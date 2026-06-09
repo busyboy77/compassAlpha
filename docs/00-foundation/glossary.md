@@ -43,6 +43,8 @@ A doctrine document for one component/entity/scope in the project, governed **un
 
 Plus auxiliary sections: Grass-root (glossary), Federation Contract (cross-entity), Cross-Compass refs, Open questions.
 
+**Placement:** one per component, under the single [Charter](#charter). **Controls** a component's own doctrine; **loosens** per-component design latitude within the Charter — the flexible, local surface.
+
 ### Cycle
 
 A bounded work period on an axis. Build cycles produce code (Phase 3 dispatches). Doctrine cycles produce compass + primitives/invariants amendments.
@@ -63,6 +65,10 @@ The human in the loop. **Relay bus + lost+found backstop**, NOT a per-decision a
 
 A subfolder in each tier's home. Receives messages from other tiers via the bus protocol. Path-partitioned multi-writer.
 
+### Invariants
+
+Charter-level rules that must hold **everywhere, always** — the non-negotiables. **Placement:** the federation [Charter](#charter), cross-component. **Controls:** maximal — they lock down what can never break federation-wide and are **not tunable**. **Loosens:** nothing. **Why:** the bedrock of codebase coherence. Marked `[INVARIANT]`.
+
 ### LIFT-WATCH
 
 Items observed during a doctrine cycle that may warrant **lifting** into Charter-tier primitives or invariants. Candidates for cross-scope promotion at cycle-close.
@@ -79,6 +85,10 @@ One of the four predictable failures of multi-agent AI work that CompassAlpha de
 2. Hallucination drift
 3. Role confusion
 4. Trust erosion
+
+### Primitives
+
+Charter-level **shared contracts** — the one canonical definition of each shared concept (types, operations, vocabulary) every component reuses. **Placement:** the federation [Charter](#charter). **Controls:** the canonical definition (locked), so no two components re-implement the same concept differently. **Loosens:** a component's internal *use* of a primitive, and the set is **extensible** — new primitives may be proposed and lifted in (see [LIFT-WATCH](#lift-watch)). **Why:** the mechanism of cross-team coherence.
 
 ### Reviewer-state repo
 

@@ -134,9 +134,9 @@ Same axioms, same guardrails. Different project = different tunables + toggles. 
 
 ## The doctrine substrate: Charter, Compasses, and Axis annexes
 
-[![Physical federation — one Charter at the top, distributed teams inheriting it, Git as the glue](../assets/physical-federation.svg)](../assets/physical-federation.svg)
+[![Team federation — one Charter at the top, distributed teams inheriting it, Git as the glue](../assets/team-federation.svg)](../assets/team-federation.svg)
 
-<small>*Physical federation: a single Charter at the top, inherited by distributed teams **wherever they sit**, with **Git as the glue** that binds them into one coherent codebase — this is GitAI. Click to open full size.*</small>
+<small>*Team federation: a single Charter at the top, inherited by distributed teams **wherever they sit**, with **Git as the glue** that binds them into one coherent codebase — the essence of GitAI. Click to open full size.*</small>
 
 The four layers above describe the **framework**. A specific federation's **doctrine** — the living constitution it actually governs by — is organized as a single hierarchy with **one source of truth**:
 
@@ -145,6 +145,18 @@ The four layers above describe the **framework**. A specific federation's **doct
 - **Axes are annexes.** Each declared [axis](../03-tunables/axis-declarations.md) — build, doctrine, and any `DECOUPLED` Day-2 axis (ops, QA, audit) — registers as an **annex** under the same Charter: its declaration plus any axis-specific invariants and primitives. An axis never gets a competing charter.
 
 This single-source-of-truth shape is what makes cross-team **codebase coherence** possible: one canonical place defines each concept, so there is no room for divergent or duplicated implementations of the same thing. It is also what lets a federation scale *physically* across many human teams (cohorts) without the codebase drifting — every team builds its segment under the one Charter.
+
+### What each doctrine artifact controls — and loosens
+
+The three named artifacts under the Charter each sit at a deliberate altitude, and each declares **what it locks down** versus **what it leaves open**:
+
+| Artifact | Where it sits | Controls (locks down) | Loosens (leaves open) | Why it's there |
+|---|---|---|---|---|
+| **Invariants** | Charter · federation-wide | the rules that must hold everywhere, always — the non-negotiables | nothing — invariants are not tunable | define what can never break across the whole federation; the bedrock of coherence |
+| **Primitives** | Charter · shared contracts | the one canonical definition of each shared concept (types, operations, vocabulary) every component reuses | a component's internal *use* of a primitive; new primitives may be proposed | prevent divergent re-implementations of the same concept — the mechanism of cross-team coherence |
+| **Compass** | under the Charter · one per component | a single component's own doctrine (60K ideology · 30K mechanics · 10K schema) | per-component design latitude *within* the Charter | localize component-specific doctrine while staying bound to the one Charter |
+
+This is the constitutional spirit applied to the doctrine itself: **Invariants are maximally controlled, Primitives lock the shared contracts yet stay extensible, and Compasses are the loosened, per-component surface** — tight at the center, flexible at the edges.
 
 ### Version bumps: GO-UP-BUMP vs sub-bump
 

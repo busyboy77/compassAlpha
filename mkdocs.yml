@@ -8,7 +8,7 @@ repo_url: https://github.com/busyboy77/compassAlpha
 edit_uri: edit/main/docs/
 
 copyright: |
-  &copy; 2026 Nasir Mahmood Rajput · a <a href="https://gradus.pk">gradus</a> project · CompassAlpha is a framework, not a tool
+  &copy; 2026 Nasir Mahmood Rajput · CompassAlpha — a framework, not a tool · <a href="https://gradus.pk">gradus.pk</a>
 
 theme:
   name: material

@@ -6,7 +6,7 @@ CompassAlpha is young, and its governance reflects that. During the v0.x line, d
 
 ## Steward
 
-**[gradus](https://gradus.pk)** is the parent company where CompassAlpha was discovered, and is the project's **steward** and current **maintainer**. gradus publishes the framework, holds its licensing, and is responsible for its continuity.
+**[gradus](https://gradus.pk)** is the project's **steward**, **maintainer**, and **licensor**: it publishes the framework, holds its licensing, and is responsible for its continuity.
 
 ## Final authority during v0.x
 

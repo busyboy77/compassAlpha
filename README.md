@@ -7,7 +7,7 @@
 [![Docs](https://img.shields.io/badge/docs-mkdocs--material-blue.svg)](https://busyboy77.github.io/compassAlpha/)
 [![Status](https://img.shields.io/badge/status-v0.1%20draft-orange.svg)](docs/08-community/changelog.md)
 
-> *A source-available framework from **[gradus](https://gradus.pk)** — the parent company where CompassAlpha was discovered.*
+> *A source-available federation framework — free for non-commercial use; [commercial use requires a license](COMMERCIAL.md).*
 >
 > Free for non-commercial & evaluation use · **[commercial use requires a license](COMMERCIAL.md)**.
 
@@ -120,9 +120,7 @@ Track progress in the [Roadmap](docs/08-community/roadmap.md) and [Changelog](do
 
 ## Acknowledgments
 
-CompassAlpha was discovered and developed at **[gradus](https://gradus.pk)** — its parent company — and built and iterated by **Nasir Mahmood Rajput** (founder) with a series of Claude (Anthropic) sessions.
-
-The framework is published source-available by [gradus](https://gradus.pk).
+CompassAlpha is built and maintained by **Nasir Mahmood Rajput** (founder) with a series of Claude (Anthropic) sessions, and published source-available by [gradus.pk](https://gradus.pk).
 
 **With recognition of the categories CompassAlpha builds upon:** GitOps (DevOps community), AIOps (operations + AI community). CompassAlpha is **GitAI** — the same pattern applied to AI agent federations.
 

@@ -1,6 +1,6 @@
 # Commercial Licensing
 
-CompassAlpha is a **source-available** framework, published by **[gradus](https://gradus.pk)** — the parent company where CompassAlpha was discovered — under the [Business Source License 1.1](LICENSE).
+CompassAlpha is a **source-available** framework, published by **[gradus](https://gradus.pk)** under the [Business Source License 1.1](LICENSE).
 
 It is **free** for a wide range of uses, and requires a **commercial license** for commercial or production use. This page explains the boundary and how to obtain a license.
 

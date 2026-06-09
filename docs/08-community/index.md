@@ -14,7 +14,7 @@ CompassAlpha is a living framework. This section is for everyone who wants to fo
 
 ## A note on licensing
 
-CompassAlpha is a [gradus](https://gradus.pk) project, **source-available** under the [Business Source License 1.1](https://github.com/busyboy77/compassAlpha/blob/main/LICENSE). It is free for non-commercial and non-production use; commercial or production use requires a commercial license. See [COMMERCIAL.md](https://github.com/busyboy77/compassAlpha/blob/main/COMMERCIAL.md) or contact **licensing@gradus.pk**.
+CompassAlpha is **source-available** under the [Business Source License 1.1](https://github.com/busyboy77/compassAlpha/blob/main/LICENSE), published by [gradus](https://gradus.pk). It is free for non-commercial and non-production use; commercial or production use requires a commercial license. See [COMMERCIAL.md](https://github.com/busyboy77/compassAlpha/blob/main/COMMERCIAL.md) or contact **licensing@gradus.pk**.
 
 !!! note "Source-available"
     The license grants broad free use for evaluation, research, teaching, and internal non-production work, and converts to Apache 2.0 on its Change Date (2030-06-09). It is not an OSI-approved license today. Read the [LICENSE](https://github.com/busyboy77/compassAlpha/blob/main/LICENSE) for the exact terms before relying on it.
