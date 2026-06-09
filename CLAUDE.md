@@ -4,7 +4,7 @@
 
 ## What this project is
 
-**CompassAlpha** — an open-source federation framework for multi-tier AI-agent collaboration on substantial codebases. The reference framework for **GitAI** (using git as the coordination, durability, and audit layer for AI-agent federations).
+**CompassAlpha** — a source-available federation framework for multi-tier AI-agent collaboration on substantial codebases. The reference framework for **GitAI** (using git as the coordination, durability, and audit layer for AI-agent federations).
 
 This repository is the framework's **canonical home**. It is independent of any specific adopter project. CompassAlpha was discovered and developed at **[gradus](https://gradus.pk)** — its parent company.
 
@@ -35,7 +35,7 @@ docs/                  ← portal content (the public-facing framework)
 - **v0.1 DRAFT**, in active development
 - **Portal build progress: ~13 of ~50 pages complete** (Foundation + Axioms done; 6 sections remaining)
 - **Repository:** https://github.com/busyboy77/compassAlpha
-- **License:** Apache 2.0
+- **License:** Business Source License 1.1 (source-available; converts to Apache 2.0 on 2030-06-09) · commercial use → `COMMERCIAL.md`
 
 ## Read-on-boot artifacts
 

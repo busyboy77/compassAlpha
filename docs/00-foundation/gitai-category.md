@@ -54,7 +54,7 @@ CompassAlpha provides:
 - **Reference implementations** of state artifacts, stamp templates, memory systems
 - **A battle-tested production federation example** (~12 months of cycles, multiple build-axis closes, doctrine cycles spanning many entities)
 
-Other GitAI frameworks may emerge in 2026+. CompassAlpha's open-source release is intended to seed the ecosystem with a battle-tested reference. Convergence on shared protocols (bus inbox conventions, marker tag grammar) would benefit the whole category.
+Other GitAI frameworks may emerge in 2026+. CompassAlpha's source-available release is intended to seed the ecosystem with a battle-tested reference. Convergence on shared protocols (bus inbox conventions, marker tag grammar) would benefit the whole category.
 
 ## What a GitAI federation looks like (in 30 seconds)
 

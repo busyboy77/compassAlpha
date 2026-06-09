@@ -1,12 +1,19 @@
 # CompassAlpha
 
-> **A framework, not a tool.** Open-source federation framework for multi-tier AI-agent collaboration on substantial codebases. The reference framework for **GitAI** — using git as the coordination, durability, and audit layer for multi-agent AI operations.
+> **A framework, not a tool.** Source-available federation framework for multi-tier AI-agent collaboration on substantial codebases. The reference framework for **GitAI** — using git as the coordination, durability, and audit layer for multi-agent AI operations.
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![License: BSL 1.1](https://img.shields.io/badge/license-BSL%201.1-blue.svg)](LICENSE)
+[![Commercial use](https://img.shields.io/badge/commercial%20use-license%20required-orange.svg)](COMMERCIAL.md)
 [![Docs](https://img.shields.io/badge/docs-mkdocs--material-blue.svg)](https://busyboy77.github.io/compassAlpha/)
 [![Status](https://img.shields.io/badge/status-v0.1%20draft-orange.svg)](docs/08-community/changelog.md)
 
-> *An open-source framework from **[gradus](https://gradus.pk)** — the parent company where CompassAlpha was discovered.*
+> *A source-available framework from **[gradus](https://gradus.pk)** — the parent company where CompassAlpha was discovered.*
+>
+> Free for non-commercial & evaluation use · **[commercial use requires a license](COMMERCIAL.md)**.
+
+[![CompassAlpha — the federation framework on one page](docs/assets/federation-diagram.svg)](docs/assets/federation-diagram.svg)
+
+<sub>*The whole framework at a glance: inheritance · the two axes + future-axis slot · work-granularity lanes · stage taxonomies · the bus protocol · load-bearing rules · trade-offs · tunables. Click to open full size.*</sub>
 
 ---
 
@@ -95,7 +102,7 @@ The framework grew out of a real production multi-agent federation that hit each
 
 ## Status
 
-This is **v0.1 DRAFT** — the framework is in active development, authored as a deliberate open-source release. **The framework will reach v1.0 stable after:**
+This is **v0.1 DRAFT** — the framework is in active development, released source-available under BSL 1.1. **The framework will reach v1.0 stable after:**
 
 1. A full doctrine cycle close + re-lock
 2. Community review pass
@@ -107,7 +114,7 @@ Track progress in the [Roadmap](docs/08-community/roadmap.md) and [Changelog](do
 
 ## License
 
-**[Apache License 2.0](LICENSE)** — permissive, with an explicit patent grant. Chosen at repository bootstrap (2026-06) ahead of v1.0 stable; this supersedes the earlier "license TBD at v1.0" placeholder.
+**[Business Source License 1.1](LICENSE)** — source-available. Free for non-commercial, evaluation, research, and internal non-production use; **commercial or production use requires a commercial license** from gradus (see **[COMMERCIAL.md](COMMERCIAL.md)**). Each version converts to the **Apache License 2.0** on its Change Date (2030-06-09 for v0.1). "CompassAlpha" and "gradus" are trademarks — see [NOTICE](NOTICE).
 
 ---
 
@@ -115,7 +122,7 @@ Track progress in the [Roadmap](docs/08-community/roadmap.md) and [Changelog](do
 
 CompassAlpha was discovered and developed at **[gradus](https://gradus.pk)** — its parent company — and built and iterated by **Nasir Mahmood Rajput** (founder) with a series of Claude (Anthropic) sessions.
 
-The framework is released as a deliberate open-source effort by [gradus](https://gradus.pk).
+The framework is published source-available by [gradus](https://gradus.pk).
 
 **With recognition of the categories CompassAlpha builds upon:** GitOps (DevOps community), AIOps (operations + AI community). CompassAlpha is **GitAI** — the same pattern applied to AI agent federations.
 

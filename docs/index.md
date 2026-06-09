@@ -2,7 +2,11 @@
 
 > *"A framework, not a tool. State of the federation = state of git."*
 
-CompassAlpha is an open-source framework for orchestrating multi-tier AI-agent federations on substantial codebases and doctrine work. It is the reference framework for **GitAI** — a category that applies GitOps' coordination patterns to multi-agent AI operations.
+CompassAlpha is a source-available framework for orchestrating multi-tier AI-agent federations on substantial codebases and doctrine work. It is the reference framework for **GitAI** — a category that applies GitOps' coordination patterns to multi-agent AI operations.
+
+[![CompassAlpha — the federation framework on one page](assets/federation-diagram.svg)](assets/federation-diagram.svg)
+
+<small>*The whole framework on one page — inheritance · the two axes + future-axis slot · work-granularity lanes · stage taxonomies · the bus protocol · load-bearing rules · trade-offs · tunables. Click to open full size.*</small>
 
 This portal is the framework's **constitution** + adoption guide. The framework itself is the protocols, conventions, and load-bearing rules documented here. The patterns were proven by a production multi-agent federation that drove every refinement in this document.
 
@@ -115,7 +119,7 @@ Every axiom and guardrail in the framework exists to prevent one or more of thes
 
 CompassAlpha is the abstraction of patterns that emerged from running a real multi-agent AI federation on a substantial production codebase. That federation evolved through multiple doctrine cycles, hitting each of the four pathologies above and engineering solutions cycle by cycle.
 
-The framework was authored as a deliberate open-source release, structured to be parametric: project-specific values are marked `[TUNABLE]` throughout, with worked examples in the [manifesto](07-reference/manifesto-full.md).
+The framework is published source-available, structured to be parametric: project-specific values are marked `[TUNABLE]` throughout, with worked examples in the [manifesto](07-reference/manifesto-full.md).
 
 [See worked examples →](06-adoption-patterns/)
 
