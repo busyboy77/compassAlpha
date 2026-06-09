@@ -99,6 +99,7 @@ nav:
     - Framework, not tool: 00-foundation/framework-not-tool.md
     - Origin — why GitAI: 00-foundation/origin-story.md
     - Constitution: 00-foundation/constitution.md
+    - Codebase coherence: 00-foundation/codebase-coherence.md
     - GitAI category: 00-foundation/gitai-category.md
     - Glossary: 00-foundation/glossary.md
   - Axioms (Invariant):
