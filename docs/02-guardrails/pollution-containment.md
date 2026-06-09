@@ -8,10 +8,6 @@
 
 **Context pollution** is the failure where a tier's working context fills with detail it does not own — a parent absorbing a child's slice-level churn, a mid-tier absorbing a doer's reasoning footprints. Polluted context makes judgment slower (cognitive overhead) and worse (the tier saw the trees and lost the forest). CompassAlpha contains it structurally: the [firewall](../01-axioms/firewall.md) confines each tier to its own folder, and **state-tracking scope** confines each mentor to its own granularity. Containment is a property of the structure, not a discipline you remember to apply.
 
-[![Codebase coherence — one canonical definition called by every component, versus duplicated divergent copies](../assets/codebase-coherence.svg)](../assets/codebase-coherence.svg)
-
-<small>*The same containment principle at the code level: one canonical definition per concept — not a divergent copy per tier or team.*</small>
-
 ## The failure it prevents
 
 In a federation, every tier carries a finite, precious context budget. Pollution is the slow leak of that budget into detail the tier has no business holding:

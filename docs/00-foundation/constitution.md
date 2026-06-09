@@ -132,6 +132,10 @@ The four layers above describe the **framework**. A specific federation's **doct
 
 This single-source-of-truth shape is what makes cross-team **codebase coherence** possible: one canonical place defines each concept, so there is no room for divergent or duplicated implementations of the same thing. It is also what lets a federation scale *physically* across many human teams (cohorts) without the codebase drifting — every team builds its segment under the one Charter.
 
+[![Codebase coherence — one canonical definition per concept, called by every component, versus divergent duplicate copies](../assets/codebase-coherence.svg)](../assets/codebase-coherence.svg)
+
+<small>*The single source of truth in practice: one canonical definition per concept, called by every component (left) — instead of divergent, duplicated copies that drift apart (right).*</small>
+
 ### What each doctrine artifact controls — and loosens
 
 The three named artifacts under the Charter each sit at a deliberate altitude, and each declares **what it locks down** versus **what it leaves open**:
