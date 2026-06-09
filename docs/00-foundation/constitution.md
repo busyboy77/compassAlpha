@@ -132,6 +132,33 @@ Same axioms, same guardrails. Different project = different tunables + toggles. 
 
 ---
 
+## The doctrine substrate: Charter, Compasses, and Axis annexes
+
+[![Physical federation — one Charter at the top, distributed teams inheriting it, Git as the glue](../assets/physical-federation.svg)](../assets/physical-federation.svg)
+
+<small>*Physical federation: a single Charter at the top, inherited by distributed teams **wherever they sit**, with **Git as the glue** that binds them into one coherent codebase — this is GitAI. Click to open full size.*</small>
+
+The four layers above describe the **framework**. A specific federation's **doctrine** — the living constitution it actually governs by — is organized as a single hierarchy with **one source of truth**:
+
+- **One federation Charter.** Each federation has exactly **one Charter** — its constitution. It is not split per team or per component; that single document is what every tier and every human cohort is bound to.
+- **Components are Compasses.** Each component of the project gets its own **Compass** (the 60K/30K/10K deliverable, plus any variants) *under* the one Charter. "A charter per component" means, in practice, a per-component **Compass governed by the single Charter** — not a separate constitution per component.
+- **Axes are annexes.** Each declared [axis](../03-tunables/axis-declarations.md) — build, doctrine, and any `DECOUPLED` Day-2 axis (ops, QA, audit) — registers as an **annex** under the same Charter: its declaration plus any axis-specific invariants and primitives. An axis never gets a competing charter.
+
+This single-source-of-truth shape is what makes cross-team **codebase coherence** possible: one canonical place defines each concept, so there is no room for divergent or duplicated implementations of the same thing. It is also what lets a federation scale *physically* across many human teams (cohorts) without the codebase drifting — every team builds its segment under the one Charter.
+
+### Version bumps: GO-UP-BUMP vs sub-bump
+
+Two bump levels keep the hierarchy honest:
+
+| Bump | Scope | When |
+|---|---|---|
+| **GO-UP-BUMP** | the federation **Charter** (`charter-v<n+1>`) | a doctrine cycle closes and re-locks — cross-cutting / charter-level change |
+| **sub-bump** (`GO-SUB-BUMP`) | a single **Compass** / entity (`sub-v<n+1>-<entity>`) | one component's doctrine is amended within a cycle |
+
+A cohort team releases only against the **current chartered Compass**; any cross-cutting change must flow through a **GO-UP-BUMP**, never an ad-hoc release. That discipline is what prevents "someone had an idea and shipped" from fracturing a multi-team codebase.
+
+---
+
 ## The "provisioned as a constitution" property
 
 Nasir's exact framing: *"toggles with every possible detail provisioned as a constitution."*

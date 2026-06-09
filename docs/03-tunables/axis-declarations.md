@@ -68,7 +68,7 @@ Whether the axis runs while the Charter is `LOCKED`, `UNLOCKED`, or is `DECOUPLE
 
 - **LOCKED** — runs only while the Charter is locked (the build axis: code is written against stable doctrine).
 - **UNLOCKED** — runs only during an amendment epoch (the doctrine axis: it *is* the amendment).
-- **DECOUPLED** — runs independently of Charter state (a future review/audit axis that doesn't gate or block the main two).
+- **DECOUPLED** — runs independently of Charter state, **continuously**, never entering the LOCKED↔UNLOCKED alternation. It consumes the Charter **read-only**, never locks or blocks it, and may only *request* a Charter amendment through the doctrine axis. (A Day-2 review / audit / ops axis.)
 
 LOCKED and UNLOCKED axes **alternate** — they do not run concurrently, because that would race the amendment (Charter primitives could change mid-build). DECOUPLED axes may run alongside whatever is active, with the rule that they do not gate the main axes.
 
@@ -114,6 +114,16 @@ LOCALITY:             host-of-substrate (default)
 ```
 
 That declaration is the entire axis. The firewall, bus protocol, hard-labour rule, persistence law, dual validation, status grids, and flush triggers all apply automatically by inheritance.
+
+## Incorporating an axis (the gate)
+
+Adding an axis is cheap, but it is **recorded** — a small, deliberate act, not an ad-hoc spawn:
+
+1. **Declare** — author the declaration above (the fields + three tier roles).
+2. **Review** — the founder and the doctrine axis's Mentor-1 review the declaration at a **cycle seam** (never mid-cycle): it must violate no axiom, and if `DECOUPLED`, it must gate nothing.
+3. **Register** — record the axis in the federation's **`AXES` manifest** (the list of every declared axis + its declaration), committed to the reviewer-state repo. The axis becomes an **annex under the one Charter** — see [the doctrine substrate](../00-foundation/constitution.md#the-doctrine-substrate-charter-compasses-and-axis-annexes).
+
+Because incorporation is **additive and read-only against existing state**, a new axis (axis-N) can be added at **any stage of a running project** without disturbing in-flight work — the integrity of the current state is preserved. A `DECOUPLED` axis can begin immediately; a `LOCKED` / `UNLOCKED` axis takes its turn in the alternation.
 
 ## Defaults
 

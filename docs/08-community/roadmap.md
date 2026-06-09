@@ -13,15 +13,15 @@ The documentation portal is built through its first two layers:
 - **Foundation** — orientation: framework-not-tool framing, the constitution overview, the GitAI category, and the glossary.
 - **Axioms** — the invariant constitution.
 
-That is 13 pages. The remaining sections are pending.
+The full portal is now drafted end to end — Foundation, Axioms, Guardrails, Tunables, Toggles, Getting Started, Adoption Patterns, Reference, and Community. What remains is hardening and review, not authoring.
 
 ## The path to v1.0
 
 The work ahead falls into phases. Each builds on the one before it.
 
-### Phase 1 — Complete the doctrine surface
+### Phase 1 — Complete the doctrine surface *(drafted — now verifying coherence)*
 
-Finish authoring the portal so the framework is fully specified end to end:
+The portal is authored end to end; this phase now tightens cross-references and consistency across:
 
 - **Guardrails** — what the framework prevents.
 - **Tunables** — the customization surface.
@@ -38,6 +38,10 @@ Doctrine only proves itself in contact with reality. This phase is about running
 ### Phase 3 — Re-lock for stability
 
 Close a full doctrine cycle, fold in community review, and lock the axioms and conventions into a form stable enough to promise compatibility against.
+
+## Planned mechanisms
+
+**Adoption telemetry (consent-first).** A way for adopters to **opt in** and share coarse, **anonymized** usage statistics — project type, axis/compass counts, preset, framework version — presented publicly via a GitHub-native data repo and a Pages dashboard. Default-off, revocable, with a minimal published schema and no PII. On-brand with GitAI (the ecosystem's own state, in git). Design is being finalized; not yet built.
 
 ## v1.0 stability criteria
 

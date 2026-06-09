@@ -4,9 +4,13 @@
 
 ## Core vocabulary (framework-level, INVARIANT)
 
+### Annex
+
+The form in which a declared [axis](#axis) attaches to the federation [Charter](#charter): the axis's declaration plus any axis-specific invariants and primitives, registered in the `AXES` manifest. Axes are annexes under the **one** Charter — they never get a competing charter.
+
 ### Axis
 
-A parallel work stream in the federation. Each axis has its own tier hierarchy, lifecycle stages, and Charter posture.
+A parallel work stream in the federation. Each axis has its own tier hierarchy, lifecycle stages, and **Charter posture** (`LOCKED` / `UNLOCKED` / [`DECOUPLED`](#decoupled)), and attaches to the one Charter as an [annex](#annex).
 
 Default axes in CompassAlpha:
 - **Build axis** — code-deliverable axis (Phase 3 dispatches)
@@ -16,15 +20,23 @@ Future axes are extensible: review, ops, AI-training, etc.
 
 ### Charter
 
-The project's master constitutional document. Has a state machine:
+The federation's **single** master constitutional document — one per federation, the source of truth every tier and human cohort is bound to. Components live under it as [Compasses](#compass); [axes](#axis) attach as [annexes](#annex). Raised by **GO-UP-BUMP** (see [Bump](#bump)). Has a state machine:
 - **LOCKED** — read-only; the build axis runs
 - **UNLOCKED** — editable; the doctrine axis runs
 
 Axes alternate temporally based on Charter state.
 
+### Bump
+
+**GO-UP-BUMP** raises the federation [Charter](#charter) version (`charter-v<n+1>`) at a doctrine-cycle close — for cross-cutting / charter-level change. A **sub-bump** (`GO-SUB-BUMP`) raises a single [Compass](#compass)/entity version (`sub-v<n+1>-<entity>`) within a cycle. A cohort team releases only against the current chartered Compass; any cross-cutting change must flow through a GO-UP-BUMP, never an ad-hoc release.
+
+### DECOUPLED
+
+A [Charter posture](#axis) for an axis that runs **continuously**, outside the LOCKED↔UNLOCKED alternation. A DECOUPLED axis reads the Charter **read-only**, never locks or blocks it, and may only *request* a Charter amendment through the doctrine axis. Day-2 axes (ops, QA, audit) are typically DECOUPLED.
+
 ### Compass
 
-A doctrine document for one entity/scope in the project. Tiered at three altitudes:
+A doctrine document for one component/entity/scope in the project, governed **under the single [Charter](#charter)**. Tiered at three altitudes:
 - **60K** — Ideology section: principles, named theses, why-this-domain-matters
 - **30K** — Mechanics: state machines, lifecycles, primitives, invariants
 - **10K** — Schema + routes + engine + events
