@@ -6,25 +6,7 @@ CompassAlpha is structured constitutionally — like a written constitution for 
 
 ## The four-layer constitutional model
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  LAYER 4: TOGGLES                                               │
-│  Live switches · flip at runtime / cycle / project boundaries   │
-│  Operating presets are named bundles of toggles                 │
-├─────────────────────────────────────────────────────────────────┤
-│  LAYER 3: TUNABLES                                              │
-│  Customization surface · the 5-axis trade-off space             │
-│  Concurrency · context · AI model · lanes · stages · ...        │
-├─────────────────────────────────────────────────────────────────┤
-│  LAYER 2: GUARDRAILS                                            │
-│  What the framework PREVENTS                                    │
-│  Pollution, hallucination, drift, trust erosion · failure modes │
-├─────────────────────────────────────────────────────────────────┤
-│  LAYER 1: AXIOMS (the constitution)                             │
-│  7 INVARIANT rules · cannot be tuned away                       │
-│  Tier grammar · firewall · persistence · hard labour · ...      │
-└─────────────────────────────────────────────────────────────────┘
-```
+[![The four-layer constitutional model — Axioms (bedrock) · Guardrails · Tunables · Toggles](../assets/four-layer-model.svg)](../assets/four-layer-model.svg)
 
 **Higher layers DERIVE from lower layers.** Toggles bundle tunables. Tunables operate on top of guardrails. Guardrails defend the axioms. The axioms are the bedrock.
 
@@ -157,6 +139,8 @@ The three named artifacts under the Charter each sit at a deliberate altitude, a
 | **Compass** | under the Charter · one per component | a single component's own doctrine (60K ideology · 30K mechanics · 10K schema) | per-component design latitude *within* the Charter | localize component-specific doctrine while staying bound to the one Charter |
 
 This is the constitutional spirit applied to the doctrine itself: **Invariants are maximally controlled, Primitives lock the shared contracts yet stay extensible, and Compasses are the loosened, per-component surface** — tight at the center, flexible at the edges.
+
+[![Charter, Compasses and axis annexes — and the GO-UP-BUMP / sub-bump ladder](../assets/charter-bump-ladder.svg)](../assets/charter-bump-ladder.svg)
 
 ### Version bumps: GO-UP-BUMP vs sub-bump
 

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 940" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="bind" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5a6b7d"/></marker>
+    <marker id="up-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="up-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+  </defs>
+
+  <rect width="1500" height="940" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Charter · Compasses · Annexes — and the bump ladder</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">One doctrine hierarchy · locked at the center, loosened at the edges · two ways it bumps</text>
+
+  <!-- vertical divider between the two halves -->
+  <line x1="905" y1="140" x2="905" y2="850" stroke="#dcdcd6" stroke-width="1.5" stroke-dasharray="3 5"/>
+
+  <!-- ===================================================== -->
+  <!-- LEFT ~60% : THE DOCTRINE HIERARCHY (top-down)         -->
+  <!-- ===================================================== -->
+  <text x="80" y="138" font-size="15" font-weight="700" fill="#444">The doctrine hierarchy</text>
+  <text x="80" y="158" font-size="11.5" fill="#888" font-style="italic">top-down · what controls what</text>
+
+  <!-- locked/loosened mini-legend -->
+  <rect x="560" y="120" width="300" height="56" rx="8" fill="#ffffff" stroke="#d8d8d8" stroke-width="1.2"/>
+  <rect x="574" y="134" width="20" height="16" rx="4" fill="#2d3a4a"/>
+  <text x="602" y="147" font-size="11" fill="#333">locked (solid · controls)</text>
+  <rect x="574" y="154" width="20" height="16" rx="4" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.2"/>
+  <text x="602" y="167" font-size="11" fill="#333">loosened (lighter · per-component)</text>
+
+  <!-- FEDERATION CHARTER box -->
+  <rect x="190" y="196" width="520" height="170" rx="12" fill="#2d3a4a"/>
+  <text x="450" y="232" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">FEDERATION CHARTER</text>
+  <text x="450" y="255" text-anchor="middle" font-size="12" fill="#9fb0c4" font-style="italic">the constitution every component is bound to</text>
+
+  <!-- inner chip: Invariants (locked, solid) -->
+  <rect x="214" y="274" width="222" height="74" rx="9" fill="#3d4a5a" stroke="#5a6b7d" stroke-width="1.4"/>
+  <!-- tiny drawn padlock -->
+  <path d="M232,294 a8,8 0 0 1 16,0 v6" fill="none" stroke="#cdd5e0" stroke-width="2"/>
+  <rect x="228" y="300" width="24" height="17" rx="3" fill="#cdd5e0"/>
+  <text x="262" y="298" font-size="14" font-weight="700" fill="#ffffff">Invariants</text>
+  <text x="262" y="318" font-size="10.5" fill="#aeb9c8">locked</text>
+  <text x="225" y="338" font-size="10.5" fill="#aeb9c8">federation-wide</text>
+
+  <!-- inner chip: Primitives (locked definition, extensible) -->
+  <rect x="464" y="274" width="222" height="74" rx="9" fill="#3d4a5a" stroke="#5a6b7d" stroke-width="1.4"/>
+  <path d="M482,294 a8,8 0 0 1 16,0 v6" fill="none" stroke="#cdd5e0" stroke-width="2"/>
+  <rect x="478" y="300" width="24" height="17" rx="3" fill="#cdd5e0"/>
+  <text x="512" y="298" font-size="14" font-weight="700" fill="#ffffff">Primitives</text>
+  <text x="512" y="318" font-size="10.5" fill="#aeb9c8">locked definition</text>
+  <text x="475" y="338" font-size="10.5" fill="#aeb9c8">extensible</text>
+
+  <!-- Axis annex box attached to the Charter -->
+  <line x1="710" y1="281" x2="772" y2="281" stroke="#7a5b9c" stroke-width="2" stroke-dasharray="5 3"/>
+  <rect x="772" y="252" width="116" height="58" rx="10" fill="#eee0f5" stroke="#7a5b9c" stroke-width="1.6"/>
+  <text x="830" y="276" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5a3a7a">Axis annex</text>
+  <text x="830" y="294" text-anchor="middle" font-size="9.5" fill="#5a3a7a">ops / QA / audit</text>
+
+  <!-- connectors: Charter down to the three Compass boxes -->
+  <line x1="450" y1="366" x2="450" y2="404" stroke="#5a6b7d" stroke-width="2"/>
+  <line x1="160" y1="404" x2="740" y2="404" stroke="#5a6b7d" stroke-width="2"/>
+  <line x1="160" y1="404" x2="160" y2="452" stroke="#5a6b7d" stroke-width="2.2" marker-end="url(#bind)"/>
+  <line x1="450" y1="404" x2="450" y2="452" stroke="#5a6b7d" stroke-width="2.2" marker-end="url(#bind)"/>
+  <line x1="740" y1="404" x2="740" y2="452" stroke="#5a6b7d" stroke-width="2.2" marker-end="url(#bind)"/>
+  <text x="466" y="432" font-size="11" fill="#5a6b7d" font-style="italic">bound to the Charter</text>
+
+  <!-- three Compass boxes (loosened, lighter tints) -->
+  <!-- Auth (blue) -->
+  <rect x="40" y="456" width="240" height="118" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="160" y="488" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4a7a">Compass · Auth</text>
+  <line x1="64" y1="502" x2="256" y2="502" stroke="#9cc0e0"/>
+  <text x="160" y="524" text-anchor="middle" font-size="11" fill="#1a4a7a">per-component</text>
+  <text x="160" y="542" text-anchor="middle" font-size="11" fill="#1a4a7a">loosened within</text>
+  <text x="160" y="560" text-anchor="middle" font-size="11" fill="#1a4a7a">the Charter</text>
+
+  <!-- Billing (purple) -->
+  <rect x="330" y="456" width="240" height="118" rx="11" fill="#eee0f5" stroke="#7a5b9c" stroke-width="2"/>
+  <text x="450" y="488" text-anchor="middle" font-size="15" font-weight="700" fill="#5a3a7a">Compass · Billing</text>
+  <line x1="354" y1="502" x2="546" y2="502" stroke="#c4a8da"/>
+  <text x="450" y="524" text-anchor="middle" font-size="11" fill="#5a3a7a">per-component</text>
+  <text x="450" y="542" text-anchor="middle" font-size="11" fill="#5a3a7a">loosened within</text>
+  <text x="450" y="560" text-anchor="middle" font-size="11" fill="#5a3a7a">the Charter</text>
+
+  <!-- Reporting (green) -->
+  <rect x="620" y="456" width="240" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2"/>
+  <text x="740" y="488" text-anchor="middle" font-size="15" font-weight="700" fill="#2a5a2a">Compass · Reporting</text>
+  <line x1="644" y1="502" x2="836" y2="502" stroke="#9cc89c"/>
+  <text x="740" y="524" text-anchor="middle" font-size="11" fill="#2a5a2a">per-component</text>
+  <text x="740" y="542" text-anchor="middle" font-size="11" fill="#2a5a2a">loosened within</text>
+  <text x="740" y="560" text-anchor="middle" font-size="11" fill="#2a5a2a">the Charter</text>
+
+  <!-- "tight center -> flexible edges" cue band -->
+  <rect x="40" y="612" width="820" height="44" rx="9" fill="#f4f1ea" stroke="#cfc6a8" stroke-width="1.2"/>
+  <rect x="58" y="624" width="20" height="20" rx="4" fill="#2d3a4a"/>
+  <text x="86" y="639" font-size="11.5" fill="#5a4d20">center: locked</text>
+  <line x1="190" y1="634" x2="640" y2="634" stroke="#a89968" stroke-width="1.6" stroke-dasharray="4 4"/>
+  <rect x="650" y="624" width="20" height="20" rx="4" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.2"/>
+  <text x="678" y="639" font-size="11.5" fill="#5a4d20">edges: loosened</text>
+
+  <!-- ===================================================== -->
+  <!-- RIGHT ~40% : THE BUMP LADDER                          -->
+  <!-- ===================================================== -->
+  <text x="960" y="138" font-size="15" font-weight="700" fill="#444">The bump ladder</text>
+  <text x="960" y="158" font-size="11.5" fill="#888" font-style="italic">two version-bump levels</text>
+
+  <!-- ===== GO-UP-BUMP (amber) ladder ===== -->
+  <rect x="960" y="196" width="240" height="320" rx="12" fill="#fef8e7" stroke="#b89425" stroke-width="2"/>
+  <text x="1080" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#8a6d0a">GO-UP-BUMP</text>
+  <text x="1080" y="246" text-anchor="middle" font-size="11" fill="#a98b2a" font-style="italic">raises the whole Charter</text>
+
+  <!-- upward arrow spine -->
+  <line x1="1080" y1="446" x2="1080" y2="276" stroke="#b89425" stroke-width="2.6" marker-end="url(#up-amber)"/>
+
+  <!-- version chips, stacked (v2 on top) -->
+  <rect x="1000" y="280" width="160" height="44" rx="9" fill="#f4e2a8" stroke="#b89425" stroke-width="1.6"/>
+  <text x="1080" y="307" text-anchor="middle" font-size="14" font-weight="700" fill="#7a5e0a">charter-v2</text>
+  <rect x="1000" y="402" width="160" height="44" rx="9" fill="#fdf3d0" stroke="#c9a94a" stroke-width="1.4"/>
+  <text x="1080" y="429" text-anchor="middle" font-size="14" font-weight="700" fill="#8a6d0a">charter-v1</text>
+
+  <text x="1080" y="476" text-anchor="middle" font-size="10.5" fill="#7a5e0a">cross-cutting</text>
+  <text x="1080" y="494" text-anchor="middle" font-size="10.5" fill="#7a5e0a">at doctrine-cycle close</text>
+
+  <!-- ===== GO-SUB-BUMP (blue) ladder ===== -->
+  <rect x="1240" y="196" width="240" height="320" rx="12" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="1360" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4a7a">GO-SUB-BUMP</text>
+  <text x="1360" y="246" text-anchor="middle" font-size="11" fill="#3b6ea5" font-style="italic">raises one Compass</text>
+
+  <line x1="1360" y1="446" x2="1360" y2="276" stroke="#3b6ea5" stroke-width="2.6" marker-end="url(#up-blue)"/>
+
+  <rect x="1280" y="280" width="160" height="44" rx="9" fill="#bcd5ee" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="1360" y="307" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">Billing sub-v2</text>
+  <rect x="1280" y="402" width="160" height="44" rx="9" fill="#e6eff8" stroke="#6f9bc7" stroke-width="1.4"/>
+  <text x="1360" y="429" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">Billing sub-v1</text>
+
+  <text x="1360" y="476" text-anchor="middle" font-size="10.5" fill="#1a4a7a">one component only</text>
+  <text x="1360" y="494" text-anchor="middle" font-size="10.5" fill="#1a4a7a">within a cycle</text>
+
+  <!-- relating note between the two ladders -->
+  <text x="1220" y="548" text-anchor="middle" font-size="10.5" fill="#888" font-style="italic">a Charter bump can absorb prior sub-bumps</text>
+
+  <!-- ============ BOTTOM CAPTION STRIP ============ -->
+  <rect x="40" y="690" width="1420" height="64" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="718" text-anchor="middle" font-size="13.5" fill="#5a4d20">Invariants &amp; Primitives are locked at the center; Compasses are the loosened, per-component surface.</text>
+  <text x="750" y="740" text-anchor="middle" font-size="13.5" font-weight="700" fill="#5a4d20">Tight at the center, flexible at the edges.</text>
+
+  <!-- ============ FOOTER (Gradus emblem + wordmark) ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="684" y="906" width="6" height="8" rx="1"/><rect x="693" y="900" width="6" height="14" rx="1"/><rect x="702" y="894" width="6" height="20" rx="1"/></g>
+    <text x="716" y="914" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

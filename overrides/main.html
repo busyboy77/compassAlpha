@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{#- SEO: Open Graph + Twitter meta + keywords, applied to every page. -#}
+{% block extrahead %}
+  {% set _desc = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
+  {% set _title = (page.title ~ " · CompassAlpha") if page and page.title and not page.is_homepage else config.site_name %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CompassAlpha">
+  <meta property="og:title" content="{{ _title }}">
+  <meta property="og:description" content="{{ _desc }}">
+  {% if page and page.canonical_url %}<meta property="og:url" content="{{ page.canonical_url }}">{% endif %}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ _title }}">
+  <meta name="twitter:description" content="{{ _desc }}">
+  <meta name="keywords" content="CompassAlpha, GitAI, multi-agent AI framework, AI agent orchestration, AI agent federation, git-based AI coordination, multi-tier AI agents, AI coding agents coordination, Claude Code multi-agent, AI doctrine framework, source-available framework, BSL">
+{% endblock %}

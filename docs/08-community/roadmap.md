@@ -43,6 +43,8 @@ Close a full doctrine cycle, fold in community review, and lock the axioms and c
 
 **Adoption telemetry (consent-first).** A way for adopters to **opt in** and share coarse, **anonymized** usage statistics — project type, axis/compass counts, preset, framework version — presented publicly via a GitHub-native data repo and a Pages dashboard. Default-off, revocable, with a minimal published schema and no PII. On-brand with GitAI (the ecosystem's own state, in git). Design is being finalized; not yet built.
 
+[![Adoption telemetry — opt-in, anonymize, submit via GitHub, public dashboard; commercial contact kept separate](../assets/adoption-telemetry.svg)](../assets/adoption-telemetry.svg)
+
 ## v1.0 stability criteria
 
 We will tag **v1.0** when all three of the following hold:

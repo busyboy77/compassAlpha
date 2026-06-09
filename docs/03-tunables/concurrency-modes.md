@@ -8,6 +8,8 @@
 
 Concurrency mode chooses **how many units of work proceed simultaneously**. The four modes — sequential (LAYGO), pipelined, parallel-independent, parallel-doer — trade wall-clock speed against pollution and dependency risk. The conservative default is **sequential (LAYGO)**: one dispatch at a time, maximum context cleanliness, lowest risk, slowest. Most projects graduate to pipelined after the first cycle proves the rhythm. The git-layer mechanics ([commit discipline + worktrees](../01-axioms/git-foundations.md)) make every mode race-safe at the storage layer, but the *coordination* risk still rises with concurrency.
 
+[![Delegation modes — Mode 1 pure RELAY vs Mode 2 Mentor-2-owns-Doer, a cycle-boundary toggle](../assets/delegation-modes.svg)](../assets/delegation-modes.svg)
+
 ## The dial
 
 The cross-axis alternation (LOCKED build vs UNLOCKED doctrine) is `[INVARIANT]` — those don't run together. This dial controls concurrency **within** an active axis: how many of its dispatches run at the same time.

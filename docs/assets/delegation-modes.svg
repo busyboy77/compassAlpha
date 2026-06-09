@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 940" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="apurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a5b9c"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+  </defs>
+
+  <rect width="1500" height="940" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Delegation Modes — a cycle-boundary toggle</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Two ways to delegate · flipped only at a cycle boundary, never mid-cycle</text>
+
+  <!-- ============ TOGGLE CUE (top center) ============ -->
+  <text x="750" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#5a4d20">cycle-boundary toggle</text>
+  <!-- left state pill (Mode 1 active = knob left, blue) -->
+  <rect x="690" y="150" width="120" height="34" rx="17" fill="#e7eaee" stroke="#9aa3ad" stroke-width="1.4"/>
+  <circle cx="708" cy="167" r="13" fill="#3b6ea5"/>
+  <text x="640" y="172" text-anchor="end" font-size="11.5" fill="#3b6ea5" font-weight="700">Mode 1</text>
+  <text x="860" y="172" text-anchor="start" font-size="11.5" fill="#7a5b9c" font-weight="700">Mode 2</text>
+  <!-- knob ghost on right to show two states -->
+  <circle cx="792" cy="167" r="11" fill="none" stroke="#7a5b9c" stroke-width="1.6" stroke-dasharray="3 3"/>
+
+  <!-- ===================================================================== -->
+  <!-- ============ LEFT PANEL · Mode 1 · pure RELAY (blue) ============ -->
+  <!-- ===================================================================== -->
+  <rect x="60" y="210" width="640" height="600" rx="12" fill="#ffffff" stroke="#3b6ea5" stroke-width="2"/>
+  <path d="M60,222 a12,12 0 0 1 12,-12 h616 a12,12 0 0 1 12,12 v30 h-640 z" fill="#3b6ea5"/>
+  <text x="380" y="243" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Mode 1 · pure RELAY</text>
+
+  <!-- Mentor-1 box -->
+  <rect x="190" y="278" width="380" height="74" rx="10" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="380" y="308" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">Mentor-1</text>
+  <text x="380" y="332" text-anchor="middle" font-size="11.5" fill="#3b6ea5" font-style="italic">fresh-per-relay, independent</text>
+
+  <!-- Founder relay node between M1 and M2 -->
+  <rect x="250" y="382" width="260" height="62" rx="10" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
+  <text x="380" y="407" text-anchor="middle" font-size="13.5" font-weight="700" fill="#8a6d0a">Founder (relay)</text>
+  <text x="380" y="428" text-anchor="middle" font-size="11" fill="#7a5e0a" font-style="italic">pull + read inbox</text>
+  <!-- bidirectional arrows M1 <-> Founder -->
+  <line x1="360" y1="356" x2="360" y2="378" stroke="#b89425" stroke-width="2.2" marker-start="url(#aamber)" marker-end="url(#aamber)"/>
+  <text x="372" y="372" font-size="9.5" fill="#8a6d0a">relay</text>
+
+  <!-- Mentor-2 box -->
+  <rect x="190" y="474" width="380" height="74" rx="10" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="380" y="504" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">Mentor-2</text>
+  <text x="380" y="528" text-anchor="middle" font-size="11.5" fill="#3b6ea5" font-style="italic">fresh-per-relay, independent</text>
+  <!-- bidirectional arrows Founder <-> M2 -->
+  <line x1="360" y1="448" x2="360" y2="470" stroke="#b89425" stroke-width="2.2" marker-start="url(#aamber)" marker-end="url(#aamber)"/>
+  <text x="372" y="464" font-size="9.5" fill="#8a6d0a">relay</text>
+
+  <!-- second Founder relay node between M2 and Doer -->
+  <rect x="250" y="578" width="260" height="62" rx="10" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
+  <text x="380" y="603" text-anchor="middle" font-size="13.5" font-weight="700" fill="#8a6d0a">Founder (relay)</text>
+  <text x="380" y="624" text-anchor="middle" font-size="11" fill="#7a5e0a" font-style="italic">pull + read inbox</text>
+  <!-- arrows M2 <-> Founder -->
+  <line x1="360" y1="552" x2="360" y2="574" stroke="#b89425" stroke-width="2.2" marker-start="url(#aamber)" marker-end="url(#aamber)"/>
+  <text x="372" y="568" font-size="9.5" fill="#8a6d0a">relay</text>
+
+  <!-- Doer box -->
+  <rect x="190" y="670" width="380" height="74" rx="10" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="380" y="700" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">Doer</text>
+  <text x="380" y="724" text-anchor="middle" font-size="11.5" fill="#3b6ea5" font-style="italic">fresh-per-relay, independent</text>
+  <!-- arrows Founder <-> Doer -->
+  <line x1="360" y1="644" x2="360" y2="666" stroke="#b89425" stroke-width="2.2" marker-start="url(#aamber)" marker-end="url(#aamber)"/>
+  <text x="372" y="660" font-size="9.5" fill="#8a6d0a">relay</text>
+
+  <!-- LEFT caption -->
+  <rect x="84" y="762" width="592" height="36" rx="8" fill="#eef3f9" stroke="#3b6ea5" stroke-width="1.1"/>
+  <text x="380" y="785" text-anchor="middle" font-size="11.5" fill="#1a4a7a">Human relays every edge&#160;&#160;·&#160;&#160;max presence&#160;&#160;·&#160;&#160;clean (no pollution)</text>
+
+  <!-- ===================================================================== -->
+  <!-- ============ RIGHT PANEL · Mode 2 · Mentor-2 owns Doer (purple) ===== -->
+  <!-- ===================================================================== -->
+  <rect x="800" y="210" width="640" height="600" rx="12" fill="#ffffff" stroke="#7a5b9c" stroke-width="2"/>
+  <path d="M800,222 a12,12 0 0 1 12,-12 h616 a12,12 0 0 1 12,12 v30 h-640 z" fill="#7a5b9c"/>
+  <text x="1120" y="243" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Mode 2 · Mentor-2 owns Doer</text>
+
+  <!-- Mentor-1 box -->
+  <rect x="930" y="288" width="380" height="74" rx="10" fill="#eee0f5" stroke="#7a5b9c" stroke-width="1.6"/>
+  <text x="1120" y="318" text-anchor="middle" font-size="16" font-weight="700" fill="#5a3a7a">Mentor-1</text>
+  <text x="1120" y="342" text-anchor="middle" font-size="11.5" fill="#7a5b9c" font-style="italic">fresh-per-relay, independent</text>
+
+  <!-- single Founder relay node between M1 and M2 -->
+  <rect x="985" y="402" width="270" height="62" rx="10" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
+  <text x="1120" y="427" text-anchor="middle" font-size="13.5" font-weight="700" fill="#8a6d0a">Founder (relay)</text>
+  <text x="1120" y="448" text-anchor="middle" font-size="11" fill="#7a5e0a" font-style="italic">M1 to/from M2 sub-bumps only</text>
+  <!-- arrows M1 <-> Founder -->
+  <line x1="1100" y1="366" x2="1100" y2="398" stroke="#b89425" stroke-width="2.2" marker-start="url(#aamber)" marker-end="url(#aamber)"/>
+  <text x="1112" y="386" font-size="9.5" fill="#8a6d0a">relay</text>
+
+  <!-- Mentor-2 box CONTAINING nested Doer -->
+  <rect x="900" y="504" width="440" height="220" rx="11" fill="#eee0f5" stroke="#7a5b9c" stroke-width="2"/>
+  <text x="1120" y="536" text-anchor="middle" font-size="16" font-weight="700" fill="#5a3a7a">Mentor-2</text>
+  <text x="1120" y="558" text-anchor="middle" font-size="11.5" fill="#7a5b9c" font-style="italic">fresh-per-relay, independent</text>
+  <!-- arrows Founder <-> M2 -->
+  <line x1="1100" y1="468" x2="1100" y2="500" stroke="#b89425" stroke-width="2.2" marker-start="url(#aamber)" marker-end="url(#aamber)"/>
+  <text x="1112" y="488" font-size="9.5" fill="#8a6d0a">relay</text>
+
+  <!-- nested Doer box inside Mentor-2 -->
+  <rect x="955" y="578" width="330" height="118" rx="9" fill="#ffffff" stroke="#7a5b9c" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="1120" y="610" text-anchor="middle" font-size="15" font-weight="700" fill="#5a3a7a">Doer</text>
+  <text x="1120" y="634" text-anchor="middle" font-size="11.5" fill="#7a5b9c">Doer = sub-agent</text>
+  <text x="1120" y="654" text-anchor="middle" font-size="11.5" fill="#7a5b9c" font-style="italic">(no human relay here)</text>
+  <!-- internal owns arrow M2 -> Doer -->
+  <line x1="1120" y1="564" x2="1120" y2="574" stroke="#7a5b9c" stroke-width="2" marker-end="url(#apurple)"/>
+  <text x="1132" y="673" text-anchor="middle" font-size="9.5" fill="#7a5b9c">owns</text>
+
+  <!-- RIGHT caption -->
+  <rect x="824" y="762" width="592" height="36" rx="8" fill="#f5eef9" stroke="#7a5b9c" stroke-width="1.1"/>
+  <text x="1120" y="785" text-anchor="middle" font-size="11.5" fill="#5a3a7a">Human relays only M1 to/from M2&#160;&#160;·&#160;&#160;less relay&#160;&#160;·&#160;&#160;pollution bounded at Mentor-2</text>
+
+  <!-- ============ BOTTOM CAPTION STRIP ============ -->
+  <rect x="60" y="838" width="1380" height="52" rx="8" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="861" text-anchor="middle" font-size="13" fill="#5a4d20">Flip at any cycle start/end — never mid-cycle.</text>
+  <text x="750" y="881" text-anchor="middle" font-size="12.5" fill="#5a4d20">Mode 1 = clean but heavy relay&#160;&#160;·&#160;&#160;Mode 2 = lighter relay, bounded pollution at Mentor-2</text>
+
+  <!-- ============ FOOTER (Gradus emblem + wordmark) ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="684" y="912" width="6" height="8" rx="1"/><rect x="693" y="906" width="6" height="14" rx="1"/><rect x="702" y="900" width="6" height="20" rx="1"/></g>
+    <text x="716" y="920" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

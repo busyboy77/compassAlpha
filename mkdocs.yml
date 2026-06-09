@@ -12,6 +12,7 @@ copyright: |
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   features:
     - navigation.instant
@@ -92,6 +93,7 @@ nav:
   - Foundation:
     - 00-foundation/index.md
     - Framework, not tool: 00-foundation/framework-not-tool.md
+    - Origin — why GitAI: 00-foundation/origin-story.md
     - Constitution: 00-foundation/constitution.md
     - GitAI category: 00-foundation/gitai-category.md
     - Glossary: 00-foundation/glossary.md
