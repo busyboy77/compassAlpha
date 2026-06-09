@@ -1,5 +1,5 @@
 ---
-description: CompassAlpha is a source-available framework for coordinating multiple AI agents on one codebase using git as the coordination, durability, and audit layer — the reference framework for GitAI.
+description: "CompassAlpha is a source-available framework for coordinating multiple AI agents on one codebase using git as the coordination, durability, and audit layer — the reference framework for GitAI."
 ---
 
 # CompassAlpha

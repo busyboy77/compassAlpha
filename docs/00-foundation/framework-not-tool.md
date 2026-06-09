@@ -1,5 +1,5 @@
 ---
-description: CompassAlpha is a framework, not a tool: a constitution and protocol for multi-tier AI-agent collaboration. Bring your own AI agents, your own git, your own host.
+description: "CompassAlpha is a framework, not a tool: a constitution and protocol for multi-tier AI-agent collaboration. Bring your own AI agents, your own git, your own host."
 ---
 
 # Framework, not tool

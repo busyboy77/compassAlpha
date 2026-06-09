@@ -1,5 +1,5 @@
 ---
-description: GitAI: git as the coordination, durability and audit layer for multi-agent AI federations. The GitOps-to-AIOps lineage and where CompassAlpha fits.
+description: "GitAI: git as the coordination, durability and audit layer for multi-agent AI federations. The GitOps-to-AIOps lineage and where CompassAlpha fits."
 ---
 
 # GitAI category
