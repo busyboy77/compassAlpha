@@ -47,12 +47,9 @@ jobs:
           pip install mkdocs-material
 
       - name: Build site
-        # --strict intentionally omitted while the portal is built incrementally:
-        # mkdocs.yml nav lists the full ~50-page roadmap, but pages land turn by
-        # turn. MkDocs drops not-yet-authored nav entries with a warning, so the
-        # live nav shows only real pages. Restore --strict once every nav-
-        # referenced page exists (portal complete) to re-enable link validation.
-        run: mkdocs build --verbose
+        # Portal complete — all nav-referenced pages exist — so --strict is back
+        # on to fail the build on broken links, bad refs, or nav drift.
+        run: mkdocs build --strict --verbose
 
       - name: Setup Pages
         uses: actions/configure-pages@v6

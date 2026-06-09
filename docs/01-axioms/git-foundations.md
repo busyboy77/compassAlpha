@@ -160,7 +160,7 @@ This is the [brief completeness rule](../02-guardrails/brief-completeness.md) ap
 
 ### Auditing compliance with the discipline
 
-A boot-time tooling can verify a Doer session has set `GIT_INDEX_FILE` correctly and is `cd`'d into a worktree (not the main tree) before allowing the session to proceed. This is a high-value first [specialised agent](../03-tunables/invariants-toolings-agents.md#specialised-agents) for a new CompassAlpha project.
+A boot-time tooling can verify a Doer session has set `GIT_INDEX_FILE` correctly and is `cd`'d into a worktree (not the main tree) before allowing the session to proceed. This is a high-value first [specialised agent](../03-tunables/invariants-toolings-agents.md) for a new CompassAlpha project.
 
 ### Cleanup discipline
 

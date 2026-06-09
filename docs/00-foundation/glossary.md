@@ -45,7 +45,7 @@ A complete CompassAlpha installation: a reviewer-state repo, an AI agent harness
 
 ### Founder
 
-The human in the loop. **Relay bus + lost+found backstop**, NOT a per-decision arbiter. The founder's role is deliberately narrow ([→](../03-tunables/full-parameter-matrix.md#cultural-tunables)).
+The human in the loop. **Relay bus + lost+found backstop**, NOT a per-decision arbiter. The founder's role is deliberately narrow ([→](../03-tunables/full-parameter-matrix.md)).
 
 ### Inbox
 
