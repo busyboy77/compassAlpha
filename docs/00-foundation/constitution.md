@@ -1,3 +1,7 @@
+---
+description: The CompassAlpha constitution: 7 invariant axioms, guardrails, tunables and toggles, plus the one-Charter / Compasses / axis-annex doctrine model for multi-agent AI work.
+---
+
 # The Constitution
 
 > *Provisioned as a constitution: a small inviolable foundation + everything else explicitly tunable on top.*

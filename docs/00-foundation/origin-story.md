@@ -1,3 +1,7 @@
+---
+description: Why CompassAlpha exists: the multi-agent AI failures — context pollution, hallucination drift, role confusion, trust erosion — that forced a git-based coordination framework. The GitAI insight.
+---
+
 # Origin — and the GitAI insight
 
 > *Every rule in this framework is a scar. Here is how each one was earned.*

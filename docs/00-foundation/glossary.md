@@ -1,3 +1,7 @@
+---
+description: CompassAlpha glossary: Charter, Compass, Invariants, Primitives, axes, the Mentor-1/Mentor-2/Doer tier grammar, bus protocol, GO-UP-BUMP and sub-bump.
+---
+
 # Glossary
 
 > Canonical vocabulary. Use these terms exactly. This glossary defines framework-level vocabulary, which applies universally; each adopting project names its own tiers, entities, and stages on top.
