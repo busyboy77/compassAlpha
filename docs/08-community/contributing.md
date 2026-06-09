@@ -43,7 +43,7 @@ This is the part to read carefully. By submitting a contribution to CompassAlpha
 This is a lightweight inbound-license note, not a separate legal contract; submitting a contribution constitutes your agreement to it.
 
 !!! note "Trademarks are not licensed"
-    "CompassAlpha" and "gradus" are trademarks of gradus / Nasir Mahmood Rajput. Nothing here grants rights to those names or logos. You may, of course, refer to the framework by name to describe origin or interoperability.
+    "CompassAlpha" and "gradus" are trademarks of gradus. Nothing here grants rights to those names or logos. You may, of course, refer to the framework by name to describe origin or interoperability.
 
 ## See also
 

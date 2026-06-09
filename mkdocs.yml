@@ -1,7 +1,7 @@
 site_name: CompassAlpha
 site_description: Source-available federation framework for multi-tier AI-agent collaboration · the reference framework for GitAI
 site_url: https://busyboy77.github.io/compassAlpha/
-site_author: Nasir Mahmood Rajput
+site_author: gradus
 
 repo_name: busyboy77/compassAlpha
 repo_url: https://github.com/busyboy77/compassAlpha
@@ -12,7 +12,7 @@ exclude_docs: |
   assets/*.md
 
 copyright: |
-  &copy; 2026 Nasir Mahmood Rajput · CompassAlpha — a framework, not a tool · <a href="https://gradus.pk">gradus.pk</a>
+  &copy; 2026 CompassAlpha — a framework, not a tool · <a href="https://gradus.pk">gradus.pk</a>
 
 theme:
   name: material

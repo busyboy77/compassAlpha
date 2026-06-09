@@ -10,7 +10,7 @@ CompassAlpha is young, and its governance reflects that. During the v0.x line, d
 
 ## Final authority during v0.x
 
-**Nasir Mahmood Rajput** is the founder of CompassAlpha and holds **final say** over its direction during the v0.x line (a BDFL-style arrangement). Where a decision cannot be resolved by consensus, the founder decides. This keeps the early framework coherent while its core doctrine is still settling.
+The **founder** of CompassAlpha holds **final say** over its direction during the v0.x line (a BDFL-style arrangement). Where a decision cannot be resolved by consensus, the founder decides. This keeps the early framework coherent while its core doctrine is still settling.
 
 ## How doctrine changes flow
 

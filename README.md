@@ -120,7 +120,7 @@ Track progress in the [Roadmap](docs/08-community/roadmap.md) and [Changelog](do
 
 ## Acknowledgments
 
-CompassAlpha is built and maintained by **Nasir Mahmood Rajput** (founder) with a series of Claude (Anthropic) sessions, and published source-available by [gradus.pk](https://gradus.pk).
+CompassAlpha is built and maintained at **[gradus.pk](https://gradus.pk)** with a series of Claude (Anthropic) sessions, and published source-available.
 
 **With recognition of the categories CompassAlpha builds upon:** GitOps (DevOps community), AIOps (operations + AI community). CompassAlpha is **GitAI** — the same pattern applied to AI agent federations.
 

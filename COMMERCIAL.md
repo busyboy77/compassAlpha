@@ -43,7 +43,7 @@ CompassAlpha v0.1 carries a **Change Date of 2030-06-09**. On that date (or the 
 
 ## Trademarks
 
-"CompassAlpha" and "gradus" are trademarks of gradus / Nasir Mahmood Rajput. The license grants no rights to these names or logos; trademark use is governed separately. You may, of course, refer to the framework by name to describe interoperability or origin.
+"CompassAlpha" and "gradus" are trademarks of gradus. The license grants no rights to these names or logos; trademark use is governed separately. You may, of course, refer to the framework by name to describe interoperability or origin.
 
 ---
 

@@ -161,7 +161,7 @@ A cohort team releases only against the **current chartered Compass**; any cross
 
 ## The "provisioned as a constitution" property
 
-Nasir's exact framing: *"toggles with every possible detail provisioned as a constitution."*
+The founder's framing: *"toggles with every possible detail provisioned as a constitution."*
 
 What this means concretely:
 

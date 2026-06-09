@@ -64,7 +64,7 @@ Each turn = a batch of related pages. Status grids per session. Persistence law 
 
 ## Founder role
 
-**Nasir Mahmood Rajput** is the founder. Per the framework's own §18, the founder is RELAY + lost+found ONLY — plus the UX exception (§18.4): de facto Chief UX Officer. Founder taste matters for portal navigation, page voice, and examples chosen.
+Per the framework's own §18, the **founder** is RELAY + lost+found ONLY — plus the UX exception (§18.4): de facto Chief UX Officer. Founder taste matters for portal navigation, page voice, and examples chosen.
 
 ## Continue the portal build
 
