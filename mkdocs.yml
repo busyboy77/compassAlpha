@@ -7,6 +7,10 @@ repo_name: busyboy77/compassAlpha
 repo_url: https://github.com/busyboy77/compassAlpha
 edit_uri: edit/main/docs/
 
+# Never publish authoring scaffolding that happens to live under docs/assets/.
+exclude_docs: |
+  assets/*.md
+
 copyright: |
   &copy; 2026 Nasir Mahmood Rajput · CompassAlpha — a framework, not a tool · <a href="https://gradus.pk">gradus.pk</a>
 
