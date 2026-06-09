@@ -1,3 +1,7 @@
+---
+description: "The 7 invariant axioms of CompassAlpha: tier grammar, firewall, persistence law, hard-labour rule, bus protocol, provenance law, and git foundations."
+---
+
 # 01 · Axioms (the INVARIANT constitution)
 
 > The 7 foundational rules. **Cannot be modified without forking the framework.** Read once, internalize forever.

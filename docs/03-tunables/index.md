@@ -1,3 +1,7 @@
+---
+description: "Tunables: the CompassAlpha customization surface — concurrency, context, AI model choice, work-granularity lanes, stages, and the 5-axis trade-off."
+---
+
 # 03 · Tunables (the customization surface)
 
 > *Everything in [Axioms](../01-axioms/index.md) and [Guardrails](../02-guardrails/index.md) is `[INVARIANT]`. Everything here is `[TUNABLE]` — the dials a project sets when it adopts CompassAlpha.*

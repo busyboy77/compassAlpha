@@ -1,3 +1,7 @@
+---
+description: "Guardrails: how CompassAlpha prevents the four multi-agent AI pathologies — context pollution, hallucination drift, role confusion, and trust erosion."
+---
+
 # 02 · Guardrails (what the framework prevents)
 
 > Where the [Axioms](../01-axioms/index.md) state the invariant *rules*, **Guardrails** document the concrete *failure modes* those rules exist to prevent — what each failure looks like, how the framework detects it, and how to recover when it happens anyway.

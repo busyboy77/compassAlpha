@@ -1,3 +1,7 @@
+---
+description: "Getting started with CompassAlpha: prerequisites, greenfield setup, and brownfield onboarding for adopting the multi-agent AI framework."
+---
+
 # 05 · Getting Started
 
 > *Two ways in: stand up a fresh federation (greenfield) or adopt CompassAlpha over a codebase you already have (brownfield). Both land in the same place — a federation whose state of record is git.*

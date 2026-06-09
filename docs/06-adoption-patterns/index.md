@@ -1,3 +1,7 @@
+---
+description: "Worked examples of CompassAlpha in action: doctrine cycles, Phase 3 dispatches, polish and surgical lanes, and Day-2 QA / Ops / incident response."
+---
+
 # 06 · Adoption Patterns (worked examples)
 
 > *Theory tells you the rules. Worked examples show you the rhythm. This section walks a single fictional project through every lane the framework supports.*

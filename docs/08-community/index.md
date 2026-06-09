@@ -1,3 +1,7 @@
+---
+description: "CompassAlpha community: contributing, code of conduct, roadmap, changelog, and governance for the source-available GitAI framework."
+---
+
 # 08 · Community
 
 > How to participate in CompassAlpha — contributing, conduct, governance, and where the framework is headed.

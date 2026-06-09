@@ -1,3 +1,7 @@
+---
+description: "CompassAlpha technical reference: the framework spec, stamp templates, status grids, hierarchy tags, flush triggers, stage grammar, and CLI conventions."
+---
+
 # 07 · Reference
 
 > *The lookup layer. When you know what you need and want the exact spec, definition, or template — start here.*

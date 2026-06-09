@@ -1,3 +1,7 @@
+---
+description: "Toggles: when each CompassAlpha parameter may change — at runtime, a cycle boundary, or the project lifecycle — plus the operating presets."
+---
+
 # 04 · Toggles
 
 > *Live switches — which parameters can flip, and **when**: at runtime, only at a cycle boundary, or effectively never.*

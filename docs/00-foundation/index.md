@@ -1,3 +1,7 @@
+---
+description: "Start here: what CompassAlpha is, the four-layer constitutional model, the GitAI category, and the glossary for the multi-agent AI framework."
+---
+
 # 00 · Foundation
 
 > Orientation layer. Read these four pages once to understand what CompassAlpha **is** and how it's framed. About 15 minutes.
