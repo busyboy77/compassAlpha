@@ -1,0 +1,67 @@
+name: Deploy CompassAlpha docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}-mkdocs
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install MkDocs Material
+        run: |
+          pip install --upgrade pip
+          pip install mkdocs-material
+
+      - name: Build site
+        # --strict intentionally omitted while the portal is built incrementally:
+        # mkdocs.yml nav lists the full ~50-page roadmap, but pages land turn by
+        # turn. MkDocs drops not-yet-authored nav entries with a warning, so the
+        # live nav shows only real pages. Restore --strict once every nav-
+        # referenced page exists (portal complete) to re-enable link validation.
+        run: mkdocs build --verbose
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

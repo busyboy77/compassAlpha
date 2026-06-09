@@ -1,0 +1,27 @@
+# MkDocs build output
+/site/
+
+# Python / mkdocs tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.cache/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# Claude Code session-local state (keep project files, not session scratch)
+.claude/settings.local.json
+
+# Internal author-only source materials — NOT part of the public framework.
+# Kept locally for the founder; never committed.
+_internal/

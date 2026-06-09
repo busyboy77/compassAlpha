@@ -1,0 +1,172 @@
+site_name: CompassAlpha
+site_description: Open-source federation framework for multi-tier AI-agent collaboration · the reference framework for GitAI
+site_url: https://busyboy77.github.io/compassAlpha/
+site_author: Nasir Mahmood Rajput
+
+repo_name: busyboy77/compassAlpha
+repo_url: https://github.com/busyboy77/compassAlpha
+edit_uri: edit/main/docs/
+
+copyright: |
+  &copy; 2026 Nasir Mahmood Rajput · a <a href="https://gradus.pk">gradus</a> project · CompassAlpha is a framework, not a tool
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - abbr
+
+plugins:
+  - search:
+      separator: '[\s​\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+nav:
+  - Home: index.md
+  - Foundation:
+    - 00-foundation/index.md
+    - Framework, not tool: 00-foundation/framework-not-tool.md
+    - Constitution: 00-foundation/constitution.md
+    - GitAI category: 00-foundation/gitai-category.md
+    - Glossary: 00-foundation/glossary.md
+  - Axioms (Invariant):
+    - 01-axioms/index.md
+    - Tier grammar: 01-axioms/tier-grammar.md
+    - Firewall: 01-axioms/firewall.md
+    - Persistence law: 01-axioms/persistence-law.md
+    - Hard labour rule: 01-axioms/hard-labour-rule.md
+    - Bus protocol: 01-axioms/bus-protocol.md
+    - Provenance law: 01-axioms/provenance-law.md
+    - Git foundations: 01-axioms/git-foundations.md
+  - Guardrails:
+    - 02-guardrails/index.md
+    - Pollution containment: 02-guardrails/pollution-containment.md
+    - Hallucination defense: 02-guardrails/hallucination-defense.md
+    - Stale snapshot detection: 02-guardrails/stale-snapshot-detection.md
+    - Failure modes: 02-guardrails/failure-modes.md
+    - Brief completeness: 02-guardrails/brief-completeness.md
+    - Single-live-writer: 02-guardrails/single-live-writer.md
+  - Tunables:
+    - 03-tunables/index.md
+    - Overview (5-axis trade-off): 03-tunables/tunables-overview.md
+    - Axis declarations: 03-tunables/axis-declarations.md
+    - Concurrency modes: 03-tunables/concurrency-modes.md
+    - Context patterns: 03-tunables/context-patterns.md
+    - AI model choices: 03-tunables/ai-model-choices.md
+    - Work granularity lanes: 03-tunables/work-granularity-lanes.md
+    - Stage taxonomies: 03-tunables/stage-taxonomies.md
+    - Invariants + Toolings + Agents: 03-tunables/invariants-toolings-agents.md
+    - Memory policy: 03-tunables/memory-policy.md
+    - Full parameter matrix: 03-tunables/full-parameter-matrix.md
+  - Toggles:
+    - 04-toggles/index.md
+    - Toggle reference: 04-toggles/toggle-reference.md
+    - Runtime toggles: 04-toggles/runtime-toggles.md
+    - Cycle toggles: 04-toggles/cycle-toggles.md
+    - Project-lifecycle toggles: 04-toggles/project-lifecycle-toggles.md
+    - Operating presets: 04-toggles/operating-presets.md
+  - Getting Started:
+    - 05-getting-started/index.md
+    - Prerequisites: 05-getting-started/prerequisites.md
+    - Greenfield setup: 05-getting-started/greenfield-setup.md
+    - Brownfield onboarding: 05-getting-started/brownfield-onboarding.md
+    - First boot: 05-getting-started/first-boot.md
+    - First dispatch: 05-getting-started/first-dispatch.md
+    - Cutover from pre-AI project: 05-getting-started/cutover-from-pre-AI-project.md
+  - Adoption Patterns:
+    - 06-adoption-patterns/index.md
+    - Sample doctrine cycle: 06-adoption-patterns/sample-doctrine-cycle.md
+    - Sample Phase 3 dispatch: 06-adoption-patterns/sample-phase3.md
+    - Sample Polish Lane: 06-adoption-patterns/sample-polish.md
+    - Sample Surgical Strike: 06-adoption-patterns/sample-surgical.md
+    - Sample Day 2 QA: 06-adoption-patterns/sample-day2-qa.md
+    - Sample Day 2 Ops: 06-adoption-patterns/sample-day2-ops.md
+    - Sample Incident Response: 06-adoption-patterns/sample-incident-response.md
+  - Reference:
+    - 07-reference/index.md
+    - Full manifesto: 07-reference/manifesto-full.md
+    - Stamp templates: 07-reference/templates/index.md
+    - Status grids: 07-reference/status-grids.md
+    - Hierarchy tags: 07-reference/hierarchy-tags.md
+    - Flush triggers T0-T7: 07-reference/flush-triggers.md
+    - Stage grammar: 07-reference/stage-grammar.md
+    - CLI conventions: 07-reference/cli-conventions.md
+  - Community:
+    - 08-community/index.md
+    - Contributing: 08-community/contributing.md
+    - Code of conduct: 08-community/code-of-conduct.md
+    - Roadmap: 08-community/roadmap.md
+    - Changelog: 08-community/changelog.md
+    - Governance: 08-community/governance.md
+
+extra:
+  generator: true
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/busyboy77/compassAlpha
