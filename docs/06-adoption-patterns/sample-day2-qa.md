@@ -43,7 +43,7 @@ When the Build axis closed `reporting-v1.3`, its status grid `NEXT` line said *"
   [[FROM-BUILD-MENTOR1→TO-QA-MENTOR1 · reporting-v1.3 · release-handoff]]
   reporting-v1.3 closed (scheduled exports). EXIT_REPORT attached. Request release verification.
   Known build leftovers: retry-on-email-failure (untested path), cron-cadence (§9, out of scope).
-  [[/FROM-QA-MENTOR1→...]]
+  [[/FROM-BUILD-MENTOR1→TO-QA-MENTOR1]]
 ```
 
 ### PLAN — QA Lead dispatches a QA Engineer

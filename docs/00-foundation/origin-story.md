@@ -43,7 +43,7 @@ Those four perspectives are four named **pathologies** — and they recur in *ev
 3. **Role confusion** — tiers do work that isn't theirs (the mentor doing labour, the doer making decisions).
 4. **Trust erosion** — claims diverge from disk, and the human can no longer delegate.
 
-CompassAlpha's entire defensive structure exists to prevent these four. They are catalogued as the framework's [guardrails](framework-not-tool.md), and each [axiom](../01-axioms/index.md) is traceable to the pathology it was carved to stop. If you weaken an axiom, you re-introduce its pathology — every time.
+CompassAlpha's entire defensive structure exists to prevent these four. They are catalogued as the framework's [guardrails](../02-guardrails/index.md), and each [axiom](../01-axioms/index.md) is traceable to the pathology it was carved to stop. If you weaken an axiom, you re-introduce its pathology — every time.
 
 ---
 

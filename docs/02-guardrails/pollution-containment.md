@@ -10,6 +10,8 @@
 
 [![Codebase coherence — one canonical definition called by every component, versus duplicated divergent copies](../assets/codebase-coherence.svg)](../assets/codebase-coherence.svg)
 
+<small>*The same containment principle at the code level: one canonical definition per concept — not a divergent copy per tier or team.*</small>
+
 ## The failure it prevents
 
 In a federation, every tier carries a finite, precious context budget. Pollution is the slow leak of that budget into detail the tier has no business holding:

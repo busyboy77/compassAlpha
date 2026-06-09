@@ -60,7 +60,7 @@ Tuned per cycle. These are the performance/cost dials that move the [5-axis trad
 | Doer effort level | high | high / normal / low | Intelligence ↑ vs Cost ↑ |
 | Doer context scope | wide / liberal | wide / narrow / declared-only | Intelligence ↑ vs Cost ↑ |
 | Doer model tier | top-tier | top / mid / low | Intelligence ↑ vs Cost ↑ |
-| Mentor model tiers | top-tier | top / mid | Intelligence ↑ vs Cost ↓ |
+| Mentor model tiers | top-tier | top / mid | Intelligence ↑ vs Cost ↑ |
 | Provider strategy | single provider | single / mixed | Consistency ↑ vs Integration cost ↑ |
 | Provenance verification | strict (cite-by-substrate) | strict / spot-check / trusted | Correctness ↑ vs Speed ↑ |
 | Memory accumulation rate | liberal | liberal / conservative | Learning ↑ vs Noise ↑ |

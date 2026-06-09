@@ -32,7 +32,7 @@ These rules **cannot be modified** without forking the framework. They define wh
 | 6 | **Provenance law** | Cite by substrate. Never trust institutional memory unverified. | [→](../01-axioms/provenance-law.md) |
 | 7 | **Git foundations** | `GIT_INDEX_FILE` + worktree + `commit-tree` per session. | [→](../01-axioms/git-foundations.md) |
 
-Each axiom defends against one or more of the [four pathologies](framework-not-tool.md). If you try to weaken any axiom, you'll re-introduce the pathology it was preventing.
+Each axiom defends against one or more of the [four pathologies](../02-guardrails/index.md). If you try to weaken any axiom, you'll re-introduce the pathology it was preventing.
 
 !!! warning "What 'invariant' means in practice"
     If you find yourself wanting to violate an axiom for short-term gain, **stop**. The axiom exists because that shortcut has been tried before and the consequence was costly. The framework's value is exactly in these constraints. If your project genuinely needs to violate an axiom, you're using the wrong framework — fork it or adopt a different one.

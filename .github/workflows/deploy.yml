@@ -51,6 +51,12 @@ jobs:
         # on to fail the build on broken links, bad refs, or nav drift.
         run: mkdocs build --strict --verbose
 
+      - name: Content safety gate
+        # Blocks the deploy if any forbidden/internal/leaked content reached the
+        # built site (PMF/business residue, internal meta text, founder name on a
+        # page, "open source" misuse, host paths). Nothing publishes if this fails.
+        run: bash scripts/content-safety.sh site
+
       - name: Setup Pages
         uses: actions/configure-pages@v6
 

@@ -33,7 +33,7 @@ git -C /path/to/reviewer-state commit -m "..."
 git -C /path/to/reviewer-state push origin main:main
 ```
 
-The pollution firewall is **structural by directory separation**: because the reviewer-state repo is outside the substrate working tree, a reviewer commit *cannot* land on a substrate branch. See [locality](../01-axioms/firewall.md).
+The pollution firewall is **structural by directory separation**: because the reviewer-state repo is outside the substrate working tree, a reviewer commit *cannot* land on a substrate branch. See [the firewall](../01-axioms/firewall.md).
 
 ---
 

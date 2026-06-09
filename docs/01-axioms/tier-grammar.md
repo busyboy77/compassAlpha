@@ -34,7 +34,7 @@ Each tier's context stays clean for its appropriate work granularity. `[INVARIAN
 
 ## Why the names are tunable
 
-Different projects want different tier role names. A project might choose family-tree metaphors for one axis and explorer metaphors for another. Other projects might use:
+Different projects want different tier role names, drawn from whatever metaphor fits their culture. For example:
 
 - **Director / Manager / Engineer** (corporate)
 - **Architect / Lead / Builder** (construction)
