@@ -34,6 +34,21 @@ For any shared concept, the doctrine provisions — and the federation enforces 
 
 The outcome: **one canonical way per concept — no duplicated implementations, no vague "close enough" calls to the same idea.** Uniformity by construction.
 
+## From a 60K vision to bit-level — how a Compass is grown
+
+This is the part you can demo. You supply the **60K ideology in plain words** — the vision, the principles, why the domain matters — and the federation **elaborates it downward**, one altitude at a time, each layer bound to the one above:
+
+[![From vision to coherent code — the doctrine axis grows the Compass layer by layer, the dev axis builds it into the product, and the two alternate each cycle](../assets/compass-cycle.svg)](../assets/compass-cycle.svg)
+
+- **60K — Ideology** — your stated vision: principles, named theses, why this domain matters.
+- **30K — Mechanics** — state machines, lifecycles, primitives, and invariants, derived from the ideology.
+- **10K — Schema, routes, engine, events** — the concrete implementation surface.
+- **Grass-root** — bit-level grounding and evidence, all the way down to code.
+
+Two axes drive this, alternating cycle after cycle (the [charter posture](constitution.md) switch): the **doctrine axis** grows the Compass — turning the vision into the layered, coherent doctrine — and the **dev axis** then builds that Compass into **coherent code**, the product.
+
+Because every altitude derives from the single doctrine, the same concept is rendered **once, in its true essence, at every layer** — no gap between what was envisioned and what was built, and no duplicated implementations of the same idea. *Say the vision; get a coherent codebase grown from it.*
+
 ## How CompassAlpha enforces it
 
 1. **Doctrine is the single source of truth.** One [Charter](constitution.md#the-doctrine-substrate-charter-compasses-and-axis-annexes); Primitives are the canonical contracts; Compasses localize each component's design *under* that Charter. There is exactly one place each concept is defined.

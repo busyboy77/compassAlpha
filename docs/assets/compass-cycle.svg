@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 660" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="aP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a5b9c"/></marker>
+    <marker id="aB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+  </defs>
+
+  <rect width="1500" height="660" fill="#fafaf8"/>
+
+  <!-- header -->
+  <rect x="0" y="0" width="1500" height="96" fill="#1f2a36"/>
+  <text x="750" y="42" text-anchor="middle" font-size="29" font-weight="700" fill="#ffffff">From Vision to Coherent Code</text>
+  <text x="750" y="70" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">The doctrine axis grows the Compass — layer on layer — and the dev axis builds it into the product. The two alternate, cycle after cycle.</text>
+
+  <!-- the cycle arc: product (right) loops back to doctrine (left) for the next cycle -->
+  <path d="M 1270 224 C 1300 150, 760 126, 430 126 C 320 126, 250 138, 232 168" fill="none" stroke="#b89425" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#aC)"/>
+  <text x="760" y="120" text-anchor="middle" font-size="12" fill="#8a6d0a" font-style="italic">next cycle — founder walk, re-open doctrine, regrow the Compass, re-lock, then build</text>
+
+  <!-- 60K vision in -->
+  <rect x="64" y="206" width="244" height="96" rx="12" fill="#fef8e7" stroke="#b89425" stroke-width="2"/>
+  <text x="186" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#5a4d20">Your 60K vision</text>
+  <text x="186" y="262" text-anchor="middle" font-size="12" fill="#7a6a30">stated in plain words</text>
+  <text x="186" y="284" text-anchor="middle" font-size="11" fill="#9a8740" font-style="italic">“build a site with components A, B, C …”</text>
+  <line x1="308" y1="240" x2="378" y2="222" stroke="#7a5b9c" stroke-width="2.2" marker-end="url(#aP)"/>
+  <text x="343" y="214" text-anchor="middle" font-size="10.5" fill="#7a5b9c" font-style="italic">speak it</text>
+
+  <!-- DOCTRINE AXIS — the Compass grown layer on layer -->
+  <text x="558" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#5a3a7a">DOCTRINE AXIS — grows the Compass</text>
+  <text x="558" y="193" text-anchor="middle" font-size="11" fill="#7a5b9c" font-style="italic">Charter UNLOCKED · the coherent doctrine</text>
+
+  <!-- four altitude slabs; each derives from the one above (deepening tint) -->
+  <g>
+    <rect x="388" y="206" width="340" height="58" rx="8" fill="#f1e8f8" stroke="#7a5b9c" stroke-width="1.6"/>
+    <rect x="400" y="222" width="58" height="26" rx="5" fill="#7a5b9c"/><text x="429" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">60K</text>
+    <text x="470" y="231" font-size="12.5" font-weight="600" fill="#3a2a4a">Ideology</text>
+    <text x="470" y="248" font-size="10.5" fill="#5a4a6a">vision · principles · why this domain matters</text>
+
+    <rect x="388" y="278" width="340" height="58" rx="8" fill="#e6d6f1" stroke="#7a5b9c" stroke-width="1.6"/>
+    <rect x="400" y="294" width="58" height="26" rx="5" fill="#7a5b9c"/><text x="429" y="312" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">30K</text>
+    <text x="470" y="303" font-size="12.5" font-weight="600" fill="#3a2a4a">Mechanics</text>
+    <text x="470" y="320" font-size="10.5" fill="#5a4a6a">state machines · lifecycles · primitives · invariants</text>
+
+    <rect x="388" y="350" width="340" height="58" rx="8" fill="#dcc6ec" stroke="#7a5b9c" stroke-width="1.6"/>
+    <rect x="400" y="366" width="58" height="26" rx="5" fill="#7a5b9c"/><text x="429" y="384" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">10K</text>
+    <text x="470" y="375" font-size="12.5" font-weight="600" fill="#3a2a4a">Schema</text>
+    <text x="470" y="392" font-size="10.5" fill="#5a4a6a">schema · routes · engine · events</text>
+
+    <rect x="388" y="422" width="340" height="58" rx="8" fill="#d0b6e4" stroke="#7a5b9c" stroke-width="1.6"/>
+    <rect x="400" y="438" width="58" height="26" rx="5" fill="#5a3a7a"/><text x="429" y="456" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">G-R</text>
+    <text x="470" y="447" font-size="12.5" font-weight="600" fill="#3a2a4a">Grass-root</text>
+    <text x="470" y="464" font-size="10.5" fill="#5a4a6a">bit-level grounding · evidence — down to code</text>
+  </g>
+  <!-- derive chevrons between slabs -->
+  <polygon points="378,270 388,270 383,278" fill="#7a5b9c"/>
+  <polygon points="378,342 388,342 383,350" fill="#7a5b9c"/>
+  <polygon points="378,414 388,414 383,422" fill="#7a5b9c"/>
+  <text x="356" y="346" text-anchor="middle" font-size="10.5" fill="#7a5b9c" font-style="italic" transform="rotate(-90 356 346)">each layer derives from the one above</text>
+
+  <!-- DEV AXIS builds the coherent code -> product -->
+  <text x="905" y="316" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">DEV AXIS — builds the coherent code</text>
+  <text x="905" y="334" text-anchor="middle" font-size="11" fill="#3b6ea5" font-style="italic">Charter LOCKED</text>
+  <line x1="734" y1="360" x2="1066" y2="360" stroke="#3b6ea5" stroke-width="2.6" marker-end="url(#aB)"/>
+
+  <rect x="1072" y="276" width="356" height="150" rx="12" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="1250" y="306" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4a7a">Coherent product</text>
+  <text x="1250" y="328" text-anchor="middle" font-size="11.5" fill="#1a4a7a">one concept, one implementation</text>
+  <text x="1250" y="346" text-anchor="middle" font-size="11" fill="#2a5a8a">no duplication · no drift · every layer in its true essence</text>
+  <!-- uniform-grid motif = coherence -->
+  <g fill="#3b6ea5">
+    <rect x="1190" y="366" width="14" height="14" rx="2"/><rect x="1212" y="366" width="14" height="14" rx="2"/><rect x="1234" y="366" width="14" height="14" rx="2"/><rect x="1256" y="366" width="14" height="14" rx="2"/><rect x="1278" y="366" width="14" height="14" rx="2"/>
+    <rect x="1190" y="388" width="14" height="14" rx="2"/><rect x="1212" y="388" width="14" height="14" rx="2"/><rect x="1234" y="388" width="14" height="14" rx="2"/><rect x="1256" y="388" width="14" height="14" rx="2"/><rect x="1278" y="388" width="14" height="14" rx="2"/>
+  </g>
+
+  <!-- caption -->
+  <rect x="64" y="512" width="1372" height="56" rx="8" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="535" text-anchor="middle" font-size="13" fill="#5a4d20">Say the vision; the federation grows the Compass — 60K, then 30K, 10K, and grass-root, each layer true to the one above — then the dev axis builds it into coherent code.</text>
+  <text x="750" y="555" text-anchor="middle" font-size="12.5" fill="#7a6a30" font-style="italic">Doctrine and dev alternate; every cycle deepens the codebase without deviation or duplication.</text>
+
+  <!-- footer brand mark -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="684" y="600" width="6" height="8" rx="1"/><rect x="693" y="594" width="6" height="14" rx="1"/><rect x="702" y="588" width="6" height="20" rx="1"/></g>
+    <text x="716" y="608" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>
