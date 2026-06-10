@@ -1,86 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 880" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 900" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
   <defs>
     <marker id="aP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a5b9c"/></marker>
     <marker id="aB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
     <marker id="aT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f8a8a"/></marker>
     <marker id="aGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="aGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a8a8a"/></marker>
   </defs>
-  <rect width="1600" height="880" fill="#fafaf8"/>
+  <rect width="1500" height="900" fill="#fafaf8"/>
 
-  <rect x="0" y="0" width="1600" height="96" fill="#1f2a36"/>
-  <text x="800" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">From Vision to Coherent Code — an AI federation's continuous cycle</text>
-  <text x="800" y="70" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Doctrine and dev are two lobes of one loop, meeting at AI-enforced coherence. The AI grows the Compass, then builds the code — cycle after cycle. The founder only relays.</text>
+  <rect x="0" y="0" width="1500" height="96" fill="#1f2a36"/>
+  <text x="750" y="42" text-anchor="middle" font-size="27" font-weight="700" fill="#ffffff">An AI federation, cycling around one coherent core</text>
+  <text x="750" y="70" text-anchor="middle" font-size="13" fill="#a0aabb" font-style="italic">The founder states the vision; AI tiers grow the Compass and build the code — and every axis (doctrine, dev, or any you add) builds against the same AI-enforced coherence.</text>
 
-  <!-- FOUNDER (thin human relay) feeding the vision in -->
-  <rect x="40" y="150" width="180" height="116" rx="12" fill="#fef8e7" stroke="#b89425" stroke-width="2"/>
-  <circle cx="130" cy="188" r="12" fill="#b89425"/><ellipse cx="130" cy="214" rx="17" ry="14" fill="#b89425"/>
-  <text x="130" y="242" text-anchor="middle" font-size="13" font-weight="700" fill="#5a4d20">Founder</text>
-  <text x="130" y="259" text-anchor="middle" font-size="10" fill="#9a8740" font-style="italic">60K vision · relays only</text>
-  <path d="M150 266 C 170 330, 210 360, 300 392" fill="none" stroke="#b89425" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aGold)"/>
-  <text x="214" y="320" font-size="10" fill="#8a6d0a" font-style="italic">speak it</text>
+  <!-- FOUNDER (thin relay) -->
+  <rect x="40" y="126" width="186" height="84" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="2"/>
+  <circle cx="78" cy="160" r="11" fill="#b89425"/><ellipse cx="78" cy="184" rx="15" ry="13" fill="#b89425"/>
+  <text x="150" y="158" text-anchor="middle" font-size="13" font-weight="700" fill="#5a4d20">Founder</text>
+  <text x="150" y="176" text-anchor="middle" font-size="9.5" fill="#7a6a30">states the 60K vision</text>
+  <text x="150" y="190" text-anchor="middle" font-size="9.5" fill="#9a8740" font-style="italic">relays only · low load</text>
+  <path d="M180 210 C 210 280, 230 330, 290 392" fill="none" stroke="#b89425" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aGold)"/>
+  <text x="206" y="300" font-size="9.5" fill="#8a6d0a" font-style="italic">speak it</text>
 
-  <!-- ============ THE INFINITY LOOP ============ -->
-  <!-- left lobe = DOCTRINE, right lobe = DEV; they meet at the coherence hub -->
-  <ellipse cx="560" cy="490" rx="258" ry="212" fill="#faf6fd" stroke="#7a5b9c" stroke-width="7"/>
-  <ellipse cx="1040" cy="490" rx="258" ry="212" fill="#f4f8fc" stroke="#3b6ea5" stroke-width="7"/>
+  <!-- cycle ring: the two default axes alternate around the core -->
+  <ellipse cx="750" cy="472" rx="404" ry="150" fill="none" stroke="#b89425" stroke-width="2.2" stroke-dasharray="8 6"/>
+  <polygon points="812,322 832,328 814,338" fill="#b89425"/>
+  <text x="750" y="312" text-anchor="middle" font-size="11" fill="#8a6d0a" font-style="italic">doctrine hands to dev · re-lock, then build</text>
+  <polygon points="688,622 668,616 686,606" fill="#b89425"/>
+  <text x="750" y="648" text-anchor="middle" font-size="11" fill="#8a6d0a" font-style="italic">dev hands back · founder walk, then regrow</text>
 
-  <!-- flow direction along the loop (continuous) -->
-  <path d="M 560 278 C 690 278, 760 360, 792 452" fill="none" stroke="#7a5b9c" stroke-width="3" marker-end="url(#aP)" opacity="0.9"/>
-  <text x="650" y="300" text-anchor="middle" font-size="11" fill="#5a3a7a" font-style="italic">grow the Compass</text>
-  <path d="M 808 528 C 840 620, 910 702, 1040 702" fill="none" stroke="#3b6ea5" stroke-width="3" marker-end="url(#aB)" opacity="0.9"/>
-  <text x="980" y="724" text-anchor="middle" font-size="11" fill="#1a4a7a" font-style="italic">build the coherent code</text>
-  <path d="M 1040 278 C 910 278, 840 360, 808 452" fill="none" stroke="#3b6ea5" stroke-width="3" marker-end="url(#aB)" opacity="0.55" stroke-dasharray="6 4"/>
-  <text x="1015" y="300" text-anchor="middle" font-size="10.5" fill="#3b6ea5" font-style="italic">re-lock, then build</text>
-  <path d="M 560 702 C 430 702, 360 620, 332 528" fill="none" stroke="#7a5b9c" stroke-width="3" marker-end="url(#aP)" opacity="0.55" stroke-dasharray="6 4"/>
-  <text x="470" y="724" text-anchor="middle" font-size="10.5" fill="#7a5b9c" font-style="italic">founder walk, then regrow</text>
+  <!-- CORE: AI-enforced coherence -->
+  <rect x="612" y="398" width="276" height="150" rx="16" fill="#d8efef" stroke="#1f8a8a" stroke-width="2.6"/>
+  <text x="750" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#0f6a6a">AI-enforced coherence</text>
+  <text x="750" y="452" text-anchor="middle" font-size="10.5" fill="#0f6a6a">Charter · Invariants · Primitives</text>
+  <line x1="640" y1="464" x2="860" y2="464" stroke="#1f8a8a" opacity="0.35"/>
+  <text x="750" y="486" text-anchor="middle" font-size="10.5" fill="#0f6a6a">the one doctrine the AI</text>
+  <text x="750" y="502" text-anchor="middle" font-size="10.5" fill="#0f6a6a">builds against — every step</text>
+  <text x="750" y="524" text-anchor="middle" font-size="9.5" fill="#0f6a6a" font-style="italic">Mentor-1 · Mentor-2 · Doer</text>
 
-  <!-- LEFT lobe content: DOCTRINE -->
-  <text x="540" y="356" text-anchor="middle" font-size="14" font-weight="700" fill="#5a3a7a">DOCTRINE AXIS</text>
-  <text x="540" y="373" text-anchor="middle" font-size="11" fill="#7a5b9c">AI grows the Compass · Charter UNLOCKED</text>
-  <g>
-    <rect x="452" y="392" width="200" height="30" rx="6" fill="#f1e8f8" stroke="#7a5b9c" stroke-width="1.4"/><text x="552" y="412" text-anchor="middle" font-size="11.5" fill="#3a2a4a">60K · Ideology</text>
-    <rect x="452" y="428" width="200" height="30" rx="6" fill="#e6d6f1" stroke="#7a5b9c" stroke-width="1.4"/><text x="552" y="448" text-anchor="middle" font-size="11.5" fill="#3a2a4a">30K · Mechanics</text>
-    <rect x="452" y="464" width="200" height="30" rx="6" fill="#dcc6ec" stroke="#7a5b9c" stroke-width="1.4"/><text x="552" y="484" text-anchor="middle" font-size="11.5" fill="#3a2a4a">10K · Schema</text>
-    <rect x="452" y="500" width="200" height="30" rx="6" fill="#d0b6e4" stroke="#7a5b9c" stroke-width="1.4"/><text x="552" y="520" text-anchor="middle" font-size="11.5" fill="#3a2a4a">G-R · Grass-root</text>
-  </g>
-  <text x="552" y="556" text-anchor="middle" font-size="10" fill="#7a5b9c" font-style="italic">AI tiers: Mentor-1 · Mentor-2 · Doer</text>
+  <!-- DOCTRINE AXIS (left) -->
+  <rect x="150" y="400" width="300" height="146" rx="12" fill="#f1e8f8" stroke="#7a5b9c" stroke-width="2"/>
+  <text x="300" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#5a3a7a">DOCTRINE AXIS</text>
+  <text x="300" y="452" text-anchor="middle" font-size="11" fill="#3a2a4a">AI grows the Compass</text>
+  <text x="300" y="472" text-anchor="middle" font-size="11" fill="#5a4a6a">60K · 30K · 10K · grass-root</text>
+  <text x="300" y="498" text-anchor="middle" font-size="10.5" fill="#7a5b9c">Charter UNLOCKED</text>
+  <text x="300" y="520" text-anchor="middle" font-size="9.5" fill="#7a5b9c" font-style="italic">Mentor-1 · Mentor-2 · Doer</text>
+  <line x1="450" y1="472" x2="606" y2="472" stroke="#7a5b9c" stroke-width="2.2" marker-end="url(#aT)"/>
+  <text x="528" y="463" text-anchor="middle" font-size="9.5" fill="#5a3a7a" font-style="italic">the Compass</text>
 
-  <!-- RIGHT lobe content: DEV -> coherent product -->
-  <text x="1060" y="356" text-anchor="middle" font-size="14" font-weight="700" fill="#1a4a7a">DEV AXIS</text>
-  <text x="1060" y="373" text-anchor="middle" font-size="11" fill="#3b6ea5">AI builds coherent code · Charter LOCKED</text>
-  <g>
-    <rect x="958" y="394" width="92" height="92" rx="7" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.4"/>
-    <path d="M958,401 a7,7 0 0 1 7,-7 h78 a7,7 0 0 1 7,7 v13 h-92 z" fill="#3b6ea5"/><text x="1004" y="409" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Auth</text>
-    <rect x="970" y="424" width="68" height="6" rx="2" fill="#cfe0f0"/><rect x="970" y="438" width="68" height="6" rx="2" fill="#cfe0f0"/><rect x="970" y="452" width="46" height="6" rx="2" fill="#cfe0f0"/>
-    <rect x="1062" y="394" width="92" height="92" rx="7" fill="#ffffff" stroke="#7a5b9c" stroke-width="1.4"/>
-    <path d="M1062,401 a7,7 0 0 1 7,-7 h78 a7,7 0 0 1 7,7 v13 h-92 z" fill="#7a5b9c"/><text x="1108" y="409" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Billing</text>
-    <rect x="1074" y="424" width="68" height="6" rx="2" fill="#e3d6ef"/><rect x="1074" y="438" width="68" height="6" rx="2" fill="#e3d6ef"/><rect x="1074" y="452" width="46" height="6" rx="2" fill="#e3d6ef"/>
-    <rect x="1166" y="394" width="92" height="92" rx="7" fill="#ffffff" stroke="#4a8a4a" stroke-width="1.4"/>
-    <path d="M1166,401 a7,7 0 0 1 7,-7 h78 a7,7 0 0 1 7,7 v13 h-92 z" fill="#4a8a4a"/><text x="1212" y="409" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">Reporting</text>
-    <rect x="1178" y="424" width="68" height="6" rx="2" fill="#d3e6d3"/><rect x="1178" y="438" width="68" height="6" rx="2" fill="#d3e6d3"/><rect x="1178" y="452" width="46" height="6" rx="2" fill="#d3e6d3"/>
-  </g>
-  <text x="1060" y="506" text-anchor="middle" font-size="10.5" fill="#1a4a7a">every module, one canonical way</text>
-  <text x="1060" y="524" text-anchor="middle" font-size="10.5" fill="#2a5a8a">no duplication · no drift</text>
-  <text x="1060" y="556" text-anchor="middle" font-size="10" fill="#3b6ea5" font-style="italic">AI tiers: Mentor-1 · Mentor-2 · Doer</text>
+  <!-- DEV AXIS (right) -->
+  <rect x="1050" y="400" width="300" height="146" rx="12" fill="#f4f8fc" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="1200" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#1a4a7a">DEV AXIS</text>
+  <text x="1200" y="452" text-anchor="middle" font-size="11" fill="#1a3a5a">AI builds the coherent code</text>
+  <text x="1200" y="472" text-anchor="middle" font-size="11" fill="#2a5a8a">one coherent product · no drift</text>
+  <text x="1200" y="498" text-anchor="middle" font-size="10.5" fill="#3b6ea5">Charter LOCKED</text>
+  <text x="1200" y="520" text-anchor="middle" font-size="9.5" fill="#3b6ea5" font-style="italic">Mentor-1 · Mentor-2 · Doer</text>
+  <line x1="894" y1="472" x2="1044" y2="472" stroke="#3b6ea5" stroke-width="2.2" marker-end="url(#aB)"/>
+  <text x="969" y="463" text-anchor="middle" font-size="9.5" fill="#1a4a7a" font-style="italic">built against it</text>
 
-  <!-- CENTER HUB: AI-enforced coherence (the crossover both lobes pass through) -->
-  <rect x="686" y="416" width="228" height="148" rx="14" fill="#d8efef" stroke="#1f8a8a" stroke-width="2.4"/>
-  <text x="800" y="446" text-anchor="middle" font-size="13" font-weight="700" fill="#0f6a6a">AI-enforced</text>
-  <text x="800" y="465" text-anchor="middle" font-size="13" font-weight="700" fill="#0f6a6a">codebase coherence</text>
-  <line x1="708" y1="478" x2="892" y2="478" stroke="#1f8a8a" opacity="0.4"/>
-  <text x="800" y="498" text-anchor="middle" font-size="10" fill="#0f6a6a">the one doctrine the AI</text>
-  <text x="800" y="513" text-anchor="middle" font-size="10" fill="#0f6a6a">builds against at every step</text>
-  <text x="800" y="534" text-anchor="middle" font-size="9.5" fill="#0f6a6a" font-style="italic">Charter · Invariants · Primitives</text>
-  <text x="800" y="551" text-anchor="middle" font-size="9.5" fill="#0f6a6a" font-style="italic">cite-by-substrate</text>
+  <!-- AXIS-N (extensible, bottom) -->
+  <rect x="540" y="700" width="420" height="92" rx="12" fill="#f4f4f4" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="750" y="728" text-anchor="middle" font-size="13" font-weight="700" fill="#5a5a5a">+ AXIS-N — plug-and-play</text>
+  <text x="750" y="749" text-anchor="middle" font-size="10.5" fill="#6a6a6a">Ops · QA · Audit · review · pen-test · …</text>
+  <text x="750" y="769" text-anchor="middle" font-size="10" fill="#7a7a7a" font-style="italic">DECOUPLED · add any number, any time — each builds against the same core</text>
+  <line x1="750" y1="700" x2="750" y2="552" stroke="#8a8a8a" stroke-width="1.8" stroke-dasharray="4 4" marker-end="url(#aGrey)"/>
 
   <!-- WHY AI -->
-  <rect x="40" y="752" width="1518" height="64" rx="8" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
-  <text x="800" y="777" text-anchor="middle" font-size="13" font-weight="600" fill="#5a4d20">Why an AI federation: it carries the vision faithfully through every altitude, enforces one canonical way at each step, and sustains coherence as the codebase grows —</text>
-  <text x="800" y="797" text-anchor="middle" font-size="12.5" fill="#7a6a30">depth, speed, and consistency a single human pass can't hold. The founder stays a low-load relay; the AI does the building, coherently.</text>
+  <rect x="40" y="812" width="1420" height="58" rx="8" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="836" text-anchor="middle" font-size="12.5" font-weight="600" fill="#5a4d20">Why an AI federation: it carries the vision through every altitude, enforces one canonical way at each step, and holds coherence across every axis you add —</text>
+  <text x="750" y="855" text-anchor="middle" font-size="12" fill="#7a6a30">depth, speed, and consistency a single human pass can't. The founder relays; the AI grows the doctrine and builds the code.</text>
 
   <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
-    <g fill="#5a7aa0"><rect x="734" y="838" width="6" height="8" rx="1"/><rect x="743" y="832" width="6" height="14" rx="1"/><rect x="752" y="826" width="6" height="20" rx="1"/></g>
-    <text x="766" y="846" font-size="13" fill="#5a7aa0">gradus.pk</text>
+    <g fill="#5a7aa0"><rect x="690" y="884" width="6" height="8" rx="1"/><rect x="699" y="878" width="6" height="14" rx="1"/><rect x="708" y="872" width="6" height="20" rx="1"/></g>
+    <text x="722" y="892" font-size="12.5" fill="#5a7aa0">gradus.pk</text>
   </a>
 </svg>

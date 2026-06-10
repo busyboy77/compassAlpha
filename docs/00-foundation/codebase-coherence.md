@@ -38,14 +38,14 @@ The outcome: **one canonical way per concept — no duplicated implementations, 
 
 This is the part you can demo. You supply the **60K ideology in plain words** — the vision, the principles, why the domain matters — and the federation **elaborates it downward**, one altitude at a time, each layer bound to the one above:
 
-[![From vision to coherent code — a tiered AI federation grows the Compass layer by layer on the doctrine axis and builds it into coherent code on the dev axis, with AI-enforced coherence binding both](../assets/compass-cycle.svg)](../assets/compass-cycle.svg)
+[![An AI federation cycling around one coherent core — the doctrine and dev axes (and any further axis you add) all build against the same AI-enforced coherence](../assets/compass-cycle.svg)](../assets/compass-cycle.svg)
 
 - **60K — Ideology** — your stated vision: principles, named theses, why this domain matters.
 - **30K — Mechanics** — state machines, lifecycles, primitives, and invariants, derived from the ideology.
 - **10K — Schema, routes, engine, events** — the concrete implementation surface.
 - **Grass-root** — bit-level grounding and evidence, all the way down to code.
 
-Both axes are run by the **AI tier-federation** (Mentor-1 · Mentor-2 · Doer), alternating cycle after cycle (the [charter posture](constitution.md) switch): the **doctrine axis** grows the Compass — turning the vision into the layered, coherent doctrine — and the **dev axis** then builds that Compass into **coherent code**, the product. At every step the AI builds against the one doctrine, so **coherence is enforced, not hoped for** — which is exactly the case for letting an AI federation do the work.
+Both axes are run by the **AI tier-federation** (Mentor-1 · Mentor-2 · Doer), alternating cycle after cycle (the [charter posture](constitution.md) switch): the **doctrine axis** grows the Compass — turning the vision into the layered, coherent doctrine — and the **dev axis** then builds that Compass into **coherent code**, the product. At every step the AI builds against the one doctrine, so **coherence is enforced, not hoped for** — which is exactly the case for letting an AI federation do the work. Doctrine and dev are the two default axes, but the same coherence core anchors **any further axis you declare** (ops, QA, audit, and beyond) — the model is not limited to two.
 
 Because every altitude derives from the single doctrine, the same concept is rendered **once, in its true essence, at every layer** — no gap between what was envisioned and what was built, and no duplicated implementations of the same idea. *Say the vision; get a coherent codebase grown from it.*
 
