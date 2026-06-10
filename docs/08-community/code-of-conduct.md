@@ -1,3 +1,7 @@
+---
+description: "The behavior we expect of everyone who takes part in the CompassAlpha community."
+---
+
 # Code of Conduct
 
 > The behavior we expect of everyone who takes part in the CompassAlpha community.

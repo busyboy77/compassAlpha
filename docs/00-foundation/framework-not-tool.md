@@ -33,32 +33,13 @@ When you adopt CompassAlpha, **you don't install anything**. You bring your own 
 
 ### What a tool would mean
 
-If CompassAlpha were a tool, it would be something like:
-- `compassalpha init` to scaffold a project
-- `compassalpha dispatch` to launch a tier session
-- A daemon running on your host
-- A web UI showing dashboards
-- An API your code calls into
-
-It would **constrain you** to using its specific implementation.
+Were CompassAlpha a tool, it would arrive as machinery: a `compassalpha init` that scaffolds a project, a `compassalpha dispatch` that launches a tier session, a daemon humming on your host, a web UI showing dashboards, an API your code calls into. Each of those is a decision made *for* you — and together they would constrain you to one specific implementation of the idea.
 
 ### What a framework means
 
-CompassAlpha specifies:
-- **WHAT** roles exist (Mentor-1 / Mentor-2 / Doer)
-- **WHAT** the bus protocol looks like (inbox-in-destination)
-- **WHAT** the persistence law requires (flush-before-disclose)
-- **WHAT** the firewall enforces (confined-not-banished)
-- **WHAT** the trade-off space looks like (speed × intelligence × cost × risk × predictability)
+CompassAlpha takes the opposite shape. It specifies the *what*, not the *how*: which roles exist (Mentor-1 / Mentor-2 / Doer), what the bus protocol looks like (inbox-in-destination), what the persistence law requires (flush-before-disclose), what the firewall enforces (confined-not-banished), and what the trade-off space looks like (speed × intelligence × cost × risk × predictability).
 
-It does **NOT** specify:
-- Which AI agent you use
-- Which git host you push to
-- Which language your codebase is in
-- Which monitoring stack you run
-- Which CI/CD pipeline you have
-
-You bring all those. The framework governs how the AI tiers you assemble interact — using your existing infrastructure as the substrate.
+What it deliberately leaves open is everything that should stay yours — which AI agent you use, which git host you push to, which language your codebase is written in, which monitoring stack and CI/CD pipeline you already run. You bring all of those. The framework governs how the AI tiers you assemble interact, using your existing infrastructure as the substrate.
 
 ---
 
@@ -80,7 +61,7 @@ git remote add origin git@github.com:you/MyProjectReviewer.git
 # That's it. No CompassAlpha binary, no daemon, no API key.
 ```
 
-What you've done: created a folder, added some markdown files, started an AI agent. The framework's value is in **what those markdown files contain** — the protocols, conventions, and rules — not in any executable.
+All you have done is create a folder, add some markdown files, and start an AI agent. The framework's value lives entirely in **what those markdown files contain** — the protocols, conventions, and rules — not in any executable.
 
 ---
 
@@ -101,15 +82,15 @@ In each case, the **specification is the value**. Implementations come from many
 
 ## "But I want a tool"
 
-If you specifically want a runnable tool that implements CompassAlpha for you, that's a valid market gap — but it's NOT what CompassAlpha is. Such a tool would be a downstream project — one of many possible implementations of CompassAlpha (the way nginx and Apache are both implementations of HTTP).
+There is a real appetite for a runnable tool that implements CompassAlpha for you — and that's a genuine market gap, just not the thing CompassAlpha itself is. Such a tool would be a downstream project: one of many possible implementations of the specification, the way nginx and Apache are both implementations of HTTP.
 
-CompassAlpha-as-a-tool is `[OPEN]` for the community to build, post v1.0 stable release. The framework itself stays specification-only.
+That space is `[OPEN]` for the community to build, post v1.0 stable release. The framework itself stays specification-only — which is exactly what lets many such tools exist without any of them owning the standard.
 
 ---
 
 ## Why the framework path is the right choice
 
-If CompassAlpha were a tool, it would have these problems:
+The framework form is not a hedge against shipping a tool — it is the form the problem actually demands. Cast as a tool, CompassAlpha would inherit a familiar set of failures:
 
 !!! danger "Why tool-form fails for this category"
 
@@ -119,7 +100,7 @@ If CompassAlpha were a tool, it would have these problems:
     - **Adopters can't tune deeply** — they get whatever the tool exposes; not the full surface.
     - **Audit/security review is harder** — tools are black boxes; protocols are inspectable.
 
-By staying framework-form, CompassAlpha avoids all of these. Adopters tune as deeply as they need; switch AI agents freely; switch hosts freely; build their own tooling on top.
+Staying framework-form sidesteps every one of these. Adopters tune as deeply as they need, switch AI agents freely, switch hosts freely, and build their own tooling on top — none of which a bundled tool could grant them.
 
 ---
 
@@ -152,19 +133,19 @@ If you're considering adoption:
     - Expect to **integrate** more than to **deploy** (CompassAlpha works alongside your existing CI/CD, not instead of it).
     - Expect adoption to take **weeks to months** for a brownfield project (see [Brownfield Onboarding](../05-getting-started/brownfield-onboarding.md)).
 
-If you wanted plug-and-play, **this is not for you yet** — wait for the community tooling layer (`[OPEN]` post-v1.0).
+If what you want is plug-and-play, the community tooling layer is where that will live (`[OPEN]` post-v1.0) — the framework is the foundation it will be built on.
 
 ---
 
 ## Why this framing was hard-won
 
-Framework-form is explicitly **chosen** over tool-form for these reasons:
+Framework-form was chosen over tool-form deliberately, and three forces made the choice unavoidable:
 
-1. **Multi-vendor AI portability** — a federation might run on one AI agent today and another tomorrow. A protocol survives vendor changes; a tool doesn't.
-2. **Host portability** — a federation may move hosts mid-cycle. A tool would require reinstallation; a protocol just requires path updates.
-3. **Tier specialization** — each project's tiers carry domain-specific names and responsibilities that wouldn't fit cleanly into a one-size-fits-all tool. Specialization-by-stamping is what makes the framework work.
+1. **Multi-vendor AI portability** — a federation might run on one AI agent today and another tomorrow. A protocol survives vendor changes; a tool does not.
+2. **Host portability** — a federation may move hosts mid-cycle. A tool would demand reinstallation; a protocol asks only for path updates.
+3. **Tier specialization** — each project's tiers carry domain-specific names and responsibilities that no one-size-fits-all tool could hold cleanly. Specialization-by-stamping is what makes the framework work.
 
-CompassAlpha exports these decisions to other projects.
+These are the decisions CompassAlpha makes once, and then exports to every project that adopts it.
 
 ---
 

@@ -1,3 +1,7 @@
+---
+description: "Confined, not banished. Each tier writes only inside its own folder. Mentors track only their own granularity."
+---
+
 # Axiom 2: Firewall + State-Tracking Scope
 
 > *Confined, not banished. Each tier writes only inside its own folder. Mentors track only their own granularity.*

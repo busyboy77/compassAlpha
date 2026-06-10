@@ -1,3 +1,7 @@
+---
+description: "Named bundles of settings. Pick one to start, then tune from there — and avoid the anti-presets."
+---
+
 # Operating Presets
 
 > *Named bundles of settings. Pick one to start, then tune from there — and avoid the anti-presets.*
@@ -88,4 +92,4 @@ Presets and tuning operate on the **performance / cost / risk surface only.** Th
 
 ---
 
-*You've reached the end of the Toggles section. Continue to [Getting started](../05-getting-started/index.md) to adopt a preset and stand up your first cycle.*
+## Next: [Getting started →](../05-getting-started/index.md)

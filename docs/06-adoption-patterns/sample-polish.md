@@ -1,3 +1,7 @@
+---
+description: "Slim ceremony for a bounded change. One module, one feature, a single checkpoint. Mentor-2 runs slim — no CP1/CP2/CP3 — and the change ships in hours, not days."
+---
+
 # Sample Polish Lane — invoice status filter
 
 > *Slim ceremony for a bounded change. One module, one feature, a single checkpoint. Mentor-2 runs slim — no CP1/CP2/CP3 — and the change ships in hours, not days.*

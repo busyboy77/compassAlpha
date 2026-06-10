@@ -1,3 +1,7 @@
+---
+description: "What carries forward across cycles, how fast it accumulates, and what (if anything) ever retires."
+---
+
 # Memory Policy
 
 > *What carries forward across cycles, how fast it accumulates, and what (if anything) ever retires.*

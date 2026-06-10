@@ -1,3 +1,7 @@
+---
+description: "Each tier sees only what it owns. Context bleed across tiers is contained by the firewall, not patched after the fact."
+---
+
 # Pollution Containment
 
 > *Each tier sees only what it owns. Context bleed across tiers is contained by the firewall, not patched after the fact.*

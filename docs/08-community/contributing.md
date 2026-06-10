@@ -1,3 +1,7 @@
+---
+description: "How to help shape CompassAlpha — and how your contributions are licensed."
+---
+
 # Contributing
 
 > How to help shape CompassAlpha — and how your contributions are licensed.

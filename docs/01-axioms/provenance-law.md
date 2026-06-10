@@ -1,3 +1,7 @@
+---
+description: "Cite by substrate. Every load-bearing claim is traceable to substrate, not to memory or LEDGER recall."
+---
+
 # Axiom 6: Provenance Law
 
 > *Cite by substrate. Every load-bearing claim is traceable to substrate, not to memory or LEDGER recall.*

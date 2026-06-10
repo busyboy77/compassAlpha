@@ -1,3 +1,7 @@
+---
+description: "No placeholders cross the relay boundary. The dispatching tier knows its dispatch's actuals; the doer does not — so the dispatcher fills them, every one, with concrete values."
+---
+
 # Brief Completeness
 
 > *No placeholders cross the relay boundary. The dispatching tier knows its dispatch's actuals; the doer does not — so the dispatcher fills them, every one, with concrete values.*

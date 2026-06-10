@@ -1,3 +1,7 @@
+---
+description: "A DECOUPLED Day-2 axis with two cadences: per-release (continuous) and per-incident. This walkthrough deploys the QA-approved scheduled-exports release and stands up the monitoring that will catch the next problem."
+---
+
 # Sample Day-2 Ops axis — deploying and watching the release
 
 > *A DECOUPLED Day-2 axis with two cadences: per-release (continuous) and per-incident. This walkthrough deploys the QA-approved scheduled-exports release and stands up the monitoring that will catch the next problem.*

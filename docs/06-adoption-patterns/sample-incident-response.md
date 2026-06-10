@@ -1,3 +1,7 @@
+---
+description: "The fastest lane in the framework. Reduced ceremony, founder post-fact (not gating), and a narrow time-bounded exception to flush-before-disclose for the immediate response window. The postmortem reflushes everything."
+---
+
 # Sample Incident Response — Billing webhook outage at 02:00
 
 > *The fastest lane in the framework. Reduced ceremony, founder post-fact (not gating), and a narrow time-bounded exception to flush-before-disclose for the immediate response window. The postmortem reflushes everything.*
@@ -124,4 +128,4 @@ This is the last of the worked examples. Together they walk the full spectrum: f
 
 ---
 
-*Return to the [Adoption Patterns overview](index.md), or revisit the [Work Granularity Lanes](../03-tunables/work-granularity-lanes.md) that these examples make concrete.*
+## Next: [Reference →](../07-reference/index.md)

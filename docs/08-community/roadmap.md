@@ -1,3 +1,7 @@
+---
+description: "The path from v0.1 DRAFT to a stable v1.0."
+---
+
 # Roadmap
 
 > The path from v0.1 DRAFT to a stable v1.0.

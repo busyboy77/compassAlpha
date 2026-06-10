@@ -1,3 +1,7 @@
+---
+description: "A concrete, revertible, step-by-step walkthrough for a team moving an existing project under CompassAlpha. Worked end-to-end with Auth / Billing / Reporting as the example modules. No big bang — every step can be undone."
+---
+
 # Cutover from a Pre-AI Project
 
 > *A concrete, revertible, step-by-step walkthrough for a team moving an existing project under CompassAlpha. Worked end-to-end with Auth / Billing / Reporting as the example modules. No big bang — every step can be undone.*
@@ -179,4 +183,4 @@ Even here, "retire" means *stop using*, not *delete* — your old CI config and 
 
 ---
 
-## ← Back to [Getting Started index](index.md) · Next section: [06 Adoption Patterns →](../06-adoption-patterns/index.md)
+## Next: [Adoption Patterns →](../06-adoption-patterns/index.md)

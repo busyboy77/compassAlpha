@@ -1,3 +1,7 @@
+---
+description: "Memory is a hypothesis, never a fact. Every load-bearing claim is verified against substrate before it is acted on."
+---
+
 # Hallucination Defense
 
 > *Memory is a hypothesis, never a fact. Every load-bearing claim is verified against substrate before it is acted on.*

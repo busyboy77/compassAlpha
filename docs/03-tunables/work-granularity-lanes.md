@@ -1,3 +1,7 @@
+---
+description: "Match the ceremony to the size of the change. The same federation handles a Charter amendment and a \"make this button blue\" — at very different weights."
+---
+
 # Work Granularity Lanes — the four lanes
 
 > *Match the ceremony to the size of the change. The same federation handles a Charter amendment and a "make this button blue" — at very different weights.*

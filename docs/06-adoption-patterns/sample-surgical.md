@@ -1,3 +1,7 @@
+---
+description: "The lightest lane. Single-concern, ideally single-file. Mentor-2 is skipped entirely; Mentor-1 briefs a fresh Doer directly; the Doer makes one commit and dies. Minutes, not hours."
+---
+
 # Sample Surgical Strike — fix the login button colour
 
 > *The lightest lane. Single-concern, ideally single-file. Mentor-2 is skipped entirely; Mentor-1 briefs a fresh Doer directly; the Doer makes one commit and dies. Minutes, not hours.*

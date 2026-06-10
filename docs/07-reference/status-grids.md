@@ -1,3 +1,7 @@
+---
+description: "Three levels of grid. Print Tier 1 at every session start and end; the heavier grids at seams."
+---
+
 # Status grids
 
 > *Three levels of grid. Print Tier 1 at every session start and end; the heavier grids at seams.*

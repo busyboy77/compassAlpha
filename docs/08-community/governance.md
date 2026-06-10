@@ -1,3 +1,7 @@
+---
+description: "Who decides what in CompassAlpha, and how those decisions are made."
+---
+
 # Governance
 
 > Who decides what in CompassAlpha, and how those decisions are made.

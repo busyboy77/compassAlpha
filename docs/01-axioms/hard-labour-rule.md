@@ -1,3 +1,7 @@
+---
+description: "Mentors never touch substrate. The Doer is the only tier that does labour."
+---
+
 # Axiom 4: Hard Labour Rule
 
 > *Mentors never touch substrate. The Doer is the only tier that does labour.*

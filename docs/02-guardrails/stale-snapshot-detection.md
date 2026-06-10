@@ -1,3 +1,7 @@
+---
+description: "A snapshot is true at the instant it is taken and false a moment later. \"Current WIP\" in a mentor's notes means \"as of the last tagged return\" — never \"live.\""
+---
+
 # Stale-Snapshot Detection
 
 > *A snapshot is true at the instant it is taken and false a moment later. "Current WIP" in a mentor's notes means "as of the last tagged return" — never "live."*

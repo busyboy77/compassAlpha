@@ -1,3 +1,7 @@
+---
+description: "One writer holds jurisdiction at a time. Everyone else fetches before they push, and no one ever clobbers the live writer."
+---
+
 # Single-Live-Writer
 
 > *One writer holds jurisdiction at a time. Everyone else fetches before they push, and no one ever clobbers the live writer.*

@@ -1,3 +1,7 @@
+---
+description: "What changed in CompassAlpha, version by version. Newest first."
+---
+
 # Changelog
 
 > What changed in CompassAlpha, version by version. Newest first.

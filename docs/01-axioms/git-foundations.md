@@ -1,3 +1,7 @@
+---
+description: "GIT_INDEX_FILE per session + worktree route-around + commit-tree pattern. The technical triad that makes parallel-doer safe by construction."
+---
+
 # Axiom 7: Git Foundations
 
 > *`GIT_INDEX_FILE` per session + worktree route-around + `commit-tree` pattern. The technical triad that makes parallel-doer safe by construction.*
@@ -221,4 +225,4 @@ Stamp these onto every tier's boot file. Verify at T0. Audit at session start.
 
 ---
 
-## ← Back to [Axioms index](index.md) · Next section: [02 Guardrails →](../02-guardrails/index.md)
+## Next: [Guardrails →](../02-guardrails/index.md)

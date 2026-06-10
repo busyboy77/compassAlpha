@@ -1,3 +1,7 @@
+---
+description: "Adopting CompassAlpha over a codebase you already have. A pre-existing project walks in with code, culture, obligations, and tooling — but no doctrine layer. This is the phased journey for extracting one."
+---
+
 # Brownfield Onboarding
 
 > *Adopting CompassAlpha over a codebase you already have. A pre-existing project walks in with code, culture, obligations, and tooling — but no doctrine layer. This is the phased journey for extracting one.*

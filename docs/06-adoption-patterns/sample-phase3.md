@@ -1,3 +1,7 @@
+---
+description: "The build axis at full ceremony. A single-module substantive change runs CP1 → CP2 → CP3, freezes, gate-checks, and tags. This walkthrough adds scheduled exports to Northwind's Reporting module."
+---
+
 # Sample Phase 3 dispatch — scheduled exports for Reporting
 
 > *The build axis at full ceremony. A single-module substantive change runs CP1 → CP2 → CP3, freezes, gate-checks, and tags. This walkthrough adds scheduled exports to Northwind's Reporting module.*

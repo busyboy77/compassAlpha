@@ -14,7 +14,7 @@ This repository is the framework's **canonical home**. It is independent of any 
 README.md              ← GitHub landing page · project overview
 mkdocs.yml             ← MkDocs Material config · builds the portal
 CLAUDE.md              ← THIS FILE · session orientation
-LICENSE                ← Apache License 2.0
+LICENSE                ← Business Source License 1.1 (source-available)
 .github/workflows/     ← GH Pages auto-deploy
 docs/                  ← portal content (the public-facing framework)
   index.md             ← portal home

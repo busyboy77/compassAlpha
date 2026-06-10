@@ -1,3 +1,7 @@
+---
+description: "The three enrichment surfaces. Each compounds intelligence against cost across cycles. Start lean; add when a pattern repeats."
+---
+
 # Invariants, Toolings & Specialised Agents
 
 > *The three enrichment surfaces. Each compounds intelligence against cost across cycles. Start lean; add when a pattern repeats.*

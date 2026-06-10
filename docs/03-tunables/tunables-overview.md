@@ -1,3 +1,7 @@
+---
+description: "Five axes in tension. No combination optimizes all of them. Tuning is choosing where to give."
+---
+
 # Tunables Overview — the 5-axis trade-off
 
 > *Five axes in tension. No combination optimizes all of them. Tuning is choosing where to give.*

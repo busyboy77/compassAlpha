@@ -1,3 +1,7 @@
+---
+description: "Three tiers per axis. Mentor-1 / Mentor-2 / Doer. Names tunable; positions invariant."
+---
+
 # Axiom 1: Tier Grammar
 
 > *Three tiers per axis. Mentor-1 / Mentor-2 / Doer. Names tunable; positions invariant.*

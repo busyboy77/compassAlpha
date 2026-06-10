@@ -1,3 +1,7 @@
+---
+description: "What may change only at a cycle boundary — including the charter posture state machine, the most consequential switch in the framework."
+---
+
 # Cycle Toggles
 
 > *What may change only at a cycle boundary — including the charter posture state machine, the most consequential switch in the framework.*

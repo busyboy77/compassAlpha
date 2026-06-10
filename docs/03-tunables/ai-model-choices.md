@@ -1,3 +1,7 @@
+---
+description: "Different tiers can run on different models. The per-tier intelligence-vs-cost dial."
+---
+
 # AI Model Choices per Tier
 
 > *Different tiers can run on different models. The per-tier intelligence-vs-cost dial.*

@@ -1,3 +1,7 @@
+---
+description: "Every block carries its sender→recipient edge. A tier ingests a block only if the edge terminates at it."
+---
+
 # Hierarchy tags
 
 > *Every block carries its sender→recipient edge. A tier ingests a block only if the edge terminates at it.*

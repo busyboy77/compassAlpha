@@ -1,3 +1,7 @@
+---
+description: "Every tunable in one place — five categories, with defaults and ranges. The reference table for the whole customization surface."
+---
+
 # Full Parameter Matrix
 
 > *Every tunable in one place — five categories, with defaults and ranges. The reference table for the whole customization surface.*

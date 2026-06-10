@@ -1,3 +1,7 @@
+---
+description: "Copy-pasteable boilerplate for the load-bearing artifacts. Fill the <placeholders>, then commit."
+---
+
 # Stamp templates
 
 > *Copy-pasteable boilerplate for the load-bearing artifacts. Fill the `<placeholders>`, then commit.*

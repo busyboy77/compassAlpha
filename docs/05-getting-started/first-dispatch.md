@@ -1,3 +1,7 @@
+---
+description: "Running your first piece of work end-to-end through the bus: Mentor-1 → Mentor-2 → Doer and back. Flush-before-disclose at every step, gates at every seam. This is the federation's heartbeat."
+---
+
 # First Dispatch
 
 > *Running your first piece of work end-to-end through the bus: Mentor-1 → Mentor-2 → Doer and back. Flush-before-disclose at every step, gates at every seam. This is the federation's heartbeat.*

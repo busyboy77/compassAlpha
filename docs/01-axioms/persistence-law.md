@@ -1,3 +1,7 @@
+---
+description: "Flush before disclose. State on disk + at origin BEFORE it is discussed with the founder. Nothing load-bearing in chat."
+---
+
 # Axiom 3: Persistence Law (the trust anchor)
 
 > *Flush before disclose. State on disk + at origin BEFORE it is discussed with the founder. Nothing load-bearing in chat.*

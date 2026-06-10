@@ -1,3 +1,7 @@
+---
+description: "The exhaustive list of moments when state must go to disk + origin. If you hit a trigger, you flush before you do anything else."
+---
+
 # Flush triggers T0–T7
 
 > *The exhaustive list of moments when state must go to disk + origin. If you hit a trigger, you flush before you do anything else.*

@@ -1,3 +1,7 @@
+---
+description: "Inbox-in-destination-folder. Sender writes file into recipient's inbox; commits + pushes; pings founder. Recipient pulls + reads its own inbox."
+---
+
 # Axiom 5: Bus Protocol
 
 > *Inbox-in-destination-folder. Sender writes file into recipient's inbox; commits + pushes; pings founder. Recipient pulls + reads its own inbox.*

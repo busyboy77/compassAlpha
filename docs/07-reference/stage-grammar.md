@@ -1,3 +1,7 @@
+---
+description: "The consolidated stage vocabulary across every axis and lane. Look up a marker; find what it means and where it's used."
+---
+
 # Stage grammar
 
 > *The consolidated stage vocabulary across every axis and lane. Look up a marker; find what it means and where it's used.*

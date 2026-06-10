@@ -1,3 +1,7 @@
+---
+description: "The lifecycle vocabulary each axis and lane uses. The words your status grids speak."
+---
+
 # Stage Taxonomies
 
 > *The lifecycle vocabulary each axis and lane uses. The words your status grids speak.*

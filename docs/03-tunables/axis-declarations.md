@@ -1,3 +1,7 @@
+---
+description: "An axis is a thin declaration: four fields + three tier roles. Everything substantive is inherited from the master."
+---
+
 # Axis Declarations — defining your own work axes
 
 > *An axis is a thin declaration: four fields + three tier roles. Everything substantive is inherited from the master.*

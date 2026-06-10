@@ -1,3 +1,7 @@
+---
+description: "The heaviest lane. Cross-module structural work runs the full doctrine axis: S1 → S5, freeze, gate-check, sub-bump, ratify. This walkthrough produces a 60K/30K/10K compass for Northwind's Billing module."
+---
+
 # Sample Doctrine Cycle — authoring the Billing compass
 
 > *The heaviest lane. Cross-module structural work runs the full doctrine axis: S1 → S5, freeze, gate-check, sub-bump, ratify. This walkthrough produces a 60K/30K/10K compass for Northwind's Billing module.*

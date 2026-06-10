@@ -1,3 +1,7 @@
+---
+description: "Four things, no more: a git host, an AI agent harness, a founder/relay, and a state-of-record remote. If you have these, you can run a CompassAlpha federation."
+---
+
 # Prerequisites
 
 > *Four things, no more: a git host, an AI agent harness, a founder/relay, and a state-of-record remote. If you have these, you can run a CompassAlpha federation.*

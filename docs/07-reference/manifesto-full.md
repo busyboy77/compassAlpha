@@ -1,3 +1,7 @@
+---
+description: "The complete CompassAlpha doctrine, consolidated by theme in one searchable page."
+---
+
 # Full framework reference
 
 > *The complete CompassAlpha doctrine, consolidated by theme in one searchable page.*

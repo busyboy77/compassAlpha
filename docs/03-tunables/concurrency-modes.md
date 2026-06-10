@@ -1,3 +1,7 @@
+---
+description: "How many dispatches run at once. The primary speed-vs-risk dial."
+---
+
 # Concurrency Modes
 
 > *How many dispatches run at once. The primary speed-vs-risk dial.*

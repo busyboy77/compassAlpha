@@ -1,3 +1,7 @@
+---
+description: "The set-once decisions. Made at adoption, effectively permanent — changing one is a migration, not a flip."
+---
+
 # Project-Lifecycle Toggles
 
 > *The set-once decisions. Made at adoption, effectively permanent — changing one is a migration, not a flip.*

@@ -1,3 +1,7 @@
+---
+description: "A DECOUPLED Day-2 axis. QA runs parallel to Build and Doctrine, never competing for Charter state, on its own cadence: per-build-closure plus periodic full regression."
+---
+
 # Sample Day-2 QA axis — verifying the scheduled-exports release
 
 > *A DECOUPLED Day-2 axis. QA runs parallel to Build and Doctrine, never competing for Charter state, on its own cadence: per-build-closure plus periodic full regression.*

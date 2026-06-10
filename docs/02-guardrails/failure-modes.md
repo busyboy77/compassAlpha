@@ -1,3 +1,7 @@
+---
+description: "The known ways a federation breaks — each with its symptom and its recovery. If a failure isn't on this list, it's a gap in the framework, not just bad luck."
+---
+
 # Failure Modes + Recovery
 
 > *The known ways a federation breaks — each with its symptom and its recovery. If a failure isn't on this list, it's a gap in the framework, not just bad luck.*

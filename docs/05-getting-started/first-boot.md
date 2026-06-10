@@ -1,3 +1,7 @@
+---
+description: "Booting your first tier session: the T0 boot-integrity ritual, the reading order, and the START status grid that doubles as a drift check. Every session, every tier, every time — this is how a CompassAlpha session begins."
+---
+
 # First Boot
 
 > *Booting your first tier session: the T0 boot-integrity ritual, the reading order, and the START status grid that doubles as a drift check. Every session, every tier, every time — this is how a CompassAlpha session begins.*

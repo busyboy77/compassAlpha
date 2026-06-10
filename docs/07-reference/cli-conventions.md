@@ -1,3 +1,7 @@
+---
+description: "The git/shell discipline for operating a federation. Two planes, an isolated index, one worktree per slice, refspec push — every time."
+---
+
 # CLI conventions
 
 > *The git/shell discipline for operating a federation. Two planes, an isolated index, one worktree per slice, refspec push — every time.*
@@ -159,4 +163,4 @@ git -C /path/to/substrate ls-remote --tags origin <tag>   # confirm it's there
 
 ---
 
-## Back to: [Reference index →](index.md)
+## Next: [Community →](../08-community/index.md)

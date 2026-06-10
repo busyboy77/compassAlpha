@@ -1,3 +1,7 @@
+---
+description: "How much context each tier carries, across what scope, and for how long. The pollution-vs-continuity surface."
+---
+
 # Context Patterns
 
 > *How much context each tier carries, across what scope, and for how long. The pollution-vs-continuity surface.*

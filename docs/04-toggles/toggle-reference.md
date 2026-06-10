@@ -1,3 +1,7 @@
+---
+description: "The complete switch list. Every changeable setting, classified by **when** it may flip."
+---
+
 # Toggle Reference
 
 > *The complete switch list. Every changeable setting, classified by **when** it may flip.*

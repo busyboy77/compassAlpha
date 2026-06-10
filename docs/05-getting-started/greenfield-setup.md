@@ -1,3 +1,7 @@
+---
+description: "Stand up a fresh federation from nothing: two repos, stamped tiers, a first axis declaration, a bus inbox layout. About a day of setup, then you're ready for [first boot](first-boot.md)."
+---
+
 # Greenfield Setup
 
 > *Stand up a fresh federation from nothing: two repos, stamped tiers, a first axis declaration, a bus inbox layout. About a day of setup, then you're ready for [first boot](first-boot.md).*
