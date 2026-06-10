@@ -20,12 +20,14 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
 === "First time here?"
 
-    Read these four pages in order (~15 minutes):
+    Read the Foundation pages in order (~20 minutes):
 
     1. [**Framework, not tool**](00-foundation/framework-not-tool.md) — what CompassAlpha is, what it's not
-    2. [**The Constitution**](00-foundation/constitution.md) — the 7 invariant axioms
-    3. [**Glossary**](00-foundation/glossary.md) — the canonical vocabulary
-    4. [**GitAI category**](00-foundation/gitai-category.md) — where CompassAlpha fits in the AI/git landscape
+    2. [**Origin — why GitAI**](00-foundation/origin-story.md) — the failures that forced the framework
+    3. [**The Constitution**](00-foundation/constitution.md) — the 7 invariant axioms + the doctrine model
+    4. [**Codebase coherence**](00-foundation/codebase-coherence.md) — the core point of distinction
+    5. [**GitAI category**](00-foundation/gitai-category.md) — where CompassAlpha fits
+    6. [**Glossary**](00-foundation/glossary.md) — the canonical vocabulary
 
 === "Evaluating adoption?"
 
@@ -42,7 +44,7 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
     - [**Sample doctrine cycle**](06-adoption-patterns/sample-doctrine-cycle.md)
     - [**Sample Phase 3 dispatch**](06-adoption-patterns/sample-phase3.md)
-    - [**Sample Day 2 cycles**](06-adoption-patterns/sample-day2-qa.md) (QA · Ops · Compliance)
+    - [**Sample Day-2 cycles**](06-adoption-patterns/sample-day2-qa.md) (QA · Ops · Compliance)
 
 === "Looking for reference?"
 

@@ -54,7 +54,7 @@ The founder observes a claim that doesn't match disk, a decision that evaporated
 | [Pollution containment](pollution-containment.md) | Context pollution | Firewall + state-tracking scope confine each tier to its own granularity. |
 | [Hallucination defense](hallucination-defense.md) | Hallucination drift | Verification-at-citation: every load-bearing claim verified against substrate before action. |
 | [Stale-snapshot detection](stale-snapshot-detection.md) | Hallucination drift (the firewall-leak class) | "As of last tagged return" discipline; forensic descent before action. |
-| [Failure modes](failure-modes.md) | Trust erosion (all classes) | The five documented failure classes, each with symptom → recovery. |
+| [Failure modes](failure-modes.md) | Trust erosion (all classes) | The six documented failure classes, each with symptom → recovery. |
 | [Brief completeness](brief-completeness.md) | Role confusion, trust erosion | No placeholders at the relay boundary; escalate, never improvise. |
 | [Single-live-writer](single-live-writer.md) | Context pollution, role confusion | One writer holds jurisdiction; fetch-before-push for everyone else. |
 

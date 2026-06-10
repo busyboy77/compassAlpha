@@ -71,7 +71,7 @@ A subfolder in each tier's home. Receives messages from other tiers via the bus 
 
 ### Invariants
 
-Charter-level rules that must hold **everywhere, always** — the non-negotiables. **Placement:** the federation [Charter](#charter), cross-component. **Controls:** maximal — they lock down what can never break federation-wide and are **not tunable**. **Loosens:** nothing. **Why:** the bedrock of codebase coherence. Marked `[INVARIANT]`.
+Charter-level rules that must hold **everywhere, always** — the non-negotiables. **Placement:** the federation [Charter](#charter), cross-component. **Controls:** maximal — they lock down what can never break federation-wide and are **not tunable**. **Loosens:** nothing. **Why:** the bedrock of [codebase coherence](codebase-coherence.md). Marked `[INVARIANT]`.
 
 ### LIFT-WATCH
 
@@ -92,7 +92,7 @@ One of the four predictable failures of multi-agent AI work that CompassAlpha de
 
 ### Primitives
 
-Charter-level **shared contracts** — the one canonical definition of each shared concept (types, operations, vocabulary) every component reuses. **Placement:** the federation [Charter](#charter). **Controls:** the canonical definition (locked), so no two components re-implement the same concept differently. **Loosens:** a component's internal *use* of a primitive, and the set is **extensible** — new primitives may be proposed and lifted in (see [LIFT-WATCH](#lift-watch)). **Why:** the mechanism of cross-team coherence.
+Charter-level **shared contracts** — the one canonical definition of each shared concept (types, operations, vocabulary) every component reuses. **Placement:** the federation [Charter](#charter). **Controls:** the canonical definition (locked), so no two components re-implement the same concept differently. **Loosens:** a component's internal *use* of a primitive, and the set is **extensible** — new primitives may be proposed and lifted in (see [LIFT-WATCH](#lift-watch)). **Why:** the mechanism of cross-team [coherence](codebase-coherence.md).
 
 ### Reviewer-state repo
 

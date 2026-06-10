@@ -6,7 +6,7 @@ description: "The 7 invariant axioms of CompassAlpha: tier grammar, firewall, pe
 
 > The 7 foundational rules. **Cannot be modified without forking the framework.** Read once, internalize forever.
 
-Every axiom defends against one or more of the [four pathologies](../00-foundation/framework-not-tool.md). If you violate an axiom, you re-introduce the pathology.
+Every axiom defends against one or more of the [four pathologies](../02-guardrails/index.md). If you violate an axiom, you re-introduce the pathology.
 
 ## The 7 axioms
 

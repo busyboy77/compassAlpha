@@ -308,7 +308,7 @@ Three grid levels: **Tier 1** — a mandatory 6-line grid at session START and E
 
 `[INVARIANT — package shape]` · `[TUNABLE — fields]`
 
-When a doctrine cycle closes, the orchestrator assembles a package for the founder: (1) triage table — each item → FOLD-IN / DEFER / DROP + rationale; (2) per-scope sub-bump list with tags + exit SHAs; (3) cross-cutting primitives lifted into Charter; (4) Charter diff — amendments accepted; (5) protocol-amendment candidates; (6) open founder-calls. On ratification: issue the cycle-end major bump (annotated tag, refspec push), re-lock the Charter, wire up the cycle home (Layer-A clean, END grid). The other axis resumes.
+When a doctrine cycle closes, the orchestrator assembles a package for the founder: (1) triage table — each item → FOLD-IN / DEFER / DROP + rationale; (2) per-scope sub-bump list with tags + exit SHAs; (3) cross-cutting primitives lifted into Charter; (4) Charter diff — amendments accepted; (5) protocol-amendment candidates; (6) open founder-calls. On ratification: issue the cycle-end major bump (**GO-UP-BUMP** — annotated tag, refspec push), re-lock the Charter, wire up the cycle home (Layer-A clean, END grid). The other axis resumes.
 
 → [Ratification package template](templates/index.md) · [Sample doctrine cycle](../06-adoption-patterns/sample-doctrine-cycle.md)
 

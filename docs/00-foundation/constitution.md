@@ -48,7 +48,7 @@ These are the **failure modes the framework defends against**, with documented r
 | **Pollution containment** | Context bleed across tiers | [→](../02-guardrails/pollution-containment.md) |
 | **Hallucination defense** | AI institutional-memory false-positives | [→](../02-guardrails/hallucination-defense.md) |
 | **Stale snapshot detection** | Firewall leak (snapshot ≈ live) | [→](../02-guardrails/stale-snapshot-detection.md) |
-| **Failure modes catalog** | 5 known classes + recovery | [→](../02-guardrails/failure-modes.md) |
+| **Failure modes catalog** | 6 known classes + recovery | [→](../02-guardrails/failure-modes.md) |
 | **Brief completeness** | Improvisation by Doers on incomplete briefs | [→](../02-guardrails/brief-completeness.md) |
 | **Single-live-writer** | Cross-session clobber on shared state | [→](../02-guardrails/single-live-writer.md) |
 
@@ -68,7 +68,7 @@ The five primary axes in tension (no combination optimizes all):
 - ⚠ **RISK** — pollution, hallucination, drift, replay
 - 📐 **PREDICTABILITY** — cycle/scope estimability
 
-A conservative profile biases toward **intelligence + low-risk** (LAYGO concurrency, pure RELAY, fresh-per-slice, xhigh effort, strict provenance). Other project profiles want other bias points.
+A conservative profile biases toward **intelligence + low-risk** (LAYGO — *Learn As You Go* — concurrency, pure RELAY, fresh-per-slice, xhigh effort, strict provenance). Other project profiles want other bias points.
 
 Tunable categories:
 
@@ -202,4 +202,4 @@ A reference federation's doctrine cycle (e.g. Charter v0.4 → v0.5) is itself t
 
 ---
 
-## Next: [GitAI category →](gitai-category.md)
+## Next: [Codebase coherence →](codebase-coherence.md)

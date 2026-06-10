@@ -128,6 +128,7 @@ Note: enforcement strictness is strict even at Bootstrap. You start with *few* i
 - [Provenance law](../01-axioms/provenance-law.md) (axiom) — toolings that verify against substrate enforce provenance automatically.
 - [Hallucination defense](../02-guardrails/hallucination-defense.md) (guardrail) — strict-enforcement invariants are a primary defense.
 - [Tunables overview](tunables-overview.md) — the intelligence-vs-cost axis these surfaces move.
+- [Codebase coherence](../00-foundation/codebase-coherence.md) — toolings mechanize the conformance checks that keep code coherent with doctrine.
 
 ---
 

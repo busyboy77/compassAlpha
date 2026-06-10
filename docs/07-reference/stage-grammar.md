@@ -109,7 +109,7 @@ ENGAGED → DISPATCH-LOOP → AMENDMENT-PKG (doctrine only) → RATIFIED → CLO
 | `DISPATCH-LOOP` | Running per-entity / per-module dispatches (most of the cycle) |
 | `AMENDMENT-PKG` | (Doctrine only) cycle-end package assembly |
 | `RATIFIED` | Founder ratified the cycle output |
-| `CLOSED` | Bump tag applied + Charter re-locked (doctrine) or Phase 3 closed (build) + cycle home frozen |
+| `CLOSED` | Charter-level bump (**GO-UP-BUMP**) applied + Charter re-locked (doctrine) or Phase 3 closed (build) + cycle home frozen |
 
 ---
 

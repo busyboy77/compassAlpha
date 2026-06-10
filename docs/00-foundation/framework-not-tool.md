@@ -168,4 +168,4 @@ CompassAlpha exports these decisions to other projects.
 
 ---
 
-## Next: [The Constitution →](constitution.md)
+## Next: [Origin — why GitAI →](origin-story.md)
