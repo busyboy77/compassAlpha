@@ -81,6 +81,13 @@ Two disciplines keep the dial honest:
 - **Flush load-bearing deltas, not everything.** The [persistence law](../01-axioms/persistence-law.md) requires durable state on disk before disclosure — it does *not* mean writing the full transcript. Flush the decisions, tags, and ledger entries the next session needs; not the reasoning footprints it doesn't.
 - **Boot reads a compact digest, not full history.** A fresh session reads the **last tagged return + the ledger summary + its own inbox** — enough to act, no more. It does not re-ingest prior transcripts or sibling history. If returns are heavy, turn digest verbosity down (dial 5 above).
 
+**Trimming the load is never discarding knowledge.** Boot-light governs what a session *reloads into working context* — not what is kept. Two things preserve the low-frequency but genuinely valuable insights that surface in discussion (heuristics, design rationale, why an option was rejected):
+
+- **Git keeps everything.** The full transcript and every prior state live in the commit history (the durability layer) and stay retrievable by tag or commit. A compact boot does not delete them.
+- **Harvest before you trim.** When a routine discussion surfaces a durable heuristic or an important rationale, promote it to the [memory layer](memory-policy.md) as a **provenance-cited memory entry** *before* the session refreshes. [Memory inheritance](memory-policy.md) is the channel that carries those forward across boots and cycles.
+
+Boot-light is safe *because* durable learnings live in memory and git — never only in the volatile transcript. If you're unsure whether something is worth keeping, harvest it: a cheap memory entry beats a lost insight.
+
 !!! warning "A slow, fatigued fresh session is an over-load signal"
     If fresh boots are slow and a just-booted tier already shows fatigue (losing one-liners, re-reading what it just read), the boot is loading too much — tighten what's flushed and what's read, **not** the rotation cadence. A correctly-scoped boot is fast and clean; that is the entire return on fresh-per-event. (When the relay overhead itself is the bottleneck across all tiers, that's a signal to revisit the [concurrency / delegation mode](concurrency-modes.md), not just the boot weight.)
 
