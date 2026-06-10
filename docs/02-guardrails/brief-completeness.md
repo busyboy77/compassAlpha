@@ -66,6 +66,15 @@ Two tests for completeness before relay:
 !!! note "Completeness is the relay boundary's contract"
     The relay boundary exists so that the founder can hand off without supervising. That only works if each handoff is self-sufficient. A complete brief is the price of the founder's narrow role: every blank in a brief is a future interruption to the founder or a future improvisation by a doer — and both are the federation reaching back up for the human it was meant to free.
 
+## The relay ping is a field, not prose
+
+A complete handoff includes one more mandatory element that is easy to overlook precisely because it is so small: the **relay ping** — the fixed one-liner that tells the recipient where to look, e.g. *"pull + read your inbox at `<path>`."* It is a **constant**, not a sentence a tier composes by hand each time.
+
+Because it is tiny, an over-loaded mentor can simply drop it — and then the recipient is never told to pull, so the dispatch **silently stalls** until someone notices and asks for it. The fix is not "be more careful": a fixed string must never depend on a tier's context length. **Mechanize the ping** — emit it from a close-of-turn checklist or a small relay-emit tooling, so it is impossible to omit no matter how loaded the session is.
+
+!!! warning "A dropped ping is also a pollution signal"
+    If a session's context grew long enough to lose a one-line relay instruction, that session was already over-loaded. Treat a dropped ping as *two* findings: a brief-completeness defect **and** a sign the tier needs a fresher boot and a lighter digest (see [context patterns — keeping fresh-per-event actually fresh](../03-tunables/context-patterns.md)).
+
 ## Detection and recovery
 
 **Detection.** Scan outbound briefs for any field containing a `<placeholder>`, the words "founder provides," "per convention" without a named convention, or "the usual." Each is a completeness defect. On the receiving side, the Doer's first act on any brief is a completeness check — an unfilled load-bearing field is caught *before* work starts, not after.

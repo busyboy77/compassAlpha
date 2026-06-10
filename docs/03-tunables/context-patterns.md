@@ -72,6 +72,18 @@ How often the long-running top mentor is preventively rotated to a fresh session
 
 Rotation is always *also* reactive: the moment a tier shows context-health signals (responses lengthening without added content, recognition fuzziness, needing to re-read what should be known), it flushes and rotates regardless of the calendar. **Do not push through fatigue.**
 
+## Keeping fresh-per-event actually fresh
+
+Fresh-per-event only pays off if a fresh session **boots light**. The failure mode: every fresh tier re-reads the *entire* on-disk state at boot, so boots get slow **and** the freshly-booted session is immediately as loaded as the one it replaced — slow and fatigued at once, defeating the whole point of refreshing.
+
+Two disciplines keep the dial honest:
+
+- **Flush load-bearing deltas, not everything.** The [persistence law](../01-axioms/persistence-law.md) requires durable state on disk before disclosure — it does *not* mean writing the full transcript. Flush the decisions, tags, and ledger entries the next session needs; not the reasoning footprints it doesn't.
+- **Boot reads a compact digest, not full history.** A fresh session reads the **last tagged return + the ledger summary + its own inbox** — enough to act, no more. It does not re-ingest prior transcripts or sibling history. If returns are heavy, turn digest verbosity down (dial 5 above).
+
+!!! warning "A slow, fatigued fresh session is an over-load signal"
+    If fresh boots are slow and a just-booted tier already shows fatigue (losing one-liners, re-reading what it just read), the boot is loading too much — tighten what's flushed and what's read, **not** the rotation cadence. A correctly-scoped boot is fast and clean; that is the entire return on fresh-per-event. (When the relay overhead itself is the bottleneck across all tiers, that's a signal to revisit the [concurrency / delegation mode](concurrency-modes.md), not just the boot weight.)
+
 ## Defaults
 
 | Dial | Default | Range |
