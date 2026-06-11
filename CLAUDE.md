@@ -16,26 +16,33 @@ mkdocs.yml             ← MkDocs Material config · builds the portal
 CLAUDE.md              ← THIS FILE · session orientation
 LICENSE                ← Business Source License 1.1 (source-available)
 .github/workflows/     ← GH Pages auto-deploy
-docs/                  ← portal content (the public-facing framework)
-  index.md             ← portal home
-  assets/              ← SVG diagram + supplementary
-  00-foundation/       ← orientation layer ✅ COMPLETE (5 pages)
-  01-axioms/           ← INVARIANT constitution ✅ COMPLETE (8 pages)
-  02-guardrails/       ← what the framework PREVENTS ⏳ PENDING
-  03-tunables/         ← customization surface ⏳ PENDING
-  04-toggles/          ← live switches ⏳ PENDING
-  05-getting-started/  ← onboarding ⏳ PENDING
-  06-adoption-patterns/← worked examples ⏳ PENDING
-  07-reference/        ← manifesto + technical reference ⏳ PENDING
-  08-community/        ← OSS community files ⏳ PENDING
+docs/                  ← portal content — ALL SECTIONS ✅ COMPLETE & LIVE
+  index.md             ← portal home (4-layer model · "vision → coherent code" pitch)
+  robots.txt           ← crawl-allow + sitemap pointer
+  assets/              ← 8 concept SVGs (federation · team-federation · four-layer-model ·
+                         charter-bump-ladder · codebase-coherence · delegation-modes ·
+                         adoption-telemetry · compass-cycle)
+  00-foundation/       ← orientation ✅ (incl. origin-story.md + codebase-coherence.md)
+  01-axioms/           ← INVARIANT constitution ✅
+  02-guardrails/       ← what the framework PREVENTS ✅
+  03-tunables/         ← customization surface ✅
+  04-toggles/          ← live switches ✅
+  05-getting-started/  ← onboarding ✅
+  06-adoption-patterns/← worked examples ✅
+  07-reference/        ← manifesto + technical reference ✅
+  08-community/        ← OSS community files ✅
+overrides/             ← Material custom_dir · SEO/OG meta (extrahead block)
+scripts/content-safety.sh ← deploy denylist gate (greps built site/ before Pages publish)
+_internal/             ← gitignored author space · graduation-candidate captures (see Active context)
 ```
 
 ## Status at session boot
 
-- **v0.1 DRAFT**, in active development
-- **Portal build progress: ~13 of ~50 pages complete** (Foundation + Axioms done; 6 sections remaining)
-- **Repository:** https://github.com/busyboy77/compassAlpha
+- **v0.1 — portal AUTHORED, VALIDATED, POLISHED, and LIVE:** https://busyboy77.github.io/compassAlpha/
+- **All 8 sections complete** (~50 pages) + 8 concept diagrams + per-page SEO/OG meta + content-safety deploy gate + robots.txt/sitemap.
+- **Repository:** https://github.com/busyboy77/compassAlpha (public)
 - **License:** Business Source License 1.1 (source-available; converts to Apache 2.0 on 2030-06-09) · commercial use → `COMMERCIAL.md`
+- **CI/build:** `.github/workflows/deploy.yml` = `mkdocs build --strict` → `scripts/content-safety.sh site` (denylist gate) → Pages deploy. Local build: `/tmp/ca-venv/bin/mkdocs build --strict`.
 
 ## Read-on-boot artifacts
 
@@ -43,17 +50,17 @@ docs/                  ← portal content (the public-facing framework)
 2. **`docs/index.md`** — portal home · 4-layer mental model · navigation
 3. **This file** — session orientation
 
-## What's next
+## What's next (the build is DONE — remaining work is graduation + founder to-dos)
 
-- **Turn 2:** Build `02-guardrails/` (6 pages)
-- **Turn 3:** Build `03-tunables/` (10 pages)
-- **Turn 4:** Build `04-toggles/` (5 pages)
-- **Turn 5:** Build `05-getting-started/` (6 pages) — includes brownfield onboarding
-- **Turn 6:** Build `06-adoption-patterns/` (8 pages) — worked examples + Day 2
-- **Turn 7:** Build `07-reference/` (7 pages)
-- **Turn 8:** Build `08-community/` (5 pages) + final polish
+- **Graduate `_internal/` captures to public docs — ONLY on founder's go:**
+  - `recovery-after-unclean-shutdown.md` → a Day-2 / reference recovery page.
+  - `delegation-modes-vision.md` → Mode-2 sub-agent context-volatility refinement into `03-tunables/` (concurrency-modes / context-patterns).
+  - `onboarding-storytelling-vision.md` → story-driven onboarding (greenfield + brownfield) — **do not build until founder says go.**
+- **Founder's external to-dos (not ours to do):** Google Search Console + sitemap submission (the SEO unlock — site is indexable, just undiscovered); launch post.
+- **Model:** Fable 5 vs Opus 4.8 A/B eval — pending founder decision (he'll say when).
+- Cross-page redundancy is a **deliberate** layered-with-cross-links choice — not a gap; don't "consolidate" it blindly.
 
-Each turn = a batch of related pages. Status grids per session. Persistence law in force throughout.
+Persistence law in force throughout. Status grids at session START + END.
 
 ## Working rules (CompassAlpha dogfoods its own doctrine)
 
@@ -66,10 +73,14 @@ Each turn = a batch of related pages. Status grids per session. Persistence law 
 
 Per the framework's own §18, the **founder** is RELAY + lost+found ONLY — plus the UX exception (§18.4): de facto Chief UX Officer. Founder taste matters for portal navigation, page voice, and examples chosen.
 
-## Continue the portal build
+## Continue / rotation handoff
 
-Fresh sessions resuming the build: read this file, then `README.md` and `docs/index.md`, sample 2-3 pages in `docs/01-axioms/` to internalize the page template, then build the next pending section from the status above.
+The portal is **built and live.** A fresh session should:
 
-For now, **the build is paused at the end of Turn 1** (Foundation + Axioms complete). Next session resumes at Turn 2 (Guardrails).
+1. Read this file + `README.md` + `docs/index.md`.
+2. Load the **auto-memory** (it loads at session start and carries the standing working rules — voice, framing, scope discipline; honour them before writing anything public).
+3. Read the gitignored **`_internal/`** captures — the private rotation handoff (`_internal/SESSION-HANDOFF.md`) and the graduation-candidate material.
+
+Then act on the pending items above **only as the founder directs** — do NOT re-author finished sections.
 
 Standing by.
