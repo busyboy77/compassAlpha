@@ -45,8 +45,17 @@
   <text x="1183" y="211" text-anchor="middle" font-size="10" fill="#8a6d0a">close</text>
   <!-- finish marker -->
   <line x1="1212" y1="178" x2="1212" y2="288" stroke="#4a8a4a" stroke-width="2" stroke-dasharray="4 3"/>
-  <text x="1252" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
-  <text x="1252" y="226" text-anchor="middle" font-size="10.5" fill="#3a6a3a">latest</text>
+  <text x="1240" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
+  <text x="1240" y="216" text-anchor="middle" font-size="10.5" fill="#3a6a3a">latest</text>
+  <!-- WHY trade + WHEN to choose -->
+  <rect x="1290" y="180" width="160" height="104" rx="9" fill="#eef6ee" stroke="#4a8a4a" stroke-width="1.3"/>
+  <text x="1300" y="200" font-size="10" font-weight="700" fill="#2a5a2a">BUYS cleanest state</text>
+  <text x="1300" y="216" font-size="10" font-weight="700" fill="#8a2a2a">COSTS wall-clock</text>
+  <line x1="1300" y1="226" x2="1440" y2="226" stroke="#cfe0cf" stroke-width="1"/>
+  <text x="1300" y="242" font-size="9.5" font-weight="700" fill="#3a6a3a">Use when&#8230;</text>
+  <text x="1300" y="257" font-size="9.5" fill="#3a6a3a">correctness &gt; speed;</text>
+  <text x="1300" y="270" font-size="9.5" fill="#3a6a3a">slices touch shared</text>
+  <text x="1300" y="282" font-size="9.5" fill="#3a6a3a">contracts &#183; the default.</text>
 
   <!-- ============ ROW 2 · PIPELINED ============ -->
   <rect x="40" y="328" width="380" height="120" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
@@ -74,8 +83,17 @@
   <!-- overlap callout -->
   <text x="660" y="436" font-size="10.5" fill="#8a6d0a" font-style="italic">B begins while A closes out</text>
   <line x1="1064" y1="334" x2="1064" y2="442" stroke="#4a8a4a" stroke-width="2" stroke-dasharray="4 3"/>
-  <text x="1104" y="366" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
-  <text x="1104" y="382" text-anchor="middle" font-size="10.5" fill="#3a6a3a">earlier</text>
+  <text x="1092" y="356" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
+  <text x="1092" y="372" text-anchor="middle" font-size="10.5" fill="#3a6a3a">earlier</text>
+  <!-- WHY trade + WHEN to choose -->
+  <rect x="1290" y="336" width="160" height="104" rx="9" fill="#eef6ee" stroke="#4a8a4a" stroke-width="1.3"/>
+  <text x="1300" y="356" font-size="10" font-weight="700" fill="#2a5a2a">BUYS ~30&#8211;50% time</text>
+  <text x="1300" y="372" font-size="10" font-weight="700" fill="#8a2a2a">COSTS slight risk</text>
+  <line x1="1300" y1="382" x2="1440" y2="382" stroke="#cfe0cf" stroke-width="1"/>
+  <text x="1300" y="398" font-size="9.5" font-weight="700" fill="#3a6a3a">Use when&#8230;</text>
+  <text x="1300" y="413" font-size="9.5" fill="#3a6a3a">a close-out tail is</text>
+  <text x="1300" y="426" font-size="9.5" fill="#3a6a3a">long &amp; the next slice</text>
+  <text x="1300" y="438" font-size="9.5" fill="#3a6a3a">has no hard dep on it.</text>
 
   <!-- ============ ROW 3 · PARALLEL-INDEPENDENT ============ -->
   <rect x="40" y="484" width="380" height="120" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
@@ -104,8 +122,17 @@
   <!-- independence brace -->
   <text x="770" y="548" font-size="10.5" fill="#9a7a1a" font-style="italic">no cross-references between modules</text>
   <line x1="726" y1="472" x2="726" y2="608" stroke="#4a8a4a" stroke-width="2" stroke-dasharray="4 3"/>
-  <text x="766" y="582" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
-  <text x="766" y="598" text-anchor="middle" font-size="10.5" fill="#3a6a3a">earliest</text>
+  <text x="754" y="494" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
+  <text x="754" y="510" text-anchor="middle" font-size="10.5" fill="#3a6a3a">earliest</text>
+  <!-- WHY trade + WHEN to choose -->
+  <rect x="1290" y="492" width="160" height="104" rx="9" fill="#fdf9ee" stroke="#b89425" stroke-width="1.3"/>
+  <text x="1300" y="512" font-size="10" font-weight="700" fill="#8a6d0a">BUYS max throughput</text>
+  <text x="1300" y="528" font-size="10" font-weight="700" fill="#8a2a2a">COSTS dep-tracking</text>
+  <line x1="1300" y1="538" x2="1440" y2="538" stroke="#ece2c2" stroke-width="1"/>
+  <text x="1300" y="554" font-size="9.5" font-weight="700" fill="#7a5e12">Use when&#8230;</text>
+  <text x="1300" y="569" font-size="9.5" fill="#7a5e12">modules are provably</text>
+  <text x="1300" y="582" font-size="9.5" fill="#7a5e12">independent &#8212; no cross-</text>
+  <text x="1300" y="594" font-size="9.5" fill="#7a5e12">references between them.</text>
 
   <!-- ============ ROW 4 · PARALLEL-DOER ============ -->
   <rect x="40" y="640" width="380" height="120" rx="11" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.8"/>
@@ -130,7 +157,16 @@
   <text x="740" y="718" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6d0a">integrate</text>
   <line x1="652" y1="692" x2="690" y2="700" stroke="#b89425" stroke-width="1.8" marker-end="url(#aamber)"/>
   <line x1="602" y1="720" x2="690" y2="712" stroke="#b89425" stroke-width="1.8" marker-end="url(#aamber)"/>
-  <text x="900" y="710" text-anchor="middle" font-size="10.5" fill="#9a3a3a" font-style="italic">divergent assumptions collide here</text>
+  <text x="900" y="700" text-anchor="middle" font-size="10.5" fill="#9a3a3a" font-style="italic">divergent assumptions collide here</text>
+  <!-- WHY trade + WHEN to choose -->
+  <rect x="1290" y="648" width="160" height="104" rx="9" fill="#fdf0f0" stroke="#c44a4a" stroke-width="1.3"/>
+  <text x="1300" y="668" font-size="10" font-weight="700" fill="#8a2a2a">BUYS speed in one task</text>
+  <text x="1300" y="684" font-size="10" font-weight="700" fill="#8a2a2a">COSTS integration risk</text>
+  <line x1="1300" y1="694" x2="1440" y2="694" stroke="#eccccc" stroke-width="1"/>
+  <text x="1300" y="710" font-size="9.5" font-weight="700" fill="#9a3a3a">Use when&#8230;</text>
+  <text x="1300" y="725" font-size="9.5" fill="#9a3a3a">one dispatch splits into</text>
+  <text x="1300" y="738" font-size="9.5" fill="#9a3a3a">parallel slices &amp; a tight</text>
+  <text x="1300" y="750" font-size="9.5" fill="#9a3a3a">integration gate follows.</text>
 
   <!-- ============ TRADE-OFF MINI SCALE ============ -->
   <rect x="40" y="788" width="1392" height="56" rx="10" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.3"/>

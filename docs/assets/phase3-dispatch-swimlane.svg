@@ -42,7 +42,14 @@
 
   <!-- ============ PARALLEL BAND backdrop for CP2 ============ -->
   <rect x="430" y="196" width="430" height="384" rx="12" fill="#f4f8fc" stroke="#b9c8da" stroke-width="1.4" stroke-dasharray="6 5"/>
-  <text x="645" y="572" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">three slices proceed in parallel here</text>
+  <text x="645" y="514" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">three slices proceed in parallel here</text>
+  <!-- WHY chip: throughput WITHOUT losing integrity -->
+  <rect x="446" y="524" width="398" height="44" rx="9" fill="#eef6ee" stroke="#4a8a4a" stroke-width="1.4"/>
+  <text x="645" y="544" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2a5a2a">WHY parallel + a gate &#8212; throughput WITHOUT losing integrity</text>
+  <text x="645" y="560" text-anchor="middle" font-size="9.5" fill="#3a6a3a">slices speed the build; the single ordered gate tail guarantees nothing ships ungated</text>
+  <!-- FAN-OUT / FAN-IN labels -->
+  <text x="436" y="252" text-anchor="middle" font-size="10" font-weight="700" fill="#2a5a2a" transform="rotate(-90 436 252)">FAN-OUT</text>
+  <text x="854" y="252" text-anchor="middle" font-size="10" font-weight="700" fill="#1a4a7a" transform="rotate(-90 854 252)">FAN-IN</text>
 
   <!-- ===== CP1 launch chip (spanning, left) ===== -->
   <rect x="240" y="288" width="170" height="200" rx="11" fill="#eef3fa" stroke="#3b6ea5" stroke-width="1.8"/>
@@ -82,9 +89,9 @@
   <text x="645" y="482" text-anchor="middle" font-size="10.5" fill="#3a6a3a">call Notifications &#8212; do NOT build a new mailer</text>
 
   <!-- CP1 -> each slice arrows (fan out) -->
-  <path d="M410,388 C432,388 438,301 458,301" fill="none" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#agreen)"/>
-  <line x1="410" y1="388" x2="458" y2="385" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#agreen)"/>
-  <path d="M410,388 C432,388 438,469 458,469" fill="none" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#agreen)"/>
+  <path d="M410,388 C432,388 438,301 458,301" fill="none" stroke="#4a8a4a" stroke-width="2.8" marker-end="url(#agreen)"/>
+  <line x1="410" y1="388" x2="458" y2="385" stroke="#4a8a4a" stroke-width="2.8" marker-end="url(#agreen)"/>
+  <path d="M410,388 C432,388 438,469 458,469" fill="none" stroke="#4a8a4a" stroke-width="2.8" marker-end="url(#agreen)"/>
 
   <!-- ===== CP3 exit-report chip (converge, right) ===== -->
   <rect x="880" y="288" width="170" height="200" rx="11" fill="#eef3fa" stroke="#3b6ea5" stroke-width="1.8"/>
@@ -98,9 +105,12 @@
   <text x="965" y="468" text-anchor="middle" font-size="10.5" fill="#3a5a7a">2 leftovers tracked</text>
 
   <!-- each slice -> CP3 arrows (fan in) -->
-  <path d="M830,301 C854,301 858,388 878,388" fill="none" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
-  <line x1="830" y1="385" x2="878" y2="388" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
-  <path d="M830,469 C854,469 858,388 878,388" fill="none" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
+  <path d="M830,301 C854,301 858,388 878,388" fill="none" stroke="#4a8a4a" stroke-width="2.8" marker-end="url(#ablue)"/>
+  <line x1="830" y1="385" x2="878" y2="388" stroke="#4a8a4a" stroke-width="2.8" marker-end="url(#ablue)"/>
+  <path d="M830,469 C854,469 858,388 878,388" fill="none" stroke="#4a8a4a" stroke-width="2.8" marker-end="url(#ablue)"/>
+
+  <!-- WHEN/WHERE the tail fires: once, after fan-in, in column order -->
+  <text x="1260" y="190" text-anchor="middle" font-size="10.5" font-style="italic" fill="#5a6678">the tail fires once &#8212; after fan-in, in this fixed order, never per-slice</text>
 
   <!-- ============ FREEZE / GATE / TAG BARRIERS (tail) ============ -->
   <!-- FREEZE barrier -->

@@ -18,6 +18,10 @@
   <!-- ============ TIME AXIS ============ -->
   <text x="56" y="140" font-size="12.5" font-weight="700" fill="#33445a">time &#8212; continuous; Ops never stops, it stands by on all three cadences</text>
   <line x1="300" y1="156" x2="1444" y2="156" stroke="#cfcabc" stroke-width="1.4" stroke-dasharray="3 5"/>
+  <!-- WHY chip: three cadences = three triggers, three rhythms -->
+  <rect x="836" y="110" width="608" height="36" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="852" y="125" font-size="10.5" font-weight="700" fill="#4a3f18">WHY three cadences &#8212; one rhythm can&#8217;t serve three triggers</text>
+  <text x="852" y="139" font-size="9.5" fill="#5a4d20">a release ships on demand, a break fires on alert, capacity reviews run on the clock &#8212; each needs its own tempo.</text>
 
   <!-- ============ CADENCE 1 · PER-RELEASE ============ -->
   <rect x="56" y="174" width="1388" height="150" rx="12" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.6"/>
@@ -61,12 +65,20 @@
   <line x1="820" y1="252" x2="832" y2="252" stroke="#4a8a4a" stroke-width="2" marker-end="url(#agreen)"/>
   <line x1="950" y1="252" x2="962" y2="252" stroke="#4a8a4a" stroke-width="2" marker-end="url(#agreen)"/>
 
-  <!-- ============ CUTOVER GATE: monitor wiring before cutover ============ -->
+  <!-- ===== HOW: monitor wiring precedes cutover (sequence on the spine) ===== -->
+  <rect x="566" y="176" width="196" height="32" rx="8" fill="#fff6df" stroke="#b89425" stroke-width="1.5"/>
+  <text x="664" y="190" text-anchor="middle" font-size="10" font-weight="700" fill="#7a5e12">WIRE-MONITOR &#183; job-lag watch</text>
+  <text x="664" y="203" text-anchor="middle" font-size="9" fill="#8a6d0a">wired during SMOKE-PROD, before any flip</text>
+  <!-- monitor must be in place before CUTOVER: arrow into cutover -->
+  <path d="M700,208 C710,216 735,218 748,220" fill="none" stroke="#b89425" stroke-width="1.8" marker-end="url(#aamber)"/>
+
+  <!-- ============ CUTOVER GATE: monitor wiring before cutover (WHY blind cutover is forbidden) ============ -->
   <rect x="1130" y="200" width="300" height="100" rx="11" fill="#fdf6e3" stroke="#b89425" stroke-width="2"/>
-  <text x="1280" y="226" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a6d0a">GATE: monitor wiring before cutover</text>
-  <text x="1280" y="250" text-anchor="middle" font-size="10.5" fill="#7a5e12">deploy policy requires a watch in place</text>
-  <text x="1280" y="266" text-anchor="middle" font-size="10.5" fill="#7a5e12">on the export-worker job-lag metric</text>
-  <text x="1280" y="284" text-anchor="middle" font-size="10.5" fill="#7a5e12">BEFORE traffic flips &#8212; no monitor, no cutover</text>
+  <text x="1280" y="224" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d0a">GATE: no monitor, no cutover</text>
+  <text x="1280" y="246" text-anchor="middle" font-size="10" fill="#7a5e12">WHY: you cannot cut over blind &#8212; the watch that</text>
+  <text x="1280" y="261" text-anchor="middle" font-size="10" fill="#7a5e12">catches the next problem must exist before traffic</text>
+  <text x="1280" y="276" text-anchor="middle" font-size="10" fill="#7a5e12">flips, or a regression rides in unseen. The gate</text>
+  <text x="1280" y="291" text-anchor="middle" font-size="10" fill="#7a5e12">checks WIRE-MONITOR is done before it lets CUTOVER fire.</text>
   <!-- gate arrow pointing at CUTOVER -->
   <path d="M1130,250 C1000,250 900,250 822,252" fill="none" stroke="#b89425" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#aamber)"/>
 

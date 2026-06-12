@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1250" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 
   <defs>
     <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
@@ -8,7 +8,7 @@
     <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
   </defs>
 
-  <rect width="1500" height="1000" fill="#fafaf8"/>
+  <rect width="1500" height="1250" fill="#fafaf8"/>
 
   <!-- ============ HEADER ============ -->
   <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
@@ -88,7 +88,50 @@
   <line x1="750" y1="314" x2="750" y2="368" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
   <line x1="1226" y1="314" x2="1226" y2="368" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
 
-  <!-- ============ TWO PLANES NEVER CROSS-COMMIT ============ -->
+  <!-- ============ MECHANISM IN MOTION: HOW the clobber is structurally avoided ============ -->
+  <text x="64" y="596" font-size="15" font-weight="700" fill="#1f2a36">The mechanism in motion &#8212; why no write can clobber another</text>
+  <text x="64" y="616" font-size="12.5" fill="#5a6678" font-style="italic">isolated index + isolated worktree keep every write on its own path; they meet only in the append-only object store, then publish to distinct refs</text>
+
+  <!-- two doer lanes converging on a shared append-only object DB -->
+  <rect x="64" y="632" width="300" height="86" rx="10" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2"/>
+  <text x="214" y="656" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">Doer A writes</text>
+  <text x="214" y="678" text-anchor="middle" font-size="10.8" fill="#3a6a3a">own index .work-tmp/A/index</text>
+  <text x="214" y="695" text-anchor="middle" font-size="10.8" fill="#3a6a3a">own worktree .work-tmp/A/wt</text>
+  <text x="214" y="712" text-anchor="middle" font-size="10.3" fill="#3a6a3a" font-style="italic">A&#8217;s edits never enter B&#8217;s staging</text>
+
+  <rect x="64" y="730" width="300" height="86" rx="10" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2"/>
+  <text x="214" y="754" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">Doer B writes</text>
+  <text x="214" y="776" text-anchor="middle" font-size="10.8" fill="#3a6a3a">own index .work-tmp/B/index</text>
+  <text x="214" y="793" text-anchor="middle" font-size="10.8" fill="#3a6a3a">own worktree .work-tmp/B/wt</text>
+  <text x="214" y="810" text-anchor="middle" font-size="10.3" fill="#3a6a3a" font-style="italic">B&#8217;s edits never enter A&#8217;s staging</text>
+
+  <!-- append-only object DB (the only shared thing, and it only grows) -->
+  <rect x="560" y="664" width="320" height="120" rx="10" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2.2"/>
+  <text x="720" y="690" text-anchor="middle" font-size="13" font-weight="700" fill="#1a4a7a">shared .git object store</text>
+  <text x="720" y="712" text-anchor="middle" font-size="11" fill="#26425f">append-only &#8212; commit-tree adds</text>
+  <text x="720" y="729" text-anchor="middle" font-size="11" fill="#26425f">new objects, never rewrites old</text>
+  <text x="720" y="752" text-anchor="middle" font-size="10.6" fill="#33597f" font-style="italic">the one thing both Doers touch &#8212;</text>
+  <text x="720" y="768" text-anchor="middle" font-size="10.6" fill="#33597f" font-style="italic">and growth-only means no collision</text>
+
+  <line x1="364" y1="672" x2="556" y2="700" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
+  <line x1="364" y1="774" x2="556" y2="748" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
+
+  <!-- distinct refs published atomically -->
+  <rect x="1076" y="632" width="360" height="86" rx="10" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="1256" y="656" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">A publishes refs/heads/feature/entity-A</text>
+  <text x="1256" y="678" text-anchor="middle" font-size="10.8" fill="#26425f">single-ref atomic push &#183; distinct branch</text>
+  <text x="1256" y="700" text-anchor="middle" font-size="10.3" fill="#33597f" font-style="italic">cannot land on B&#8217;s ref &#8212; different name</text>
+
+  <rect x="1076" y="730" width="360" height="86" rx="10" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="1256" y="754" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">B publishes refs/heads/feature/entity-B</text>
+  <text x="1256" y="776" text-anchor="middle" font-size="10.8" fill="#26425f">single-ref atomic push &#183; distinct branch</text>
+  <text x="1256" y="798" text-anchor="middle" font-size="10.3" fill="#33597f" font-style="italic">if same ref raced: loser gets non-ff, retries</text>
+
+  <line x1="880" y1="700" x2="1072" y2="674" stroke="#3b6ea5" stroke-width="2.2" marker-end="url(#ablue)"/>
+  <line x1="880" y1="748" x2="1072" y2="772" stroke="#3b6ea5" stroke-width="2.2" marker-end="url(#ablue)"/>
+
+  <!-- ============ TWO PLANES NEVER CROSS-COMMIT (shifted down) ============ -->
+  <g transform="translate(0,250)">
   <text x="64" y="596" font-size="15" font-weight="700" fill="#1f2a36">A Doer turn = two separate git operations &#8212; the planes never cross-commit</text>
 
   <!-- data plane -->
@@ -134,5 +177,6 @@
     <g fill="#5a7aa0"><rect x="690" y="952" width="6" height="8" rx="1"/><rect x="699" y="946" width="6" height="14" rx="1"/><rect x="708" y="940" width="6" height="20" rx="1"/></g>
     <text x="722" y="960" font-size="13" fill="#5a7aa0">gradus.pk</text>
   </a>
+  </g>
 
 </svg>

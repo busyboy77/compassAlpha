@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1010" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 
   <defs>
     <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
@@ -8,7 +8,7 @@
     <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
   </defs>
 
-  <rect width="1500" height="1010" fill="#fafaf8"/>
+  <rect width="1500" height="1150" fill="#fafaf8"/>
 
   <!-- ============ HEADER ============ -->
   <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
@@ -18,75 +18,91 @@
   <!-- ============ STEP CHIPS (left column) ============ -->
   <!-- helper: each step is a chip; arrow down to next -->
 
+  <!-- legend for the per-chip line grammar -->
+  <text x="60" y="124" font-size="11.5" font-style="italic" fill="#6a7585">Each step: the move &#183; what it UNLOCKS (why) &#183; WHERE the artifact lands. Arrows carry the order dependency (why this precedes the next).</text>
+
   <!-- step 1 -->
-  <rect x="60" y="132" width="760" height="84" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
-  <circle cx="100" cy="174" r="22" fill="#3b6ea5"/>
-  <text x="100" y="181" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">1</text>
-  <text x="140" y="166" font-size="15" font-weight="700" fill="#1a4a7a">Create the two repos as siblings</text>
-  <text x="140" y="188" font-size="11.5" fill="#5a7aa0">git init substrate + reviewer-state; add a remote to each. Never nested.</text>
-  <text x="140" y="206" font-size="11" fill="#33597f" font-style="italic">produces &#8212; two sibling repos with origins</text>
+  <rect x="60" y="132" width="760" height="96" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <circle cx="100" cy="180" r="22" fill="#3b6ea5"/>
+  <text x="100" y="187" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">1</text>
+  <text x="140" y="160" font-size="15" font-weight="700" fill="#1a4a7a">Create the two repos as siblings</text>
+  <text x="140" y="181" font-size="11.5" fill="#5a7aa0">git init substrate + reviewer-state; add a remote to each. Never nested.</text>
+  <text x="140" y="200" font-size="11" fill="#1a4a7a">unlocks &#8212; the firewall: two planes that can never cross-commit</text>
+  <text x="140" y="218" font-size="10.5" fill="#33597f" font-style="italic">lands &#8212; /path/to/substrate/ &#183; /path/to/reviewer-state/ (siblings, each with origin)</text>
 
   <!-- step 2 -->
-  <rect x="60" y="244" width="760" height="84" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
-  <circle cx="100" cy="286" r="22" fill="#3b6ea5"/>
-  <text x="100" y="293" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">2</text>
-  <text x="140" y="278" font-size="15" font-weight="700" fill="#1a4a7a">Drop the master into reviewer-state</text>
-  <text x="140" y="300" font-size="11.5" fill="#5a7aa0">Copy the master protocol to the reviewer-state root. Customise via tunables, not edits.</text>
-  <text x="140" y="318" font-size="11" fill="#33597f" font-style="italic">produces &#8212; master protocol at the root</text>
+  <rect x="60" y="258" width="760" height="96" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <circle cx="100" cy="306" r="22" fill="#3b6ea5"/>
+  <text x="100" y="313" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">2</text>
+  <text x="140" y="286" font-size="15" font-weight="700" fill="#1a4a7a">Drop the master into reviewer-state</text>
+  <text x="140" y="307" font-size="11.5" fill="#5a7aa0">Copy the master protocol to the root. Customise via tunables, never by editing it.</text>
+  <text x="140" y="326" font-size="11" fill="#1a4a7a">unlocks &#8212; the substantive rules every later step inherits from</text>
+  <text x="140" y="344" font-size="10.5" fill="#33597f" font-style="italic">lands &#8212; /path/to/reviewer-state/COMPASS_ALPHA_FRAMEWORK_v0.1.md</text>
 
   <!-- step 3 -->
-  <rect x="60" y="356" width="760" height="84" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
-  <circle cx="100" cy="398" r="22" fill="#3b6ea5"/>
-  <text x="100" y="405" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">3</text>
-  <text x="140" y="390" font-size="15" font-weight="700" fill="#1a4a7a">Author the canonical state artifacts</text>
-  <text x="140" y="412" font-size="11.5" fill="#5a7aa0">CLAUDE.md, LEDGER, LEFTOVERS, HANDOVER_LOG/PROTOCOL, memory/MEMORY. Commit + push.</text>
-  <text x="140" y="430" font-size="11" fill="#33597f" font-style="italic">produces &#8212; the federation&#8217;s running memory</text>
+  <rect x="60" y="384" width="760" height="96" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <circle cx="100" cy="432" r="22" fill="#3b6ea5"/>
+  <text x="100" y="439" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">3</text>
+  <text x="140" y="412" font-size="15" font-weight="700" fill="#1a4a7a">Author the canonical state artifacts</text>
+  <text x="140" y="433" font-size="11.5" fill="#5a7aa0">CLAUDE.md, LEDGER, LEFTOVERS, HANDOVER_LOG/PROTOCOL, memory/MEMORY. Commit + push.</text>
+  <text x="140" y="452" font-size="11" fill="#1a4a7a">unlocks &#8212; the federation&#8217;s running memory; nothing load-bearing in a head</text>
+  <text x="140" y="470" font-size="10.5" fill="#33597f" font-style="italic">lands &#8212; /path/to/reviewer-state/ root + memory/MEMORY.md</text>
 
   <!-- step 4 -->
-  <rect x="60" y="468" width="760" height="84" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
-  <circle cx="100" cy="510" r="22" fill="#4a8a4a"/>
-  <text x="100" y="517" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">4</text>
-  <text x="140" y="502" font-size="15" font-weight="700" fill="#2a5a2a">Lay out the bus inbox tree</text>
-  <text x="140" y="524" font-size="11.5" fill="#3a6a3a">Inbox-in-destination-folder; a sender writes into the recipient&#8217;s inbox. Add .gitkeep.</text>
-  <text x="140" y="542" font-size="11" fill="#2a5a2a" font-style="italic">produces &#8212; the bus tree, ready for the first dispatch</text>
+  <rect x="60" y="510" width="760" height="96" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <circle cx="100" cy="558" r="22" fill="#4a8a4a"/>
+  <text x="100" y="565" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">4</text>
+  <text x="140" y="538" font-size="15" font-weight="700" fill="#2a5a2a">Lay out the bus inbox tree</text>
+  <text x="140" y="559" font-size="11.5" fill="#3a6a3a">Inbox-in-destination-folder; a sender writes into the recipient&#8217;s inbox. Add .gitkeep.</text>
+  <text x="140" y="578" font-size="11" fill="#2a5a2a">unlocks &#8212; somewhere for the first dispatch to land; single-writer routing</text>
+  <text x="140" y="596" font-size="10.5" fill="#2a5a2a" font-style="italic">lands &#8212; tier-1-mentor/&#8230;/inbox/ trees under reviewer-state</text>
 
   <!-- step 5 -->
-  <rect x="60" y="580" width="760" height="84" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
-  <circle cx="100" cy="622" r="22" fill="#4a8a4a"/>
-  <text x="100" y="629" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">5</text>
-  <text x="140" y="614" font-size="15" font-weight="700" fill="#2a5a2a">Stamp your three tiers</text>
-  <text x="140" y="636" font-size="11.5" fill="#3a6a3a">A CLAUDE.md per tier turns a generic session into Mentor-1 / Mentor-2 / Doer.</text>
-  <text x="140" y="654" font-size="11" fill="#2a5a2a" font-style="italic">produces &#8212; tier stamps (Doer brief composed per slice)</text>
+  <rect x="60" y="636" width="760" height="96" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <circle cx="100" cy="684" r="22" fill="#4a8a4a"/>
+  <text x="100" y="691" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">5</text>
+  <text x="140" y="664" font-size="15" font-weight="700" fill="#2a5a2a">Stamp your three tiers</text>
+  <text x="140" y="685" font-size="11.5" fill="#3a6a3a">A CLAUDE.md per tier turns a generic session into Mentor-1 / Mentor-2 / Doer.</text>
+  <text x="140" y="704" font-size="11" fill="#2a5a2a">unlocks &#8212; identity: a booting session knows which tier it is</text>
+  <text x="140" y="722" font-size="10.5" fill="#2a5a2a" font-style="italic">lands &#8212; CLAUDE.md in each tier home (Doer brief composed per slice)</text>
 
   <!-- step 6 -->
-  <rect x="60" y="692" width="760" height="84" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
-  <circle cx="100" cy="734" r="22" fill="#b89425"/>
-  <text x="100" y="741" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">6</text>
-  <text x="140" y="726" font-size="15" font-weight="700" fill="#8a6d0a">Declare your first axis</text>
-  <text x="140" y="748" font-size="11.5" fill="#9a7a1a">A thin AXIS_BUILD.md naming tiers + bindings; everything substantive is inherited.</text>
-  <text x="140" y="766" font-size="11" fill="#8a6d0a" font-style="italic">produces &#8212; AXIS_BUILD.md declaration</text>
+  <rect x="60" y="762" width="760" height="96" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
+  <circle cx="100" cy="810" r="22" fill="#b89425"/>
+  <text x="100" y="817" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">6</text>
+  <text x="140" y="790" font-size="15" font-weight="700" fill="#8a6d0a">Declare your first axis</text>
+  <text x="140" y="811" font-size="11.5" fill="#9a7a1a">A thin AXIS_BUILD.md naming tiers + bindings; everything substantive is inherited.</text>
+  <text x="140" y="830" font-size="11" fill="#8a6d0a">unlocks &#8212; a runnable axis: roles bound to the inherited master rules</text>
+  <text x="140" y="848" font-size="10.5" fill="#8a6d0a" font-style="italic">lands &#8212; /path/to/reviewer-state/AXIS_BUILD.md</text>
 
   <!-- step 7 -->
-  <rect x="60" y="804" width="760" height="84" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
-  <circle cx="100" cy="846" r="22" fill="#2a5a2a"/>
-  <text x="100" y="853" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">7</text>
-  <text x="140" y="838" font-size="15" font-weight="700" fill="#2a5a2a">Keep the first dispatch deliberately small</text>
-  <text x="140" y="860" font-size="11.5" fill="#3a6a3a">Prove the rhythm with a one-file change &#8212; LAYGO pacing. Then trust the machinery.</text>
-  <text x="140" y="878" font-size="11" fill="#2a5a2a" font-style="italic">produces &#8212; first dispatch &#8212; ready for first boot</text>
+  <rect x="60" y="888" width="760" height="96" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
+  <circle cx="100" cy="936" r="22" fill="#2a5a2a"/>
+  <text x="100" y="943" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">7</text>
+  <text x="140" y="916" font-size="15" font-weight="700" fill="#2a5a2a">Keep the first dispatch deliberately small</text>
+  <text x="140" y="937" font-size="11.5" fill="#3a6a3a">Prove the rhythm with a one-file change &#8212; LAYGO pacing. Then trust the machinery.</text>
+  <text x="140" y="956" font-size="11" fill="#2a5a2a">unlocks &#8212; proof the bus moves, the Doer commits, the gate closes &#8212; then first boot</text>
+  <text x="140" y="974" font-size="10.5" fill="#2a5a2a" font-style="italic">lands &#8212; first commit on the substrate + return in Mentor-2&#8217;s inbox</text>
 
-  <!-- step-to-step arrows -->
-  <line x1="40" y1="216" x2="40" y2="244" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#ablue)"/>
-  <line x1="40" y1="328" x2="40" y2="356" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#ablue)"/>
-  <line x1="40" y1="440" x2="40" y2="468" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
-  <line x1="40" y1="552" x2="40" y2="580" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
-  <line x1="40" y1="664" x2="40" y2="692" stroke="#b89425" stroke-width="2.4" marker-end="url(#aamber)"/>
-  <line x1="40" y1="776" x2="40" y2="804" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <!-- step-to-step arrows + order-dependency labels (HOW: why each precedes the next) -->
+  <line x1="40" y1="228" x2="40" y2="258" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#ablue)"/>
+  <text x="440" y="248" text-anchor="middle" font-size="10" fill="#5a7aa0" font-style="italic">because &#8212; need the repos before dropping the master into them</text>
+  <line x1="40" y1="354" x2="40" y2="384" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#ablue)"/>
+  <text x="440" y="374" text-anchor="middle" font-size="10" fill="#5a7aa0" font-style="italic">because &#8212; the state artifacts inherit the master&#8217;s rules</text>
+  <line x1="40" y1="480" x2="40" y2="510" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <text x="440" y="500" text-anchor="middle" font-size="10" fill="#3a6a3a" font-style="italic">because &#8212; the bus tree hangs off the authored state root</text>
+  <line x1="40" y1="606" x2="40" y2="636" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <text x="440" y="626" text-anchor="middle" font-size="10" fill="#3a6a3a" font-style="italic">because &#8212; tier stamps live in the homes just laid out</text>
+  <line x1="40" y1="732" x2="40" y2="762" stroke="#b89425" stroke-width="2.4" marker-end="url(#aamber)"/>
+  <text x="440" y="752" text-anchor="middle" font-size="10" fill="#9a7a1a" font-style="italic">because &#8212; the axis binds the now-stamped tiers</text>
+  <line x1="40" y1="858" x2="40" y2="888" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <text x="440" y="878" text-anchor="middle" font-size="10" fill="#3a6a3a" font-style="italic">because &#8212; only a declared axis can be dispatched</text>
 
   <!-- ============ FOLDER STRUCTURE (right column) ============ -->
-  <rect x="858" y="132" width="582" height="756" rx="12" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.6"/>
+  <rect x="858" y="132" width="582" height="852" rx="12" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.6"/>
   <rect x="858" y="132" width="582" height="40" rx="12" fill="#33445a"/>
   <rect x="858" y="152" width="582" height="20" fill="#33445a"/>
-  <text x="1149" y="159" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">The folder structure that emerges</text>
+  <text x="1149" y="159" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">WHERE it all lands &#8212; the folder structure that emerges</text>
 
   <text x="884" y="200" font-size="12.5" font-weight="700" fill="#2a5a2a">/path/to/substrate/</text>
   <text x="906" y="220" font-size="11.5" fill="#6a7585" font-style="italic">the project you build (its own remote)</text>
@@ -133,15 +149,22 @@
   <text x="900" y="848" font-size="11" fill="#9a7a1a">CHARTER POSTURE: LOCKED &#183; LOCALITY: host-of-substrate</text>
   <text x="900" y="866" font-size="10.5" fill="#8a6d0a" font-style="italic">rename roles freely &#8212; the framework cares about the three positions, not labels</text>
 
+  <!-- step-to-locus map -->
+  <rect x="884" y="884" width="532" height="88" rx="9" fill="#f6f7f9" stroke="#9aa3b0" stroke-width="1.3"/>
+  <text x="900" y="906" font-size="12" font-weight="700" fill="#33445a">Each step&#8217;s artifact has one home (WHERE)</text>
+  <text x="900" y="926" font-size="10.5" fill="#5a6678">Step 1 &#8212; two sibling repo roots &#183; Steps 2&#8211;3, 6 &#8212; reviewer-state root &#183; Step 4 &#8212; inbox/ trees</text>
+  <text x="900" y="944" font-size="10.5" fill="#5a6678">Step 5 &#8212; CLAUDE.md in each tier home &#183; Step 7 &#8212; first commit on substrate + inbox return</text>
+  <text x="900" y="962" font-size="10.5" fill="#6a7585" font-style="italic">every artifact is committed and pushed &#8212; the disk, not a head, is the record</text>
+
   <!-- ============ CAPTION STRIP ============ -->
-  <rect x="60" y="908" width="1380" height="56" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
-  <text x="750" y="932" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">About a day of setup &#8212; two repos, stamped tiers, a first axis, a bus tree. Nothing load-bearing stays in your head.</text>
-  <text x="750" y="954" text-anchor="middle" font-size="12.5" fill="#5a4d20">Every step produces real artifacts committed and pushed; with all boxes ticked you boot the first session.</text>
+  <rect x="60" y="1004" width="1380" height="56" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="1028" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">About a day of setup &#8212; two repos, stamped tiers, a first axis, a bus tree. Nothing load-bearing stays in your head.</text>
+  <text x="750" y="1050" text-anchor="middle" font-size="12.5" fill="#5a4d20">Each step unlocks the next and lands one artifact at a known path; with all boxes ticked you boot the first session.</text>
 
   <!-- ============ FOOTER ============ -->
   <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
-    <g fill="#5a7aa0"><rect x="690" y="982" width="6" height="8" rx="1"/><rect x="699" y="976" width="6" height="14" rx="1"/><rect x="708" y="970" width="6" height="20" rx="1"/></g>
-    <text x="722" y="990" font-size="13" fill="#5a7aa0">gradus.pk</text>
+    <g fill="#5a7aa0"><rect x="690" y="1078" width="6" height="8" rx="1"/><rect x="699" y="1072" width="6" height="14" rx="1"/><rect x="708" y="1066" width="6" height="20" rx="1"/></g>
+    <text x="722" y="1086" font-size="13" fill="#5a7aa0">gradus.pk</text>
   </a>
 
 </svg>

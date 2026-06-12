@@ -18,8 +18,8 @@
   <!-- ============ COLUMN HEADERS ============ -->
   <text x="120" y="136" font-size="13" font-weight="700" fill="#33445a">STEP</text>
   <text x="420" y="136" font-size="13" font-weight="700" fill="#2a5a2a">FORWARD ACTION</text>
-  <rect x="836" y="120" width="222" height="24" rx="6" fill="#fdf3f3"/>
-  <text x="947" y="137" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a2a2a">REVERT PATH</text>
+  <rect x="826" y="120" width="242" height="24" rx="6" fill="#fdf3f3"/>
+  <text x="947" y="137" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a2a2a">REVERT PATH &#8212; the undo move</text>
   <rect x="1086" y="120" width="356" height="24" rx="6" fill="#eef4fa"/>
   <text x="1264" y="137" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">PARALLEL-TRACK BOUNDARY (legacy &#183; managed)</text>
 
@@ -94,9 +94,11 @@
   <text x="150" y="808" font-size="14" font-weight="700" fill="#8a2a2a">Retire the legacy workflow</text>
   <text x="150" y="830" font-size="11.5" fill="#9a3a3a">The ONE deliberately one-way step &#8212; taken last, after every module has proven itself.</text>
   <rect x="826" y="776" width="242" height="92" rx="10" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.8"/>
-  <text x="947" y="810" text-anchor="middle" font-size="11.5" font-weight="700" fill="#8a2a2a">The only one-way step</text>
-  <text x="947" y="830" text-anchor="middle" font-size="11" fill="#9a3a3a">&#8220;retire&#8221; = stop using, not delete;</text>
-  <text x="947" y="848" text-anchor="middle" font-size="11" fill="#9a3a3a">old CI + PR history remain</text>
+  <text x="947" y="800" text-anchor="middle" font-size="11.5" font-weight="700" fill="#8a2a2a">The only one-way step</text>
+  <text x="947" y="818" text-anchor="middle" font-size="10" fill="#9a3a3a">WHY: no parallel legacy track is left</text>
+  <text x="947" y="831" text-anchor="middle" font-size="10" fill="#9a3a3a">to fall back to once it is gone.</text>
+  <text x="947" y="850" text-anchor="middle" font-size="10" fill="#9a3a3a">Softened: &#8220;retire&#8221; = stop using, not</text>
+  <text x="947" y="862" text-anchor="middle" font-size="10" fill="#9a3a3a">delete &#8212; old CI + PR history remain.</text>
 
   <!-- forward-flow arrows down the step column -->
   <line x1="36" y1="244" x2="36" y2="256" stroke="#5a6678" stroke-width="2.4" marker-end="url(#ablue)"/>
@@ -106,13 +108,19 @@
   <line x1="36" y1="660" x2="36" y2="672" stroke="#5a6678" stroke-width="2.4" marker-end="url(#agreen)"/>
   <line x1="36" y1="764" x2="36" y2="776" stroke="#5a6678" stroke-width="2.4" marker-end="url(#ared)"/>
 
-  <!-- revert curved arrows (each step back to undo) -->
-  <line x1="1072" y1="198" x2="1086" y2="198" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
-  <line x1="1072" y1="302" x2="1086" y2="302" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
-  <line x1="1072" y1="406" x2="1086" y2="406" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
-  <line x1="1072" y1="510" x2="1086" y2="510" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
-  <line x1="1072" y1="614" x2="1086" y2="614" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
-  <line x1="1072" y1="718" x2="1086" y2="718" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
+  <!-- HOW the revert works: a dashed undo arrow from the REVERT chip back to the FORWARD action it reverses -->
+  <path d="M826,228 C816,238 820,238 810,238" fill="none" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
+  <path d="M826,332 C816,342 820,342 810,342" fill="none" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
+  <path d="M826,436 C816,446 820,446 810,446" fill="none" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
+  <path d="M826,540 C816,550 820,550 810,550" fill="none" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
+  <path d="M826,644 C816,654 820,654 810,654" fill="none" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
+  <path d="M826,748 C816,758 820,758 810,758" fill="none" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ared)"/>
+  <!-- step 7: the revert is BLOCKED — one-way. A barred return instead of an undo arrow -->
+  <g stroke="#8a2a2a" stroke-width="2.4">
+    <line x1="818" y1="846" x2="804" y2="860"/>
+    <line x1="804" y1="846" x2="818" y2="860"/>
+  </g>
+  <text x="811" y="838" text-anchor="middle" font-size="9" font-weight="700" fill="#8a2a2a">no undo</text>
 
   <!-- ============ PARALLEL-TRACK BOUNDARY PANEL (right) ============ -->
   <rect x="1086" y="152" width="356" height="716" rx="12" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.6"/>
@@ -147,8 +155,12 @@
   <text x="1264" y="828" text-anchor="middle" font-size="10.5" fill="#3a6a3a">all CompassAlpha-managed</text>
   <text x="1264" y="846" text-anchor="middle" font-size="10" fill="#3a6a3a" font-style="italic">legacy workflow retired</text>
 
-  <!-- moving boundary tick label -->
-  <text x="1110" y="490" font-size="10.5" fill="#6a7585" font-style="italic" transform="rotate(-90 1110 490)">the boundary shifts as modules graduate</text>
+  <!-- moving boundary tick label (WHERE/WHEN): the legacy/managed line descends as modules graduate -->
+  <text x="1110" y="510" font-size="10.5" font-weight="700" fill="#8a6d0a" font-style="italic" transform="rotate(-90 1110 510)">WHERE/WHEN &#8212; the legacy / managed boundary descends as modules graduate</text>
+
+  <!-- the migrating boundary drawn as a descending dashed staircase between legacy (above) and managed (below) -->
+  <path d="M1098,612 L1430,612 L1430,668 L1098,668 L1098,706 L1430,706"
+        fill="none" stroke="#b89425" stroke-width="2.6" stroke-dasharray="7 4"/>
 
   <!-- ============ CAPTION STRIP ============ -->
   <rect x="56" y="888" width="1386" height="74" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>

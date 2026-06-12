@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1060" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1080" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 
   <defs>
     <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
@@ -7,7 +7,7 @@
     <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
   </defs>
 
-  <rect width="1500" height="1060" fill="#fafaf8"/>
+  <rect width="1500" height="1080" fill="#fafaf8"/>
 
   <!-- ============ HEADER ============ -->
   <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
@@ -22,37 +22,46 @@
   <!-- preset header cells -->
   <!-- col centres: 316,476,636,796,956,1116,1276 ; col x: 236,396,556,716,876,1036,1196 width 160 -->
   <g font-size="13" font-weight="700">
-    <rect x="236" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
-    <text x="315" y="146" text-anchor="middle" fill="#1a4a7a">Conservative</text>
-    <text x="315" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">ref default</text>
+    <rect x="236" y="124" width="158" height="62" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="315" y="144" text-anchor="middle" fill="#1a4a7a">Conservative</text>
+    <text x="315" y="160" text-anchor="middle" font-size="9" font-weight="700" fill="#5a7aa0">ref default</text>
+    <text x="315" y="176" text-anchor="middle" font-size="8.5" font-weight="400" fill="#5a7aa0">suits: regulated &#183; doctrine-heavy</text>
 
-    <rect x="396" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
-    <text x="475" y="146" text-anchor="middle" fill="#1a4a7a">Balanced</text>
-    <text x="475" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">post-cycle-1</text>
+    <rect x="396" y="124" width="158" height="62" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="475" y="144" text-anchor="middle" fill="#1a4a7a">Balanced</text>
+    <text x="475" y="160" text-anchor="middle" font-size="9" font-weight="700" fill="#5a7aa0">post-cycle-1</text>
+    <text x="475" y="176" text-anchor="middle" font-size="8.5" font-weight="400" fill="#5a7aa0">suits: most projects, proven</text>
 
-    <rect x="556" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
-    <text x="635" y="146" text-anchor="middle" fill="#1a4a7a">Throughput</text>
-    <text x="635" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">mature, time-pressed</text>
+    <rect x="556" y="124" width="158" height="62" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="635" y="144" text-anchor="middle" fill="#1a4a7a">Throughput</text>
+    <text x="635" y="160" text-anchor="middle" font-size="9" font-weight="700" fill="#5a7aa0">mature, time-pressed</text>
+    <text x="635" y="176" text-anchor="middle" font-size="8.5" font-weight="400" fill="#5a7aa0">suits: parallel-ready &#183; deadline</text>
 
-    <rect x="716" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
-    <text x="795" y="146" text-anchor="middle" fill="#1a4a7a">Cost-optimized</text>
-    <text x="795" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">budget-conscious</text>
+    <rect x="716" y="124" width="158" height="62" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="795" y="144" text-anchor="middle" fill="#1a4a7a">Cost-optimized</text>
+    <text x="795" y="160" text-anchor="middle" font-size="9" font-weight="700" fill="#5a7aa0">budget-conscious</text>
+    <text x="795" y="176" text-anchor="middle" font-size="8.5" font-weight="400" fill="#5a7aa0">suits: smaller scope &#183; spend-bound</text>
 
-    <rect x="876" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
-    <text x="955" y="146" text-anchor="middle" fill="#1a4a7a">Risk-averse</text>
-    <text x="955" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">compliance-critical</text>
+    <rect x="876" y="124" width="158" height="62" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="955" y="144" text-anchor="middle" fill="#1a4a7a">Risk-averse</text>
+    <text x="955" y="160" text-anchor="middle" font-size="9" font-weight="700" fill="#5a7aa0">compliance-critical</text>
+    <text x="955" y="176" text-anchor="middle" font-size="8.5" font-weight="400" fill="#5a7aa0">suits: error cost &#8805; federation cost</text>
 
-    <rect x="1036" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
-    <text x="1115" y="146" text-anchor="middle" fill="#1a4a7a">Research</text>
-    <text x="1115" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">fast iteration</text>
+    <rect x="1036" y="124" width="158" height="62" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="1115" y="144" text-anchor="middle" fill="#1a4a7a">Research</text>
+    <text x="1115" y="160" text-anchor="middle" font-size="9" font-weight="700" fill="#5a7aa0">fast iteration</text>
+    <text x="1115" y="176" text-anchor="middle" font-size="8.5" font-weight="400" fill="#5a7aa0">suits: doctrine churns &#183; exploring</text>
 
-    <rect x="1196" y="124" width="158" height="48" rx="8" fill="#fef0c8" stroke="#b89425" stroke-width="1.6"/>
-    <text x="1275" y="146" text-anchor="middle" fill="#8a6d0a">Bootstrap</text>
-    <text x="1275" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#9a7a1a">first cycle</text>
+    <rect x="1196" y="124" width="158" height="62" rx="8" fill="#fef0c8" stroke="#b89425" stroke-width="1.6"/>
+    <text x="1275" y="144" text-anchor="middle" fill="#8a6d0a">Bootstrap</text>
+    <text x="1275" y="160" text-anchor="middle" font-size="9" font-weight="700" fill="#9a7a1a">first cycle</text>
+    <text x="1275" y="176" text-anchor="middle" font-size="8.5" font-weight="400" fill="#9a7a1a">suits: new adoption &#183; prove rhythm</text>
   </g>
 
   <!-- dial label cells + value cells -->
   <!-- helper: each row drawn explicitly. cell fills encode the "heat": green=safest/strict, blue=mid, amber=loosened -->
+  <!-- matrix + everything below shifted down 18px to clear the taller "suits:" header cells -->
+  <g transform="translate(0,18)">
 
   <!-- ROW 1 · Concurrency (y172) -->
   <rect x="56" y="172" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
@@ -217,4 +226,5 @@
     <text x="1410" y="1012" font-size="13" fill="#5a7aa0">gradus.pk</text>
   </a>
 
+  </g>
 </svg>

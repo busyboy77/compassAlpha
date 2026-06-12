@@ -16,22 +16,24 @@
   <text x="720" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Every session, every tier, every time &#8212; prove you are grounded in disk before you take any work</text>
 
   <!-- ============ INTRO ============ -->
-  <rect x="56" y="124" width="1328" height="44" rx="9" fill="#eef1f6" stroke="#3b6ea5" stroke-width="1.4"/>
-  <text x="720" y="151" text-anchor="middle" font-size="13" fill="#26425f">A session that skips boot operates on assumptions instead of disk. T0 is what makes &#8220;state of the federation = state of git&#8221; trustworthy at the start of every turn.</text>
+  <rect x="56" y="124" width="1328" height="64" rx="9" fill="#eef1f6" stroke="#3b6ea5" stroke-width="1.4"/>
+  <text x="720" y="148" text-anchor="middle" font-size="13" fill="#26425f">A session that skips boot operates on assumptions instead of disk. T0 is what makes &#8220;state of the federation = state of git&#8221; trustworthy at the start of every turn.</text>
+  <text x="720" y="170" text-anchor="middle" font-size="11.5" fill="#3b6ea5" font-style="italic">WHY boot-light: each read grounds the session in one artifact &#8212; the order trims what is loaded, never what is knowable. Knowledge stays on disk, reachable on demand; only the working set is kept small.</text>
 
   <!-- ============ STEP COLUMN (left) + ASSERTION COLUMN (right) ============ -->
   <!-- steps: 8 ordered, vertical flow. left box x56 w560, assertion x660 w724 -->
   <!-- step y positions -->
 
-  <!-- reading-order bracket label -->
+  <!-- reading-order bracket label (WHY the order: broad rules first, narrowing to this turn's work) -->
   <rect x="40" y="196" width="14" height="430" rx="4" fill="#dfeaf5"/>
-  <text x="47" y="412" font-size="11" font-weight="700" fill="#1a4a7a" transform="rotate(-90 47 412)" text-anchor="middle">THE READING ORDER</text>
+  <text x="47" y="412" font-size="11" font-weight="700" fill="#1a4a7a" transform="rotate(-90 47 412)" text-anchor="middle">READING ORDER &#183; BROAD RULES DOWN TO THIS TURN&#8217;S WORK</text>
 
   <!-- STEP 1 -->
   <rect x="72" y="196" width="540" height="50" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
   <circle cx="104" cy="221" r="14" fill="#3b6ea5"/><text x="104" y="226" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
   <text x="130" y="217" font-size="13.5" font-weight="700" fill="#1a4a7a">Read the master protocol</text>
   <text x="130" y="234" font-size="10.5" fill="#5a7aa0">COMPASS_ALPHA_FRAMEWORK_v0.1.md &#8212; the substantive rules</text>
+  <text x="600" y="234" text-anchor="end" font-size="9" fill="#7a8aa0" font-style="italic">from: repo root (shared)</text>
   <rect x="660" y="196" width="724" height="50" rx="9" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.2"/>
   <text x="676" y="226" font-size="11.5" fill="#2a5a2a">Asserts &#8212; the rulebook this session runs under is the canonical one on disk</text>
 
@@ -40,6 +42,7 @@
   <circle cx="104" cy="275" r="14" fill="#3b6ea5"/><text x="104" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2</text>
   <text x="130" y="271" font-size="13.5" font-weight="700" fill="#1a4a7a">Read this tier&#8217;s stamp</text>
   <text x="130" y="288" font-size="10.5" fill="#5a7aa0">its own CLAUDE.md &#8212; who am I, what may I touch, my commit discipline</text>
+  <text x="600" y="288" text-anchor="end" font-size="9" fill="#7a8aa0" font-style="italic">from: tier home</text>
   <rect x="660" y="250" width="724" height="50" rx="9" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.2"/>
   <text x="676" y="280" font-size="11.5" fill="#2a5a2a">Asserts &#8212; identity + jurisdiction are known; the session knows its own tier</text>
 
@@ -48,6 +51,7 @@
   <circle cx="104" cy="329" r="14" fill="#3b6ea5"/><text x="104" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3</text>
   <text x="130" y="325" font-size="13.5" font-weight="700" fill="#1a4a7a">Read the axis declaration</text>
   <text x="130" y="342" font-size="10.5" fill="#5a7aa0">e.g. AXIS_BUILD.md &#8212; the bindings for this axis</text>
+  <text x="600" y="342" text-anchor="end" font-size="9" fill="#7a8aa0" font-style="italic">from: repo root</text>
   <rect x="660" y="304" width="724" height="50" rx="9" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.2"/>
   <text x="676" y="334" font-size="11.5" fill="#2a5a2a">Asserts &#8212; the axis bindings (charter posture, stage taxonomy) are loaded</text>
 
@@ -56,6 +60,7 @@
   <circle cx="104" cy="383" r="14" fill="#3b6ea5"/><text x="104" y="388" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">4</text>
   <text x="130" y="379" font-size="13.5" font-weight="700" fill="#1a4a7a">Read the LEDGER</text>
   <text x="130" y="396" font-size="10.5" fill="#5a7aa0">LEDGER.md &#8212; live federation state: in flight, done, next</text>
+  <text x="600" y="396" text-anchor="end" font-size="9" fill="#7a8aa0" font-style="italic">from: repo root (shared)</text>
   <rect x="660" y="358" width="724" height="50" rx="9" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.2"/>
   <text x="676" y="388" font-size="11.5" fill="#2a5a2a">Asserts &#8212; the session knows what is in flight, what closed, what is next</text>
 
@@ -64,6 +69,7 @@
   <circle cx="104" cy="437" r="14" fill="#3b6ea5"/><text x="104" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">5</text>
   <text x="130" y="433" font-size="13.5" font-weight="700" fill="#1a4a7a">Read the memory index</text>
   <text x="130" y="450" font-size="10.5" fill="#5a7aa0">memory/MEMORY.md &#8212; cross-cycle learnings inherited, not re-learned</text>
+  <text x="600" y="450" text-anchor="end" font-size="9" fill="#7a8aa0" font-style="italic">from: tier home /memory</text>
   <rect x="660" y="412" width="724" height="50" rx="9" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.2"/>
   <text x="676" y="442" font-size="11.5" fill="#2a5a2a">Asserts &#8212; hard-won lessons carry forward into this fresh session</text>
 
@@ -72,6 +78,7 @@
   <circle cx="104" cy="491" r="14" fill="#3b6ea5"/><text x="104" y="496" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">6</text>
   <text x="130" y="487" font-size="13.5" font-weight="700" fill="#1a4a7a">Read the inbox</text>
   <text x="130" y="504" font-size="10.5" fill="#5a7aa0">its own inbox/ &#8212; new files here are this turn&#8217;s work</text>
+  <text x="600" y="504" text-anchor="end" font-size="9" fill="#7a8aa0" font-style="italic">from: tier home /inbox</text>
   <rect x="660" y="466" width="724" height="50" rx="9" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.2"/>
   <text x="676" y="496" font-size="11.5" fill="#2a5a2a">Asserts &#8212; the mentor does NOT read down a sub-tier folder; that manufactures false drift</text>
 

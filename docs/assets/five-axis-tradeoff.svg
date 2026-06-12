@@ -53,8 +53,20 @@
   <!-- research / exploratory : green -->
   <polygon points="490,350 656.4,415.9 584,599.4 425.3,559 423.4,448.4" fill="#4a8a4a" fill-opacity="0.12" stroke="#4a8a4a" stroke-width="2.4" stroke-dasharray="2 4"/>
 
-  <!-- center dot -->
+  <!-- center dot + invariant-floor anchor -->
   <circle cx="490" cy="470" r="3" fill="#7a7060"/>
+  <circle cx="490" cy="470" r="13" fill="none" stroke="#3b6ea5" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <line x1="490" y1="483" x2="490" y2="690" stroke="#3b6ea5" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#ablue)"/>
+  <rect x="372" y="690" width="236" height="34" rx="8" fill="#eef1f6" stroke="#3b6ea5" stroke-width="1.3"/>
+  <text x="490" y="704" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a4a7a">the invariant floor sits under the origin</text>
+  <text x="490" y="718" text-anchor="middle" font-size="9.5" fill="#5a7aa0">it is not an axis &#8212; no spoke can trade it away</text>
+
+  <!-- HOW: a preset is a polygon traced on the surface -->
+  <rect x="44" y="196" width="214" height="62" rx="9" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.3"/>
+  <text x="151" y="216" text-anchor="middle" font-size="11" font-weight="700" fill="#1f2a36">How to read a preset</text>
+  <text x="151" y="234" text-anchor="middle" font-size="10" fill="#5a6678">each profile is one polygon traced</text>
+  <text x="151" y="248" text-anchor="middle" font-size="10" fill="#5a6678">across the five spokes &#8212; a single point</text>
+  <line x1="258" y1="250" x2="346" y2="380" stroke="#3b6ea5" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ablue)"/>
 
   <!-- ============ PROFILE LEGEND ============ -->
   <rect x="40" y="724" width="908" height="120" rx="10" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.3"/>
@@ -77,29 +89,32 @@
   <rect x="980" y="156" width="476" height="380" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
   <text x="1218" y="186" text-anchor="middle" font-size="16" font-weight="700" fill="#8a6d0a">The couplings &#8212; spend one to buy another</text>
 
-  <rect x="1004" y="206" width="428" height="72" rx="9" fill="#ffffff" stroke="#c44a4a" stroke-width="1.4"/>
-  <text x="1022" y="232" font-size="13" font-weight="700" fill="#8a2a2a">Speed up</text>
-  <line x1="1098" y1="227" x2="1140" y2="227" stroke="#c44a4a" stroke-width="2.4" marker-end="url(#ared)"/>
-  <text x="1152" y="232" font-size="13" font-weight="700" fill="#8a2a2a">Risk up &#183; Intelligence down</text>
-  <text x="1022" y="258" font-size="11" fill="#9a3a3a">parallel dispatches, skipped verification, concise digests</text>
+  <rect x="1004" y="206" width="428" height="74" rx="9" fill="#ffffff" stroke="#c44a4a" stroke-width="1.4"/>
+  <text x="1022" y="230" font-size="13" font-weight="700" fill="#8a2a2a">Speed up</text>
+  <line x1="1098" y1="225" x2="1140" y2="225" stroke="#c44a4a" stroke-width="2.4" marker-end="url(#ared)"/>
+  <text x="1152" y="230" font-size="13" font-weight="700" fill="#8a2a2a">Risk up &#183; Intelligence down</text>
+  <text x="1022" y="251" font-size="11" font-style="italic" fill="#8a2a2a">because less verification runs per unit of work</text>
+  <text x="1022" y="269" font-size="10.5" fill="#9a3a3a">parallel dispatches, skipped checks, concise digests</text>
 
-  <rect x="1004" y="290" width="428" height="72" rx="9" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.4"/>
+  <rect x="1004" y="292" width="428" height="74" rx="9" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.4"/>
   <text x="1022" y="316" font-size="13" font-weight="700" fill="#1a4a7a">Intelligence up</text>
   <line x1="1132" y1="311" x2="1174" y2="311" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#ablue)"/>
   <text x="1186" y="316" font-size="13" font-weight="700" fill="#1a4a7a">Cost up &#183; Speed down</text>
-  <text x="1022" y="342" font-size="11" fill="#5a7aa0">top-tier models, wide context, strict provenance, more invariants</text>
+  <text x="1022" y="337" font-size="11" font-style="italic" fill="#1a4a7a">because deeper reads &amp; richer tooling cost tokens and time</text>
+  <text x="1022" y="355" font-size="10.5" fill="#5a7aa0">top-tier models, wide context, strict provenance</text>
 
-  <rect x="1004" y="374" width="428" height="72" rx="9" fill="#ffffff" stroke="#b89425" stroke-width="1.4"/>
-  <text x="1022" y="400" font-size="13" font-weight="700" fill="#8a6d0a">Cost down</text>
-  <line x1="1098" y1="395" x2="1140" y2="395" stroke="#b89425" stroke-width="2.4" marker-end="url(#aamber)"/>
-  <text x="1152" y="400" font-size="13" font-weight="700" fill="#8a6d0a">Founder load up &#183; Risk up</text>
-  <text x="1022" y="426" font-size="11" fill="#9a7a1a">cheaper models or fewer toolings shift verification onto the human</text>
+  <rect x="1004" y="378" width="428" height="74" rx="9" fill="#ffffff" stroke="#b89425" stroke-width="1.4"/>
+  <text x="1022" y="402" font-size="13" font-weight="700" fill="#8a6d0a">Cost down</text>
+  <line x1="1098" y1="397" x2="1140" y2="397" stroke="#b89425" stroke-width="2.4" marker-end="url(#aamber)"/>
+  <text x="1152" y="402" font-size="13" font-weight="700" fill="#8a6d0a">Founder load up &#183; Risk up</text>
+  <text x="1022" y="423" font-size="11" font-style="italic" fill="#8a6d0a">because the verification cut has to land somewhere &#8212; on the human</text>
+  <text x="1022" y="441" font-size="10.5" fill="#9a7a1a">cheaper models or fewer toolings</text>
 
-  <rect x="1004" y="458" width="428" height="58" rx="9" fill="#ffffff" stroke="#4a8a4a" stroke-width="1.4"/>
-  <text x="1022" y="484" font-size="13" font-weight="700" fill="#2a5a2a">Predictability up</text>
-  <line x1="1146" y1="479" x2="1188" y2="479" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
-  <text x="1200" y="484" font-size="13" font-weight="700" fill="#2a5a2a">Speed down</text>
-  <text x="1022" y="506" font-size="11" fill="#3a6a3a">LAYGO one-at-a-time is estimable but slow</text>
+  <rect x="1004" y="464" width="428" height="60" rx="9" fill="#ffffff" stroke="#4a8a4a" stroke-width="1.4"/>
+  <text x="1022" y="488" font-size="13" font-weight="700" fill="#2a5a2a">Predictability up</text>
+  <line x1="1146" y1="483" x2="1188" y2="483" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <text x="1200" y="488" font-size="13" font-weight="700" fill="#2a5a2a">Speed down</text>
+  <text x="1022" y="510" font-size="11" font-style="italic" fill="#2a5a2a">because one-at-a-time (LAYGO) is estimable but forgoes overlap</text>
 
   <!-- ============ INVARIANT FLOOR NOTE ============ -->
   <rect x="980" y="556" width="476" height="166" rx="11" fill="#eef1f6" stroke="#3b6ea5" stroke-width="1.6"/>

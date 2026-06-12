@@ -20,10 +20,25 @@
   <text x="630" y="174" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a6d0a">RELAXED WINDOW</text>
   <text x="630" y="192" text-anchor="middle" font-size="10.5" fill="#9a7a1a" font-style="italic">the only exception to the persistence law</text>
 
-  <!-- ============ TIMELINE SPINE ============ -->
+  <!-- ============ WHY chip (top-left rationale) ============ -->
+  <rect x="92" y="148" width="356" height="80" rx="10" fill="#fbeaea" stroke="#c44a4a" stroke-width="1.5"/>
+  <text x="108" y="170" font-size="11.5" font-weight="700" fill="#8a2a2a">WHY a window at all &#8212; the pathology it prevents</text>
+  <text x="108" y="189" font-size="10.5" fill="#7a3030">strict flush-first at 02:00 would trade live downtime for paperwork:</text>
+  <text x="108" y="205" font-size="10.5" fill="#7a3030">seconds of outage cost more than the flush delay. The danger it</text>
+  <text x="108" y="221" font-size="10.5" fill="#7a3030">guards against &#8212; a permanent audit hole &#8212; is closed at postmortem.</text>
+
+  <!-- ============ TIMELINE SPINE + CLOCK (WHERE / WHEN) ============ -->
   <line x1="120" y1="300" x2="1400" y2="300" stroke="#9aa3b0" stroke-width="3"/>
-  <text x="120" y="270" font-size="13" font-weight="700" fill="#33445a">02:00 &#8212; alert fires</text>
-  <text x="1400" y="270" text-anchor="end" font-size="13" font-weight="700" fill="#33445a">postmortem &#8212; trail complete</text>
+  <text x="120" y="262" font-size="13" font-weight="700" fill="#33445a">02:00 &#8212; alert fires</text>
+  <text x="1400" y="262" text-anchor="end" font-size="13" font-weight="700" fill="#33445a">postmortem &#8212; trail complete</text>
+  <!-- live-response duration bracket: 02:01 -> 02:23 (22 min MTTR) -->
+  <line x1="190" y1="246" x2="850" y2="246" stroke="#5a6678" stroke-width="1.6"/>
+  <line x1="190" y1="242" x2="190" y2="250" stroke="#5a6678" stroke-width="1.6"/>
+  <line x1="850" y1="242" x2="850" y2="250" stroke="#5a6678" stroke-width="1.6"/>
+  <text x="520" y="240" text-anchor="middle" font-size="10.5" font-weight="700" fill="#5a6678">live response &#8212; 22 min MTTR (the meter is running)</text>
+  <!-- gap marker: postmortem is later, off the live clock -->
+  <line x1="948" y1="246" x2="1110" y2="246" stroke="#4a8a4a" stroke-width="1.6" stroke-dasharray="4 4"/>
+  <text x="1029" y="240" text-anchor="middle" font-size="10.5" font-weight="700" fill="#3a6a3a">later &#8212; off the live clock</text>
 
   <!-- ===== STAGE 1 · ALERT ===== -->
   <circle cx="190" cy="300" r="9" fill="#3b6ea5"/>
@@ -97,11 +112,20 @@
   <text x="850" y="536" text-anchor="middle" font-size="11" fill="#3a5a7a">not gating mid-incident</text>
   <line x1="850" y1="438" x2="850" y2="478" stroke="#3b6ea5" stroke-width="1.8" marker-end="url(#ablue)"/>
 
-  <!-- ===== re-flush arrow from relaxed window to POSTMORTEM ===== -->
-  <path d="M630,580 C630,632 1110,632 1110,468" fill="none" stroke="#4a8a4a" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#agreen)"/>
-  <rect x="772" y="608" width="320" height="44" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
-  <text x="932" y="628" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">deferred persistence closes here</text>
-  <text x="932" y="644" text-anchor="middle" font-size="10.5" fill="#3a6a3a">the relaxed window&#8217;s deferred writes are reflushed</text>
+  <!-- ===== deferred-writes buffer (the mechanism: writes queue here, not lost) ===== -->
+  <rect x="540" y="452" width="180" height="72" rx="9" fill="#fff6df" stroke="#b89425" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <text x="630" y="473" text-anchor="middle" font-size="11" font-weight="700" fill="#7a5e12">deferred-writes buffer</text>
+  <text x="630" y="491" text-anchor="middle" font-size="10" fill="#8a6d0a">incident-ID on each commit;</text>
+  <text x="630" y="507" text-anchor="middle" font-size="10" fill="#8a6d0a">full ceremony queued,</text>
+  <text x="630" y="521" text-anchor="middle" font-size="10" fill="#8a6d0a">recoverable from git meanwhile</text>
+  <!-- MITIGATE feeds the buffer -->
+  <line x1="630" y1="438" x2="630" y2="452" stroke="#b89425" stroke-width="1.8" marker-end="url(#aamber)"/>
+
+  <!-- ===== re-flush arrow: buffer drains into POSTMORTEM (the close mechanism) ===== -->
+  <path d="M630,540 C630,628 1110,634 1110,468" fill="none" stroke="#4a8a4a" stroke-width="2.6" stroke-dasharray="7 5" marker-end="url(#agreen)"/>
+  <rect x="772" y="606" width="320" height="48" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="932" y="626" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">REFLUSH &#8212; buffer drains to disk, hole closes</text>
+  <text x="932" y="644" text-anchor="middle" font-size="10.5" fill="#3a6a3a">every deferred write lands; the audit trail is made complete</text>
 
   <!-- 'latency-deferred, never permanently off-disk' note on the window -->
   <text x="630" y="566" text-anchor="middle" font-size="10.5" fill="#8a6d0a" font-style="italic">latency-deferred, not lost</text>
