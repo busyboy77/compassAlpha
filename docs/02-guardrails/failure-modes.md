@@ -22,7 +22,7 @@ Most AI-collaboration setups treat failures as surprises and recover by improvis
 
 **Symptom.** A running session is killed mid-turn (host cycles, process dies). In-memory context is lost; any uncommitted in-flight work is lost with it.
 
-**Recovery.** A fresh session pulls the state-of-record repo — the last pushed commit is the source of truth — reads its own folder and inbox, and resumes from the last clean checkpoint (or reconciles and continues). **Loss is bounded to the current in-flight turn**, and only if the flush=push cadence was honored. This is exactly what the [persistence law](../01-axioms/persistence-law.md) buys: frequent small commits mean a power-down is a shrug, not a catastrophe.
+**Recovery.** A fresh session pulls the state-of-record repo — the last pushed commit is the source of truth — reads its own folder and inbox, and resumes from the last clean checkpoint (or reconciles and continues). **Loss is bounded to the current in-flight turn**, and only if the flush=push cadence was honored. This is exactly what the [persistence law](../01-axioms/persistence-law.md) buys: frequent small commits mean a power-down is a shrug, not a catastrophe. When the event leaves the git planes themselves damaged — zeroed objects, a truncated index, a broken ref — the full reconciliation is in [Disaster reconciliation](disaster-reconciliation.md): an aggressive read-only recon across *every* persisted plane before any tier boots.
 
 ### Rotation mid-flight
 
@@ -72,8 +72,9 @@ Most AI-collaboration setups treat failures as surprises and recover by improvis
 
 - **[Persistence law](../01-axioms/persistence-law.md)** is what bounds power-down loss and makes mid-flight rotation safe — every recovery here assumes state is durable on origin.
 - **[Firewall](../01-axioms/firewall.md)** is what lets in-flight dispatches survive a parent rotation untouched, and is the axiom the firewall-leak class defends.
+- **[Disaster reconciliation](disaster-reconciliation.md)** expands the power-down row into its full treatment — the dual-plane recon that runs before any tier boots after an unclean event.
 - **[Stale-snapshot detection](stale-snapshot-detection.md)**, **[Hallucination defense](hallucination-defense.md)**, **[Pollution containment](pollution-containment.md)**, and **[Brief completeness](brief-completeness.md)** each expand one row of the table above into its full treatment.
 
 ---
 
-## Next: [Brief Completeness →](brief-completeness.md)
+## Next: [Disaster Reconciliation →](disaster-reconciliation.md)

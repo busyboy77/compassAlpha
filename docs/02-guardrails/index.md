@@ -25,9 +25,9 @@ Every guardrail in this section defends one or more of the four pathologies that
 
 ### 1. Context pollution
 
-A tier's context fills with detail it does not own — sibling churn, sub-tier reasoning, integration noise. Judgment degrades (cognitive overhead) and biases (saw the trees, lost the forest). Worst form: a parent that *delegated* work still absorbs the delegate's full context on retrieval, so isolation buys nothing.
+A tier's context fills with detail it does not own — sibling churn, sub-tier reasoning, integration noise. Judgment degrades (cognitive overhead) and biases (saw the trees, lost the forest). Worst form: a parent that *delegated* work still absorbs the delegate's full context on retrieval, so isolation buys nothing. It arrives by two vectors — a tier auto-reading what it doesn't own, and a sender *pushing* detail across the bus the receiver never needed.
 
-> Guarded by: [Pollution containment](pollution-containment.md), [Single-live-writer](single-live-writer.md).
+> Guarded by: [Pollution containment](pollution-containment.md) (spatial vector), [The minimal-sufficient bus](minimal-sufficient-bus.md) (relay vector), [Single-live-writer](single-live-writer.md).
 
 ### 2. Hallucination drift
 
@@ -43,24 +43,26 @@ A tier acts outside its jurisdiction — a mentor does labour, a doer improvises
 
 ### 4. Trust erosion
 
-The founder observes a claim that doesn't match disk, a decision that evaporated, or a "done" that wasn't pushed. Once observed, the founder can no longer hold the narrow relay-and-lost+found posture and must return to micromanaging — which is exactly the cost the framework exists to spare them.
+The founder observes a claim that doesn't match disk, a decision that evaporated, or a "done" that wasn't pushed. Once observed, the founder can no longer hold the narrow relay-and-lost+found posture and must return to micromanaging — which is exactly the cost the framework exists to spare them. A disaster that loses unbounded work — rather than the bounded, recoverable sliver — erodes trust the same way.
 
-> Guarded by: [Failure modes](failure-modes.md), [Brief completeness](brief-completeness.md), and the persistence discipline behind every page here.
+> Guarded by: [Failure modes](failure-modes.md), [Disaster reconciliation](disaster-reconciliation.md), [Brief completeness](brief-completeness.md), and the persistence discipline behind every page here.
 
-## The six guardrail pages
+## The eight guardrail pages
 
 | Page | Pathology guarded | Core mechanism |
 |---|---|---|
-| [Pollution containment](pollution-containment.md) | Context pollution | Firewall + state-tracking scope confine each tier to its own granularity. |
+| [Pollution containment](pollution-containment.md) | Context pollution (spatial vector) | Firewall + state-tracking scope confine each tier to its own granularity. |
+| [The minimal-sufficient bus](minimal-sufficient-bus.md) | Context pollution (relay vector) | Relay the least the receiver needs; persist the detail in substrate, pulled on demand. |
 | [Hallucination defense](hallucination-defense.md) | Hallucination drift | Verification-at-citation: every load-bearing claim verified against substrate before action. |
 | [Stale-snapshot detection](stale-snapshot-detection.md) | Hallucination drift (the firewall-leak class) | "As of last tagged return" discipline; forensic descent before action. |
-| [Failure modes](failure-modes.md) | Trust erosion (all classes) | The six documented failure classes, each with symptom → recovery. |
+| [Failure modes](failure-modes.md) | Trust erosion (all classes) | The documented failure classes, each with symptom → recovery. |
+| [Disaster reconciliation](disaster-reconciliation.md) | Trust erosion (unclean-event class) | Bounded loss by design; aggressive dual-plane recon before any tier boots. |
 | [Brief completeness](brief-completeness.md) | Role confusion, trust erosion | No placeholders at the relay boundary; escalate, never improvise. |
 | [Single-live-writer](single-live-writer.md) | Context pollution, role confusion | One writer holds jurisdiction; fetch-before-push for everyone else. |
 
 ## How to read this section
 
-If you are **operating** a federation, read [Failure modes](failure-modes.md) first — it is the index of everything that can go wrong, with the recovery for each.
+If you are **operating** a federation, read [Failure modes](failure-modes.md) first — it is the index of everything that can go wrong, with the recovery for each — then [Disaster reconciliation](disaster-reconciliation.md) for the unclean-event runbook you will reach for after a power loss or host crash.
 
 If you are **designing or auditing** one, read [Pollution containment](pollution-containment.md) and [Hallucination defense](hallucination-defense.md) — they explain why the structural choices in the axioms are not negotiable.
 

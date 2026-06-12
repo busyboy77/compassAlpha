@@ -114,9 +114,11 @@ nav:
   - Guardrails:
     - 02-guardrails/index.md
     - Pollution containment: 02-guardrails/pollution-containment.md
+    - Minimal-sufficient bus: 02-guardrails/minimal-sufficient-bus.md
     - Hallucination defense: 02-guardrails/hallucination-defense.md
     - Stale snapshot detection: 02-guardrails/stale-snapshot-detection.md
     - Failure modes: 02-guardrails/failure-modes.md
+    - Disaster reconciliation: 02-guardrails/disaster-reconciliation.md
     - Brief completeness: 02-guardrails/brief-completeness.md
     - Single-live-writer: 02-guardrails/single-live-writer.md
   - Tunables:

@@ -94,7 +94,8 @@ CompassAlpha defaults to **pure RELAY** — separate sessions handing off via pa
 - **[Hard labour rule](../01-axioms/hard-labour-rule.md)** prevents the descent-to-help variant: mentors don't pollute by doing labour; doers escalate clean summaries upward instead.
 - **[Stale-snapshot detection](stale-snapshot-detection.md)** is the failure that occurs when containment succeeds *spatially* but a tier still treats an old summary as live — the inverse risk.
 - **[Single-live-writer](single-live-writer.md)** prevents a parallel-writer variant where overlapping writers cross-contaminate each other's folders.
+- **[The minimal-sufficient bus](minimal-sufficient-bus.md)** is the sibling guardrail for the *relay* vector: this page stops a tier from auto-reading what it doesn't own; that one stops a sender from *pushing* detail the receiver never needed across the bus.
 
 ---
 
-## Next: [Hallucination Defense →](hallucination-defense.md)
+## Next: [The Minimal-Sufficient Bus →](minimal-sufficient-bus.md)
