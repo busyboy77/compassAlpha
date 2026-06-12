@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 880" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+  </defs>
+
+  <rect width="1500" height="880" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Doctrine Cycle &#8212; the vision-to-code descent</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">The heaviest lane: S1 to S5 walks down the altitudes, then a freeze &#183; gate &#183; sub-bump &#183; ratify tail closes the compass</text>
+
+  <!-- ============ ALTITUDE AXIS (left) ============ -->
+  <text x="120" y="138" font-size="13.5" font-weight="700" fill="#33445a">Altitude descends &#8212; from ideology to executable code</text>
+  <!-- altitude tick labels down the left edge -->
+  <text x="84" y="232" font-size="12" font-weight="700" fill="#5a6678">60K</text>
+  <text x="84" y="392" font-size="12" font-weight="700" fill="#5a6678">30K</text>
+  <text x="84" y="552" font-size="12" font-weight="700" fill="#5a6678">10K</text>
+  <text x="68" y="638" font-size="11" font-weight="700" fill="#5a6678">grass-root</text>
+  <line x1="120" y1="170" x2="120" y2="660" stroke="#9aa3b0" stroke-width="2" stroke-dasharray="3 5"/>
+  <path d="M120,660 L114,646 L126,646 Z" fill="#9aa3b0"/>
+
+  <!-- ===== S1 · 60K ideology ===== -->
+  <rect x="156" y="186" width="300" height="92" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="156" y="186" width="300" height="30" rx="11" fill="#3b6ea5"/>
+  <rect x="156" y="202" width="300" height="14" fill="#3b6ea5"/>
+  <text x="306" y="207" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">S1 &#183; Substrate recon + 60K ideology</text>
+  <text x="306" y="240" text-anchor="middle" font-size="11.5" fill="#26425f">why billing exists &#183; named theses</text>
+  <text x="306" y="258" text-anchor="middle" font-size="11.5" fill="#26425f">principles &#183; every claim cites substrate</text>
+  <rect x="476" y="206" width="120" height="52" rx="8" fill="#eef3fa" stroke="#3b6ea5" stroke-width="1.4"/>
+  <text x="536" y="228" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">60K</text>
+  <text x="536" y="246" text-anchor="middle" font-size="10.5" fill="#3a5a7a">ideology</text>
+
+  <!-- ===== S2a/S2b · 30K mechanics ===== -->
+  <rect x="156" y="346" width="300" height="92" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="156" y="346" width="300" height="30" rx="11" fill="#3b6ea5"/>
+  <rect x="156" y="362" width="300" height="14" fill="#3b6ea5"/>
+  <text x="306" y="367" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">S2a / S2b &#183; 30K mechanics</text>
+  <text x="306" y="400" text-anchor="middle" font-size="11.5" fill="#26425f">higher-altitude mechanics, then</text>
+  <text x="306" y="418" text-anchor="middle" font-size="11.5" fill="#26425f">compass-conjoined cross-refs</text>
+  <rect x="476" y="366" width="120" height="52" rx="8" fill="#eef3fa" stroke="#3b6ea5" stroke-width="1.4"/>
+  <text x="536" y="388" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">30K</text>
+  <text x="536" y="406" text-anchor="middle" font-size="10.5" fill="#3a5a7a">mechanics</text>
+
+  <!-- ===== S3a/S3b · 10K schema ===== -->
+  <rect x="156" y="506" width="300" height="92" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="156" y="506" width="300" height="30" rx="11" fill="#3b6ea5"/>
+  <rect x="156" y="522" width="300" height="14" fill="#3b6ea5"/>
+  <text x="306" y="527" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">S3a / S3b &#183; 10K schema + engine</text>
+  <text x="306" y="560" text-anchor="middle" font-size="11.5" fill="#26425f">tables, types, state machine &#183; routes,</text>
+  <text x="306" y="578" text-anchor="middle" font-size="11.5" fill="#26425f">engine, events &#8212; 10K must be executable</text>
+  <rect x="476" y="526" width="120" height="52" rx="8" fill="#eef3fa" stroke="#3b6ea5" stroke-width="1.4"/>
+  <text x="536" y="548" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">10K</text>
+  <text x="536" y="566" text-anchor="middle" font-size="10.5" fill="#3a5a7a">schema</text>
+
+  <!-- descent arrows on the spine -->
+  <line x1="306" y1="278" x2="306" y2="346" stroke="#3b6ea5" stroke-width="2.6" marker-end="url(#ablue)"/>
+  <line x1="306" y1="438" x2="306" y2="506" stroke="#3b6ea5" stroke-width="2.6" marker-end="url(#ablue)"/>
+
+  <!-- ============ RIGHT COLUMN · S4, S5, then tail ============ -->
+  <!-- ===== S4 · grass-root walks ===== -->
+  <rect x="668" y="186" width="320" height="92" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <rect x="668" y="186" width="320" height="30" rx="11" fill="#4a8a4a"/>
+  <rect x="668" y="202" width="320" height="14" fill="#4a8a4a"/>
+  <text x="828" y="207" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">S4 &#183; Grass-root walks + LIFT-anchor</text>
+  <text x="828" y="240" text-anchor="middle" font-size="11.5" fill="#2a5a2a">Doer walks the actual code paths</text>
+  <text x="828" y="258" text-anchor="middle" font-size="11.5" fill="#2a5a2a">two anchors &#8211; LIFT-WATCH: high</text>
+  <rect x="1008" y="206" width="120" height="52" rx="8" fill="#eef6ee" stroke="#4a8a4a" stroke-width="1.4"/>
+  <text x="1068" y="228" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">grass-root</text>
+  <text x="1068" y="246" text-anchor="middle" font-size="10.5" fill="#3a6a3a">code evidence</text>
+
+  <!-- ===== S5 · close package ===== -->
+  <rect x="668" y="346" width="320" height="92" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <rect x="668" y="346" width="320" height="30" rx="11" fill="#4a8a4a"/>
+  <rect x="668" y="362" width="320" height="14" fill="#4a8a4a"/>
+  <text x="828" y="367" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">S5 &#183; Close package + reconciliation</text>
+  <text x="828" y="400" text-anchor="middle" font-size="11.5" fill="#2a5a2a">compass COMPLETE 60K/30K/10K</text>
+  <text x="828" y="418" text-anchor="middle" font-size="11.5" fill="#2a5a2a">finding tally self-reconciles &#183; leftovers onboarded</text>
+
+  <!-- carry arrow from S3 over to S4 -->
+  <path d="M596,552 C630,552 640,232 664,232" fill="none" stroke="#4a8a4a" stroke-width="2.6" marker-end="url(#agreen)"/>
+  <text x="628" y="318" text-anchor="middle" font-size="10.5" fill="#2a5a2a" font-style="italic" transform="rotate(-90 628 318)">descent complete</text>
+  <!-- S4 -> S5 -->
+  <line x1="828" y1="278" x2="828" y2="346" stroke="#4a8a4a" stroke-width="2.6" marker-end="url(#agreen)"/>
+
+  <!-- ============ FREEZE -> GATE -> SUB-BUMP -> RATIFY TAIL ============ -->
+  <text x="668" y="490" font-size="15" font-weight="700" fill="#1f2a36">Tag-freeze tail &#8212; the cycle close</text>
+
+  <!-- CP-FREEZE -->
+  <rect x="668" y="506" width="156" height="98" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="2"/>
+  <rect x="668" y="506" width="156" height="28" rx="11" fill="#b89425"/>
+  <rect x="668" y="520" width="156" height="14" fill="#b89425"/>
+  <text x="746" y="525" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">CP-FREEZE</text>
+  <text x="746" y="554" text-anchor="middle" font-size="10.5" fill="#7a5e12">T7 fires &#8212; every</text>
+  <text x="746" y="570" text-anchor="middle" font-size="10.5" fill="#7a5e12">non-closed item</text>
+  <text x="746" y="586" text-anchor="middle" font-size="10.5" fill="#7a5e12">onboarded to</text>
+  <text x="746" y="600" text-anchor="middle" font-size="10.5" fill="#7a5e12">LEFTOVERS</text>
+
+  <!-- GATE-CHECK -->
+  <rect x="852" y="506" width="156" height="98" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="852" y="506" width="156" height="28" rx="11" fill="#3b6ea5"/>
+  <rect x="852" y="520" width="156" height="14" fill="#3b6ea5"/>
+  <text x="930" y="525" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">GATE-CHECK</text>
+  <text x="930" y="554" text-anchor="middle" font-size="10.5" fill="#26425f">four objective</text>
+  <text x="930" y="570" text-anchor="middle" font-size="10.5" fill="#26425f">gates &#8212; all GREEN</text>
+  <text x="930" y="586" text-anchor="middle" font-size="10.5" fill="#26425f">complete &#183; coverage</text>
+  <text x="930" y="600" text-anchor="middle" font-size="10.5" fill="#26425f">tally &#183; onboarded</text>
+
+  <!-- SUB-BUMP -->
+  <rect x="1036" y="506" width="156" height="98" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <rect x="1036" y="506" width="156" height="28" rx="11" fill="#4a8a4a"/>
+  <rect x="1036" y="520" width="156" height="14" fill="#4a8a4a"/>
+  <text x="1114" y="525" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">SUB-BUMP</text>
+  <text x="1114" y="554" text-anchor="middle" font-size="10.5" fill="#2a5a2a">GO-SUB-BUMP</text>
+  <text x="1114" y="570" text-anchor="middle" font-size="10.5" fill="#2a5a2a">per-entity tag</text>
+  <text x="1114" y="586" text-anchor="middle" font-size="10.5" fill="#2a5a2a">billing-compass</text>
+  <text x="1114" y="600" text-anchor="middle" font-size="10.5" fill="#2a5a2a">-v0.1 pushed</text>
+
+  <!-- RATIFY -->
+  <rect x="1220" y="506" width="200" height="98" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
+  <rect x="1220" y="506" width="200" height="28" rx="11" fill="#2a5a2a"/>
+  <rect x="1220" y="520" width="200" height="14" fill="#2a5a2a"/>
+  <text x="1320" y="525" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">RATIFY &#183; RE-LOCK</text>
+  <text x="1320" y="554" text-anchor="middle" font-size="10.5" fill="#2a5a2a">founder ratifies pkg</text>
+  <text x="1320" y="572" text-anchor="middle" font-size="10.5" fill="#2a5a2a">charter-v0.6 tagged</text>
+  <text x="1320" y="590" text-anchor="middle" font-size="10.5" fill="#2a5a2a">Charter RE-LOCKS &#183; build resumes</text>
+
+  <!-- tail arrows -->
+  <line x1="824" y1="555" x2="852" y2="555" stroke="#5a6678" stroke-width="2.4" marker-end="url(#ablue)"/>
+  <line x1="1008" y1="555" x2="1036" y2="555" stroke="#5a6678" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <line x1="1192" y1="555" x2="1220" y2="555" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <!-- S5 down into freeze tail -->
+  <line x1="746" y1="438" x2="746" y2="506" stroke="#4a8a4a" stroke-width="2.6" marker-end="url(#aamber)"/>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="56" y="700" width="1388" height="80" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="730" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">Vision becomes coherent code by descending the altitudes &#8212; 60K ideology, 30K mechanics, 10K schema, grass-root evidence</text>
+  <text x="750" y="754" text-anchor="middle" font-size="13" fill="#5a4d20">Every claim is anchored to substrate; the freeze gates objectively, the sub-bump tags per entity, and ratification re-locks the Charter.</text>
+  <text x="750" y="773" text-anchor="middle" font-size="12.5" fill="#6a5a28" font-style="italic">Every other lane is a relaxation of this one &#8212; the full ceremony lives here.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="822" width="6" height="8" rx="1"/><rect x="699" y="816" width="6" height="14" rx="1"/><rect x="708" y="810" width="6" height="20" rx="1"/></g>
+    <text x="722" y="830" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

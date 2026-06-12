@@ -8,6 +8,11 @@ description: "The heaviest lane. Cross-module structural work runs the full doct
 
 This is the worked example for the **Doctrine Cycle** lane (see [Work Granularity Lanes](../03-tunables/work-granularity-lanes.md)). It is the most ceremonious thing CompassAlpha does, and the example most worth reading slowly — every other lane is a *relaxation* of this one.
 
+
+[![The doctrine cycle stages descending from 60K ideology to grass-root code, ending in the gate-and-tag freeze tail](../assets/doctrine-cycle-timeline.svg)](../assets/doctrine-cycle-timeline.svg)
+
+<small>*A doctrine cycle elaborates the vision downward — 60K ideology to 30K mechanics to 10K schema to code — then freezes and tags.*</small>
+
 ## Setup
 
 Northwind has shipped its first few modules but never wrote down what Billing actually *is* — its invariants live in tribal knowledge and in code. The founder wants a **compass**: the canonical doctrine document for Billing, structured at three altitudes (see [Compass tier system, §19](../03-tunables/stage-taxonomies.md)).

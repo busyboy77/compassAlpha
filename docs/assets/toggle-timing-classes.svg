@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 880" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="880" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">The Three Flip-Timing Classes</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">When may this switch flip &#8212; and what does flipping it cost? Timing is its own failure mode, distinct from value.</text>
+
+  <!-- ============ SHARED TIMELINE HEADER ============ -->
+  <text x="60" y="138" font-size="13" font-weight="700" fill="#33445a">A unit of work, left to right</text>
+  <!-- seam markers along the top, referenced by all three lanes -->
+  <text x="372" y="138" text-anchor="middle" font-size="11.5" fill="#5a6678">dispatch in flight</text>
+  <text x="700" y="138" text-anchor="middle" font-size="11.5" fill="#5a6678" font-weight="700">cycle seam</text>
+  <text x="1040" y="138" text-anchor="middle" font-size="11.5" fill="#5a6678">next cycle</text>
+  <line x1="700" y1="150" x2="700" y2="724" stroke="#cfcabc" stroke-width="2" stroke-dasharray="3 5"/>
+  <text x="700" y="744" text-anchor="middle" font-size="10.5" fill="#8a7d4a" font-style="italic">clean seam: dispatch close &#183; cycle close &#183; charter re-lock</text>
+
+  <!-- =================================================================== -->
+  <!-- LANE 1 · RUNTIME (green) -->
+  <!-- =================================================================== -->
+  <rect x="56" y="160" width="1356" height="160" rx="12" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.8"/>
+  <rect x="56" y="160" width="270" height="160" rx="12" fill="#e0f0e0"/>
+  <rect x="314" y="160" width="12" height="160" fill="#e0f0e0"/>
+  <text x="191" y="198" text-anchor="middle" font-size="17" font-weight="700" fill="#2a5a2a">RUNTIME</text>
+  <text x="191" y="222" text-anchor="middle" font-size="11.5" fill="#3a6a3a">flip any time</text>
+  <text x="191" y="240" text-anchor="middle" font-size="11.5" fill="#3a6a3a">mid-cycle, no pause</text>
+  <text x="191" y="270" text-anchor="middle" font-size="10.5" fill="#3a6a3a" font-style="italic">e.g. Doer effort,</text>
+  <text x="191" y="286" text-anchor="middle" font-size="10.5" fill="#3a6a3a" font-style="italic">context width, model</text>
+
+  <!-- safe-flip window: the whole lane is green/open -->
+  <rect x="346" y="186" width="1044" height="40" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.4"/>
+  <text x="868" y="211" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">safe-flip window = the entire timeline</text>
+  <!-- many flip ticks -->
+  <g stroke="#4a8a4a" stroke-width="2">
+    <line x1="430" y1="232" x2="430" y2="252" marker-end="url(#agreen)"/>
+    <line x1="560" y1="232" x2="560" y2="252" marker-end="url(#agreen)"/>
+    <line x1="820" y1="232" x2="820" y2="252" marker-end="url(#agreen)"/>
+    <line x1="980" y1="232" x2="980" y2="252" marker-end="url(#agreen)"/>
+    <line x1="1180" y1="232" x2="1180" y2="252" marker-end="url(#agreen)"/>
+  </g>
+  <text x="868" y="278" text-anchor="middle" font-size="11.5" fill="#3a6a3a">Blast radius &#8212; bounded to work not yet started; the in-flight dispatch is untouched</text>
+  <text x="868" y="300" text-anchor="middle" font-size="11" fill="#4a7a4a" font-style="italic">flipping costs nothing; the new value simply governs the next dispatch</text>
+
+  <!-- =================================================================== -->
+  <!-- LANE 2 · CYCLE-BOUNDARY (blue) -->
+  <!-- =================================================================== -->
+  <rect x="56" y="340" width="1356" height="160" rx="12" fill="#eef1f6" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="56" y="340" width="270" height="160" rx="12" fill="#dfeaf5"/>
+  <rect x="314" y="340" width="12" height="160" fill="#dfeaf5"/>
+  <text x="191" y="378" text-anchor="middle" font-size="17" font-weight="700" fill="#1a4a7a">CYCLE-BOUNDARY</text>
+  <text x="191" y="402" text-anchor="middle" font-size="11.5" fill="#33597f">flip only at a clean seam</text>
+  <text x="191" y="430" text-anchor="middle" font-size="10.5" fill="#33597f" font-style="italic">e.g. concurrency mode,</text>
+  <text x="191" y="446" text-anchor="middle" font-size="10.5" fill="#33597f" font-style="italic">charter posture,</text>
+  <text x="191" y="462" text-anchor="middle" font-size="10.5" fill="#33597f" font-style="italic">stage taxonomy</text>
+
+  <!-- locked region during dispatch -->
+  <rect x="346" y="366" width="338" height="40" rx="8" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.4"/>
+  <text x="515" y="391" text-anchor="middle" font-size="12" font-weight="700" fill="#8a2a2a">locked while a unit is in flight</text>
+  <!-- the one safe-flip point: at the seam -->
+  <rect x="676" y="358" width="48" height="56" rx="6" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2"/>
+  <line x1="700" y1="416" x2="700" y2="438" stroke="#4a8a4a" stroke-width="2.6" marker-end="url(#agreen)"/>
+  <text x="700" y="452" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2a5a2a">flip here</text>
+  <!-- open region next cycle -->
+  <rect x="716" y="366" width="674" height="40" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.4"/>
+  <text x="1053" y="391" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">new value governs the whole next cycle</text>
+  <text x="868" y="482" text-anchor="middle" font-size="11.5" fill="#33597f">Blast radius &#8212; the whole next cycle; flipping mid-cycle is a protocol violation even if the value is better</text>
+
+  <!-- =================================================================== -->
+  <!-- LANE 3 · PROJECT-LIFECYCLE (amber) -->
+  <!-- =================================================================== -->
+  <rect x="56" y="520" width="1356" height="160" rx="12" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
+  <rect x="56" y="520" width="270" height="160" rx="12" fill="#fef0c8"/>
+  <rect x="314" y="520" width="12" height="160" fill="#fef0c8"/>
+  <text x="191" y="558" text-anchor="middle" font-size="16" font-weight="700" fill="#8a6d0a">PROJECT-LIFECYCLE</text>
+  <text x="191" y="582" text-anchor="middle" font-size="11.5" fill="#9a7a1a">sticky &#8212; set once at adoption</text>
+  <text x="191" y="610" text-anchor="middle" font-size="10.5" fill="#9a7a1a" font-style="italic">e.g. repo paths,</text>
+  <text x="191" y="626" text-anchor="middle" font-size="10.5" fill="#9a7a1a" font-style="italic">tier names,</text>
+  <text x="191" y="642" text-anchor="middle" font-size="10.5" fill="#9a7a1a" font-style="italic">choice of VCS</text>
+
+  <!-- one set point at adoption, then frozen the whole way -->
+  <rect x="346" y="556" width="48" height="40" rx="6" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2"/>
+  <text x="370" y="581" text-anchor="middle" font-size="10" font-weight="700" fill="#2a5a2a">set</text>
+  <text x="370" y="612" text-anchor="middle" font-size="9.5" fill="#3a6a3a">adoption</text>
+  <rect x="406" y="566" width="984" height="40" rx="8" fill="#fef0c8" stroke="#b89425" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="898" y="591" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d0a">no safe-flip window &#8212; changing this is a migration, not a toggle</text>
+  <text x="868" y="640" text-anchor="middle" font-size="11.5" fill="#9a7a1a">Blast radius &#8212; the entire federation; baked into every path and stamp; reversing it re-plumbs the project</text>
+  <text x="868" y="662" text-anchor="middle" font-size="11" fill="#a8861a" font-style="italic">effectively permanent for the project&#8217;s lifetime</text>
+
+  <!-- ============ THE DISCIPLINE LINE ============ -->
+  <rect x="56" y="762" width="1356" height="42" rx="9" fill="#1f2a36"/>
+  <text x="734" y="788" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">The discipline: a setting may only change at or before the earliest seam its class permits.</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="56" y="816" width="1356" height="36" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="734" y="839" text-anchor="middle" font-size="12.5" fill="#5a4d20">A reasonable value changed at the wrong moment can race the very work it governs &#8212; this section is about timing, not value.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="862" width="6" height="8" rx="1"/><rect x="699" y="856" width="6" height="14" rx="1"/><rect x="708" y="850" width="6" height="20" rx="1"/></g>
+    <text x="722" y="870" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="800" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Day-2 Ops &#8212; three interlocking cadences</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Per-release, per-incident, periodic-capacity &#8212; running DECOUPLED, with CUTOVER gated by monitoring wired before traffic flips</text>
+
+  <!-- ============ TIME AXIS ============ -->
+  <text x="56" y="140" font-size="12.5" font-weight="700" fill="#33445a">time &#8212; continuous; Ops never stops, it stands by on all three cadences</text>
+  <line x1="300" y1="156" x2="1444" y2="156" stroke="#cfcabc" stroke-width="1.4" stroke-dasharray="3 5"/>
+
+  <!-- ============ CADENCE 1 · PER-RELEASE ============ -->
+  <rect x="56" y="174" width="1388" height="150" rx="12" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="80" y="202" font-size="15" font-weight="700" fill="#2a5a2a">Per-release</text>
+  <text x="80" y="220" font-size="11" fill="#3a6a3a" font-style="italic">continuous &#8212; every QA-passed release</text>
+  <text x="80" y="244" font-size="10.5" fill="#3a6a3a">triggers when:</text>
+  <text x="80" y="260" font-size="10.5" fill="#3a6a3a">QA hands off a pass</text>
+
+  <!-- per-release stage spine -->
+  <line x1="300" y1="252" x2="1090" y2="252" stroke="#9aa3b0" stroke-width="2.4"/>
+  <!-- INTAKE -->
+  <rect x="300" y="228" width="118" height="48" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="359" y="250" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">INTAKE</text>
+  <text x="359" y="266" text-anchor="middle" font-size="9.5" fill="#3a6a3a">QA handoff</text>
+  <!-- STAGE -->
+  <rect x="430" y="228" width="118" height="48" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="489" y="250" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">STAGE</text>
+  <text x="489" y="266" text-anchor="middle" font-size="9.5" fill="#3a6a3a">to staging-prod</text>
+  <!-- SMOKE-PROD -->
+  <rect x="560" y="228" width="118" height="48" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="619" y="248" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">SMOKE-PROD</text>
+  <text x="619" y="266" text-anchor="middle" font-size="9.5" fill="#3a6a3a">new worker fires</text>
+  <!-- CUTOVER (gated control point) -->
+  <rect x="690" y="222" width="130" height="60" rx="9" fill="#fef8e7" stroke="#b89425" stroke-width="2.4"/>
+  <text x="755" y="246" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d0a">CUTOVER</text>
+  <text x="755" y="263" text-anchor="middle" font-size="9.5" fill="#9a7a1a">go-live ratified</text>
+  <text x="755" y="276" text-anchor="middle" font-size="9.5" fill="#9a7a1a">traffic flips</text>
+  <!-- OBSERVE -->
+  <rect x="832" y="228" width="118" height="48" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="891" y="248" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">OBSERVE</text>
+  <text x="891" y="266" text-anchor="middle" font-size="9.5" fill="#3a6a3a">soak window</text>
+  <!-- CLOSE -->
+  <rect x="962" y="228" width="118" height="48" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="1021" y="250" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">CLOSE</text>
+  <text x="1021" y="266" text-anchor="middle" font-size="9.5" fill="#3a6a3a">deploy record</text>
+
+  <!-- per-release flow arrows -->
+  <line x1="418" y1="252" x2="430" y2="252" stroke="#4a8a4a" stroke-width="2" marker-end="url(#agreen)"/>
+  <line x1="548" y1="252" x2="560" y2="252" stroke="#4a8a4a" stroke-width="2" marker-end="url(#agreen)"/>
+  <line x1="678" y1="252" x2="690" y2="252" stroke="#b89425" stroke-width="2" marker-end="url(#aamber)"/>
+  <line x1="820" y1="252" x2="832" y2="252" stroke="#4a8a4a" stroke-width="2" marker-end="url(#agreen)"/>
+  <line x1="950" y1="252" x2="962" y2="252" stroke="#4a8a4a" stroke-width="2" marker-end="url(#agreen)"/>
+
+  <!-- ============ CUTOVER GATE: monitor wiring before cutover ============ -->
+  <rect x="1130" y="200" width="300" height="100" rx="11" fill="#fdf6e3" stroke="#b89425" stroke-width="2"/>
+  <text x="1280" y="226" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a6d0a">GATE: monitor wiring before cutover</text>
+  <text x="1280" y="250" text-anchor="middle" font-size="10.5" fill="#7a5e12">deploy policy requires a watch in place</text>
+  <text x="1280" y="266" text-anchor="middle" font-size="10.5" fill="#7a5e12">on the export-worker job-lag metric</text>
+  <text x="1280" y="284" text-anchor="middle" font-size="10.5" fill="#7a5e12">BEFORE traffic flips &#8212; no monitor, no cutover</text>
+  <!-- gate arrow pointing at CUTOVER -->
+  <path d="M1130,250 C1000,250 900,250 822,252" fill="none" stroke="#b89425" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#aamber)"/>
+
+  <!-- ============ CADENCE 2 · PER-INCIDENT ============ -->
+  <rect x="56" y="346" width="1388" height="120" rx="12" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.6"/>
+  <text x="80" y="374" font-size="15" font-weight="700" fill="#8a2a2a">Per-incident</text>
+  <text x="80" y="392" font-size="11" fill="#9a3a3a" font-style="italic">armed &#8212; fires on a break</text>
+  <text x="80" y="416" font-size="10.5" fill="#9a3a3a">triggers when:</text>
+  <text x="80" y="432" font-size="10.5" fill="#9a3a3a">a monitor alerts</text>
+
+  <!-- per-incident spine (mostly dormant, one trigger marker) -->
+  <line x1="300" y1="406" x2="1090" y2="406" stroke="#d8b0b0" stroke-width="2" stroke-dasharray="6 7"/>
+  <text x="560" y="398" text-anchor="middle" font-size="10.5" fill="#9a3a3a" font-style="italic">dormant until something breaks</text>
+  <!-- trigger marker -->
+  <circle cx="700" cy="406" r="8" fill="#c44a4a"/>
+  <rect x="640" y="424" width="240" height="36" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.6"/>
+  <text x="760" y="447" text-anchor="middle" font-size="10.5" fill="#8a2a2a">Incident Response lane fires &#8212; reduced ceremony</text>
+  <line x1="700" y1="414" x2="700" y2="424" stroke="#c44a4a" stroke-width="1.8" marker-end="url(#ared)"/>
+  <!-- escalation hook from OBSERVE -->
+  <path d="M891,278 C891,330 760,340 700,398" fill="none" stroke="#c44a4a" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ared)"/>
+  <text x="900" y="320" text-anchor="middle" font-size="10" fill="#9a3a3a" font-style="italic">if the worker had fallen over</text>
+
+  <!-- ============ CADENCE 3 · PERIODIC-CAPACITY ============ -->
+  <rect x="56" y="488" width="1388" height="120" rx="12" fill="#eef3fa" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="80" y="516" font-size="15" font-weight="700" fill="#1a4a7a">Periodic-capacity</text>
+  <text x="80" y="534" font-size="11" fill="#3a5a7a" font-style="italic">scheduled &#8212; cost/capacity reviews</text>
+  <text x="80" y="558" font-size="10.5" fill="#3a5a7a">triggers when:</text>
+  <text x="80" y="574" font-size="10.5" fill="#3a5a7a">the clock says so</text>
+
+  <!-- periodic spine with tick markers -->
+  <line x1="300" y1="548" x2="1090" y2="548" stroke="#9aa3b0" stroke-width="2" stroke-dasharray="3 5"/>
+  <circle cx="430" cy="548" r="7" fill="#3b6ea5"/>
+  <circle cx="690" cy="548" r="7" fill="#3b6ea5"/>
+  <circle cx="950" cy="548" r="7" fill="#3b6ea5"/>
+  <rect x="780" y="566" width="300" height="36" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="930" y="589" text-anchor="middle" font-size="10.5" fill="#1a4a7a">revisits the job-lag-threshold leftover after a week</text>
+  <line x1="950" y1="556" x2="950" y2="566" stroke="#3b6ea5" stroke-width="1.8" marker-end="url(#ablue)"/>
+
+  <!-- leftover handoff from CLOSE to periodic -->
+  <path d="M1021,278 C1021,400 950,440 950,541" fill="none" stroke="#3b6ea5" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ablue)"/>
+  <text x="1085" y="430" text-anchor="middle" font-size="10" fill="#3a5a7a" font-style="italic">tuning leftover onboarded</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="56" y="630" width="1388" height="80" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="660" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">Three cadences run on one DECOUPLED axis &#8212; per-release ships, per-incident stands armed, periodic-capacity revisits.</text>
+  <text x="750" y="684" text-anchor="middle" font-size="13" fill="#5a4d20">CUTOVER is the one hard gate: the monitor that will catch the next problem must be wired before traffic flips.</text>
+  <text x="750" y="703" text-anchor="middle" font-size="12.5" fill="#6a5a28" font-style="italic">Leftovers route between cadences instead of being forgotten &#8212; the deploy stays auditable end to end.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="752" width="6" height="8" rx="1"/><rect x="699" y="746" width="6" height="14" rx="1"/><rect x="708" y="740" width="6" height="20" rx="1"/></g>
+    <text x="722" y="760" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

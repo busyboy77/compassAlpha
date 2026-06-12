@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1060" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="1060" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Operating Presets &#215; Tuning Dials</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Named bundles of toggle values that work together &#8212; pick one to start, tune from there, avoid the anti-presets</text>
+
+  <!-- ============ MATRIX ============ -->
+  <!-- column geometry: dial label column x56..236 (w180); 7 preset columns w160 each from x236 -->
+  <!-- header row y124..172 -->
+  <!-- dial rows: 8 rows of h74 starting y172 -->
+
+  <!-- preset header cells -->
+  <!-- col centres: 316,476,636,796,956,1116,1276 ; col x: 236,396,556,716,876,1036,1196 width 160 -->
+  <g font-size="13" font-weight="700">
+    <rect x="236" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="315" y="146" text-anchor="middle" fill="#1a4a7a">Conservative</text>
+    <text x="315" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">ref default</text>
+
+    <rect x="396" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="475" y="146" text-anchor="middle" fill="#1a4a7a">Balanced</text>
+    <text x="475" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">post-cycle-1</text>
+
+    <rect x="556" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="635" y="146" text-anchor="middle" fill="#1a4a7a">Throughput</text>
+    <text x="635" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">mature, time-pressed</text>
+
+    <rect x="716" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="795" y="146" text-anchor="middle" fill="#1a4a7a">Cost-optimized</text>
+    <text x="795" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">budget-conscious</text>
+
+    <rect x="876" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="955" y="146" text-anchor="middle" fill="#1a4a7a">Risk-averse</text>
+    <text x="955" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">compliance-critical</text>
+
+    <rect x="1036" y="124" width="158" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+    <text x="1115" y="146" text-anchor="middle" fill="#1a4a7a">Research</text>
+    <text x="1115" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5a7aa0">fast iteration</text>
+
+    <rect x="1196" y="124" width="158" height="48" rx="8" fill="#fef0c8" stroke="#b89425" stroke-width="1.6"/>
+    <text x="1275" y="146" text-anchor="middle" fill="#8a6d0a">Bootstrap</text>
+    <text x="1275" y="163" text-anchor="middle" font-size="9.5" font-weight="400" fill="#9a7a1a">first cycle</text>
+  </g>
+
+  <!-- dial label cells + value cells -->
+  <!-- helper: each row drawn explicitly. cell fills encode the "heat": green=safest/strict, blue=mid, amber=loosened -->
+
+  <!-- ROW 1 · Concurrency (y172) -->
+  <rect x="56" y="172" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
+  <text x="68" y="206" font-size="12.5" font-weight="700" fill="#33445a">Concurrency</text>
+  <text x="68" y="224" font-size="9.5" fill="#6a7585">cycle-class</text>
+  <rect x="236" y="172" width="158" height="74" fill="#e0f0e0"/><text x="315" y="213" text-anchor="middle" font-size="11.5" fill="#2a5a2a">LAYGO</text>
+  <rect x="396" y="172" width="158" height="74" fill="#dfeaf5"/><text x="475" y="213" text-anchor="middle" font-size="11.5" fill="#1a4a7a">Pipelined</text>
+  <rect x="556" y="172" width="158" height="74" fill="#fef0c8"/><text x="635" y="208" text-anchor="middle" font-size="11" fill="#8a6d0a">Parallel-</text><text x="635" y="224" text-anchor="middle" font-size="11" fill="#8a6d0a">independent</text>
+  <rect x="716" y="172" width="158" height="74" fill="#dfeaf5"/><text x="795" y="213" text-anchor="middle" font-size="11.5" fill="#1a4a7a">Pipelined</text>
+  <rect x="876" y="172" width="158" height="74" fill="#e0f0e0"/><text x="955" y="213" text-anchor="middle" font-size="11.5" fill="#2a5a2a">LAYGO</text>
+  <rect x="1036" y="172" width="158" height="74" fill="#e0f0e0"/><text x="1115" y="208" text-anchor="middle" font-size="11" fill="#2a5a2a">LAYGO /</text><text x="1115" y="224" text-anchor="middle" font-size="11" fill="#2a5a2a">Pipelined</text>
+  <rect x="1196" y="172" width="158" height="74" fill="#e0f0e0"/><text x="1275" y="213" text-anchor="middle" font-size="11.5" fill="#2a5a2a">LAYGO</text>
+
+  <!-- ROW 2 · Doer effort (y246) -->
+  <rect x="56" y="246" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
+  <text x="68" y="280" font-size="12.5" font-weight="700" fill="#33445a">Doer effort</text>
+  <text x="68" y="298" font-size="9.5" fill="#6a7585">runtime-class</text>
+  <rect x="236" y="246" width="158" height="74" fill="#e0f0e0"/><text x="315" y="287" text-anchor="middle" font-size="11.5" fill="#2a5a2a">xhigh</text>
+  <rect x="396" y="246" width="158" height="74" fill="#e0f0e0"/><text x="475" y="287" text-anchor="middle" font-size="11.5" fill="#2a5a2a">xhigh</text>
+  <rect x="556" y="246" width="158" height="74" fill="#e0f0e0"/><text x="635" y="287" text-anchor="middle" font-size="11.5" fill="#2a5a2a">xhigh</text>
+  <rect x="716" y="246" width="158" height="74" fill="#fef0c8"/><text x="795" y="282" text-anchor="middle" font-size="11" fill="#8a6d0a">mid</text><text x="795" y="298" text-anchor="middle" font-size="9.5" fill="#9a7a1a">simple slices</text>
+  <rect x="876" y="246" width="158" height="74" fill="#e0f0e0"/><text x="955" y="287" text-anchor="middle" font-size="11.5" fill="#2a5a2a">xhigh</text>
+  <rect x="1036" y="246" width="158" height="74" fill="#e0f0e0"/><text x="1115" y="287" text-anchor="middle" font-size="11.5" fill="#2a5a2a">xhigh</text>
+  <rect x="1196" y="246" width="158" height="74" fill="#e0f0e0"/><text x="1275" y="287" text-anchor="middle" font-size="11.5" fill="#2a5a2a">xhigh</text>
+
+  <!-- ROW 3 · Doer context (y320) -->
+  <rect x="56" y="320" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
+  <text x="68" y="354" font-size="12.5" font-weight="700" fill="#33445a">Doer context</text>
+  <text x="68" y="372" font-size="9.5" fill="#6a7585">runtime-class</text>
+  <rect x="236" y="320" width="158" height="74" fill="#e0f0e0"/><text x="315" y="361" text-anchor="middle" font-size="11.5" fill="#2a5a2a">wide</text>
+  <rect x="396" y="320" width="158" height="74" fill="#e0f0e0"/><text x="475" y="361" text-anchor="middle" font-size="11.5" fill="#2a5a2a">wide</text>
+  <rect x="556" y="320" width="158" height="74" fill="#e0f0e0"/><text x="635" y="361" text-anchor="middle" font-size="11.5" fill="#2a5a2a">wide</text>
+  <rect x="716" y="320" width="158" height="74" fill="#fef0c8"/><text x="795" y="361" text-anchor="middle" font-size="11.5" fill="#8a6d0a">narrow</text>
+  <rect x="876" y="320" width="158" height="74" fill="#e0f0e0"/><text x="955" y="361" text-anchor="middle" font-size="11.5" fill="#2a5a2a">wide</text>
+  <rect x="1036" y="320" width="158" height="74" fill="#e0f0e0"/><text x="1115" y="361" text-anchor="middle" font-size="11.5" fill="#2a5a2a">wide</text>
+  <rect x="1196" y="320" width="158" height="74" fill="#e0f0e0"/><text x="1275" y="361" text-anchor="middle" font-size="11.5" fill="#2a5a2a">wide</text>
+
+  <!-- ROW 4 · Founder involve (y394) -->
+  <rect x="56" y="394" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
+  <text x="68" y="428" font-size="12.5" font-weight="700" fill="#33445a">Founder involve</text>
+  <text x="68" y="446" font-size="9.5" fill="#6a7585">runtime-class</text>
+  <rect x="236" y="394" width="158" height="74" fill="#dfeaf5"/><text x="315" y="430" text-anchor="middle" font-size="10" fill="#1a4a7a">RELAY +</text><text x="315" y="445" text-anchor="middle" font-size="10" fill="#1a4a7a">lost+found</text>
+  <rect x="396" y="394" width="158" height="74" fill="#dfeaf5"/><text x="475" y="430" text-anchor="middle" font-size="10" fill="#1a4a7a">RELAY +</text><text x="475" y="445" text-anchor="middle" font-size="10" fill="#1a4a7a">lost+found</text>
+  <rect x="556" y="394" width="158" height="74" fill="#e0f0e0"/><text x="635" y="430" text-anchor="middle" font-size="10" fill="#2a5a2a">RELAY +</text><text x="635" y="445" text-anchor="middle" font-size="10" fill="#2a5a2a">occasional</text>
+  <rect x="716" y="394" width="158" height="74" fill="#e0f0e0"/><text x="795" y="435" text-anchor="middle" font-size="10.5" fill="#2a5a2a">RELAY only</text>
+  <rect x="876" y="394" width="158" height="74" fill="#fef0c8"/><text x="955" y="430" text-anchor="middle" font-size="10" fill="#8a6d0a">RELAY +</text><text x="955" y="445" text-anchor="middle" font-size="10" fill="#8a6d0a">frequent</text>
+  <rect x="1036" y="394" width="158" height="74" fill="#e0f0e0"/><text x="1115" y="430" text-anchor="middle" font-size="10" fill="#2a5a2a">RELAY +</text><text x="1115" y="445" text-anchor="middle" font-size="10" fill="#2a5a2a">minimal</text>
+  <rect x="1196" y="394" width="158" height="74" fill="#fef0c8"/><text x="1275" y="430" text-anchor="middle" font-size="10" fill="#8a6d0a">RELAY +</text><text x="1275" y="445" text-anchor="middle" font-size="10" fill="#8a6d0a">frequent</text>
+
+  <!-- ROW 5 · Provenance (y468) -->
+  <rect x="56" y="468" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
+  <text x="68" y="502" font-size="12.5" font-weight="700" fill="#33445a">Provenance</text>
+  <text x="68" y="520" font-size="9.5" fill="#6a7585">runtime-class</text>
+  <rect x="236" y="468" width="158" height="74" fill="#e0f0e0"/><text x="315" y="509" text-anchor="middle" font-size="11.5" fill="#2a5a2a">strict</text>
+  <rect x="396" y="468" width="158" height="74" fill="#e0f0e0"/><text x="475" y="509" text-anchor="middle" font-size="11.5" fill="#2a5a2a">strict</text>
+  <rect x="556" y="468" width="158" height="74" fill="#e0f0e0"/><text x="635" y="509" text-anchor="middle" font-size="11.5" fill="#2a5a2a">strict</text>
+  <rect x="716" y="468" width="158" height="74" fill="#fef0c8"/><text x="795" y="509" text-anchor="middle" font-size="11" fill="#8a6d0a">spot-check</text>
+  <rect x="876" y="468" width="158" height="74" fill="#e0f0e0"/><text x="955" y="504" text-anchor="middle" font-size="10.5" fill="#2a5a2a">strict +</text><text x="955" y="520" text-anchor="middle" font-size="10.5" fill="#2a5a2a">double-verify</text>
+  <rect x="1036" y="468" width="158" height="74" fill="#e0f0e0"/><text x="1115" y="509" text-anchor="middle" font-size="11.5" fill="#2a5a2a">strict</text>
+  <rect x="1196" y="468" width="158" height="74" fill="#e0f0e0"/><text x="1275" y="509" text-anchor="middle" font-size="11.5" fill="#2a5a2a">strict</text>
+
+  <!-- ROW 6 · Memory (y542) -->
+  <rect x="56" y="542" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
+  <text x="68" y="576" font-size="12.5" font-weight="700" fill="#33445a">Memory rate</text>
+  <text x="68" y="594" font-size="9.5" fill="#6a7585">runtime-class</text>
+  <rect x="236" y="542" width="158" height="74" fill="#e0f0e0"/><text x="315" y="583" text-anchor="middle" font-size="11.5" fill="#2a5a2a">liberal</text>
+  <rect x="396" y="542" width="158" height="74" fill="#e0f0e0"/><text x="475" y="583" text-anchor="middle" font-size="11.5" fill="#2a5a2a">liberal</text>
+  <rect x="556" y="542" width="158" height="74" fill="#e0f0e0"/><text x="635" y="583" text-anchor="middle" font-size="11.5" fill="#2a5a2a">liberal</text>
+  <rect x="716" y="542" width="158" height="74" fill="#fef0c8"/><text x="795" y="583" text-anchor="middle" font-size="11" fill="#8a6d0a">conservative</text>
+  <rect x="876" y="542" width="158" height="74" fill="#e0f0e0"/><text x="955" y="583" text-anchor="middle" font-size="11.5" fill="#2a5a2a">liberal</text>
+  <rect x="1036" y="542" width="158" height="74" fill="#e0f0e0"/><text x="1115" y="583" text-anchor="middle" font-size="11.5" fill="#2a5a2a">liberal</text>
+  <rect x="1196" y="542" width="158" height="74" fill="#e0f0e0"/><text x="1275" y="583" text-anchor="middle" font-size="11.5" fill="#2a5a2a">liberal</text>
+
+  <!-- ROW 7 · Rotation (y616) -->
+  <rect x="56" y="616" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
+  <text x="68" y="650" font-size="12.5" font-weight="700" fill="#33445a">Rotation</text>
+  <text x="68" y="668" font-size="9.5" fill="#6a7585">cadence</text>
+  <rect x="236" y="616" width="158" height="74" fill="#dfeaf5"/><text x="315" y="657" text-anchor="middle" font-size="11.5" fill="#1a4a7a">2&#8211;4w</text>
+  <rect x="396" y="616" width="158" height="74" fill="#dfeaf5"/><text x="475" y="657" text-anchor="middle" font-size="11.5" fill="#1a4a7a">2&#8211;4w</text>
+  <rect x="556" y="616" width="158" height="74" fill="#dfeaf5"/><text x="635" y="657" text-anchor="middle" font-size="11.5" fill="#1a4a7a">2&#8211;3w</text>
+  <rect x="716" y="616" width="158" height="74" fill="#dfeaf5"/><text x="795" y="657" text-anchor="middle" font-size="11.5" fill="#1a4a7a">3&#8211;4w</text>
+  <rect x="876" y="616" width="158" height="74" fill="#e0f0e0"/><text x="955" y="657" text-anchor="middle" font-size="11.5" fill="#2a5a2a">1&#8211;2w</text>
+  <rect x="1036" y="616" width="158" height="74" fill="#dfeaf5"/><text x="1115" y="657" text-anchor="middle" font-size="11.5" fill="#1a4a7a">2w</text>
+  <rect x="1196" y="616" width="158" height="74" fill="#dfeaf5"/><text x="1275" y="657" text-anchor="middle" font-size="11.5" fill="#1a4a7a">2w</text>
+
+  <!-- ROW 8 · Models (y690) -->
+  <rect x="56" y="690" width="178" height="74" rx="8" fill="#eef1f6" stroke="#9aa3b0" stroke-width="1.2"/>
+  <text x="68" y="724" font-size="12.5" font-weight="700" fill="#33445a">Models</text>
+  <text x="68" y="742" font-size="9.5" fill="#6a7585">runtime-class</text>
+  <rect x="236" y="690" width="158" height="74" fill="#e0f0e0"/><text x="315" y="731" text-anchor="middle" font-size="11" fill="#2a5a2a">top-tier all</text>
+  <rect x="396" y="690" width="158" height="74" fill="#e0f0e0"/><text x="475" y="731" text-anchor="middle" font-size="11" fill="#2a5a2a">top-tier all</text>
+  <rect x="556" y="690" width="158" height="74" fill="#e0f0e0"/><text x="635" y="731" text-anchor="middle" font-size="11" fill="#2a5a2a">top-tier all</text>
+  <rect x="716" y="690" width="158" height="74" fill="#fef0c8"/><text x="795" y="731" text-anchor="middle" font-size="11" fill="#8a6d0a">mixed</text>
+  <rect x="876" y="690" width="158" height="74" fill="#e0f0e0"/><text x="955" y="726" text-anchor="middle" font-size="10.5" fill="#2a5a2a">top-tier +</text><text x="955" y="742" text-anchor="middle" font-size="10.5" fill="#2a5a2a">verifier</text>
+  <rect x="1036" y="690" width="158" height="74" fill="#e0f0e0"/><text x="1115" y="731" text-anchor="middle" font-size="11" fill="#2a5a2a">top-tier all</text>
+  <rect x="1196" y="690" width="158" height="74" fill="#e0f0e0"/><text x="1275" y="731" text-anchor="middle" font-size="11" fill="#2a5a2a">top-tier all</text>
+
+  <!-- matrix gridlines (vertical separators) -->
+  <g stroke="#ffffff" stroke-width="2">
+    <line x1="396" y1="172" x2="396" y2="764"/>
+    <line x1="556" y1="172" x2="556" y2="764"/>
+    <line x1="716" y1="172" x2="716" y2="764"/>
+    <line x1="876" y1="172" x2="876" y2="764"/>
+    <line x1="1036" y1="172" x2="1036" y2="764"/>
+    <line x1="1196" y1="172" x2="1196" y2="764"/>
+    <line x1="236" y1="172" x2="236" y2="764"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="2">
+    <line x1="236" y1="246" x2="1354" y2="246"/>
+    <line x1="236" y1="320" x2="1354" y2="320"/>
+    <line x1="236" y1="394" x2="1354" y2="394"/>
+    <line x1="236" y1="468" x2="1354" y2="468"/>
+    <line x1="236" y1="542" x2="1354" y2="542"/>
+    <line x1="236" y1="616" x2="1354" y2="616"/>
+    <line x1="236" y1="690" x2="1354" y2="690"/>
+  </g>
+  <rect x="236" y="172" width="1118" height="592" rx="2" fill="none" stroke="#9aa3b0" stroke-width="1.4"/>
+
+  <!-- heat legend -->
+  <g font-size="10.5">
+    <rect x="56" y="780" width="18" height="18" rx="3" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.2"/>
+    <text x="82" y="794" fill="#3a6a3a">safest / strict value</text>
+    <rect x="248" y="780" width="18" height="18" rx="3" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.2"/>
+    <text x="274" y="794" fill="#33597f">mid posture</text>
+    <rect x="408" y="780" width="18" height="18" rx="3" fill="#fef0c8" stroke="#b89425" stroke-width="1.2"/>
+    <text x="434" y="794" fill="#9a7a1a">loosened for cost / speed</text>
+  </g>
+  <text x="1354" y="794" text-anchor="end" font-size="11" fill="#5a6678" font-style="italic">Presets are starting points, not commitments &#8212; Bootstrap graduates to Conservative or Balanced after cycle one.</text>
+
+  <!-- ============ ANTI-PRESETS DANGER ZONE ============ -->
+  <rect x="56" y="818" width="1298" height="130" rx="12" fill="#fdf3f3" stroke="#c44a4a" stroke-width="2.4"/>
+  <path d="M88,832 L74,860 L90,860 L78,886 L112,852 L94,852 L108,832 Z" fill="#f2c200" stroke="#8a2a2a" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="240" y="845" font-size="15" font-weight="700" fill="#8a2a2a">ANTI-PRESETS &#8212; do NOT use</text>
+  <text x="160" y="866" font-size="11" fill="#9a3a3a" font-style="italic">each stacks loosened settings multiplicatively; combined, they dismantle the guardrails</text>
+
+  <rect x="140" y="878" width="380" height="56" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.4"/>
+  <text x="330" y="898" text-anchor="middle" font-size="12" font-weight="700" fill="#8a2a2a">&#8220;Maximum speed&#8221;</text>
+  <text x="330" y="916" text-anchor="middle" font-size="10" fill="#9a3a3a">parallel + concise digests + trusted prov.</text>
+  <text x="330" y="929" text-anchor="middle" font-size="10" fill="#9a3a3a">sacrifices: drift-detection on parallel work</text>
+
+  <rect x="530" y="878" width="380" height="56" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.4"/>
+  <text x="720" y="898" text-anchor="middle" font-size="12" font-weight="700" fill="#8a2a2a">&#8220;Maximum frugality&#8221;</text>
+  <text x="720" y="916" text-anchor="middle" font-size="10" fill="#9a3a3a">parallel + low-tier Doer + trusted + no toolings</text>
+  <text x="720" y="929" text-anchor="middle" font-size="10" fill="#9a3a3a">sacrifices: verification + audit; failures compound</text>
+
+  <rect x="920" y="878" width="380" height="56" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.4"/>
+  <text x="1110" y="898" text-anchor="middle" font-size="12" font-weight="700" fill="#8a2a2a">&#8220;Maximum founder gate&#8221;</text>
+  <text x="1110" y="916" text-anchor="middle" font-size="10" fill="#9a3a3a">every transition founder-approved</text>
+  <text x="1110" y="929" text-anchor="middle" font-size="10" fill="#9a3a3a">sacrifices: the trust anchor; founder becomes the bottleneck</text>
+
+  <!-- the uncrossable line -->
+  <rect x="56" y="958" width="1298" height="34" rx="9" fill="#1f2a36"/>
+  <text x="705" y="980" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">No preset can toggle the axioms, guardrails, or load-bearing invariants &#8212; tuning changes how fast and how cheap, never what is correct.</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="56" y="1000" width="1298" height="30" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="705" y="1020" text-anchor="middle" font-size="12" fill="#5a4d20">Pick the preset that matches your context, adopt its bundle, then tune individual dials within their flip-timing class.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="1378" y="1004" width="6" height="8" rx="1"/><rect x="1387" y="998" width="6" height="14" rx="1"/><rect x="1396" y="992" width="6" height="20" rx="1"/></g>
+    <text x="1410" y="1012" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

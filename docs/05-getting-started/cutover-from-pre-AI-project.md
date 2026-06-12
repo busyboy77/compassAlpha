@@ -18,6 +18,11 @@ The example is a small SaaS with three modules — **Auth**, **Billing**, **Repo
 
 ---
 
+
+[![The cutover steps, each with its revert path, and the migrating legacy-to-managed boundary](../assets/cutover-revert-paths.svg)](../assets/cutover-revert-paths.svg)
+
+<small>*Every cutover step is reversible: each carries a revert path as the managed/legacy boundary migrates — only the final step is one-way.*</small>
+
 ## Cutover at a glance
 
 | Step | Action | Revert by… |

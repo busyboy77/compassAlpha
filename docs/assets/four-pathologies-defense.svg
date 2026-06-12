@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 880" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="880" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Four Pathologies &#183; Four Defenses</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Every recurring failure of ad-hoc multi-agent work is met by a named axiom carved to stop it</text>
+
+  <!-- ============ COLUMN HEADERS ============ -->
+  <rect x="56" y="124" width="560" height="44" rx="9" fill="#fdf3f3" stroke="#c44a4a" stroke-width="2"/>
+  <text x="336" y="152" text-anchor="middle" font-size="16" font-weight="700" fill="#8a2a2a">THE FAILURE &#8212; what rots the work</text>
+
+  <rect x="884" y="124" width="560" height="44" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2"/>
+  <text x="1164" y="152" text-anchor="middle" font-size="16" font-weight="700" fill="#2a5a2a">THE DEFENSE &#8212; the axiom that holds</text>
+
+  <!-- ============ ROW 1 · CONTEXT POLLUTION ============ -->
+  <rect x="56" y="192" width="560" height="118" rx="11" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.8"/>
+  <circle cx="92" cy="222" r="15" fill="#c44a4a"/>
+  <text x="92" y="227" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">1</text>
+  <text x="122" y="228" font-size="16" font-weight="700" fill="#8a2a2a">Context pollution</text>
+  <text x="80" y="256" font-size="11.5" fill="#9a3a3a">A tier absorbs detail it doesn&#8217;t own &#8212; the &#8220;helpful mentor&#8221;</text>
+  <text x="80" y="276" font-size="11.5" fill="#9a3a3a">opens the substrate, fills with diffs &amp; traces.</text>
+  <text x="80" y="296" font-size="11.5" font-style="italic" fill="#9a3a3a">Judgement degrades; it can no longer orchestrate.</text>
+
+  <rect x="884" y="192" width="560" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="906" y="222" font-size="16" font-weight="700" fill="#2a5a2a">Firewall &#43; hard-labour rule</text>
+  <text x="906" y="250" font-size="11.5" fill="#3a6a3a">Each tier carries only its own granularity; mentors</text>
+  <text x="906" y="270" font-size="11.5" fill="#3a6a3a">orchestrate and never touch substrate.</text>
+  <text x="906" y="292" font-size="11.5" font-weight="600" fill="#2a5a2a">Pollution containment &#183; minimal-sufficient bus</text>
+
+  <line x1="616" y1="251" x2="884" y2="251" stroke="#4a8a4a" stroke-width="3" marker-end="url(#agreen)"/>
+  <rect x="664" y="234" width="156" height="22" rx="7" fill="#fafaf8"/>
+  <text x="742" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">defended by</text>
+
+  <!-- ============ ROW 2 · HALLUCINATION DRIFT ============ -->
+  <rect x="56" y="330" width="560" height="118" rx="11" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.8"/>
+  <circle cx="92" cy="360" r="15" fill="#c44a4a"/>
+  <text x="92" y="365" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">2</text>
+  <text x="122" y="366" font-size="16" font-weight="700" fill="#8a2a2a">Hallucination drift</text>
+  <text x="80" y="394" font-size="11.5" fill="#9a3a3a">&#8220;We decided last cycle to denormalize Reporting&#8221; &#8212;</text>
+  <text x="80" y="414" font-size="11.5" fill="#9a3a3a">except no such decision exists on disk.</text>
+  <text x="80" y="434" font-size="11.5" font-style="italic" fill="#9a3a3a">A false memory propagates downstream as fact.</text>
+
+  <rect x="884" y="330" width="560" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="906" y="360" font-size="16" font-weight="700" fill="#2a5a2a">Provenance law</text>
+  <text x="906" y="388" font-size="11.5" fill="#3a6a3a">Cite by substrate, never by memory; every load-bearing</text>
+  <text x="906" y="408" font-size="11.5" fill="#3a6a3a">claim re-derivable from a committed file, tag, or Ledger.</text>
+  <text x="906" y="430" font-size="11.5" font-weight="600" fill="#2a5a2a">Hallucination defense &#183; stale-snapshot detection</text>
+
+  <line x1="616" y1="389" x2="884" y2="389" stroke="#4a8a4a" stroke-width="3" marker-end="url(#agreen)"/>
+  <rect x="664" y="372" width="156" height="22" rx="7" fill="#fafaf8"/>
+  <text x="742" y="388" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">defended by</text>
+
+  <!-- ============ ROW 3 · ROLE CONFUSION ============ -->
+  <rect x="56" y="468" width="560" height="118" rx="11" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.8"/>
+  <circle cx="92" cy="498" r="15" fill="#c44a4a"/>
+  <text x="92" y="503" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">3</text>
+  <text x="122" y="504" font-size="16" font-weight="700" fill="#8a2a2a">Role confusion</text>
+  <text x="80" y="532" font-size="11.5" fill="#9a3a3a">A mentor does labour; a doer improvises authority;</text>
+  <text x="80" y="552" font-size="11.5" fill="#9a3a3a">a brief that was almost complete gets filled from imagination.</text>
+  <text x="80" y="572" font-size="11.5" font-style="italic" fill="#9a3a3a">Coordination integrity dissolves.</text>
+
+  <rect x="884" y="468" width="560" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="906" y="498" font-size="16" font-weight="700" fill="#2a5a2a">Tier grammar &#43; brief completeness</text>
+  <text x="906" y="526" font-size="11.5" fill="#3a6a3a">Three fixed tiers &#8212; Mentor-1 / Mentor-2 / Doer; only one</text>
+  <text x="906" y="546" font-size="11.5" fill="#3a6a3a">touches substrate. No placeholders &#8212; escalate, never improvise.</text>
+  <text x="906" y="568" font-size="11.5" font-weight="600" fill="#2a5a2a">Single-live-writer holds jurisdiction</text>
+
+  <line x1="616" y1="527" x2="884" y2="527" stroke="#4a8a4a" stroke-width="3" marker-end="url(#agreen)"/>
+  <rect x="664" y="510" width="156" height="22" rx="7" fill="#fafaf8"/>
+  <text x="742" y="526" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">defended by</text>
+
+  <!-- ============ ROW 4 · TRUST EROSION ============ -->
+  <rect x="56" y="606" width="560" height="118" rx="11" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.8"/>
+  <circle cx="92" cy="636" r="15" fill="#c44a4a"/>
+  <text x="92" y="641" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">4</text>
+  <text x="122" y="642" font-size="16" font-weight="700" fill="#8a2a2a">Trust erosion</text>
+  <text x="80" y="670" font-size="11.5" fill="#9a3a3a">&#8220;Done, committed and pushed&#8221; &#8212; but the disk disagrees.</text>
+  <text x="80" y="690" font-size="11.5" fill="#9a3a3a">Twice, and the human must verify everything by hand.</text>
+  <text x="80" y="710" font-size="11.5" font-style="italic" fill="#9a3a3a">The trust anchor is gone; delegation collapses.</text>
+
+  <rect x="884" y="606" width="560" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="906" y="636" font-size="16" font-weight="700" fill="#2a5a2a">Persistence law</text>
+  <text x="906" y="664" font-size="11.5" fill="#3a6a3a">Flush before disclose &#8212; state reaches disk and origin</text>
+  <text x="906" y="684" font-size="11.5" fill="#3a6a3a">before it is disclosed. When a tier says &#8220;done,&#8221; disk agrees.</text>
+  <text x="906" y="706" font-size="11.5" font-weight="600" fill="#2a5a2a">Bounded loss &#183; dual-plane disaster recon</text>
+
+  <line x1="616" y1="665" x2="884" y2="665" stroke="#4a8a4a" stroke-width="3" marker-end="url(#agreen)"/>
+  <rect x="664" y="648" width="156" height="22" rx="7" fill="#fafaf8"/>
+  <text x="742" y="664" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">defended by</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="56" y="752" width="1388" height="52" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="775" text-anchor="middle" font-size="13.5" fill="#5a4d20">Each axiom is a scar. Weaken a defense and you re-introduce its pathology &#8212; every time.</text>
+  <text x="750" y="794" text-anchor="middle" font-size="13.5" fill="#5a4d20">The four defenses share one substrate: a single durable, inspectable, append-only state of record &#8212; git.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="836" width="6" height="8" rx="1"/><rect x="699" y="830" width="6" height="14" rx="1"/><rect x="708" y="824" width="6" height="20" rx="1"/></g>
+    <text x="722" y="844" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

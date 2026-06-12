@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="1000" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">The Bus Protocol &#8212; Inbox in the Destination Folder</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Content moves through git &#183; the founder&#8217;s clipboard carries zero substantive content</text>
+
+  <!-- ============ SWIMLANE LABELS ============ -->
+  <text x="150" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a4a7a">SENDER tier</text>
+  <text x="150" y="167" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">e.g. Mentor-2</text>
+
+  <text x="555" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#33445a">CONTROL PLANE</text>
+  <text x="555" y="167" text-anchor="middle" font-size="11" fill="#6a7585" font-style="italic">reviewer-state repo &#183; git</text>
+
+  <text x="960" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#5a4d20">FOUNDER</text>
+  <text x="960" y="167" text-anchor="middle" font-size="11" fill="#8a7530" font-style="italic">RELAY only &#183; one-liner pings</text>
+
+  <text x="1350" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a4a7a">RECIPIENT tier</text>
+  <text x="1350" y="167" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">e.g. Mentor-1</text>
+
+  <!-- swimlane dividers -->
+  <line x1="300" y1="180" x2="300" y2="744" stroke="#cfcabc" stroke-width="2" stroke-dasharray="3 5"/>
+  <line x1="810" y1="180" x2="810" y2="744" stroke="#cfcabc" stroke-width="2" stroke-dasharray="3 5"/>
+  <line x1="1110" y1="180" x2="1110" y2="744" stroke="#cfcabc" stroke-width="2" stroke-dasharray="3 5"/>
+
+  <!-- ============ STEP 1: SENDER WRITES FILE INTO RECIPIENT INBOX ============ -->
+  <rect x="40" y="200" width="244" height="92" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <rect x="40" y="200" width="34" height="92" rx="11" fill="#3b6ea5"/>
+  <text x="57" y="252" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">1</text>
+  <text x="186" y="228" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">writes a file into the</text>
+  <text x="186" y="247" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">RECIPIENT&#8217;s inbox</text>
+  <text x="186" y="270" text-anchor="middle" font-size="10.5" fill="#5a7aa0">from-mentor2-&lt;event&gt;.md</text>
+
+  <!-- inbox file landing in control plane -->
+  <path d="M396,206 h120 l24,24 v82 h-144 z" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.8"/>
+  <path d="M516,206 v24 h24 z" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="468" y="252" text-anchor="middle" font-size="11" font-weight="700" fill="#1a4a7a">inbox file</text>
+  <text x="468" y="272" text-anchor="middle" font-size="10" fill="#33597f">tagged block</text>
+  <text x="468" y="287" text-anchor="middle" font-size="10" fill="#33597f">in recipient&#8217;s folder</text>
+  <line x1="284" y1="246" x2="392" y2="252" stroke="#3b6ea5" stroke-width="2.2" marker-end="url(#ablue)"/>
+
+  <!-- ============ STEP 2: COMMIT + PUSH ============ -->
+  <rect x="40" y="324" width="244" height="84" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <rect x="40" y="324" width="34" height="84" rx="11" fill="#3b6ea5"/>
+  <text x="57" y="372" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">2</text>
+  <text x="186" y="352" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">commits + pushes the</text>
+  <text x="186" y="371" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">reviewer-state repo</text>
+  <text x="186" y="392" text-anchor="middle" font-size="10.5" fill="#5a7aa0">pull --ff-only, then push refspec</text>
+
+  <!-- origin cylinder in control plane -->
+  <rect x="430" y="350" width="160" height="120" fill="#dfeaf5"/>
+  <line x1="430" y1="350" x2="430" y2="470" stroke="#3b6ea5" stroke-width="2"/>
+  <line x1="590" y1="350" x2="590" y2="470" stroke="#3b6ea5" stroke-width="2"/>
+  <ellipse cx="510" cy="470" rx="80" ry="20" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <ellipse cx="510" cy="350" rx="80" ry="20" fill="#eaf2fb" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="510" y="348" text-anchor="middle" font-size="13" font-weight="700" fill="#1a4a7a">ORIGIN</text>
+  <text x="510" y="392" text-anchor="middle" font-size="11" fill="#1a4a7a">durable record</text>
+  <text x="510" y="412" text-anchor="middle" font-size="10.5" fill="#33597f">every pushed commit</text>
+  <text x="510" y="430" text-anchor="middle" font-size="10.5" fill="#33597f">full audit trail</text>
+  <line x1="284" y1="366" x2="426" y2="372" stroke="#3b6ea5" stroke-width="2.2" marker-end="url(#ablue)"/>
+
+  <!-- ============ STEP 3: PING FOUNDER ============ -->
+  <rect x="40" y="440" width="244" height="84" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <rect x="40" y="440" width="34" height="84" rx="11" fill="#3b6ea5"/>
+  <text x="57" y="488" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">3</text>
+  <text x="186" y="468" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">pings the founder</text>
+  <text x="186" y="489" text-anchor="middle" font-size="11" fill="#26425f">one line: &#8220;ready for &lt;recipient&gt;&#8221;</text>
+  <text x="186" y="508" text-anchor="middle" font-size="10.5" fill="#5a7aa0" font-style="italic">no substantive content</text>
+
+  <!-- founder node -->
+  <rect x="846" y="430" width="228" height="104" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="2.2"/>
+  <text x="960" y="462" text-anchor="middle" font-size="13.5" font-weight="700" fill="#8a6d0a">FOUNDER</text>
+  <text x="960" y="485" text-anchor="middle" font-size="11.5" fill="#9a7a1a">spawns the right tier session</text>
+  <text x="960" y="503" text-anchor="middle" font-size="11.5" fill="#9a7a1a">delivers one-line trigger pings</text>
+  <text x="960" y="523" text-anchor="middle" font-size="10.5" fill="#8a7530" font-style="italic">clipboard carries ZERO content</text>
+  <line x1="284" y1="482" x2="842" y2="482" stroke="#b89425" stroke-width="2.2" marker-end="url(#aamber)"/>
+
+  <!-- ============ STEP 4: FOUNDER RELAYS TRIGGER ============ -->
+  <rect x="846" y="556" width="228" height="78" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="2"/>
+  <text x="960" y="582" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a6d0a">4 &#183; relays a one-line trigger</text>
+  <text x="960" y="604" text-anchor="middle" font-size="11" fill="#9a7a1a">&#8220;pull + read your inbox at</text>
+  <text x="960" y="621" text-anchor="middle" font-size="11" fill="#9a7a1a">/path/to/reviewer-state&#8221;</text>
+  <line x1="960" y1="534" x2="960" y2="552" stroke="#b89425" stroke-width="2.2" marker-end="url(#aamber)"/>
+
+  <!-- ============ STEP 5: RECIPIENT PULLS + READS + ACTS ============ -->
+  <rect x="1148" y="556" width="296" height="138" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
+  <rect x="1148" y="556" width="34" height="138" rx="11" fill="#4a8a4a"/>
+  <text x="1165" y="630" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">5</text>
+  <text x="1313" y="586" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">pulls + reads its OWN inbox</text>
+  <text x="1313" y="608" text-anchor="middle" font-size="12" fill="#2a5a2a">git pull --ff-only</text>
+  <text x="1313" y="628" text-anchor="middle" font-size="12" fill="#2a5a2a">reads the new inbox file</text>
+  <text x="1313" y="648" text-anchor="middle" font-size="12" fill="#2a5a2a">verifies the routing tag, then acts</text>
+  <text x="1313" y="676" text-anchor="middle" font-size="10.5" fill="#3a6a3a" font-style="italic">content arrived via git, not via chat</text>
+  <line x1="1074" y1="595" x2="1144" y2="610" stroke="#b89425" stroke-width="2.2" marker-end="url(#aamber)"/>
+
+  <!-- recipient pulls from origin (the real content path) -->
+  <path d="M510,490 C510,560 700,690 1146,650" fill="none" stroke="#4a8a4a" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#agreen)"/>
+  <text x="700" y="700" text-anchor="middle" font-size="11.5" fill="#2a5a2a" font-weight="600">the content travels here &#8212; pulled from origin, never through the founder</text>
+
+  <!-- ============ TWO PLANES NEVER CROSS-COMMIT ============ -->
+  <rect x="40" y="760" width="690" height="150" rx="11" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.6"/>
+  <text x="385" y="786" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2a36">Two planes &#8212; never cross-commit</text>
+
+  <rect x="64" y="800" width="306" height="92" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="217" y="824" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">DATA plane</text>
+  <text x="217" y="846" text-anchor="middle" font-size="11" fill="#3a6a3a">the substrate &#8212; the deliverable</text>
+  <text x="217" y="864" text-anchor="middle" font-size="11" fill="#3a6a3a">git -C /path/to/substrate</text>
+  <text x="217" y="882" text-anchor="middle" font-size="10.5" fill="#3a6a3a" font-style="italic">its own repo &#183; its own remote</text>
+
+  <rect x="400" y="800" width="306" height="92" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="553" y="824" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">CONTROL plane</text>
+  <text x="553" y="846" text-anchor="middle" font-size="11" fill="#26425f">reviewer-state &#8212; the inboxes</text>
+  <text x="553" y="864" text-anchor="middle" font-size="11" fill="#26425f">git -C /path/to/reviewer-state</text>
+  <text x="553" y="882" text-anchor="middle" font-size="10.5" fill="#33597f" font-style="italic">its own repo &#183; its own remote</text>
+
+  <!-- crossed barrier between planes -->
+  <line x1="385" y1="800" x2="385" y2="892" stroke="#c44a4a" stroke-width="2.4"/>
+  <circle cx="385" cy="846" r="16" fill="#fdf3f3" stroke="#c44a4a" stroke-width="2.2"/>
+  <line x1="376" y1="837" x2="394" y2="855" stroke="#c44a4a" stroke-width="2.4"/>
+  <line x1="394" y1="837" x2="376" y2="855" stroke="#c44a4a" stroke-width="2.4"/>
+
+  <!-- why-it-exists card -->
+  <rect x="752" y="760" width="684" height="150" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="1.6"/>
+  <text x="1094" y="786" text-anchor="middle" font-size="14" font-weight="700" fill="#8a6d0a">Why the founder carries nothing</text>
+  <text x="776" y="812" font-size="11.5" fill="#9a7a1a">Pre-bus, the founder copy-pasted 100+ line digests between sessions &#8212; the bottleneck and failure point.</text>
+  <text x="776" y="834" font-size="11.5" fill="#9a7a1a">Now: every message is a committed file. The founder only spawns sessions and sends one-line triggers.</text>
+  <text x="776" y="856" font-size="11.5" fill="#9a7a1a">&#183;&#8195;Audit trail durability &#8212; the full history is reconstructable from git log.</text>
+  <text x="776" y="878" font-size="11.5" fill="#9a7a1a">&#183;&#8195;Zero new infrastructure &#8212; no queue, no pub-sub; git inboxes are a folder-and-file convention.</text>
+  <text x="776" y="900" font-size="11.5" fill="#9a7a1a">&#183;&#8195;Inbox files are KEPT, not pruned &#8212; consumption is recorded in the LEDGER; the file stays.</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="40" y="926" width="1396" height="44" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="738" y="954" text-anchor="middle" font-size="13.5" fill="#5a4d20">The substantive content rides git from sender to origin to recipient; the founder&#8217;s relay is reduced to a one-line trigger ping.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="984" width="6" height="8" rx="1"/><rect x="699" y="978" width="6" height="14" rx="1"/><rect x="708" y="972" width="6" height="20" rx="1"/></g>
+    <text x="722" y="992" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

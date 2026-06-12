@@ -14,6 +14,11 @@ All paths below are generic placeholders. Substitute your own: `/path/to/substra
 
 ---
 
+
+[![The two-plane git discipline — data plane and control plane — with separate git operations and a never-cross-commit rule](../assets/cli-two-plane-discipline.svg)](../assets/cli-two-plane-discipline.svg)
+
+<small>*Two repos, two planes: the substrate deliverable and the control-plane state are committed by separate git operations and never crossed.*</small>
+
 ## 1. Two-plane discipline
 
 A federation operates **two distinct repos in two sibling directories that never cross-commit:**

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 740" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+  </defs>
+
+  <rect width="1500" height="740" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Day-2 QA &#8212; the DECOUPLED axis</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">QA runs on its own track, never competing for Charter state &#8212; coordinated only by bus handoffs at intake and verdict</text>
+
+  <!-- ============ BUILD AXIS TRACK (top) ============ -->
+  <rect x="56" y="150" width="1388" height="118" rx="12" fill="#eef3fa" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="80" y="178" font-size="15" font-weight="700" fill="#1a4a7a">BUILD axis</text>
+  <text x="80" y="196" font-size="11" fill="#3a5a7a" font-style="italic">locked/unlocked epochs &#183; owns Charter state</text>
+
+  <!-- build track spine -->
+  <line x1="300" y1="222" x2="1400" y2="222" stroke="#9aa3b0" stroke-width="2.4"/>
+  <!-- build: close reporting-v1.3 -->
+  <rect x="300" y="196" width="220" height="52" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="410" y="218" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">CLOSE reporting-v1.3</text>
+  <text x="410" y="236" text-anchor="middle" font-size="10.5" fill="#3a6a3a">scheduled exports gated</text>
+  <!-- build continues, undisturbed -->
+  <rect x="1090" y="196" width="300" height="52" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="1240" y="218" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">Build proceeds undisturbed</text>
+  <text x="1240" y="236" text-anchor="middle" font-size="10.5" fill="#3a5a7a">next dispatch / doctrine cycle &#8212; never blocked by QA</text>
+  <line x1="520" y1="222" x2="1090" y2="222" stroke="#9aa3b0" stroke-width="2.4" stroke-dasharray="5 6"/>
+
+  <!-- ============ QA AXIS TRACK (bottom) ============ -->
+  <rect x="56" y="360" width="1388" height="160" rx="12" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="80" y="388" font-size="15" font-weight="700" fill="#2a5a2a">QA axis</text>
+  <text x="80" y="406" font-size="11" fill="#3a6a3a" font-style="italic">posture: DECOUPLED &#183; continuous &#183; no Charter state</text>
+
+  <!-- QA stage chips -->
+  <!-- INTAKE -->
+  <rect x="300" y="430" width="150" height="66" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="375" y="454" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">INTAKE</text>
+  <text x="375" y="474" text-anchor="middle" font-size="10" fill="#3a6a3a">build closure</text>
+  <text x="375" y="488" text-anchor="middle" font-size="10" fill="#3a6a3a">hands off</text>
+  <!-- PLAN -->
+  <rect x="470" y="430" width="150" height="66" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="545" y="454" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">PLAN</text>
+  <text x="545" y="474" text-anchor="middle" font-size="10" fill="#3a6a3a">QA Engineer</text>
+  <text x="545" y="488" text-anchor="middle" font-size="10" fill="#3a6a3a">scopes new surface</text>
+  <!-- AUTHOR -->
+  <rect x="640" y="430" width="150" height="66" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="715" y="454" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">AUTHOR</text>
+  <text x="715" y="474" text-anchor="middle" font-size="10" fill="#3a6a3a">Test Author</text>
+  <text x="715" y="488" text-anchor="middle" font-size="10" fill="#3a6a3a">writes test slices</text>
+  <!-- EXECUTE -->
+  <rect x="810" y="430" width="150" height="66" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="885" y="454" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">EXECUTE</text>
+  <text x="885" y="474" text-anchor="middle" font-size="10" fill="#3a6a3a">runs in worktree</text>
+  <text x="885" y="488" text-anchor="middle" font-size="10" fill="#3a6a3a">17/18 pass</text>
+  <!-- EVIDENCE -->
+  <rect x="980" y="430" width="150" height="66" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="1055" y="454" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">EVIDENCE</text>
+  <text x="1055" y="474" text-anchor="middle" font-size="10" fill="#3a6a3a">package assembled</text>
+  <text x="1055" y="488" text-anchor="middle" font-size="10" fill="#3a6a3a">1 FAIL surfaced</text>
+  <!-- VERDICT -->
+  <rect x="1150" y="430" width="170" height="66" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
+  <text x="1235" y="454" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">VERDICT</text>
+  <text x="1235" y="474" text-anchor="middle" font-size="10" fill="#3a6a3a">conditional pass</text>
+  <text x="1235" y="488" text-anchor="middle" font-size="10" fill="#3a6a3a">qa-...-v1.3-pass tag</text>
+
+  <!-- QA stage flow arrows -->
+  <line x1="450" y1="463" x2="470" y2="463" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#agreen)"/>
+  <line x1="620" y1="463" x2="640" y2="463" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#agreen)"/>
+  <line x1="790" y1="463" x2="810" y2="463" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#agreen)"/>
+  <line x1="960" y1="463" x2="980" y2="463" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#agreen)"/>
+  <line x1="1130" y1="463" x2="1150" y2="463" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#agreen)"/>
+
+  <!-- ============ BUS MESSAGES (between tracks) ============ -->
+  <!-- intake handoff: Build CLOSE -> QA INTAKE -->
+  <path d="M410,248 C410,300 375,330 375,428" fill="none" stroke="#3b6ea5" stroke-width="2.6" marker-end="url(#ablue)"/>
+  <rect x="120" y="300" width="216" height="48" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="228" y="320" text-anchor="middle" font-size="11" font-weight="700" fill="#1a4a7a">bus message: release-handoff</text>
+  <text x="228" y="337" text-anchor="middle" font-size="10" fill="#3a5a7a">FROM-BUILD-MENTOR1 &#183; TO-QA-MENTOR1</text>
+
+  <!-- verdict report-back: QA VERDICT -> next axis (Ops) via bus -->
+  <path d="M1235,428 C1235,360 1300,360 1300,300" fill="none" stroke="#b89425" stroke-width="2.6" marker-end="url(#aamber)"/>
+  <rect x="1118" y="300" width="230" height="48" rx="9" fill="#fef8e7" stroke="#b89425" stroke-width="1.6"/>
+  <text x="1233" y="320" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6d0a">bus message: hand qa-pass to Ops</text>
+  <text x="1233" y="337" text-anchor="middle" font-size="10" fill="#9a7a1a">founder-call ruled: ship; fix as Polish</text>
+
+  <!-- DECOUPLING annotation between tracks -->
+  <line x1="56" y1="314" x2="120" y2="314" stroke="#9aa3b0" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <line x1="1348" y1="314" x2="1444" y2="314" stroke="#9aa3b0" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <text x="750" y="290" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5a6678">the two axes touch ONLY at these two bus handoffs &#8212; otherwise they run independently</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="56" y="556" width="1388" height="80" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="586" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">DECOUPLED means parallel, not gated &#8212; QA never locks the Charter, never stalls Build or a doctrine cycle.</text>
+  <text x="750" y="610" text-anchor="middle" font-size="13" fill="#5a4d20">Same tier grammar, bus protocol, and persistence law &#8212; coordination is purely a release-handoff in and a verdict-handoff out.</text>
+  <text x="750" y="629" text-anchor="middle" font-size="12.5" fill="#6a5a28" font-style="italic">A latent build leftover was confirmed reproducible and routed to the right lane instead of silently shipping.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="680" width="6" height="8" rx="1"/><rect x="699" y="674" width="6" height="14" rx="1"/><rect x="708" y="668" width="6" height="20" rx="1"/></g>
+    <text x="722" y="688" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

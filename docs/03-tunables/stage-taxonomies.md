@@ -12,6 +12,11 @@ description: "The lifecycle vocabulary each axis and lane uses. The words your s
 
 Each axis and lane declares its own **lifecycle stage vocabulary** — the named states a unit of work passes through from launch to FROZEN. These stages drive Tier-2 status grids, inbox file naming, ratification-gate definitions, and the audit trail. The build axis uses `CP1 → CP2 → CP3`; the doctrine axis uses `S1 → S5`; Polish and Surgical lanes use slim taxonomies. Project-specific stage names are `[TUNABLE]`; the framework requires only three structural properties: monotonic progression, a defined freeze-to-tag tail, and a terminal FROZEN state. The stage taxonomy is one of the most important things a new project authors at adoption.
 
+
+[![Stage sequences for each axis and lane, all converging on the shared freeze-gate-tag tail](../assets/stage-sequences-timelines.svg)](../assets/stage-sequences-timelines.svg)
+
+<small>*Each lane runs its own stages but ends the same way: the freeze → gate → tag tail is the shared invariant shape.*</small>
+
 ## The dial
 
 Stage names, counts, and sub-stages are yours to choose per axis and per lane. What's fixed is the *shape* — a monotonic march toward a gated freeze, then a tag, then archival. You fill in the names that fit your deliverable.

@@ -14,6 +14,11 @@ This defends against a specific failure: a block that *sounds* right (voice-matc
 
 ---
 
+
+[![The edge-tag wire format anatomy and the validate-then-ingest routing decision](../assets/hierarchy-tag-anatomy.svg)](../assets/hierarchy-tag-anatomy.svg)
+
+<small>*Every bus message is wrapped in an edge tag; the recipient validates the edge terminates at its own tier before ingesting — misrouted tags are rejected.*</small>
+
 ## The wire format
 
 A tag names a directed edge between two tiers, plus a scope, plus (for upward returns) a status.

@@ -12,6 +12,11 @@ A session that skips boot is a session operating on assumptions instead of disk.
 
 ---
 
+
+[![The T0 boot ritual as an ordered read sequence ending in the START status-grid drift check](../assets/first-boot-t0-ritual.svg)](../assets/first-boot-t0-ritual.svg)
+
+<small>*A fresh session boots light and in order — master, stamp, axis, ledger, memory, inbox, sync check — then prints the START grid as a drift gate.*</small>
+
 ## What "boot" means
 
 When the founder spawns a fresh AI session in a tier's home folder and the session reads its stamped `CLAUDE.md`, that session **boots**. Boot is the **T0 flush trigger** — the first of the [flush triggers T0–T7](first-dispatch.md#the-gates-that-protect-a-dispatch). At T0 the session does not start working. First it proves it is grounded in reality.

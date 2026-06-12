@@ -16,6 +16,11 @@ Concurrency mode chooses **how many units of work proceed simultaneously**. The 
 
 <small>*A related but separate dial: the **delegation mode** (who coordinates with whom) is its own cycle-boundary toggle that composes with the concurrency mode (how many run at once).*</small>
 
+
+[![The concurrency modes as side-by-side timelines, from sequential to parallel-Doer](../assets/concurrency-modes-timeline.svg)](../assets/concurrency-modes-timeline.svg)
+
+<small>*How dispatches overlap — from one-at-a-time to parallel Doers under one orchestrator — and the speed-versus-risk each buys.*</small>
+
 ## The dial
 
 The cross-axis alternation (LOCKED build vs UNLOCKED doctrine) is `[INVARIANT]` — those don't run together. This dial controls concurrency **within** an active axis: how many of its dispatches run at the same time.

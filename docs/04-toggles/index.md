@@ -14,6 +14,11 @@ description: "Toggles: when each CompassAlpha parameter may change — at runtim
 
 Flipping a setting at the wrong moment is its own failure mode — distinct from choosing the wrong value. A perfectly reasonable value, changed under a live dispatch, can race the very work it was meant to govern. **This section is about timing, not value.**
 
+
+[![The three toggle flip-timing classes — runtime, cycle-boundary, project-lifecycle — and when each may safely flip](../assets/toggle-timing-classes.svg)](../assets/toggle-timing-classes.svg)
+
+<small>*When a switch may flip and what flipping costs: anytime at runtime, only at a clean seam at cycle-boundary, effectively a migration at project-lifecycle.*</small>
+
 ## The three flip-timing classes
 
 CompassAlpha sorts every changeable setting into exactly one of three classes:

@@ -14,6 +14,11 @@ Rather than setting every [tunable](../03-tunables/index.md) individually and th
 
 Each preset *locks* certain settings (you commit to them for the project's posture) and leaves others *flippable* (you adjust as you learn). There are also three **anti-presets** — combinations that look tempting but trade away CompassAlpha's correctness guarantees for marginal gains. Don't use them.
 
+
+[![The operating presets as a matrix of tuning-dial choices, plus the anti-presets danger zone](../assets/operating-presets-matrix.svg)](../assets/operating-presets-matrix.svg)
+
+<small>*Named bundles of toggle values that work together — pick one as a starting point, tune from there, and avoid the anti-presets that dismantle the guardrails.*</small>
+
 ## The seven presets
 
 | Preset | When to use | Concurrency | Doer effort | Doer context | Founder involve | Provenance | Memory | Rotation | Models |

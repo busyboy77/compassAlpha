@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 980" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="980" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Concurrency Modes &#8212; the Speed-vs-Risk Dial</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">How many dispatches run at once &#8212; time flows left to right; overlap buys speed and costs containment</text>
+
+  <!-- time axis label -->
+  <text x="430" y="138" font-size="12.5" font-weight="700" fill="#5a6678">label column</text>
+  <line x1="430" y1="150" x2="1432" y2="150" stroke="#9aa3b0" stroke-width="1.6" marker-end="url(#ablue)"/>
+  <text x="930" y="143" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3b6ea5">wall-clock time</text>
+
+  <!-- ============ ROW 1 · SEQUENTIAL (LAYGO) ============ -->
+  <rect x="40" y="172" width="380" height="120" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="60" y="200" font-size="17" font-weight="700" fill="#2a5a2a">Sequential &#183; LAYGO</text>
+  <text x="60" y="222" font-size="11.5" fill="#3a6a3a" font-style="italic">default &#183; one dispatch at a time</text>
+  <text x="60" y="248" font-size="11" fill="#3a6a3a">Slowest wall-clock. Lowest pollution risk &#8212;</text>
+  <text x="60" y="266" font-size="11" fill="#3a6a3a">no two in flight to bleed. Highest intelligence</text>
+  <text x="60" y="284" font-size="11" fill="#3a6a3a">floor &amp; predictability. No dependency tracking.</text>
+
+  <!-- dispatch A -->
+  <rect x="436" y="190" width="190" height="34" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="520" y="212" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">dispatch A</text>
+  <rect x="626" y="190" width="58" height="34" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="655" y="211" text-anchor="middle" font-size="10" fill="#8a6d0a">close</text>
+  <!-- dispatch B -->
+  <rect x="700" y="190" width="190" height="34" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="784" y="212" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">dispatch B</text>
+  <rect x="890" y="190" width="58" height="34" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="919" y="211" text-anchor="middle" font-size="10" fill="#8a6d0a">close</text>
+  <!-- dispatch C -->
+  <rect x="964" y="190" width="190" height="34" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="1048" y="212" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">dispatch C</text>
+  <rect x="1154" y="190" width="58" height="34" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="1183" y="211" text-anchor="middle" font-size="10" fill="#8a6d0a">close</text>
+  <!-- finish marker -->
+  <line x1="1212" y1="178" x2="1212" y2="288" stroke="#4a8a4a" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="1252" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
+  <text x="1252" y="226" text-anchor="middle" font-size="10.5" fill="#3a6a3a">latest</text>
+
+  <!-- ============ ROW 2 · PIPELINED ============ -->
+  <rect x="40" y="328" width="380" height="120" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="60" y="356" font-size="17" font-weight="700" fill="#1a4a7a">Pipelined</text>
+  <text x="60" y="378" font-size="11.5" fill="#5a7aa0" font-style="italic">next starts during the close-out tail</text>
+  <text x="60" y="404" font-size="11" fill="#33597f">~30&#8211;50% wall-clock reduction &#8212; the close-out</text>
+  <text x="60" y="422" font-size="11" fill="#33597f">tail overlaps useful work. Risk rises to</text>
+  <text x="60" y="440" font-size="11" fill="#33597f">low-medium; intelligence &amp; predictability high.</text>
+
+  <!-- dispatch A -->
+  <rect x="436" y="346" width="190" height="34" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="520" y="368" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">dispatch A</text>
+  <rect x="626" y="346" width="58" height="34" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="655" y="367" text-anchor="middle" font-size="10" fill="#8a6d0a">close</text>
+  <!-- dispatch B starts during A close (overlap) -->
+  <rect x="626" y="384" width="190" height="34" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="721" y="406" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">dispatch B</text>
+  <rect x="816" y="384" width="58" height="34" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="845" y="405" text-anchor="middle" font-size="10" fill="#8a6d0a">close</text>
+  <!-- dispatch C overlap -->
+  <rect x="816" y="346" width="190" height="34" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="911" y="368" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">dispatch C</text>
+  <rect x="1006" y="346" width="58" height="34" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="1035" y="367" text-anchor="middle" font-size="10" fill="#8a6d0a">close</text>
+  <!-- overlap callout -->
+  <text x="660" y="436" font-size="10.5" fill="#8a6d0a" font-style="italic">B begins while A closes out</text>
+  <line x1="1064" y1="334" x2="1064" y2="442" stroke="#4a8a4a" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="1104" y="366" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
+  <text x="1104" y="382" text-anchor="middle" font-size="10.5" fill="#3a6a3a">earlier</text>
+
+  <!-- ============ ROW 3 · PARALLEL-INDEPENDENT ============ -->
+  <rect x="40" y="484" width="380" height="120" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
+  <text x="60" y="512" font-size="17" font-weight="700" fill="#8a6d0a">Parallel-independent</text>
+  <text x="60" y="534" font-size="11.5" fill="#9a7a1a" font-style="italic">non-dependent dispatches run together</text>
+  <text x="60" y="560" font-size="11" fill="#7a5e12">Maximum throughput. Requires explicit</text>
+  <text x="60" y="578" font-size="11" fill="#7a5e12">dependency tracking; risk medium &#8212; a stale-base</text>
+  <text x="60" y="596" font-size="11" fill="#7a5e12">read if dependencies are wrong.</text>
+
+  <!-- three parallel bars stacked -->
+  <rect x="436" y="500" width="220" height="30" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="546" y="520" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1a4a7a">dispatch A &#183; Auth</text>
+  <rect x="656" y="500" width="50" height="30" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="681" y="519" text-anchor="middle" font-size="9.5" fill="#8a6d0a">close</text>
+
+  <rect x="436" y="534" width="240" height="30" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="556" y="554" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1a4a7a">dispatch B &#183; Billing</text>
+  <rect x="676" y="534" width="50" height="30" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="701" y="553" text-anchor="middle" font-size="9.5" fill="#8a6d0a">close</text>
+
+  <rect x="436" y="568" width="200" height="30" rx="7" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="536" y="588" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1a4a7a">dispatch C &#183; Reporting</text>
+  <rect x="636" y="568" width="50" height="30" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="661" y="587" text-anchor="middle" font-size="9.5" fill="#8a6d0a">close</text>
+
+  <!-- independence brace -->
+  <text x="770" y="548" font-size="10.5" fill="#9a7a1a" font-style="italic">no cross-references between modules</text>
+  <line x1="726" y1="472" x2="726" y2="608" stroke="#4a8a4a" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="766" y="582" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">finish</text>
+  <text x="766" y="598" text-anchor="middle" font-size="10.5" fill="#3a6a3a">earliest</text>
+
+  <!-- ============ ROW 4 · PARALLEL-DOER ============ -->
+  <rect x="40" y="640" width="380" height="120" rx="11" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.8"/>
+  <text x="60" y="668" font-size="17" font-weight="700" fill="#8a2a2a">Parallel-doer</text>
+  <text x="60" y="690" font-size="11.5" fill="#9a3a3a" font-style="italic">one Mentor-2 spawns many parallel Doers</text>
+  <text x="60" y="716" font-size="11" fill="#9a3a3a">Throughput within one dispatch. Each Doer is a</text>
+  <text x="60" y="734" font-size="11" fill="#9a3a3a">fresh session in its own worktree. Remaining risk:</text>
+  <text x="60" y="752" font-size="11" fill="#9a3a3a">semantic divergence, surfacing only at integration.</text>
+
+  <!-- Mentor-2 dispatch envelope -->
+  <rect x="436" y="654" width="540" height="92" rx="9" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.4"/>
+  <text x="460" y="672" font-size="11" font-weight="700" fill="#8a2a2a">Mentor-2 &#183; one dispatch</text>
+  <!-- three parallel doer slices -->
+  <rect x="452" y="680" width="170" height="24" rx="6" fill="#e8eef5" stroke="#3b6ea5" stroke-width="1.4"/>
+  <text x="537" y="697" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a4a7a">Doer slice 1</text>
+  <rect x="452" y="708" width="200" height="24" rx="6" fill="#e8eef5" stroke="#3b6ea5" stroke-width="1.4"/>
+  <text x="552" y="725" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a4a7a">Doer slice 2</text>
+  <rect x="452" y="736" width="150" height="8" rx="3" fill="#e8eef5" stroke="#3b6ea5" stroke-width="1"/>
+  <!-- integrate gate -->
+  <rect x="690" y="680" width="100" height="52" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.6"/>
+  <text x="740" y="702" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6d0a">ordered</text>
+  <text x="740" y="718" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6d0a">integrate</text>
+  <line x1="652" y1="692" x2="690" y2="700" stroke="#b89425" stroke-width="1.8" marker-end="url(#aamber)"/>
+  <line x1="602" y1="720" x2="690" y2="712" stroke="#b89425" stroke-width="1.8" marker-end="url(#aamber)"/>
+  <text x="900" y="710" text-anchor="middle" font-size="10.5" fill="#9a3a3a" font-style="italic">divergent assumptions collide here</text>
+
+  <!-- ============ TRADE-OFF MINI SCALE ============ -->
+  <rect x="40" y="788" width="1392" height="56" rx="10" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.3"/>
+  <text x="64" y="810" font-size="13" font-weight="700" fill="#1f2a36">Down the rows:</text>
+  <text x="220" y="810" font-size="12.5" fill="#2a5a2a" font-weight="600">speed rises</text>
+  <text x="340" y="810" font-size="12.5" fill="#c44a4a" font-weight="600">risk rises</text>
+  <line x1="64" y1="826" x2="1408" y2="826" stroke="#cfcabc" stroke-width="2"/>
+  <text x="64" y="838" font-size="11" fill="#4a8a4a">LAYGO &#8212; cleanest, slowest</text>
+  <text x="1408" y="838" text-anchor="end" font-size="11" fill="#c44a4a">parallel-doer &#8212; fastest, most integration risk</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="40" y="860" width="1392" height="52" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="736" y="883" text-anchor="middle" font-size="13.5" fill="#5a4d20">The git layer makes every mode race-safe at storage (isolated index, per-slice worktrees, refspec push).</text>
+  <text x="736" y="902" text-anchor="middle" font-size="13.5" fill="#5a4d20">Concurrency tuning rides on top of that floor &#8212; it buys wall-clock time but never relaxes the storage invariants.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="936" width="6" height="8" rx="1"/><rect x="699" y="930" width="6" height="14" rx="1"/><rect x="708" y="924" width="6" height="20" rx="1"/></g>
+    <text x="722" y="944" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

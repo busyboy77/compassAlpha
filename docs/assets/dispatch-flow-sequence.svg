@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="1000" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">One Dispatch, End to End</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">The federation&#8217;s heartbeat &#8212; brief down, labour in substrate, digest up &#8212; flush-before-disclose at every seam</text>
+
+  <!-- ============ TIER LANE LABELS ============ -->
+  <!-- lane y-centres: Mentor-1 = 200, Mentor-2 = 330, Doer = 460 -->
+  <rect x="44" y="160" width="190" height="560" rx="11" fill="#eef1f6" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="139" y="196" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">Mentor-1</text>
+  <text x="139" y="216" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">owns the dispatch</text>
+  <text x="139" y="232" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">never touches substrate</text>
+
+  <text x="139" y="330" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">Mentor-2</text>
+  <text x="139" y="350" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">orchestrates &#183; slices</text>
+  <text x="139" y="366" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">applies the gate</text>
+
+  <text x="139" y="460" text-anchor="middle" font-size="16" font-weight="700" fill="#2a5a2a">Doer</text>
+  <text x="139" y="480" text-anchor="middle" font-size="11" fill="#3a6a3a" font-style="italic">the only tier that</text>
+  <text x="139" y="496" text-anchor="middle" font-size="11" fill="#3a6a3a" font-style="italic">touches substrate</text>
+
+  <!-- lane timelines -->
+  <line x1="234" y1="225" x2="1392" y2="225" stroke="#9aa3b0" stroke-width="1.4" stroke-dasharray="3 5"/>
+  <line x1="234" y1="355" x2="1392" y2="355" stroke="#9aa3b0" stroke-width="1.4" stroke-dasharray="3 5"/>
+  <line x1="234" y1="485" x2="1392" y2="485" stroke="#9aa3b0" stroke-width="1.4" stroke-dasharray="3 5"/>
+
+  <!-- ============ STEP NODES ============ -->
+  <!-- Step 1: Mentor-1 dispatch brief @ x 300 -->
+  <rect x="252" y="186" width="148" height="78" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="326" y="210" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">1 &#183; compose</text>
+  <text x="326" y="228" text-anchor="middle" font-size="11.5" fill="#33597f">dispatch brief</text>
+  <text x="326" y="246" text-anchor="middle" font-size="10.5" fill="#5a7aa0" font-style="italic">complete &#183; no gaps</text>
+
+  <!-- Step 2: Mentor-2 slice @ x 520 -->
+  <rect x="446" y="316" width="148" height="78" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="520" y="340" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">2 &#183; slice +</text>
+  <text x="520" y="358" text-anchor="middle" font-size="11.5" fill="#33597f">brief the Doer</text>
+  <text x="520" y="376" text-anchor="middle" font-size="10.5" fill="#5a7aa0" font-style="italic">preconditions set</text>
+
+  <!-- Step 3: Doer labour @ x 740 -->
+  <rect x="666" y="446" width="148" height="78" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="740" y="470" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">3 &#183; substrate</text>
+  <text x="740" y="488" text-anchor="middle" font-size="11.5" fill="#3a6a3a">labour</text>
+  <text x="740" y="506" text-anchor="middle" font-size="10.5" fill="#3a6a3a" font-style="italic">write code &#183; commit</text>
+
+  <!-- Step 4: Doer digest @ x 960 (still doer lane) -->
+  <rect x="886" y="446" width="148" height="78" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="960" y="470" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">4 &#183; return</text>
+  <text x="960" y="488" text-anchor="middle" font-size="11.5" fill="#3a6a3a">tagged digest</text>
+  <text x="960" y="506" text-anchor="middle" font-size="10.5" fill="#3a6a3a" font-style="italic">session disposable</text>
+
+  <!-- Step 5: Mentor-2 ratify gate @ x 1110 -->
+  <rect x="1036" y="316" width="148" height="78" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="1110" y="340" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">5 &#183; CP1 gate</text>
+  <text x="1110" y="358" text-anchor="middle" font-size="11.5" fill="#33597f">triage + close</text>
+  <text x="1110" y="376" text-anchor="middle" font-size="10.5" fill="#5a7aa0" font-style="italic">or re-slice</text>
+
+  <!-- Step 6: Mentor-1 integrate/tag @ x 1310 -->
+  <rect x="1244" y="186" width="148" height="78" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="1318" y="210" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">6 &#183; ratify</text>
+  <text x="1318" y="228" text-anchor="middle" font-size="11.5" fill="#33597f">tag + LEDGER</text>
+  <text x="1318" y="246" text-anchor="middle" font-size="10.5" fill="#5a7aa0" font-style="italic">dispatch closed</text>
+
+  <!-- ============ HANDOFF ARROWS (each crosses a flush gate) ============ -->
+  <!-- 1 -> 2 : brief down -->
+  <path d="M326,264 L326,300 L500,300 L500,316" fill="none" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#ablue)"/>
+  <text x="372" y="293" font-size="10.5" fill="#1a4a7a" font-weight="600">brief</text>
+  <!-- 2 -> 3 : slice down -->
+  <path d="M520,394 L520,420 L720,420 L720,446" fill="none" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <text x="588" y="413" font-size="10.5" fill="#1a4a7a" font-weight="600">slice brief</text>
+  <!-- 3 -> 4 : labour to digest (within doer lane) -->
+  <line x1="814" y1="485" x2="886" y2="485" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#agreen)"/>
+  <!-- 4 -> 5 : digest up -->
+  <path d="M1006,446 L1006,420 L1090,420 L1090,394" fill="none" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#ablue)"/>
+  <text x="1018" y="413" font-size="10.5" fill="#2a5a2a" font-weight="600">digest</text>
+  <!-- 5 -> 6 : close pkg up -->
+  <path d="M1130,316 L1130,300 L1300,300 L1300,264" fill="none" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#ablue)"/>
+  <text x="1190" y="293" font-size="10.5" fill="#1a4a7a" font-weight="600">close pkg</text>
+
+  <!-- corrective re-slice loop (5 back to doer) -->
+  <path d="M1110,394 C1110,540 980,560 814,524" fill="none" stroke="#c44a4a" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#ared)"/>
+  <text x="980" y="572" text-anchor="middle" font-size="10.5" fill="#9a3a3a" font-style="italic">gate fails &#8212; corrective re-slice to a fresh Doer</text>
+
+  <!-- ============ FLUSH GATES (one per handoff seam) ============ -->
+  <!-- gate chips sit on the seam corners -->
+  <g font-size="9.5" font-weight="700" fill="#8a6d0a">
+    <rect x="290" y="276" width="72" height="20" rx="5" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+    <text x="326" y="290" text-anchor="middle">FLUSH</text>
+    <rect x="484" y="406" width="72" height="20" rx="5" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+    <text x="520" y="420" text-anchor="middle">FLUSH</text>
+    <rect x="970" y="406" width="72" height="20" rx="5" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+    <text x="1006" y="420" text-anchor="middle">FLUSH</text>
+    <rect x="1264" y="276" width="72" height="20" rx="5" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+    <text x="1300" y="290" text-anchor="middle">FLUSH</text>
+  </g>
+
+  <!-- gate legend -->
+  <rect x="252" y="600" width="560" height="60" rx="9" fill="#fef8e7" stroke="#b89425" stroke-width="1.6"/>
+  <rect x="266" y="618" width="56" height="20" rx="5" fill="#fef8e7" stroke="#b89425" stroke-width="1.4"/>
+  <text x="294" y="632" text-anchor="middle" font-size="9.5" font-weight="700" fill="#8a6d0a">FLUSH</text>
+  <text x="338" y="624" font-size="12" font-weight="700" fill="#8a6d0a">commit + push to origin BEFORE disclosure</text>
+  <text x="338" y="644" font-size="11" fill="#9a7a1a">the ping to the founder always follows the push &#8212; never precedes it</text>
+
+  <!-- ============ T0-T7 OVERLAY TIMELINE ============ -->
+  <text x="252" y="704" font-size="15" font-weight="700" fill="#1f2a36">Flush triggers fired along this dispatch</text>
+  <line x1="252" y1="724" x2="1392" y2="724" stroke="#5a6678" stroke-width="2.2"/>
+  <!-- tick group -->
+  <g>
+    <!-- T0 at boot of each session -->
+    <line x1="300" y1="716" x2="300" y2="744" stroke="#4a8a4a" stroke-width="2.2"/>
+    <circle cx="300" cy="724" r="4" fill="#4a8a4a"/>
+    <text x="300" y="762" text-anchor="middle" font-size="12" font-weight="700" fill="#2a5a2a">T0</text>
+    <text x="300" y="780" text-anchor="middle" font-size="10" fill="#3a6a3a">each boot</text>
+
+    <line x1="470" y1="716" x2="470" y2="744" stroke="#b89425" stroke-width="2.2"/>
+    <circle cx="470" cy="724" r="4" fill="#b89425"/>
+    <text x="470" y="762" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d0a">T1</text>
+    <text x="470" y="780" text-anchor="middle" font-size="10" fill="#9a7a1a">brief composed</text>
+
+    <line x1="650" y1="716" x2="650" y2="744" stroke="#b89425" stroke-width="2.2"/>
+    <circle cx="650" cy="724" r="4" fill="#b89425"/>
+    <text x="650" y="762" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d0a">T1</text>
+    <text x="650" y="780" text-anchor="middle" font-size="10" fill="#9a7a1a">slice dispatched</text>
+
+    <line x1="830" y1="716" x2="830" y2="744" stroke="#4a8a4a" stroke-width="2.2"/>
+    <circle cx="830" cy="724" r="4" fill="#4a8a4a"/>
+    <text x="830" y="762" text-anchor="middle" font-size="12" font-weight="700" fill="#2a5a2a">T3</text>
+    <text x="830" y="780" text-anchor="middle" font-size="10" fill="#3a6a3a">Doer turn-end sweep</text>
+
+    <line x1="1010" y1="716" x2="1010" y2="744" stroke="#b89425" stroke-width="2.2"/>
+    <circle cx="1010" cy="724" r="4" fill="#b89425"/>
+    <text x="1010" y="762" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d0a">T2</text>
+    <text x="1010" y="780" text-anchor="middle" font-size="10" fill="#9a7a1a">gate triaged</text>
+
+    <line x1="1200" y1="716" x2="1200" y2="744" stroke="#b89425" stroke-width="2.2"/>
+    <circle cx="1200" cy="724" r="4" fill="#b89425"/>
+    <text x="1200" y="762" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d0a">T1</text>
+    <text x="1200" y="780" text-anchor="middle" font-size="10" fill="#9a7a1a">dispatch advanced</text>
+
+    <line x1="1360" y1="716" x2="1360" y2="744" stroke="#3b6ea5" stroke-width="2.2"/>
+    <circle cx="1360" cy="724" r="4" fill="#3b6ea5"/>
+    <text x="1360" y="762" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">T0e</text>
+    <text x="1360" y="780" text-anchor="middle" font-size="10" fill="#33597f">END grids</text>
+  </g>
+  <text x="822" y="810" text-anchor="middle" font-size="10.5" fill="#5a6678" font-style="italic">T4 context-health &#183; T5 cutover &#183; T6 doctrine-change &#183; T7 CP-freeze fire as the project grows</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="44" y="836" width="1412" height="72" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="864" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">Brief flows down the tiers; the digest flows back up &#8212; and state lands at origin before any seam is disclosed.</text>
+  <text x="750" y="888" text-anchor="middle" font-size="12.5" fill="#5a4d20">Every closed dispatch is reconstructable from git log alone: no load-bearing state was ever trapped in a chat window.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="948" width="6" height="8" rx="1"/><rect x="699" y="942" width="6" height="14" rx="1"/><rect x="708" y="936" width="6" height="20" rx="1"/></g>
+    <text x="722" y="956" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

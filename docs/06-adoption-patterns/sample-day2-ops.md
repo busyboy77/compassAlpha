@@ -8,6 +8,11 @@ description: "A DECOUPLED Day-2 axis with two cadences: per-release (continuous)
 
 This is the worked example for the **Ops axis** — the Day-2 axis that takes a verified release and gets it *running in production*, then keeps watching it. Like [QA](sample-day2-qa.md), Ops runs **DECOUPLED**: parallel to Build and Doctrine, sharing the [bus protocol](../01-axioms/bus-protocol.md) and [persistence law](../01-axioms/persistence-law.md), competing for no Charter state.
 
+
+[![The three Day-2 Ops cadences as parallel time-tracks with a monitor-gated cutover control point](../assets/day2-ops-cadences.svg)](../assets/day2-ops-cadences.svg)
+
+<small>*Ops runs three intersecting cadences — per-release, per-incident, periodic-capacity — with cutover gated on monitor wiring.*</small>
+
 ## The Ops axis tiers + cadences
 
 | Generic tier | Northwind Ops role | Does |

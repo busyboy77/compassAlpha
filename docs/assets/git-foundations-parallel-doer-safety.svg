@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="1000" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Git Foundations &#8212; Parallel Doers, Safe by Construction</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Three mechanics make concurrent substrate work race-free &#183; plus two planes that never cross-commit</text>
+
+  <!-- intro -->
+  <text x="64" y="146" font-size="15" font-weight="700" fill="#1f2a36">Multiple Doers run at once &#8212; they cannot corrupt each other&#8217;s state</text>
+  <text x="64" y="167" font-size="12.5" fill="#5a6678" font-style="italic">correctness scales linearly with the number of parallel Doers</text>
+
+  <!-- ============ THREE PARALLEL DOERS ============ -->
+  <!-- Doer A -->
+  <rect x="64" y="196" width="420" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
+  <rect x="64" y="196" width="420" height="32" rx="11" fill="#4a8a4a"/>
+  <rect x="64" y="212" width="420" height="16" fill="#4a8a4a"/>
+  <text x="274" y="218" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">Doer A &#8212; fresh-per-slice</text>
+  <text x="88" y="252" font-size="11" fill="#2a5a2a">GIT_INDEX_FILE = .work-tmp/A/index</text>
+  <text x="88" y="272" font-size="11" fill="#2a5a2a">worktree = .work-tmp/A/wt</text>
+  <text x="88" y="292" font-size="11" fill="#2a5a2a">branch = feature/entity-A-slice</text>
+
+  <!-- Doer B -->
+  <rect x="540" y="196" width="420" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
+  <rect x="540" y="196" width="420" height="32" rx="11" fill="#4a8a4a"/>
+  <rect x="540" y="212" width="420" height="16" fill="#4a8a4a"/>
+  <text x="750" y="218" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">Doer B &#8212; fresh-per-slice</text>
+  <text x="564" y="252" font-size="11" fill="#2a5a2a">GIT_INDEX_FILE = .work-tmp/B/index</text>
+  <text x="564" y="272" font-size="11" fill="#2a5a2a">worktree = .work-tmp/B/wt</text>
+  <text x="564" y="292" font-size="11" fill="#2a5a2a">branch = feature/entity-B-slice</text>
+
+  <!-- Doer C -->
+  <rect x="1016" y="196" width="420" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
+  <rect x="1016" y="196" width="420" height="32" rx="11" fill="#4a8a4a"/>
+  <rect x="1016" y="212" width="420" height="16" fill="#4a8a4a"/>
+  <text x="1226" y="218" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">Doer C &#8212; fresh-per-slice</text>
+  <text x="1040" y="252" font-size="11" fill="#2a5a2a">GIT_INDEX_FILE = .work-tmp/C/index</text>
+  <text x="1040" y="272" font-size="11" fill="#2a5a2a">worktree = .work-tmp/C/wt</text>
+  <text x="1040" y="292" font-size="11" fill="#2a5a2a">branch = feature/entity-C-slice</text>
+
+  <!-- ============ THREE MECHANICS ROW ============ -->
+  <text x="64" y="352" font-size="15" font-weight="700" fill="#1f2a36">The triad &#8212; three mechanics, each closing one race class</text>
+
+  <!-- mechanic A: per-session index -->
+  <rect x="64" y="372" width="420" height="178" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="88" y="400" font-size="13.5" font-weight="700" fill="#1a4a7a">a &#183; per-session GIT_INDEX_FILE</text>
+  <text x="88" y="424" font-size="11.5" fill="#26425f">Each session points at its own staging index</text>
+  <text x="88" y="442" font-size="11.5" fill="#26425f">via an env var &#8212; siblings can&#8217;t see or stomp it.</text>
+  <text x="88" y="466" font-size="11" fill="#33597f">export GIT_INDEX_FILE=.work-tmp/A/index</text>
+  <text x="88" y="484" font-size="11" fill="#33597f">git update-index --add &lt;file&gt;</text>
+  <text x="88" y="502" font-size="11" fill="#33597f">git write-tree &#183; commit-tree &#183; update-ref</text>
+  <rect x="88" y="516" width="372" height="24" rx="6" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.2"/>
+  <text x="274" y="533" text-anchor="middle" font-size="10.5" fill="#8a2a2a">closes: shared .git/index stomp under plain git add</text>
+
+  <!-- mechanic B: per-doer worktree -->
+  <rect x="540" y="372" width="420" height="178" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="564" y="400" font-size="13.5" font-weight="700" fill="#1a4a7a">b &#183; per-Doer worktree</text>
+  <text x="564" y="424" font-size="11.5" fill="#26425f">Each Doer checks out its branch in its own</text>
+  <text x="564" y="442" font-size="11.5" fill="#26425f">directory &#8212; never the main working tree.</text>
+  <text x="564" y="466" font-size="11" fill="#33597f">git worktree add .work-tmp/A/wt &lt;tip-SHA&gt;</text>
+  <text x="564" y="484" font-size="11" fill="#33597f">git -C .work-tmp/A/wt &#8230;</text>
+  <text x="564" y="502" font-size="11" fill="#33597f">shared only the append-only .git/ objects</text>
+  <rect x="564" y="516" width="372" height="24" rx="6" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.2"/>
+  <text x="750" y="533" text-anchor="middle" font-size="10.5" fill="#8a2a2a">closes: Doers overwriting each other&#8217;s file edits</text>
+
+  <!-- mechanic C: atomic refspec push -->
+  <rect x="1016" y="372" width="420" height="178" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="1040" y="400" font-size="13.5" font-weight="700" fill="#1a4a7a">c &#183; atomic refspec push</text>
+  <text x="1040" y="424" font-size="11.5" fill="#26425f">A single-ref push is atomic. If two race, one</text>
+  <text x="1040" y="442" font-size="11.5" fill="#26425f">wins; the loser gets non-fast-forward + retries.</text>
+  <text x="1040" y="466" font-size="11" fill="#33597f">git pull --ff-only&#8195;(fetch-before-push)</text>
+  <text x="1040" y="484" font-size="11" fill="#33597f">git push origin &lt;branch&gt;:&lt;branch&gt;</text>
+  <text x="1040" y="502" font-size="11" fill="#33597f">explicit refspec &#8212; never default push</text>
+  <rect x="1040" y="516" width="372" height="24" rx="6" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.2"/>
+  <text x="1226" y="533" text-anchor="middle" font-size="10.5" fill="#8a2a2a">closes: lost-update on concurrent ref publication</text>
+
+  <!-- arrows from each Doer down to its mechanic column -->
+  <line x1="274" y1="314" x2="274" y2="368" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
+  <line x1="750" y1="314" x2="750" y2="368" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
+  <line x1="1226" y1="314" x2="1226" y2="368" stroke="#4a8a4a" stroke-width="2.2" marker-end="url(#ablue)"/>
+
+  <!-- ============ TWO PLANES NEVER CROSS-COMMIT ============ -->
+  <text x="64" y="596" font-size="15" font-weight="700" fill="#1f2a36">A Doer turn = two separate git operations &#8212; the planes never cross-commit</text>
+
+  <!-- data plane -->
+  <rect x="64" y="616" width="560" height="150" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2.2"/>
+  <rect x="64" y="616" width="560" height="32" rx="11" fill="#4a8a4a"/>
+  <rect x="64" y="632" width="560" height="16" fill="#4a8a4a"/>
+  <text x="344" y="638" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">DATA plane &#8212; the substrate deliverable</text>
+  <text x="88" y="676" font-size="12" fill="#2a5a2a">commit-tree from the isolated index, then push to the entity&#8217;s feature branch</text>
+  <text x="88" y="700" font-size="11.5" fill="#33445a">git -C /path/to/substrate &#8230;</text>
+  <text x="88" y="726" font-size="11.5" fill="#3a6a3a">its own repo &#183; its own remote &#183; its own .git object database</text>
+  <text x="88" y="748" font-size="11" fill="#3a6a3a" font-style="italic">where the code lands</text>
+
+  <!-- control plane -->
+  <rect x="876" y="616" width="560" height="150" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2.2"/>
+  <rect x="876" y="616" width="560" height="32" rx="11" fill="#3b6ea5"/>
+  <rect x="876" y="632" width="560" height="16" fill="#3b6ea5"/>
+  <text x="1156" y="638" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">CONTROL plane &#8212; the return digest</text>
+  <text x="900" y="676" font-size="12" fill="#1a4a7a">write the tagged return into the recipient&#8217;s inbox, then push reviewer-state</text>
+  <text x="900" y="700" font-size="11.5" fill="#33445a">git -C /path/to/reviewer-state &#8230;</text>
+  <text x="900" y="726" font-size="11.5" fill="#33597f">its own repo &#183; its own remote &#183; its own .git object database</text>
+  <text x="900" y="748" font-size="11" fill="#33597f" font-style="italic">where the coordination state lands</text>
+
+  <!-- crossed barrier between planes -->
+  <line x1="750" y1="616" x2="750" y2="766" stroke="#c44a4a" stroke-width="2.6"/>
+  <circle cx="750" cy="691" r="22" fill="#fdf3f3" stroke="#c44a4a" stroke-width="2.4"/>
+  <line x1="737" y1="678" x2="763" y2="704" stroke="#c44a4a" stroke-width="2.6"/>
+  <line x1="763" y1="678" x2="737" y2="704" stroke="#c44a4a" stroke-width="2.6"/>
+  <text x="750" y="788" text-anchor="middle" font-size="11.5" font-weight="700" fill="#8a2a2a">a tier about to git add across the boundary HALTS</text>
+
+  <!-- ============ OUTCOME CHIP ============ -->
+  <rect x="64" y="800" width="1372" height="58" rx="10" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2"/>
+  <polyline points="100,830 112,842 136,816" fill="none" stroke="#2a5a2a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="772" y="826" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2a5a2a">Different writers touch different paths; only ref-level races remain, and fast-forward handles those.</text>
+  <text x="772" y="847" text-anchor="middle" font-size="12.5" fill="#3a6a3a">File-level conflicts are structurally impossible &#8212; parallelism is safe by construction, not by careful timing.</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="64" y="876" width="1372" height="52" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="899" text-anchor="middle" font-size="13.5" fill="#5a4d20">Isolated index + isolated worktree + atomic refspec push remove every cross-Doer race; separate git -C invocations</text>
+  <text x="750" y="918" text-anchor="middle" font-size="13.5" fill="#5a4d20">keep the data and control planes in different object databases. The federation&#8217;s state is the state of git &#8212; safely.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="952" width="6" height="8" rx="1"/><rect x="699" y="946" width="6" height="14" rx="1"/><rect x="708" y="940" width="6" height="20" rx="1"/></g>
+    <text x="722" y="960" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

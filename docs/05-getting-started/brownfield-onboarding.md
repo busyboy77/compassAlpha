@@ -18,6 +18,11 @@ Extracting that doctrine is the hard, valuable work brownfield onboarding does. 
 
 ---
 
+
+[![The five-phase brownfield onboarding journey with overlapping phases and a migrating parallel-track boundary](../assets/brownfield-phases.svg)](../assets/brownfield-phases.svg)
+
+<small>*Brownfield adoption is phased, not big-bang: modules graduate one at a time as the managed/legacy boundary migrates rightward.*</small>
+
 ## The five-phase journey
 
 | Phase | Typical duration | What happens |

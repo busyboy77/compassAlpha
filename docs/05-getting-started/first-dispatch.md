@@ -12,6 +12,11 @@ We'll use the small first dispatch you chose during setup — say, **scaffold an
 
 ---
 
+
+[![One full dispatch across the three tiers, with a flush-before-disclose gate at every seam and the T0–T7 flush triggers](../assets/dispatch-flow-sequence.svg)](../assets/dispatch-flow-sequence.svg)
+
+<small>*The federation's heartbeat: brief flows down, labour happens in substrate, the digest flows up — and state lands at origin before any seam is disclosed.*</small>
+
 ## The cast
 
 | Tier | In this dispatch | Touches substrate? |

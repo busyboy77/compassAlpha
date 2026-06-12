@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="1000" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">Two-Plane CLI Discipline</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Every tier names the repo with git -C; data and control are two repos that never cross-commit</text>
+
+  <!-- ============ TIER COLUMN ============ -->
+  <text x="750" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#33445a">A single Doer turn = two separate git -C operations &#8212; never one commit</text>
+
+  <!-- tier chips -->
+  <rect x="600" y="158" width="300" height="64" rx="10" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="750" y="186" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a4a7a">Doer turn</text>
+  <text x="750" y="208" text-anchor="middle" font-size="11" fill="#5a7aa0" font-style="italic">the only tier that touches substrate</text>
+
+  <!-- ============ DATA PLANE (LEFT) ============ -->
+  <rect x="56" y="288" width="640" height="468" rx="12" fill="#ffffff" stroke="#4a8a4a" stroke-width="2"/>
+  <rect x="56" y="288" width="640" height="44" rx="12" fill="#4a8a4a"/>
+  <rect x="56" y="312" width="640" height="20" fill="#4a8a4a"/>
+  <text x="376" y="317" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">DATA PLANE</text>
+
+  <rect x="80" y="350" width="592" height="58" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.4"/>
+  <text x="376" y="376" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2a5a2a">/path/to/substrate</text>
+  <text x="376" y="396" text-anchor="middle" font-size="11.5" fill="#3a6a3a">the codebase deliverable &#183; code / doctrine</text>
+
+  <!-- worktree callout -->
+  <rect x="80" y="426" width="592" height="116" rx="9" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="96" y="450" font-size="12.5" font-weight="700" fill="#2a5a2a">One worktree per slice</text>
+  <text x="96" y="472" font-size="11" fill="#3a6a3a">git -C /path/to/substrate worktree add</text>
+  <text x="96" y="490" font-size="11" fill="#3a6a3a">  .work-tmp/&lt;scope&gt;/&lt;slice&gt;/wt  &lt;cycle-tip-SHA&gt;</text>
+  <text x="96" y="514" font-size="10.5" fill="#6a7585" font-style="italic">isolated worktree cut from the cycle-tip &#183; gitignored &#183; volatile</text>
+  <text x="96" y="532" font-size="10.5" fill="#6a7585" font-style="italic">siblings share only the append-only object database</text>
+
+  <!-- commit-tree callout -->
+  <rect x="80" y="560" width="592" height="174" rx="9" fill="#f4f9f4" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="96" y="584" font-size="12.5" font-weight="700" fill="#2a5a2a">Isolated-index commit-tree (no plain add+commit)</text>
+  <text x="96" y="606" font-size="11" fill="#3a6a3a">export GIT_INDEX_FILE=.../&lt;slice&gt;/index</text>
+  <text x="96" y="624" font-size="11" fill="#3a6a3a">git -C &lt;wt&gt; update-index --add &lt;file&gt;</text>
+  <text x="96" y="642" font-size="11" fill="#3a6a3a">TREE_SHA=$(git -C &lt;wt&gt; write-tree)</text>
+  <text x="96" y="660" font-size="11" fill="#3a6a3a">COMMIT_SHA=$(git -C &lt;wt&gt; commit-tree "$TREE_SHA" -p &lt;parent&gt; ...)</text>
+  <text x="96" y="678" font-size="11" fill="#3a6a3a">git -C &lt;wt&gt; update-ref refs/heads/&lt;branch&gt; "$COMMIT_SHA"</text>
+  <text x="96" y="696" font-size="11" fill="#3a6a3a">git -C &lt;wt&gt; push origin &lt;branch&gt;:&lt;branch&gt;</text>
+  <text x="96" y="720" font-size="10.5" fill="#6a7585" font-style="italic">per-session index &#183; siblings cannot stomp each other &#183; explicit refspec = atomic</text>
+
+  <!-- ============ CONTROL PLANE (RIGHT) ============ -->
+  <rect x="804" y="288" width="640" height="468" rx="12" fill="#ffffff" stroke="#3b6ea5" stroke-width="2"/>
+  <rect x="804" y="288" width="640" height="44" rx="12" fill="#3b6ea5"/>
+  <rect x="804" y="312" width="640" height="20" fill="#3b6ea5"/>
+  <text x="1124" y="317" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">CONTROL PLANE</text>
+
+  <rect x="828" y="350" width="592" height="58" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.4"/>
+  <text x="1124" y="376" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">/path/to/reviewer-state</text>
+  <text x="1124" y="396" text-anchor="middle" font-size="11.5" fill="#5a7aa0">LEDGER &#183; inboxes &#183; judicial state &#183; memories</text>
+
+  <!-- ledger / inbox callout -->
+  <rect x="828" y="426" width="592" height="116" rx="9" fill="#eef4fa" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="844" y="450" font-size="12.5" font-weight="700" fill="#1a4a7a">Tagged return into the recipient&#8217;s inbox</text>
+  <text x="844" y="472" font-size="11" fill="#33597f">git -C /path/to/reviewer-state pull --ff-only</text>
+  <text x="844" y="490" font-size="11" fill="#33597f">git -C /path/to/reviewer-state add &lt;inbox-file&gt; &lt;ledger&gt;</text>
+  <text x="844" y="514" font-size="10.5" fill="#5a6678" font-style="italic">fetch-before-push &#183; --ff-only refuses a silent merge</text>
+  <text x="844" y="532" font-size="10.5" fill="#5a6678" font-style="italic">single-live-writer safety on the state-of-record</text>
+
+  <!-- commit+push callout -->
+  <rect x="828" y="560" width="592" height="174" rx="9" fill="#eef4fa" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="844" y="584" font-size="12.5" font-weight="700" fill="#1a4a7a">Commit the judicial state, then refspec push</text>
+  <text x="844" y="606" font-size="11" fill="#33597f">git -C /path/to/reviewer-state commit -m "..."</text>
+  <text x="844" y="624" font-size="11" fill="#33597f">git -C /path/to/reviewer-state push origin main:main</text>
+  <text x="844" y="652" font-size="11.5" font-weight="700" fill="#1a4a7a">Sync check (T0 + before disclosure)</text>
+  <text x="844" y="674" font-size="11" fill="#33597f">git -C /path/to/reviewer-state fetch origin</text>
+  <text x="844" y="692" font-size="11" fill="#33597f">rev-list --left-right --count origin/main...main</text>
+  <text x="844" y="716" font-size="10.5" fill="#5a6678" font-style="italic">expect 0  0 &#8212; any non-zero count is drift; halt and reconcile</text>
+
+  <!-- ============ TWO git -C ARROWS FROM TIER ============ -->
+  <path d="M650,222 C470,250 376,256 376,286" fill="none" stroke="#4a8a4a" stroke-width="2.6" marker-end="url(#agreen)"/>
+  <text x="430" y="262" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">git -C /path/to/substrate</text>
+  <path d="M850,222 C1030,250 1124,256 1124,286" fill="none" stroke="#3b6ea5" stroke-width="2.6" marker-end="url(#ablue)"/>
+  <text x="1066" y="262" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1a4a7a">git -C /path/to/reviewer-state</text>
+
+  <!-- ============ NEVER-CROSS-COMMIT RULE (center divider) ============ -->
+  <line x1="750" y1="332" x2="750" y2="700" stroke="#c44a4a" stroke-width="2.4" stroke-dasharray="6 5"/>
+  <rect x="640" y="488" width="220" height="80" rx="11" fill="#fdf3f3" stroke="#c44a4a" stroke-width="2.4"/>
+  <path d="M676,548 L662,520 L676,520 L668,500 L694,528 L680,528 L688,548 Z" fill="#f2c200" stroke="#8a2a2a" stroke-width="1.4" stroke-linejoin="round"/>
+  <text x="772" y="516" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a2a2a">NEVER cross-commit</text>
+  <text x="772" y="534" text-anchor="middle" font-size="11" fill="#9a3a3a">the two planes</text>
+  <text x="772" y="552" text-anchor="middle" font-size="10.5" fill="#9a3a3a">directory separation</text>
+  <text x="772" y="568" text-anchor="middle" font-size="10.5" fill="#9a3a3a">= structural firewall</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="56" y="790" width="1388" height="74" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="818" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">Always git -C &lt;explicit-path&gt; &#8212; the working directory resets between ops, so a bare git is the classic cross-commit accident.</text>
+  <text x="750" y="842" text-anchor="middle" font-size="13" fill="#5a4d20">Deliverable lands on the data plane; the tagged return and judicial state land on the control plane. Two repos, two refspec pushes, one firewall.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="924" width="6" height="8" rx="1"/><rect x="699" y="918" width="6" height="14" rx="1"/><rect x="708" y="912" width="6" height="20" rx="1"/></g>
+    <text x="722" y="932" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

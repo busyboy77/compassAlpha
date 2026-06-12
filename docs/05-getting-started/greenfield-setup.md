@@ -12,6 +12,11 @@ The whole setup is seven steps. Each produces real artifacts on disk that you co
 
 ---
 
+
+[![The seven greenfield setup steps and the folder structure that emerges](../assets/greenfield-setup-steps.svg)](../assets/greenfield-setup-steps.svg)
+
+<small>*Greenfield setup in seven steps, each producing a concrete artifact, until the federation's folder structure stands up.*</small>
+
 ## Step 1 — Create the two repos as siblings
 
 The substrate (your project) and the reviewer-state (federation meta-state) are **two distinct repos in two distinct sibling directories**. They never cross-commit; that separation is the [firewall](../01-axioms/firewall.md).

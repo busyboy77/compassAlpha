@@ -8,6 +8,11 @@ description: "The build axis at full ceremony. A single-module substantive chang
 
 This is the worked example for the **Phase 3** lane (see [Work Granularity Lanes](../03-tunables/work-granularity-lanes.md)) — the heaviest *build*-axis lane, used for substantive single-module work: a new schema, new routes, a multi-stage rollout. It is the build-axis sibling of the [doctrine cycle](sample-doctrine-cycle.md): same three tiers, same freeze/gate/tag tail, but the deliverable is **code**, not doctrine, so §19 compass structure doesn't apply.
 
+
+[![The Phase 3 dispatch as a swimlane: parallel slices through the checkpoints, then freeze, gate, and tag](../assets/phase3-dispatch-swimlane.svg)](../assets/phase3-dispatch-swimlane.svg)
+
+<small>*Parallel slices fan out through the checkpoints and fan back in to a single freeze-gate-tag close.*</small>
+
 ## Setup
 
 Northwind's Reporting module can render dashboards live but can't deliver them on a schedule. The founder wants **scheduled exports**: users pick a report + a cadence, and the system emails a CSV at that cadence. This is a new schema (a `scheduled_export` table), new routes, and a background runner — squarely Phase 3.

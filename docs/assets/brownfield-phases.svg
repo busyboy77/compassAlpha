@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 900" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ablue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aamber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+  </defs>
+
+  <rect width="1500" height="900" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">The Brownfield Journey</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Five overlapping phases &#8212; the parallel-track boundary migrates rightward as each module graduates, one at a time</text>
+
+  <!-- ============ TIME AXIS ============ -->
+  <text x="56" y="138" font-size="13" font-weight="700" fill="#33445a">Time &#8212; no big-bang cutover; every step revertible</text>
+  <line x1="56" y1="150" x2="1444" y2="150" stroke="#9aa3b0" stroke-width="2" marker-end="url(#ablue)"/>
+
+  <!-- ============ PHASE BOXES (overlapping) ============ -->
+  <!-- Phase 0 -->
+  <rect x="56" y="172" width="260" height="118" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="186" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4a7a">0 &#183; Discovery</text>
+  <text x="186" y="222" text-anchor="middle" font-size="10.5" fill="#5a7aa0" font-style="italic">1&#8211;2 weeks</text>
+  <text x="186" y="246" text-anchor="middle" font-size="10.5" fill="#33597f">stand up reviewer-state</text>
+  <text x="186" y="262" text-anchor="middle" font-size="10.5" fill="#33597f">inventory modules</text>
+  <text x="186" y="278" text-anchor="middle" font-size="10.5" fill="#33597f">pick 1&#8211;2 pilots</text>
+
+  <!-- Phase 1 (overlaps 0) -->
+  <rect x="296" y="172" width="280" height="118" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="436" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4a7a">1 &#183; Doctrine extraction</text>
+  <text x="436" y="222" text-anchor="middle" font-size="10.5" fill="#5a7aa0" font-style="italic">4&#8211;12 weeks per pilot</text>
+  <text x="436" y="246" text-anchor="middle" font-size="10.5" fill="#33597f">Discovery Doctrine Cycle</text>
+  <text x="436" y="262" text-anchor="middle" font-size="10.5" fill="#33597f">extract doctrine from code</text>
+  <text x="436" y="278" text-anchor="middle" font-size="10.5" fill="#33597f">freeze module compass v0.1</text>
+
+  <!-- Phase 2 (overlaps 1) -->
+  <rect x="556" y="172" width="250" height="118" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="681" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4a7a">2 &#183; First Charter</text>
+  <text x="681" y="222" text-anchor="middle" font-size="10.5" fill="#5a7aa0" font-style="italic">2&#8211;4 weeks</text>
+  <text x="681" y="246" text-anchor="middle" font-size="10.5" fill="#33597f">author Charter v0.1</text>
+  <text x="681" y="262" text-anchor="middle" font-size="10.5" fill="#33597f">minimal cross-cutting rules</text>
+  <text x="681" y="278" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2a5a2a">LOCK it</text>
+
+  <!-- Phase 3 (long, overlaps 2; this is the parallel-track middle) -->
+  <rect x="786" y="172" width="420" height="118" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="1.8"/>
+  <text x="996" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#8a6d0a">3 &#183; Legacy parallel-track</text>
+  <text x="996" y="222" text-anchor="middle" font-size="10.5" fill="#9a7a1a" font-style="italic">continuous &#8212; the long middle</text>
+  <text x="996" y="246" text-anchor="middle" font-size="10.5" fill="#9a7a1a">pilots go through CompassAlpha</text>
+  <text x="996" y="262" text-anchor="middle" font-size="10.5" fill="#9a7a1a">legacy keeps its old workflow</text>
+  <text x="996" y="278" text-anchor="middle" font-size="10.5" fill="#9a7a1a">debt inducted into LEFTOVERS</text>
+
+  <!-- Phase 4 (overlaps 3) -->
+  <rect x="1186" y="172" width="258" height="118" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="1315" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#2a5a2a">4 &#183; Expansion</text>
+  <text x="1315" y="222" text-anchor="middle" font-size="10.5" fill="#3a6a3a" font-style="italic">months to years</text>
+  <text x="1315" y="246" text-anchor="middle" font-size="10.5" fill="#3a6a3a">module by module onboards</text>
+  <text x="1315" y="262" text-anchor="middle" font-size="10.5" fill="#3a6a3a">Charter evolves</text>
+  <text x="1315" y="278" text-anchor="middle" font-size="10.5" fill="#3a6a3a">all modules managed; legacy retired</text>
+
+  <!-- overlap region markers between adjacent phases -->
+  <g font-size="9.5" fill="#8a6d0a" font-style="italic" text-anchor="middle">
+    <rect x="296" y="300" width="20" height="22" fill="#fef0c8" opacity="0.7"/>
+    <rect x="556" y="300" width="20" height="22" fill="#fef0c8" opacity="0.7"/>
+    <rect x="786" y="300" width="20" height="22" fill="#fef0c8" opacity="0.7"/>
+    <rect x="1186" y="300" width="20" height="22" fill="#fef0c8" opacity="0.7"/>
+  </g>
+  <text x="751" y="316" text-anchor="middle" font-size="10.5" fill="#8a7d4a" font-style="italic">phases overlap &#8212; Phase 3 begins the moment the first pilot has a frozen compass, even while a second is still in Phase 1</text>
+
+  <!-- ============ PARALLEL-TRACK BOUNDARY (migrates rightward) ============ -->
+  <text x="56" y="360" font-size="15" font-weight="700" fill="#1f2a36">The parallel-track boundary, migrating one module at a time</text>
+
+  <!-- track band -->
+  <rect x="56" y="378" width="1388" height="300" rx="12" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.4"/>
+
+  <!-- three time-slices showing the boundary moving right -->
+  <!-- slice column headers -->
+  <text x="287" y="402" text-anchor="middle" font-size="12" font-weight="700" fill="#33445a">After pilot #1 (Auth)</text>
+  <text x="750" y="402" text-anchor="middle" font-size="12" font-weight="700" fill="#33445a">After pilot #2 (Billing)</text>
+  <text x="1213" y="402" text-anchor="middle" font-size="12" font-weight="700" fill="#33445a">Steady state (all graduated)</text>
+  <line x1="518" y1="414" x2="518" y2="660" stroke="#cfcabc" stroke-width="2" stroke-dasharray="3 5"/>
+  <line x1="981" y1="414" x2="981" y2="660" stroke="#cfcabc" stroke-width="2" stroke-dasharray="3 5"/>
+
+  <!-- SLICE 1 : Auth managed | Billing+Reporting legacy -->
+  <rect x="80" y="422" width="130" height="100" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="145" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#2a5a2a">Auth</text>
+  <text x="145" y="474" text-anchor="middle" font-size="9.5" fill="#3a6a3a">CompassAlpha-</text>
+  <text x="145" y="488" text-anchor="middle" font-size="9.5" fill="#3a6a3a">managed</text>
+  <rect x="222" y="422" width="130" height="100" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.6"/>
+  <text x="287" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#5a4d20">Billing</text>
+  <text x="287" y="474" text-anchor="middle" font-size="9.5" fill="#6a5a28">legacy</text>
+  <text x="287" y="488" text-anchor="middle" font-size="9.5" fill="#6a5a28">workflow</text>
+  <rect x="364" y="422" width="130" height="100" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.6"/>
+  <text x="429" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#5a4d20">Reporting</text>
+  <text x="429" y="474" text-anchor="middle" font-size="9.5" fill="#6a5a28">legacy</text>
+  <text x="429" y="488" text-anchor="middle" font-size="9.5" fill="#6a5a28">workflow</text>
+  <!-- boundary line slice 1 -->
+  <line x1="216" y1="422" x2="216" y2="522" stroke="#c44a4a" stroke-width="3"/>
+
+  <!-- SLICE 2 : Auth+Billing managed | Reporting legacy -->
+  <rect x="543" y="422" width="130" height="100" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="608" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#2a5a2a">Auth</text>
+  <text x="608" y="478" text-anchor="middle" font-size="9.5" fill="#3a6a3a">managed</text>
+  <rect x="685" y="422" width="130" height="100" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="750" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#2a5a2a">Billing</text>
+  <text x="750" y="478" text-anchor="middle" font-size="9.5" fill="#3a6a3a">graduated</text>
+  <rect x="827" y="422" width="130" height="100" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.6"/>
+  <text x="892" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#5a4d20">Reporting</text>
+  <text x="892" y="478" text-anchor="middle" font-size="9.5" fill="#6a5a28">legacy</text>
+  <!-- boundary line slice 2 (moved right) -->
+  <line x1="821" y1="422" x2="821" y2="522" stroke="#c44a4a" stroke-width="3"/>
+
+  <!-- SLICE 3 : all managed -->
+  <rect x="1006" y="422" width="130" height="100" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="1071" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#2a5a2a">Auth</text>
+  <text x="1071" y="478" text-anchor="middle" font-size="9.5" fill="#3a6a3a">managed</text>
+  <rect x="1148" y="422" width="130" height="100" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="1213" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#2a5a2a">Billing</text>
+  <text x="1213" y="478" text-anchor="middle" font-size="9.5" fill="#3a6a3a">managed</text>
+  <rect x="1290" y="422" width="130" height="100" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="1355" y="454" text-anchor="middle" font-size="12" font-weight="700" fill="#2a5a2a">Reporting</text>
+  <text x="1355" y="478" text-anchor="middle" font-size="9.5" fill="#3a6a3a">graduated</text>
+  <!-- boundary line slice 3 (fully right; legacy retired) -->
+  <line x1="1424" y1="422" x2="1424" y2="522" stroke="#c44a4a" stroke-width="3" stroke-dasharray="5 4"/>
+  <text x="1430" y="544" text-anchor="end" font-size="9.5" fill="#9a3a3a" font-style="italic">boundary off the edge &#8212; legacy track retired</text>
+
+  <!-- migration arrow under the slices -->
+  <line x1="216" y1="560" x2="1424" y2="560" stroke="#c44a4a" stroke-width="2.4" stroke-dasharray="2 0" marker-end="url(#aamber)"/>
+  <text x="820" y="552" text-anchor="middle" font-size="11.5" font-weight="700" fill="#8a2a2a">boundary migrates rightward as each module graduates</text>
+
+  <!-- graduation trigger callout -->
+  <rect x="80" y="588" width="1340" height="72" rx="9" fill="#fef8e7" stroke="#b89425" stroke-width="1.6"/>
+  <text x="100" y="612" font-size="12.5" font-weight="700" fill="#8a6d0a">Graduation trigger:</text>
+  <text x="100" y="634" font-size="11" fill="#9a7a1a">a legacy module graduates into CompassAlpha management when it has run its own Discovery Doctrine Cycle and produced a frozen compass.</text>
+  <text x="100" y="652" font-size="11" fill="#9a7a1a">Until then it&#8217;s legacy &#8212; a CompassAlpha module may reference a legacy interface, but the dependency is recorded so the integration is deliberate.</text>
+
+  <!-- legend -->
+  <g font-size="11">
+    <rect x="80" y="694" width="20" height="20" rx="4" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.4"/>
+    <text x="108" y="709" fill="#3a6a3a">CompassAlpha-managed module</text>
+    <rect x="356" y="694" width="20" height="20" rx="4" fill="#f0ede4" stroke="#a89968" stroke-width="1.4"/>
+    <text x="384" y="709" fill="#6a5a28">legacy module (old workflow)</text>
+    <line x1="640" y1="694" x2="640" y2="714" stroke="#c44a4a" stroke-width="3"/>
+    <text x="652" y="709" fill="#9a3a3a">parallel-track boundary</text>
+  </g>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="56" y="738" width="1388" height="64" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="764" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4a3f18">You will not boil the ocean: onboard one or two pilots, prove the rhythm, expand while the rest keeps running.</text>
+  <text x="750" y="787" text-anchor="middle" font-size="12.5" fill="#5a4d20">Over months the boundary migrates until every module is CompassAlpha-managed &#8212; and every step along the way is revertible.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="844" width="6" height="8" rx="1"/><rect x="699" y="838" width="6" height="14" rx="1"/><rect x="708" y="832" width="6" height="20" rx="1"/></g>
+    <text x="722" y="852" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>
