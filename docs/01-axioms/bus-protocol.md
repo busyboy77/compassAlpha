@@ -8,7 +8,11 @@ description: "Inbox-in-destination-folder. Sender writes file into recipient's i
 
 `[INVARIANT — the inbox-in-destination-folder model]` `[TUNABLE — exact path layout]`
 
+This page explains how the AI agents in a federation pass messages to each other: instead of a human copying text between chat windows, each agent has a mailbox (an `inbox/` folder), and messages are dropped in as files that travel through git. Get this, and you understand how the whole federation stays coordinated without anyone playing telephone.
+
 ## TL;DR
+
+When one agent needs to tell another something, it doesn't paste text into a chat — it writes a file into the other agent's mailbox and pushes it through git. Here's the precise version:
 
 All inter-tier communication uses **inbox files in the recipient's folder**. The sender writes a file into the recipient's `inbox/`, commits + pushes the reviewer-state repo, and pings the founder. The founder sends a one-line trigger (`"pull + read your inbox at <path>"`) to the recipient session. The recipient pulls, reads its own inbox, acts.
 
@@ -233,6 +237,13 @@ It was refined with rules like:
 - Inbox-tree integrity — `git add` every existing inbox file before commit
 
 These refinements inform the framework's specification.
+
+## Remember this
+
+- **Messages are files, not chat.** A sender drops a file into the recipient's `inbox/` folder and pushes it through git. The human relaying things only sends a one-line "go check your inbox" — they never carry the actual content.
+- **The mailbox model means nothing gets lost.** Every message is a committed file with a timestamp and a recipient, so the whole conversation history can be rebuilt from git at any time — no transient chat windows to vanish on a reboot.
+- **No extra infrastructure needed.** You don't install a message queue or a server; you just agree on a folder-and-file convention, and git (which every project already has) does the carrying.
+- **Two separate worlds, never mixed.** The actual work (the "substrate" — the real code) and the coordination messages live in different git repos and are committed separately, never in one command. This is one of the framework's core moving parts — see [the mental model](../00-foundation/mental-model.md).
 
 ---
 

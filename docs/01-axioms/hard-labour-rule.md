@@ -8,9 +8,11 @@ description: "Mentors never touch substrate. The Doer is the only tier that does
 
 `[INVARIANT]`
 
+This page explains the one job split that keeps the whole system sane: the AI agents that *think and plan* (mentors) never touch the actual code, and the AI agents that *do the work* (Doers) are the only ones allowed to. You care because this is the rule that keeps the planners' judgment sharp over a project that runs for weeks.
+
 ## TL;DR
 
-Mentor-1 and Mentor-2 **never** touch the substrate (the project's actual codebase or doctrine source repo). The Doer is the **only** tier that does labour — code, doctrine, surveys, audits, recon, all of it. This is what keeps mentor context clean across the long cycle horizon.
+In this framework, "substrate" just means the real thing being worked on — the project's actual codebase, or the source repo holding the doctrine. Mentor-1 and Mentor-2 **never** touch the substrate (the project's actual codebase or doctrine source repo). The Doer is the **only** tier that does labour — code, doctrine, surveys, audits, recon, all of it. This is what keeps mentor context clean across the long cycle horizon.
 
 ## The rule
 
@@ -151,5 +153,12 @@ Across that horizon, accumulated substrate detail in mentor context becomes subs
 By contrast, Doers are fresh-per-slice. Each slice starts with a clean Doer context. The substrate detail accumulates for one slice's worth of work, then dies. **No fatigue across the horizon.**
 
 This is the engineering reason the axiom is non-negotiable. It's not philosophical; it's about preserving mentor judgment quality across a long cycle.
+
+## Remember this
+
+- **Planners plan; Doers do.** Mentors orchestrate and approve; Doers are the only tier that touches real code or files. If you catch a mentor "just quickly checking" the codebase, that's the violation.
+- **It's not bureaucracy — it's hygiene.** Doers start fresh each time and forget what they saw. Mentors live for weeks, so anything they look at sticks and slowly clouds their judgment. Keeping code out of mentor heads keeps their decisions clean.
+- **When in doubt, dispatch a Doer.** Recon, debugging, verifying a claim, even asking "why was this done?" — all of it goes through a fresh Doer, never a mentor doing it directly.
+- New to the tiers and how they fit together? See [the mental model](../00-foundation/mental-model.md).
 
 ## Next: [Axiom 5 — Bus Protocol →](bus-protocol.md)

@@ -8,7 +8,11 @@ description: "GIT_INDEX_FILE per session + worktree route-around + commit-tree p
 
 `[INVARIANT — these mechanics are non-negotiable]`
 
+**In plain terms:** when several AI agents work on the same codebase at once, this page is the set of git tricks that keeps them from accidentally overwriting each other — so parallel work stays correct instead of quietly corrupting.
+
 ## TL;DR
+
+**The short version:** CompassAlpha treats git itself as the single source of truth, and three specific git techniques are what make it safe for many agents to write at the same time. Here they are in detail.
 
 CompassAlpha's claim that *"state of the federation = state of git"* rests on specific git-layer mechanics that make multi-tier + multi-axis + parallel-doer + sub-agent isolation actually possible. Without these mechanics, the framework would fail at first contact with concurrent work.
 
@@ -227,6 +231,13 @@ The framework no longer needs the single-writer session because it no longer has
 ```
 
 Stamp these onto every tier's boot file. Verify at T0. Audit at session start.
+
+## Remember this
+
+- When many agents share one codebase, the danger isn't loud crashes — it's *silent* clobbering: two agents stage or edit the same spot and quietly corrupt each other's work.
+- The fix is isolation: each agent gets its own staging area (`GIT_INDEX_FILE`), its own working directory (a `git worktree`), and publishes through a precise, single-target push. They only ever share git's append-only object store, which is safe to share.
+- "Two planes, never cross-commit" is a safety wall: the work-product repo and the messaging repo are kept physically separate so a commit can't leak from one into the other.
+- These mechanics are what let parallel work scale without surprises — and they're the ground floor for [the mental model](../00-foundation/mental-model.md).
 
 ---
 

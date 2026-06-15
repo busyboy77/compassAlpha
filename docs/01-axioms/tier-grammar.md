@@ -8,9 +8,13 @@ description: "Three tiers per axis. Mentor-1 / Mentor-2 / Doer. Names tunable; p
 
 `[INVARIANT — number of tiers]` `[TUNABLE — names]`
 
+This page explains the basic shape of every CompassAlpha team: three layers of agents — one who reviews, one who coordinates, and one who actually does the work. Get this shape right and everything else in the framework clicks into place.
+
 ## TL;DR
 
-CompassAlpha specifies **exactly three tiers per axis**: a top mentor, a middle orchestrator, and a doer at the bottom. The names are project-specific; the positions and their distinct responsibilities are inviolable. This is the foundational structural rule from which all other axioms derive.
+In short: every line of work in CompassAlpha is run by a three-person chain — a reviewer at the top, a coordinator in the middle, and a worker at the bottom.
+
+CompassAlpha specifies **exactly three tiers per axis** (an *axis* is one line of work, like building features or writing docs): a top mentor, a middle orchestrator, and a doer at the bottom. The names are project-specific; the positions and their distinct responsibilities are inviolable. This is the foundational structural rule from which all other axioms derive.
 
 
 [![The three-tier hierarchy — Mentor-1, Mentor-2, Doer — with the labour-boundary firewall separating the mentors from the only tier that touches substrate](../assets/tier-grammar-pyramid.svg)](../assets/tier-grammar-pyramid.svg)
@@ -111,6 +115,13 @@ While the three positions are `[INVARIANT]`, the following are `[TUNABLE]`:
 - [Hard labour rule](hard-labour-rule.md) — what mentors can and can't do
 - [Bus protocol](bus-protocol.md) — how tiers communicate
 - [Hierarchy tags](../07-reference/hierarchy-tags.md) — how messages between tiers are marked
+
+## Remember this
+
+- Every line of work runs on **three layers**: a reviewer (Mentor-1), a coordinator (Mentor-2), and a worker (Doer). No more, no less.
+- Only the **Doer touches the actual files** — the two mentors think, plan, and check, but never do the hands-on work themselves. That separation is what keeps each layer focused and uncluttered.
+- The **names are yours to choose** (Director/Manager/Engineer, Architect/Lead/Builder, whatever fits) — but the three positions never change.
+- If you're new, this is the backbone of [the mental model](../00-foundation/mental-model.md): three layers, one worker at the bottom, clean boundaries between them.
 
 ---
 

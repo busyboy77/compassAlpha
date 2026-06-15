@@ -8,7 +8,11 @@ description: "Confined, not banished. Each tier writes only inside its own folde
 
 `[INVARIANT]`
 
+This page is about keeping each layer of the team in its own lane: an agent only writes inside its own folder, and a supervisor only tracks the kind of progress it's actually responsible for. You care because this is what stops a supervisor from drowning in detail it doesn't need — or worse, confidently reporting old, out-of-date information as if it were current.
+
 ## TL;DR
+
+In plain terms: every agent gets its own workspace and isn't allowed to rummage through anyone else's. Supervisors keep notes only about the big-picture progress they own, and they always mark *when* they last heard news — so they never mistake a stale update for a live one.
 
 Each tier in the federation operates within a **confined persistence domain** — its own folder, its own state files. Tiers can read across the boundary only on **deliberate trigger** (escalation, exit-study), never as routine flow. Mentors track only the granularity they own — never live sub-tier progress. **Recording a point-in-time sub-tier snapshot and then treating it as live is a firewall leak.**
 
@@ -155,6 +159,13 @@ The build-axis Mentor-1 does not run while a doctrine cycle is engaged. The doct
 | Snapshot-vs-live linguistic discipline | strict "as of X" framing | strict / informal (degrades pollution defense) |
 
 [→ Context patterns](../03-tunables/context-patterns.md) for the full set of visibility configurations.
+
+## Remember this
+
+- **Each agent stays in its own folder.** Writing into someone else's workspace, or routinely reading theirs, is off-limits — that boundary is what keeps everyone's thinking clear.
+- **A supervisor only tracks what it owns.** It follows the big milestones, not the minute-by-minute work happening one level down.
+- **"As of when" is everything.** Any note about a sub-team's progress is a snapshot from the last time they reported in — never assume it's still true right now. Pretending a stale snapshot is live is the one mistake this axiom exists to prevent.
+- New here? This page is one piece of [the mental model](../00-foundation/mental-model.md) — start there if the tiers and folders feel abstract.
 
 ## How this connects to other axioms
 

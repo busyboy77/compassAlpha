@@ -8,7 +8,11 @@ description: "Cite by substrate. Every load-bearing claim is traceable to substr
 
 `[INVARIANT]`
 
+This page explains a simple rule that keeps the whole system honest: before anyone — human or AI — acts on "I remember we decided X," they have to go check the actual files. You care because it's the main reason the framework doesn't quietly drift into things that never actually happened.
+
 ## TL;DR
+
+In plain terms: don't trust memory, check the source. Every important claim has to point back to a real, committed file at a known point in time — not to what an AI "remembers."
 
 Every load-bearing claim in the federation must be **traceable to substrate** — the project's actual codebase or doctrine source repo at a specific commit/tag. AI institutional memory ("I remember we decided X") is NEVER authoritative without substrate verification. This is the framework's structural defense against AI hallucination.
 
@@ -23,6 +27,8 @@ When citing an existing primitive, invariant, fact, or decision, the citation re
 A tier's recall ("I remember we decided X") MUST be verified against the substrate before action. Memory recall is HYPOTHESIS, not FACT.
 
 ### Frozen-base provenance
+
+In plain terms: if you edit a document by branching off an old version, you can silently lose changes that were made after that old version — including decisions the founder already made. So always branch off the last known-good frozen state, and double-check nothing got dropped.
 
 A doctrine-axis revision rooted on a base predating the entity's build-axis doc-close tag silently drops deltas (scope reductions + founder rulings). Run ancestor-test + read-diff-reconcile @ the build-axis tag; verify against frozen-base-blob, not worktree checkout.
 
@@ -165,5 +171,12 @@ Memory becomes a curated index of substrate references, not a parallel source of
 - **[Firewall](firewall.md)** prevents pollution of mentor context with sub-tier detail; provenance law ensures mentors don't compensate by hallucinating sub-tier detail from memory.
 - **[Brief completeness](../02-guardrails/brief-completeness.md)** requires concrete values in briefs; provenance law applies the same principle to claims.
 - **[Hallucination defense](../02-guardrails/hallucination-defense.md)** is the broader guardrail; this axiom is its load-bearing core.
+
+## Remember this
+
+- **Check the source, don't trust the memory.** Before acting on "I remember we decided X," go read the actual committed file. Memory is a guess until the source confirms it.
+- **Point to a specific version.** A good citation names the file *and* the exact tag or commit, so it can't drift or be misremembered later.
+- **This is how the system catches AI mistakes.** If an AI invents a plausible-but-false fact, requiring a source means the lie gets caught the moment someone looks.
+- New here? See [the mental model](../00-foundation/mental-model.md) for how this axiom fits the bigger picture.
 
 ## Next: [Axiom 7 — Git Foundations →](git-foundations.md)

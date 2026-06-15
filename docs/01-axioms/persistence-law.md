@@ -8,7 +8,11 @@ description: "Flush before disclose. State on disk + at origin BEFORE it is disc
 
 `[INVARIANT]`
 
+New here? This page explains the one habit that lets a human safely trust a team of AI agents: nothing important is "real" until it's saved to a file and confirmed — never just spoken in the chat. Get this, and you understand why the human running the show can relax instead of double-checking everything.
+
 ## TL;DR
+
+In plain terms: an AI agent isn't allowed to tell you "I did it" until the change is actually saved, backed up, and re-read to confirm it stuck. Talk is cheap; the file is the truth.
 
 Every load-bearing state change must be **written to disk + pushed to origin + read back** **before** it is discussed with the founder. This is the trust anchor — what lets the founder step back to a relay+lost+found role instead of micromanaging every interaction.
 
@@ -179,6 +183,13 @@ If the founder ever observes a violation — a claim that doesn't match disk, a 
 Option 2 is what most AI-collaboration projects end up doing — and is exactly the cognitive load CompassAlpha is designed to spare the founder.
 
 The persistence law is the contract that earns the trust.
+
+## Remember this
+
+- **If it isn't on disk, it didn't happen.** A claim that lives only in chat is not real state — and an agent must not report it as done.
+- **Flush means write + push + read-back.** Saving locally isn't enough; the change goes to the durable remote, then gets re-read to confirm it actually landed.
+- **This is what frees the human.** Because state is always durable and verifiable, the founder can step away and trust the federation instead of micromanaging it.
+- New to the whole picture? See [the mental model](../00-foundation/mental-model.md) for how this law fits the rest of the framework.
 
 ---
 
