@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1500" height="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 720" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <rect width="1500" height="720" fill="#fafaf8"/>
+
+  <!-- HEADER -->
+  <rect x="0" y="0" width="1500" height="90" fill="#1f2a36"/>
+  <text x="750" y="40" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">How the Four Layers Compose</text>
+  <text x="750" y="67" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">An invariant foundation, a configurable top — worked here as a Conservative profile (biased to intelligence, low risk)</text>
+
+  <!-- rigidity arrow on the far left -->
+  <text x="44" y="150" font-size="11" font-weight="700" fill="#7a8aa0">softer · per-project</text>
+  <line x1="40" y1="160" x2="40" y2="540" stroke="#9aa3b0" stroke-width="2"/>
+  <polygon points="40,160 35,170 45,170" fill="#9aa3b0"/>
+  <polygon points="40,540 35,530 45,530" fill="#9aa3b0"/>
+  <text x="44" y="556" font-size="11" font-weight="700" fill="#33445a">harder · invariant foundation</text>
+
+  <!-- LAYER 4 · TOGGLES (top) -->
+  <rect x="80" y="150" width="1360" height="92" rx="10" fill="#eaf1f8" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="80" y="150" width="300" height="92" rx="10" fill="#dce8f4"/><rect x="356" y="150" width="24" height="92" fill="#dce8f4"/>
+  <text x="230" y="186" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">LAYER 4 · TOGGLES</text>
+  <text x="230" y="208" text-anchor="middle" font-size="11" fill="#3b6ea5">live switches</text>
+  <rect x="230" y="216" width="120" height="20" rx="5" fill="#3b6ea5"/><text x="290" y="230" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">VARIES per project</text>
+  <text x="404" y="184" font-size="12" fill="#26425f"><tspan font-weight="700">operating_preset = Conservative</tspan>  (this one bundles the Layer-3 settings below)</text>
+  <text x="404" y="206" font-size="11.5" fill="#26425f">rotation_cadence = "2–4 weeks preventive"  ·  founder-call boundary, pacing …</text>
+  <text x="404" y="228" font-size="10.5" fill="#5a7aa0" font-style="italic">flip at the allowed moment — runtime, cycle-boundary, or lifecycle</text>
+
+  <!-- LAYER 3 · TUNABLES -->
+  <rect x="80" y="252" width="1360" height="92" rx="10" fill="#eef4f9" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="80" y="252" width="300" height="92" rx="10" fill="#dce8f4"/><rect x="356" y="252" width="24" height="92" fill="#dce8f4"/>
+  <text x="230" y="288" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">LAYER 3 · TUNABLES</text>
+  <text x="230" y="310" text-anchor="middle" font-size="11" fill="#3b6ea5">the customization surface</text>
+  <rect x="230" y="318" width="120" height="20" rx="5" fill="#3b6ea5"/><text x="290" y="332" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">VARIES per project</text>
+  <text x="404" y="284" font-size="11.5" fill="#26425f">concurrency = LAYGO  ·  ai_model = top-tier (all tiers)</text>
+  <text x="404" y="306" font-size="11.5" fill="#26425f">context = {fresh-per-slice doer · verbose digests · liberal memory}</text>
+  <text x="404" y="328" font-size="11.5" fill="#26425f">lanes_enabled = {Doctrine Cycle · Phase 3 · Polish · Surgical}</text>
+
+  <!-- LAYER 2 · GUARDRAILS -->
+  <rect x="80" y="354" width="1360" height="84" rx="10" fill="#eef2f6" stroke="#5a6a7a" stroke-width="1.8"/>
+  <rect x="80" y="354" width="300" height="84" rx="10" fill="#e2e8ee"/><rect x="356" y="354" width="24" height="84" fill="#e2e8ee"/>
+  <text x="230" y="388" text-anchor="middle" font-size="16" font-weight="700" fill="#2a3a4a">LAYER 2 · GUARDRAILS</text>
+  <rect x="170" y="400" width="120" height="20" rx="5" fill="#2a3a4a"/><text x="230" y="414" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">INVARIANT · always</text>
+  <text x="404" y="386" font-size="11.5" fill="#2a3a4a">all guardrails active — derived from the axioms, in force in every profile</text>
+  <text x="404" y="408" font-size="10.5" fill="#5a6a7a" font-style="italic">the failure-facing view of the same defenses; not tunable away</text>
+
+  <!-- LAYER 1 · AXIOMS (foundation) -->
+  <rect x="80" y="448" width="1360" height="84" rx="10" fill="#e8ebef" stroke="#2a3a4a" stroke-width="2"/>
+  <rect x="80" y="448" width="300" height="84" rx="10" fill="#dadfe5"/><rect x="356" y="448" width="24" height="84" fill="#dadfe5"/>
+  <text x="230" y="482" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2a3a">LAYER 1 · AXIOMS</text>
+  <rect x="170" y="494" width="120" height="20" rx="5" fill="#1a2a3a"/><text x="230" y="508" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">INVARIANT · always</text>
+  <text x="404" y="480" font-size="11.5" fill="#1a2a3a">all 7 axioms in force — the load-bearing rules every federation stands on</text>
+  <text x="404" y="502" font-size="10.5" fill="#5a6a7a" font-style="italic">cannot be changed without forking the framework — structural correctness</text>
+
+  <!-- CAPTION -->
+  <rect x="80" y="560" width="1360" height="110" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="588" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4a3f18">Same axioms, same guardrails — every project. Different project = different tunables and toggles.</text>
+  <text x="750" y="614" text-anchor="middle" font-size="12" fill="#5a4d20"><tspan font-weight="700">Why:</tspan> the bottom two layers are structural correctness (the same everywhere); the top two are the performance/cost surface each project sets to fit its risk profile, budget, and maturity.</text>
+  <text x="750" y="634" text-anchor="middle" font-size="12" fill="#5a4d20"><tspan font-weight="700">How to read it:</tspan> a profile is just a choice of Layers 3–4 sitting on the unchanging Layers 1–2. Swap the profile and the foundation is untouched.</text>
+  <text x="750" y="656" text-anchor="middle" font-size="11.5" fill="#6a5a28" font-style="italic">Where: this is the constitutional separation — invariant below the line, configurable above it.</text>
+
+  <!-- FOOTER -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="686" width="6" height="6" rx="1"/><rect x="699" y="682" width="6" height="10" rx="1"/><rect x="708" y="678" width="6" height="14" rx="1"/></g>
+    <text x="722" y="692" font-size="12" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

@@ -12,6 +12,10 @@ CompassAlpha is the reference framework for a new operational category: **GitAI*
 
 ## Lineage
 
+![GitOps (~2017) to AIOps (~2017) to GitAI (2026) — git as the source of truth for operations, then AI as an operator, combined into git as the coordination layer for multi-agent AI federations](../assets/gitai-lineage.svg)
+
+<small>*GitOps proved git could be the durable, audited source of truth for a running system; AIOps proved AI could be a first-class operator. GitAI combines them — the operators are AI agents, and git is the layer that coordinates, stores, and audits everything they do. State of the federation = state of git.*</small>
+
 | Category | Era | Core insight | Reconciler |
 |---|---|---|---|
 | **GitOps** | ~2017+ | State of infrastructure = state of git. PRs + automated reconcilers. | k8s operators, Flux, ArgoCD, etc. |

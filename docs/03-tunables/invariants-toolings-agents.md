@@ -16,6 +16,10 @@ This page is about the three ways a project gets smarter as it grows — the rul
 
 A federation gets smarter over time through three **enrichment surfaces**: project **invariants** (correctness rules enforced everywhere), **toolings** (automation — audits, validators, dashboards), and **specialised agents** (AI roles tuned for specific work types). All three compound the **intelligence ↔ cost** trade-off: more of each raises the deliverable's quality and the per-cycle cost. The recommended evolution is **start lean and add when a pattern repeats three times** and the marginal benefit is observable. A mature federation accumulates many invariants, several toolings, and a handful of agents over many cycles — biased toward intelligence; a lean federation stays cheap and fast with a lower quality floor.
 
+![The three enrichment surfaces — invariants, toolings, and specialised agents — each compounding the intelligence-versus-cost trade-off](../assets/enrichment-surfaces.svg)
+
+<small>*A federation buys quality with three independent-but-compounding levers: invariants (correctness rules), toolings (automation), and specialised agents (tuned AI roles). More of each raises the intelligence floor and the per-cycle cost. Start lean; add one only when a pattern has repeated about three times and the benefit is observable.*</small>
+
 ## The dial
 
 How much of each surface a project invests in is the dial. The three surfaces are independent levers but they **compound** — investing in all three yields a high-intelligence, high-cost federation; investing in none yields a lean, cheap, lower-floor one. Every project at every cycle decides how much of each to add.

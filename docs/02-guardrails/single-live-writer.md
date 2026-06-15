@@ -16,6 +16,10 @@ In plain terms: when several sessions share one source of truth, you need exactl
 
 The **clobber** is the failure where two sessions write the state-of-record concurrently and one silently overwrites the other's work — a decision, a ledger update, a ratification, gone without a trace. CompassAlpha prevents it with **single-live-writer**: only the tier currently holding jurisdiction writes the state-of-record repo while it holds it. A rotation *transfers* jurisdiction; it does not create a second writer. Any out-of-jurisdiction party (an outgoing tier kept as backstop, a sibling parallel worker) **fetches before it pushes** and never clobbers the live writer. Combined with path-partitioned writes, this makes file-level conflicts structurally impossible and reduces the whole problem to ref-races that a fast-forward handles.
 
+![Single live writer — blind concurrent pushes clobber (the second overwrites the first), while one jurisdiction-holder plus fetch-before-push preserves every write](../assets/single-live-writer.svg)
+
+<small>*Two writers pushing the same path blindly: the second clobbers the first and a whole return vanishes silently. One jurisdiction-holder — with any overlapping writer fetching and rebasing before it pushes, and parallel doers on distinct paths — loses nothing. Git keeps the storage safe; this keeps the semantics safe.*</small>
+
 ## The failure it prevents
 
 A "persistent single-writer anti-pattern" is the naïve alternative: one long-lived session that never rotates, writing everything, because "then there's only one writer and nothing can clobber." It avoids clobber by accumulating unbounded context — and so it rots into [pollution](pollution-containment.md) and [stale snapshots](stale-snapshot-detection.md) instead. CompassAlpha wants the opposite: *aggressive* session refresh and rotation, which means many sessions over time and sometimes overlapping ones. That only stays safe if writing is governed.

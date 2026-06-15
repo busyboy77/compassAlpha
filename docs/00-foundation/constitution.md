@@ -101,6 +101,10 @@ Toggles are tunables seen from the **timing** perspective: when can each one fli
 
 A worked example: a conservative profile biased toward intelligence + low-risk.
 
+![How the four layers compose — AXIOMS and GUARDRAILS are an invariant foundation (the same every project); TUNABLES and TOGGLES are the configurable top a project sets, shown here as a Conservative profile](../assets/layers-compose.svg)
+
+<small>*An invariant foundation, a configurable top. The bottom two layers (axioms, guardrails) are the same for every project; the top two (tunables, toggles) are the profile a project chooses — here, Conservative. Swap the profile and the foundation is untouched. The same values, written out:*</small>
+
 ```
 LAYER 1 (axioms):     all 7 axioms in force (always — invariant)
 LAYER 2 (guardrails): all 6 guardrails active (always — derived from axioms)
