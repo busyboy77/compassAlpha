@@ -8,7 +8,9 @@ description: "Every block carries its sender→recipient edge. A tier ingests a 
 
 `[INVARIANT — the wire format]` · `[TUNABLE — exact tag names]`
 
-Hierarchy-edge tags are the addressing layer of the [bus protocol](../01-axioms/bus-protocol.md). Every paste-ready block — and every inbox file's content — is wrapped in a tag naming the **edge** it travels: which tier sent it, which tier it is for. The tag is what makes routing auditable and what powers **tag-gated ingestion**: a tier validates the edge before consuming the content.
+**New here?** This page explains the little "address label" that gets stamped on every message agents pass to each other — who it's from, who it's for. That label is what stops a message from being read by the wrong agent. If you're routing work between tiers and want to know why messages can't get crossed, this is the page for you.
+
+Hierarchy-edge tags are the addressing layer of the [bus protocol](../01-axioms/bus-protocol.md) — the shared messaging system tiers use to pass work back and forth. Every paste-ready block — and every inbox file's content — is wrapped in a tag naming the **edge** it travels (an "edge" here just means the directed link from one tier to another): which tier sent it, which tier it is for. The tag is what makes routing auditable — you can always trace where a message came from and where it was headed — and what powers **tag-gated ingestion**: before a tier acts on a message, it checks the tag to confirm the message was actually addressed to it.
 
 This defends against a specific failure: a block that *sounds* right (voice-match across relay hops) being ingested by the wrong tier. Voice-match is signal, not authorization. Only the edge authorizes.
 
@@ -121,6 +123,15 @@ Edge does not terminate at DOER — intended recipient is MENTOR-2. Not ingestin
 The tag lives **inside** the file; the [bus protocol](../01-axioms/bus-protocol.md) names the **file** `from-<sender-tier>-<event-class>[-<discriminator>].md`. The filename tells you (and the audit log) who wrote it and why; the inner tag is what the consuming tier validates before acting. Both must agree — a file named `from-mentor1-brief.md` should contain a `[[MENTOR-1→…]]` tag.
 
 → [Bus protocol](../01-axioms/bus-protocol.md) · [Stage grammar](stage-grammar.md) · [Dispatch brief template](templates/index.md) · [Firewall](../01-axioms/firewall.md)
+
+---
+
+## Remember this
+
+- **Every message wears an address label.** The tag names who sent it and who it's for — that's the "edge" it travels along.
+- **The recipient checks the label before acting.** If the message isn't addressed to this tier, it gets rejected, not silently obeyed.
+- **Sounding right isn't the same as being authorized.** A message can read like it came from a trusted tier and still be for someone else — only the edge decides.
+- **Misroutes get caught out loud.** A rejected message names who it was actually for, so the path can be corrected. For how this fits the bigger picture, see [the mental model](../00-foundation/mental-model.md).
 
 ---
 

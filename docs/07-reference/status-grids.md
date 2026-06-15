@@ -8,7 +8,11 @@ description: "Three levels of grid. Print Tier 1 at every session start and end;
 
 `[INVARIANT — three grid tiers exist]` · `[TUNABLE — stage taxonomy per axis]`
 
-Status grids are the federation's at-a-glance state surface. They serve two load-bearing functions: a **boot-integrity check** (the START grid must match disk, or it's drift) and a **handover certification** (the END grid certifies disk == understanding, nothing unflushed). A grid is never narrative — it is a fixed-shape snapshot a founder or incoming tier can scan in seconds.
+**New here?** A status grid is a tiny, fixed-shape status report an AI agent prints at the start and end of every work session — so anyone (a human or the next agent picking up the work) can see in seconds exactly where things stand, with no guessing and no long story to read.
+
+Think of it like the dashboard you glance at when you sit down: what's done, what's in progress, what's left, what's next, and whether everything has actually been saved. This page shows the three sizes of that dashboard and when to use each one.
+
+Status grids are the federation's at-a-glance state surface (the federation being the team of AI agents working together on the code). They serve two load-bearing functions. First, a **boot-integrity check**: the grid printed at session start must match what's actually saved on disk — if it doesn't, something has drifted out of sync and work pauses to reconcile. Second, a **handover certification**: the grid printed at session end confirms that what's on disk matches the agent's understanding, with nothing left unsaved (unflushed). A grid is never a narrative — it's a fixed-shape snapshot a founder or an incoming agent can scan in seconds.
 
 The three tiers escalate in depth. You print the right one for the seam.
 
@@ -131,6 +135,15 @@ TIER-3 STATUS GRID — 2026-06-09 · cycle charter-v0.4 → v0.5 prep
 A grid that hasn't been written to disk before being shown to the founder is a persistence-law violation — print, flush, *then* disclose.
 
 → [Persistence law](../01-axioms/persistence-law.md) · [Flush triggers](flush-triggers.md) · [Stage grammar](stage-grammar.md) · [Status-grid template](templates/index.md)
+
+---
+
+## Remember this
+
+- A status grid is a small, fixed-shape report of where the work stands — printed so anyone can read the state in seconds instead of reconstructing it from memory.
+- There are three sizes: **Tier 1** (the quick 6-line grid, printed every session start and end), **Tier 2** (a fuller categorized list, at bigger moments), and **Tier 3** (the deepest, for cycle-close and cross-team handovers). Use the smallest one that fits the moment.
+- The start-of-session grid must match what's saved on disk, and the end-of-session grid certifies nothing was left unsaved — that's how the handover stays trustworthy.
+- Always save the grid before showing it to anyone; a grid shown but not yet written down breaks the rule. See [the mental model](../00-foundation/mental-model.md) for how this fits the bigger picture.
 
 ---
 

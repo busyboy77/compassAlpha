@@ -6,11 +6,13 @@ description: "The consolidated stage vocabulary across every axis and lane. Look
 
 > *The consolidated stage vocabulary across every axis and lane. Look up a marker; find what it means and where it's used.*
 
+**New here?** This page is a dictionary. Every piece of work in CompassAlpha moves through named steps — like a parcel going from "ordered" to "shipped" to "delivered." Those step-names are called **stages**, and this page is where you look one up when you see it and wonder what it means.
+
 `[TUNABLE — stage names per axis + per lane]`
 
-Stages are the lifecycle markers a unit of work moves through. They appear in four places: [Tier-2 status grids](status-grids.md) (each item carries its stage), inbox file naming and [hierarchy-tag](hierarchy-tags.md) status fields, ratification-gate definitions, and the audit trail. This page consolidates every reference stage taxonomy in one lookup.
+A **stage** is a lifecycle marker: a label that says where a unit of work currently sits in its journey. Stages are the lifecycle markers a unit of work moves through. They appear in four places: [Tier-2 status grids](status-grids.md) (each item carries its stage), inbox file naming and [hierarchy-tag](hierarchy-tags.md) status fields, ratification-gate definitions, and the audit trail. This page consolidates every reference stage taxonomy in one lookup.
 
-The specific names below are the framework's reference defaults. They are `[TUNABLE]` — a project declares its own. But the **stage machinery** itself has invariant constraints (see [the rules](#what-the-framework-requires) at the bottom).
+The specific names below are the framework's reference defaults. They are `[TUNABLE]` — meaning a project can swap them out and declare its own. But the underlying **stage machinery** (how stages behave, not what they're called) has invariant constraints — rules that can't be changed (see [the rules](#what-the-framework-requires) at the bottom).
 
 ---
 
@@ -163,6 +165,15 @@ The names above are `[TUNABLE]`. The **stage machinery** is constrained:
 3. **A terminal FROZEN state.** A unit ends in a state that signals archival per the firewall, so no closed unit lingers as ambiguous WIP.
 
 Within those three constraints, stage names, counts, and sub-stages are a project's to declare during adoption.
+
+---
+
+## Remember this
+
+- A **stage** is just a step-name telling you where a piece of work is in its journey — and this page is the dictionary you check when you meet one you don't recognize.
+- Different kinds of work follow different step-lists (a quick fix has four steps; a full build has a dozen), so look under the right axis or lane above.
+- You can rename the stages for your own project, but you can't change the three rules at the bottom: work moves forward (or rolls back on purpose, never silently), every path has a freeze→gate→apply tail, and everything ends in a clean `FROZEN` state.
+- If the terms here feel abstract, [the mental model](../00-foundation/mental-model.md) shows how stages fit the bigger picture.
 
 → [Stage taxonomies (tunable)](../03-tunables/stage-taxonomies.md) · [Status grids](status-grids.md) · [Hierarchy tags](hierarchy-tags.md) · [Work granularity lanes](../03-tunables/work-granularity-lanes.md)
 

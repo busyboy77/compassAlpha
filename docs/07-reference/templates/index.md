@@ -6,7 +6,11 @@ description: "Copy-pasteable boilerplate for the load-bearing artifacts. Fill th
 
 > *Copy-pasteable boilerplate for the load-bearing artifacts. Fill the `<placeholders>`, then commit.*
 
-These are generic, ready-to-use templates for the artifacts a CompassAlpha federation produces. Every value in `<angle brackets>` is a placeholder you replace for your project. All templates assume the [bus protocol](../../01-axioms/bus-protocol.md), the [persistence law](../../01-axioms/persistence-law.md) (flush = write + commit + push + read-back), and the [commit discipline](../cli-conventions.md).
+**In plain terms:** this page is a set of fill-in-the-blank documents you copy, paste, and adapt for your own project — so you never have to write these recurring files from scratch.
+
+If you're new here, you don't need to understand every line before using them. Pick the template that matches the moment you're in (booting a new helper, handing off work, closing a cycle), copy it, and swap every value in `<angle brackets>` for something real in your project. The notes around each template explain what it's for.
+
+These are generic, ready-to-use templates for the artifacts a CompassAlpha federation produces. Every value in `<angle brackets>` is a placeholder you replace for your project. All templates assume the [bus protocol](../../01-axioms/bus-protocol.md) (how tiers pass work to each other), the [persistence law](../../01-axioms/persistence-law.md) (flush = write + commit + push + read-back — nothing counts as "done" until it's safely on disk and pushed), and the [commit discipline](../cli-conventions.md).
 
 !!! tip "Two planes"
     Anything below that is a **brief or a return** travels in the reviewer-state repo (control plane). Only the actual deliverable travels in the substrate repo (data plane). They never cross-commit. See [CLI conventions](../cli-conventions.md).
@@ -208,6 +212,15 @@ Assembled by the orchestrator for founder ratification at a doctrine cycle close
 | Ratification package | The orchestrator | cycle folder | Cycle close |
 
 → [Status grids](../status-grids.md) · [Hierarchy tags](../hierarchy-tags.md) · [Flush triggers](../flush-triggers.md) · [CLI conventions](../cli-conventions.md)
+
+---
+
+## Remember this
+
+- These templates are starting points, not forms to revere — copy one, replace every `<placeholder>` with a real value, and you've done most of the work.
+- Each template matches a moment: booting a new helper (the boot stamp), handing off a task (the dispatch brief), opening and closing a session (the status grid), rotating who's in charge (the handover certificate), or closing a cycle (the ratification package).
+- One rule never bends: a placeholder left unfilled in a dispatch brief is not "create it however" — it's a question to send back. Concrete values only.
+- If a placeholder name is unfamiliar, that's a cue to revisit [the mental model](../../00-foundation/mental-model.md), which names the tiers and planes these templates assume.
 
 ---
 

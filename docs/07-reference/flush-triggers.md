@@ -6,9 +6,11 @@ description: "The exhaustive list of moments when state must go to disk + origin
 
 > *The exhaustive list of moments when state must go to disk + origin. If you hit a trigger, you flush before you do anything else.*
 
+This page is a checklist of the exact moments when an AI agent must save its work somewhere durable before doing anything else — so that if the session is interrupted, nothing important is lost. If you're new, think of it as the framework's list of "save now" alarms.
+
 `[INVARIANT]`
 
-A **flush** is the [persistence law](../01-axioms/persistence-law.md) in action: write + commit + push + read-back. The flush triggers are the named moments at which a flush is mandatory. They exist so that "when should I persist?" is never a judgment call — it's a lookup. Every trigger has a number (`T#`) used in [status grids](status-grids.md) (`NEXT` line) and in operational reasoning ("relay the GO — that's a T1").
+Saving the work is called a **flush** — and "flushing" here means more than hitting save: it's writing the change to a file, committing it, pushing it to the shared remote, then reading it back to confirm it really landed. A **flush** is the [persistence law](../01-axioms/persistence-law.md) in action: write + commit + push + read-back. The flush triggers are the named moments at which a flush is mandatory — the alarms. They exist so that "when should I persist?" is never a judgment call — it's a lookup. Every trigger has a number (`T#`) used in [status grids](status-grids.md) (`NEXT` line) and in operational reasoning ("relay the GO — that's a T1").
 
 !!! note "Flush ≠ file-write"
     On hosts with abrupt power-down risk, a flush is `git commit + push` to the state-of-record remote, then a read-back from disk. A write that has not been pushed-and-read-back is **not flushed**. See the [persistence law](../01-axioms/persistence-law.md).
@@ -86,6 +88,15 @@ The lighter [lanes](../03-tunables/work-granularity-lanes.md) preserve the persi
 | **Surgical strike** | T1 (the commit) + T3; T0/T0e grids optional for a one-turn Doer |
 
 The load-bearing flush-before-disclose discipline holds in every lane; only the ceremony of the heavier triggers (T5 rotations, T6 doctrine changes) is absent from the light lanes that don't reach those events.
+
+---
+
+## Remember this
+
+- A **flush** isn't just saving a file — it's write, commit, push, and read-back, so the work is truly safe even if the session dies a second later.
+- The numbered triggers (T0–T7) turn "should I save now?" into a simple lookup instead of a guess: hit a trigger, flush first, then continue.
+- The most common one is **T1 (state change)**: any time something real happens, it goes to disk immediately, never held in memory for a later batch save.
+- If this feels abstract, start with [the mental model](../00-foundation/mental-model.md) — it shows where saving-the-work fits in the bigger picture.
 
 → [Persistence law](../01-axioms/persistence-law.md) · [Status grids](status-grids.md) · [Single-live-writer](../02-guardrails/single-live-writer.md) · [CLI conventions](cli-conventions.md)
 

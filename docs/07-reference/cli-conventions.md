@@ -8,6 +8,8 @@ description: "The git/shell discipline for operating a federation. Two planes, a
 
 `[INVARIANT — commit discipline + worktree mechanism]` · `[TUNABLE — paths, remote service]`
 
+**New here?** This page is the rulebook for how every AI agent in a federation uses git and the command line — which commands to run, in which folder, and in what order — so that many agents can work at once without overwriting each other's files. If you'll be running or configuring a federation, these are the moves to copy exactly.
+
 This page is the operational cheat-sheet for the git layer. The framework's claim that *state of the federation = state of git* only holds if every tier follows these conventions exactly. They are the concrete resolution of "commit discipline" referenced throughout the portal. The mechanics are explained in depth on the [git foundations axiom](../01-axioms/git-foundations.md); this page is the lookup form.
 
 All paths below are generic placeholders. Substitute your own: `/path/to/substrate` (the project repo) and `/path/to/reviewer-state` (the federation meta-state repo).
@@ -48,7 +50,9 @@ The pollution firewall is **structural by directory separation**: because the re
 
 ## 2. The isolated-index commit pattern (`GIT_INDEX_FILE` + `commit-tree`)
 
-Never use plain `git add` + `git commit` for federation work. Plain `git add` modifies the shared default index (`.git/index`); two parallel sessions stomp each other's staged files and produce commits with sibling-session deltas — silently. Use a **per-session index** and `commit-tree`:
+Git keeps a *staging area* called the **index** — the list of changes that the next commit will include. By default every command shares one index file, so if two agents stage changes at the same time, they trip over each other.
+
+Never use plain `git add` + `git commit` for federation work. Plain `git add` modifies the shared default index (`.git/index`); two parallel sessions stomp each other's staged files and produce commits with sibling-session deltas — silently. Use a **per-session index** (each agent gets its own private staging area) and `commit-tree`:
 
 ```bash
 # 1. Point this session at its OWN index file (per-session staging area).
@@ -76,7 +80,7 @@ git -C <worktree> push origin <branch>:<branch>
 
 ## 3. One worktree per slice (`git worktree`)
 
-The Doer never edits the substrate's main working tree. Each slice gets its own **isolated worktree**, cut from the cycle-tip:
+A **worktree** is a separate folder where one repo can have a different branch checked out — so each agent edits its own copy of the files instead of sharing one. The Doer (the agent doing the work) never edits the substrate's main working tree. Each slice (a unit of assigned work) gets its own **isolated worktree**, cut from the cycle-tip (the agreed starting commit for the round):
 
 ```bash
 # Cut a worktree from the cycle-tip SHA into a gitignored, slice-local path.
@@ -97,7 +101,7 @@ git -C /path/to/substrate worktree remove \
 
 ## 4. Refspec push + fetch-before-push
 
-Always push with an **explicit refspec** — `git push origin <branch>:<branch>` — never a bare `git push`. A single-ref refspec push is **atomic for that ref**: if two sessions race the same branch, only one succeeds; the loser gets a `non-fast-forward` rejection and must fetch + rebase + retry. Race-safe by construction — the loser cannot silently overwrite the winner.
+A **refspec** is the `<source>:<destination>` part of a push that spells out exactly which local branch goes to which remote branch. Always push with an **explicit refspec** — `git push origin <branch>:<branch>` — never a bare `git push`. A single-ref refspec push is **atomic for that ref**: if two sessions race the same branch, only one succeeds; the loser gets a `non-fast-forward` rejection and must fetch + rebase + retry. Race-safe by construction — the loser cannot silently overwrite the winner.
 
 Before every push to the **reviewer-state** repo, fetch first:
 
@@ -165,6 +169,15 @@ git -C /path/to/substrate ls-remote --tags origin <tag>   # confirm it's there
 | Worktree root | `<substrate>/.doer-tmp/` (gitignored) | Path layout is tunable; the worktree mechanism is invariant |
 
 → [Git foundations axiom](../01-axioms/git-foundations.md) · [Bus protocol](../01-axioms/bus-protocol.md) · [Persistence law](../01-axioms/persistence-law.md) · [Single-live-writer](../02-guardrails/single-live-writer.md) · [Flush triggers](flush-triggers.md)
+
+---
+
+## Remember this
+
+- **Two folders, never crossed.** The deliverable lives in one repo, the federation's bookkeeping in another. Always name the folder with `git -C <path>` so a command can't land in the wrong place.
+- **Give every agent its own staging area and its own folder.** A per-session index plus one worktree per slice is what lets many agents work at once without overwriting each other.
+- **Push narrowly and check before you trust.** An explicit refspec push is race-safe, and a quick "is local the same as origin?" sync check at boot catches drift before it bites.
+- These habits are the hands-on form of the bigger picture in [the mental model](../00-foundation/mental-model.md): the state of the federation simply *is* the state of git.
 
 ---
 

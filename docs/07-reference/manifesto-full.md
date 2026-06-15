@@ -6,6 +6,10 @@ description: "The complete CompassAlpha doctrine, consolidated by theme in one s
 
 > *The complete CompassAlpha doctrine, consolidated by theme in one searchable page.*
 
+This is the framework's full deep reference — every rule, in one long page you can read end to end or search. It's the most detailed page on the site; the [Foundation](../00-foundation/index.md) pages are the gentler way in.
+
+*New here? Start with [the mental model](../00-foundation/mental-model.md) — this page is the full reference.*
+
 This page is the single long reference for the CompassAlpha framework. It folds the portal's sections together into one organized document for readers who want everything in one place — to read end to end, or to search (Ctrl-F) for a specific rule without first guessing which section owns it.
 
 It is a synthesis, not a substitute. Where a topic has a dedicated teaching page with worked examples, this page summarizes and links to it. The [Axioms](../01-axioms/index.md) are the authoritative statement of the invariants; the [Tunables](../03-tunables/index.md) are the authoritative statement of the customization surface. This page consolidates both for lookup.
