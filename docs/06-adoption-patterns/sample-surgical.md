@@ -6,13 +6,17 @@ description: "The lightest lane. Single-concern, ideally single-file. Mentor-2 i
 
 > *The lightest lane. Single-concern, ideally single-file. Mentor-2 is skipped entirely; Mentor-1 briefs a fresh Doer directly; the Doer makes one commit and dies. Minutes, not hours.*
 
+**In plain terms:** this page walks through the simplest possible job CompassAlpha can run — a tiny one-file fix — from request to shipped, so a newcomer can see the whole loop end to end without any of the heavier ceremony getting in the way.
+
+CompassAlpha organises work into *lanes* of increasing weight; the **Surgical Strike** is the lightest. Two roles do the work: a **Mentor** (the reviewer who briefs and checks) and a **Doer** (the worker who edits code). For a small fix, you only need one Mentor (Mentor-1) and one Doer — a second reviewer (Mentor-2) would just be overhead, so it is skipped.
+
 This is the worked example for the **Surgical Strike** lane (see [Work Granularity Lanes](../03-tunables/work-granularity-lanes.md)) — the smallest complete loop CompassAlpha supports. It is the irreducible core of the framework: strip away everything that can be stripped, and *this* is what remains. If you read only one worked example, read this one.
 
 ## Setup
 
 The primary button on Northwind's login page renders in the wrong brand colour after a design-token rename — it's a single-line fix in one file. No behaviour change, no schema, no new feature. This is textbook Surgical Strike.
 
-- **Charter posture:** LOCKED (and it wouldn't matter — Surgical can run during an UNLOCKED doctrine epoch too, since it never touches primitives).
+- **Charter posture:** LOCKED — the *charter* is the project's constitution of foundational rules; "LOCKED" means those rules are frozen for now. (It wouldn't matter here anyway — Surgical can run even during an UNLOCKED doctrine epoch, since it never touches those foundational rules, the "primitives".)
 - **Tiers in play:** Mentor-1 → Doer. **Mentor-2 is SKIPPED.**
 - **Deliverable:** the corrected button colour.
 - **Tag plan:** none — Surgical commits directly on trunk, no tag.
@@ -23,7 +27,7 @@ Northwind uses the default Surgical stage taxonomy: `REQUEST → EXECUTE → COM
 
 ### REQUEST — founder one-liner
 
-The founder asks for the fix verbally. Per the persistence law (**nothing load-bearing in chat**), Mentor-1 transcribes the request into its own inbox before acting:
+The founder asks for the fix verbally. The *persistence law* says anything that matters to the work must live on disk, not just in a chat window (**nothing load-bearing in chat**) — so before doing anything, Mentor-1 writes the request down into its own *inbox*, a plain file where messages between roles are dropped:
 
 ```
 /path/to/reviewer-state/tier-1-mentor/inbox/surgical/from-founder-request.md
@@ -60,7 +64,7 @@ git -C /path/to/substrate commit -m "auth: login primary button → brand-blue t
 git -C /path/to/substrate push origin main:main
 ```
 
-The Doer is **fresh-per-turn** here — even lighter than fresh-per-slice. It did one request and dies; nothing carries forward.
+The Doer is **fresh-per-turn** here — meaning it spins up clean for this one request and is discarded afterward, carrying no memory forward. That is even lighter than *fresh-per-slice* (a Doer that lives across a few related steps). It did one request and dies; nothing carries forward.
 
 ### DONE — ping closes the loop
 
@@ -117,6 +121,13 @@ DISK        1 commit on trunk · read-back ✓ · GH-sync 0/0 @ d0c8e51
 - Firewall, bus, persistence, and hard labour rule still held. **That is the framework working as designed: minimum ceremony, zero compromise on the load-bearing rules.**
 
 The four lanes — [Doctrine Cycle](sample-doctrine-cycle.md), [Phase 3](sample-phase3.md), [Polish](sample-polish.md), Surgical — cover **building**. The next three examples cover **operating** a shipped product: the Day-2 axes.
+
+## Remember this
+
+- The **Surgical Strike** is the smallest complete job: one Mentor briefs one short-lived Doer, who makes a single commit and is done. Minutes, not hours.
+- "Lighter ceremony" never means "weaker rules." Even here, the founder doesn't touch code, messages travel as files, and the change is committed and pushed — the load-bearing rules hold.
+- Match the job to the lane: a tiny cosmetic fix belongs here, but anything structural (like a schema change) is too big for this lane and goes to a heavier one.
+- If any of these roles or rules feel unfamiliar, start with [the mental model](../00-foundation/mental-model.md) — it explains the moving parts this example puts to work.
 
 ---
 

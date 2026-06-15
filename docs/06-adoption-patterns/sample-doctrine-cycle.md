@@ -6,6 +6,10 @@ description: "The heaviest lane. Cross-module structural work runs the full doct
 
 > *The heaviest lane. Cross-module structural work runs the full doctrine axis: S1 → S5, freeze, gate-check, sub-bump, ratify. This walkthrough produces a 60K/30K/10K compass for Northwind's Billing module.*
 
+**New here?** This page follows one team, step by step, as they write down everything their billing system *is* — its rules, its shape, its connections — into a single trusted document. It's the fullest, most careful job CompassAlpha asks for, so it's the best one to read slowly: every lighter task in the framework is just a shorter version of what you'll see here.
+
+A few words you'll meet along the way: a **compass** is that canonical "this is what this part of the system is" document, written at three zoom levels (60K = big-picture *why*, 30K = how the pieces fit, 10K = the exact tables and code). The **doctrine cycle** is the act of producing one. **Tiers** are the roles doing the work — a senior coordinator (Mentor-1), a per-area lead (Mentor-2), and a worker (Doer). Don't worry about memorizing these; each is reintroduced when it shows up.
+
 This is the worked example for the **Doctrine Cycle** lane (see [Work Granularity Lanes](../03-tunables/work-granularity-lanes.md)). It is the most ceremonious thing CompassAlpha does, and the example most worth reading slowly — every other lane is a *relaxation* of this one.
 
 
@@ -165,6 +169,13 @@ DISK        4 state artifacts · read-back ✓ · no unflushed state · GH-sync 
 - The whole cycle is reconstructable from git: the walk, the inbox messages, the compass, the tags.
 
 This is the heaviest lane. Notice that the **next** example does *less* of all of this — and the one after that, less still.
+
+## Remember this
+
+- A **doctrine cycle** turns scattered, in-someone's-head knowledge into one written document (a **compass**) that the whole team — and every AI agent — can trust.
+- It moves from the big *why* (60K) down to exact code and tables (10K), and **every claim has to point at a real line of code**. No anchor, no fact.
+- Nothing is "done" until it's safely written to disk and frozen with a git tag — so the entire story can be replayed later from git alone.
+- This is the most ceremonious lane on purpose. Every other lane is a lighter version of it, so understanding this one teaches you all the rest. If the roles or stages feel like a lot, [the mental model](../00-foundation/mental-model.md) is the gentler place to start.
 
 ---
 

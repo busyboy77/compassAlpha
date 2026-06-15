@@ -6,6 +6,10 @@ description: "The build axis at full ceremony. A single-module substantive chang
 
 > *The build axis at full ceremony. A single-module substantive change runs CP1 → CP2 → CP3, freezes, gate-checks, and tags. This walkthrough adds scheduled exports to Northwind's Reporting module.*
 
+**New here?** This page follows one real feature — adding scheduled report exports to a sample app — from first plan to final tagged release, so you can see how a substantial piece of work moves through the framework's checkpoints. Think of it as a recorded demo of the full process.
+
+A quick orientation before the jargon arrives. **Phase 3** is the framework's name for a chunky-but-contained piece of work: one module gets something genuinely new (a database table, new endpoints, a background job). The work passes through three review **checkpoints** — CP1 (plan it), CP2 (build it), CP3 (report on it) — and then a closing ritual where the work is locked, checked against a set of **gates** (pass/fail quality checks), and given a git **tag** (a permanent version label). Tiers like *Mentor* and *Doer* are simply roles: planners/reviewers above, the hands-on builder below. With that map in hand, the walkthrough below should read cleanly.
+
 This is the worked example for the **Phase 3** lane (see [Work Granularity Lanes](../03-tunables/work-granularity-lanes.md)) — the heaviest *build*-axis lane, used for substantive single-module work: a new schema, new routes, a multi-stage rollout. It is the build-axis sibling of the [doctrine cycle](sample-doctrine-cycle.md): same three tiers, same freeze/gate/tag tail, but the deliverable is **code**, not doctrine, so §19 compass structure doesn't apply.
 
 
@@ -135,6 +139,13 @@ DISK        3 state artifacts · read-back ✓ · no unflushed state · GH-sync 
 - The dispatch is now ready to hand to the [QA axis](sample-day2-qa.md) for release verification and the [Ops axis](sample-day2-ops.md) for deployment.
 
 Compared to the [doctrine cycle](sample-doctrine-cycle.md): same tier count, same gate tail — but no 60K/30K/10K altitude structure and no Charter unlock. The build axis runs *inside* a locked Charter. The next two examples relax the ceremony further.
+
+## Remember this
+
+- **Phase 3 is the heavy lane for building, not deciding.** It runs inside an already-settled Charter (the rules don't change here) — the deliverable is working code, gated and tagged.
+- **CP1 → CP2 → CP3 means plan, build, account.** Open questions get surfaced early (at CP1) and either answered or parked on a queue — never silently dropped.
+- **The closing ritual is the safety net.** Freeze, four gates (all must be GREEN), then a version tag. A feature only "ships" once every gate passes and every loose end is tracked.
+- **Roles map to a simple hierarchy.** If "Mentor" and "Doer" still feel abstract, [the mental model](../00-foundation/mental-model.md) lays out who does what and why the layers exist.
 
 ---
 

@@ -6,6 +6,10 @@ description: "Slim ceremony for a bounded change. One module, one feature, a sin
 
 > *Slim ceremony for a bounded change. One module, one feature, a single checkpoint. Mentor-2 runs slim — no CP1/CP2/CP3 — and the change ships in hours, not days.*
 
+**New here?** This page walks through one small, real feature — adding a dropdown filter to a table — from first request to shipped code. It shows you the *lightest* way work flows through CompassAlpha, so you can see that small changes don't need heavy process.
+
+A quick orientation before the jargon arrives: a **lane** is just a size-of-job setting (small jobs get a short process, big jobs a longer one). **Polish** is the lane for small-but-real changes. **Mentor-1, Mentor-2, and Doer** are roles — a coordinator, a planner, and the hands that write the code. **Checkpoints (CP1/CP2/CP3)** are formal review pauses used on bigger work; the Polish lane skips them. With that in hand, the walkthrough below should read plainly.
+
 This is the worked example for the **Polish Lane** (see [Work Granularity Lanes](../03-tunables/work-granularity-lanes.md)). Polish is for cosmetic or bounded behavioural changes inside a single module: a datatable column, a microcopy tweak, a modal layout fix, **a new dropdown filter**. It is the everyday lane for the founder's small wishes that are still more than a one-line edit.
 
 ## Setup
@@ -114,6 +118,13 @@ DISK        2 state artifacts · read-back ✓ · no unflushed state · GH-sync 
 - A bounded change got a bounded process. That proportionality is the whole point of the lane system: **match the ceremony to the size of the change.**
 
 The next example goes lighter still — small enough that even the slim Mentor-2 is skipped entirely.
+
+## Remember this
+
+- **Match the ceremony to the size of the change.** A bounded one-module tweak gets a bounded, single-stage process — no checkpoints, no full audit. That proportionality is the whole point of the lane system.
+- **Lighter process, same guardrails.** Even on the slim path, the founder never edits code directly (the firewall holds), requests travel as files not chat, and every change is committed and pushed. Speed is bought by dropping *ceremony*, never by dropping *discipline*.
+- **Polish is the everyday lane** for small wishes that are still more than a one-line edit — and it ships in hours, not days.
+- If the roles and rules here feel unfamiliar, [the mental model](../00-foundation/mental-model.md) explains how the tiers fit together.
 
 ---
 

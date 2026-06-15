@@ -6,7 +6,11 @@ description: "A DECOUPLED Day-2 axis. QA runs parallel to Build and Doctrine, ne
 
 > *A DECOUPLED Day-2 axis. QA runs parallel to Build and Doctrine, never competing for Charter state, on its own cadence: per-build-closure plus periodic full regression.*
 
-The four lanes ([Doctrine](sample-doctrine-cycle.md), [Phase 3](sample-phase3.md), [Polish](sample-polish.md), [Surgical](sample-surgical.md)) cover *building*. Once a product ships, building isn't enough — you have to **operate** it. CompassAlpha's answer is a set of **Day-2 axes** that reuse the same tier grammar, bus protocol, and persistence law, but run **DECOUPLED**: parallel to Build and Doctrine, not gated by them.
+**New here?** This page follows a quality-assurance (QA) team as it checks a finished feature before it ships — running alongside the people still building, never getting in their way. It is a worked example of how testing fits into CompassAlpha without slowing development down.
+
+A quick vocabulary note before we start. An **axis** is one team working one kind of job. A **Charter** is the shared lock that says "this work is in progress, don't touch it." **DECOUPLED** (you'll see it in capitals) just means an axis that runs on its own track and never grabs that lock — so it can never block anyone else.
+
+The four lanes ([Doctrine](sample-doctrine-cycle.md), [Phase 3](sample-phase3.md), [Polish](sample-polish.md), [Surgical](sample-surgical.md)) cover *building*. Once a product ships, building isn't enough — you have to **operate** it: test it, watch it, keep it compliant. CompassAlpha's answer is a set of **Day-2 axes** — teams that handle that ongoing work. They reuse the same building blocks the build teams use (the same tier structure, the same message bus, the same write-it-to-disk persistence law), but they run **DECOUPLED**: parallel to Build and Doctrine, never waiting on them.
 
 This is the worked example for the **QA axis**.
 
@@ -126,6 +130,13 @@ Notice what *didn't* happen: QA never locked the Charter, never blocked the Buil
 - A latent bug (the build leftover) was confirmed reproducible and routed to the right lane instead of silently shipping.
 - The release is now ready for the [Ops axis](sample-day2-ops.md) to deploy.
 - QA ran in parallel with everything else, competing for nothing.
+
+## Remember this
+
+- **Building a feature and operating it are different jobs.** Day-2 axes (like QA) handle the operating part, using the same playbook as the build teams.
+- **DECOUPLED means "never blocks."** A QA axis runs continuously on its own track and never grabs the shared lock, so it can verify a release without freezing the people still building. That separation is the whole point.
+- **Teams coordinate by passing notes, not by waiting.** The build team hands off to QA through a bus message; QA hands its verdict to Ops the same way. Each team keeps moving.
+- **Hard calls go up, evidence stays on disk.** When a real failure showed up, the QA Lead surfaced a founder-call instead of guessing — and the test results were committed and tagged so the decision is auditable later. For why "write it down" runs through everything here, see [the mental model](../00-foundation/mental-model.md).
 
 ---
 

@@ -6,6 +6,10 @@ description: "A DECOUPLED Day-2 axis with two cadences: per-release (continuous)
 
 > *A DECOUPLED Day-2 axis with two cadences: per-release (continuous) and per-incident. This walkthrough deploys the QA-approved scheduled-exports release and stands up the monitoring that will catch the next problem.*
 
+**New here?** This page follows one team as they put a finished, tested feature live in production and set up alarms to watch over it. If you want to see what "shipping and then keeping an eye on it" looks like under CompassAlpha, start here.
+
+A quick word on terms used below. An **axis** is one independent line of work; **Ops** is the axis that handles going live and monitoring. **DECOUPLED** means it runs in parallel with other work without fighting over shared state. A **cadence** is a rhythm of work (some happens on every release, some only when something breaks). And the **bus** is the shared message channel the team uses to hand work off to each other. Each of these is explained again where it first matters.
+
 This is the worked example for the **Ops axis** — the Day-2 axis that takes a verified release and gets it *running in production*, then keeps watching it. Like [QA](sample-day2-qa.md), Ops runs **DECOUPLED**: parallel to Build and Doctrine, sharing the [bus protocol](../01-axioms/bus-protocol.md) and [persistence law](../01-axioms/persistence-law.md), competing for no Charter state.
 
 
@@ -119,6 +123,13 @@ This is the deploy that went *right*. The next example is the one that goes *wro
 - The deploy is auditable: handoff, brief, deploy record, and tag are all on disk.
 - A tuning leftover was tracked for the periodic-capacity cadence instead of being forgotten.
 - Ops ran DECOUPLED — no Charter contention, coordinated entirely through bus handoffs from QA.
+
+## Remember this
+
+- **Going live is gated, not a single button.** The release moves through clear stages, and someone has to sign off on the cutover before traffic flips.
+- **Watch before you ship.** Monitoring is wired *before* the switch is flipped, so if something breaks you find out right away rather than from angry users.
+- **Ops doesn't stop after launch.** It keeps watching for an agreed window, and small follow-up tasks get written down (in a leftovers list) instead of forgotten.
+- **It all runs alongside other work without collisions** — handoffs travel over the shared message channel, which is the heart of [the mental model](../00-foundation/mental-model.md).
 
 ---
 

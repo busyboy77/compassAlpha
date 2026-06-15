@@ -6,6 +6,10 @@ description: "The fastest lane in the framework. Reduced ceremony, founder post-
 
 > *The fastest lane in the framework. Reduced ceremony, founder post-fact (not gating), and a narrow time-bounded exception to flush-before-disclose for the immediate response window. The postmortem reflushes everything.*
 
+**In plain terms:** this page walks through how an AI-agent team handles a real production emergency — a billing system breaking at 2 in the morning — and shows the one moment where the framework lets responders move fast first and write the full record afterward. If you want to see how all the careful rules bend (just a little, just briefly) when seconds cost money, start here.
+
+A quick note on two terms you'll see throughout. A **lane** is just a named way of doing work — different sizes of job get different amounts of process. **Flush-before-disclose** is the framework's normal rule that you write something down (to disk) before you act on it or tell anyone — so there's always a durable record. This page is about the *one* lane where that rule is briefly relaxed.
+
 This is the worked example for the **Incident Response lane** — a fifth work-granularity lane that lives within (or cross-cuts) the [Ops axis](sample-day2-ops.md). It exists because the other lanes are all designed for *planned* work, and a production outage at 02:00 is not planned. Incident Response is **faster than a [Surgical Strike](sample-surgical.md)**: it must be, because the meter is running.
 
 
@@ -28,7 +32,7 @@ This is a *narrow, time-bounded* exception. It applies only to the live MITIGATE
 
 ## Setup
 
-At 02:00 a monitor fires: Billing's payment-provider **webhook handler is erroring** — incoming `payment_succeeded` callbacks are 500ing, so subscriptions aren't being marked paid. The on-call responder is an Ops Doer (Deploy/Config Editor); the SRE Lead (Mentor-1) is paged.
+At 02:00 a monitor fires: Billing's payment-provider **webhook handler is erroring** — incoming `payment_succeeded` callbacks are 500ing, so subscriptions aren't being marked paid. The on-call responder is an **Ops Doer** — a hands-on agent allowed to deploy and edit config; the **SRE Lead** (a mentor-tier agent, "Mentor-1") is paged to oversee.
 
 The lane uses the stages `ALERT → INVESTIGATE → MITIGATE → RESOLVE → POSTMORTEM`.
 
@@ -130,6 +134,13 @@ The incident commit even carries the incident ID, so the trail is reconstructabl
 - The whole incident — alert, mitigation commit, resolution, postmortem, tag — is reconstructable from git.
 
 This is the last of the worked examples. Together they walk the full spectrum: from a weeks-long [doctrine cycle](sample-doctrine-cycle.md) down to a 22-minute incident — the *same* primitives throughout, only the ceremony changing to match the moment.
+
+## Remember this
+
+- **Emergencies get their own fast lane.** Every other lane is built for planned work; this one is built for a 2 a.m. alert, so it trades ceremony for speed.
+- **The "write it down first" rule bends only here, and only briefly.** During the live mitigation window the responder acts first; the postmortem then writes the *full* record to disk, so nothing is permanently lost — it's just delayed.
+- **The founder is told, not asked.** Mid-incident there's no waiting for approval; the founder is informed after the fact.
+- **Loose ends don't evaporate.** Follow-up fixes get routed to their proper lanes instead of disappearing with the on-call shift. For how these pieces fit together, see [the mental model](../00-foundation/mental-model.md).
 
 ---
 
