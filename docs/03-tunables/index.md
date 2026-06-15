@@ -39,6 +39,7 @@ Every tunable moves the federation along five axes that are **in tension**:
 | [Axis declarations](axis-declarations.md) | Defining your own work axes (the 4-field + 3-role declaration). |
 | [Concurrency modes](concurrency-modes.md) | Sequential / pipelined / parallel-independent / parallel-doer. |
 | [Context patterns](context-patterns.md) | Mentor lifecycle, doer scope, cross-tier visibility, memory rate, digest verbosity. |
+| [The retrieval surface](retrieval-surface.md) | How a tier pulls the slice on demand — lexical vs vector grade, corpus, chunking, cadence. |
 | [AI model choices](ai-model-choices.md) | Per-tier model selection; single vs mixed providers. |
 | [Work granularity lanes](work-granularity-lanes.md) | The four lanes — matching ceremony to change size. |
 | [Stage taxonomies](stage-taxonomies.md) | Per-axis lifecycle vocabularies used by status grids. |

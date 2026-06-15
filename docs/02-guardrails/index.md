@@ -27,7 +27,7 @@ Every guardrail in this section defends one or more of the four pathologies that
 
 A tier's context fills with detail it does not own — sibling churn, sub-tier reasoning, integration noise. Judgment degrades (cognitive overhead) and biases (saw the trees, lost the forest). Worst form: a parent that *delegated* work still absorbs the delegate's full context on retrieval, so isolation buys nothing. It arrives by two vectors — a tier auto-reading what it doesn't own, and a sender *pushing* detail across the bus the receiver never needed.
 
-> Guarded by: [Pollution containment](pollution-containment.md) (spatial vector), [The minimal-sufficient bus](minimal-sufficient-bus.md) (relay vector), [Single-live-writer](single-live-writer.md).
+> Guarded by: [Pollution containment](pollution-containment.md) (spatial vector), [The minimal-sufficient bus](minimal-sufficient-bus.md) (relay vector), [Retrieval discipline](retrieval-discipline.md) (the pull vector), [Single-live-writer](single-live-writer.md).
 
 ### 2. Hallucination drift
 
@@ -47,12 +47,13 @@ The founder observes a claim that doesn't match disk, a decision that evaporated
 
 > Guarded by: [Failure modes](failure-modes.md), [Disaster reconciliation](disaster-reconciliation.md), [Brief completeness](brief-completeness.md), and the persistence discipline behind every page here.
 
-## The eight guardrail pages
+## The nine guardrail pages
 
 | Page | Pathology guarded | Core mechanism |
 |---|---|---|
 | [Pollution containment](pollution-containment.md) | Context pollution (spatial vector) | Firewall + state-tracking scope confine each tier to its own granularity. |
 | [The minimal-sufficient bus](minimal-sufficient-bus.md) | Context pollution (relay vector) | Relay the least the receiver needs; persist the detail in substrate, pulled on demand. |
+| [Retrieval discipline](retrieval-discipline.md) | Context pollution (the pull vector) | Pull the minimal-sufficient slice: partitioned index, as-of + re-verify, pointer-not-truth. |
 | [Hallucination defense](hallucination-defense.md) | Hallucination drift | Verification-at-citation: every load-bearing claim verified against substrate before action. |
 | [Stale-snapshot detection](stale-snapshot-detection.md) | Hallucination drift (the firewall-leak class) | "As of last tagged return" discipline; forensic descent before action. |
 | [Failure modes](failure-modes.md) | Trust erosion (all classes) | The documented failure classes, each with symptom → recovery. |

@@ -86,8 +86,9 @@ The *principle* — minimal-sufficient on the bus, detail persisted and pulled o
 - **[Bus protocol](../01-axioms/bus-protocol.md)** is the channel; minimal-sufficient is the discipline on what that channel carries. The bus already moves content through git and keeps the founder's clipboard empty — this keeps the *receiver's context* empty of noise too.
 - **[Persistence law](../01-axioms/persistence-law.md)** and **[provenance law](../01-axioms/provenance-law.md)** are what make pull-on-demand safe: the detail is durably on disk, and the receiver reconstructs from substrate rather than from a relayed summary.
 - **[Context patterns](../03-tunables/context-patterns.md)** holds the boot-light discipline that stops the detail-files from becoming the new pollution.
+- **[Retrieval discipline](retrieval-discipline.md)** mechanizes the pull-on-demand this guardrail relies on — and bounds it, so retrieving the detail doesn't reopen the pollution at the pull step.
 - **[Brief completeness](brief-completeness.md)** sets the floor: the minimal-sufficient message is still *complete as a pointer* — sufficiency trims volume, never required fields.
 
 ---
 
-## Next: [Hallucination Defense →](hallucination-defense.md)
+## Next: [Retrieval Discipline →](retrieval-discipline.md)

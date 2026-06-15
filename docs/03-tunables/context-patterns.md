@@ -118,8 +118,9 @@ Boot-light is safe *because* durable learnings live in memory and git — never 
 - [Hard labour rule](../01-axioms/hard-labour-rule.md) (axiom) — keeps mentor context clean regardless of lifecycle choice.
 - [Pollution containment](../02-guardrails/pollution-containment.md) (guardrail) — the down-tier freshness bias these lifecycle dials implement.
 - [Memory policy](memory-policy.md) — the memory accumulation dial in full.
+- [Retrieval surface](retrieval-surface.md) — how a fresh or loaded tier reloads only the relevant slice on demand, instead of re-ingesting full history; the retrieval mechanism behind boot-light.
 - [Concurrency modes](concurrency-modes.md) — parallel concurrency pressures the top mentor's context, interacting with lifecycle + rotation.
 
 ---
 
-## Next: [AI model choices →](ai-model-choices.md)
+## Next: [The retrieval surface →](retrieval-surface.md)

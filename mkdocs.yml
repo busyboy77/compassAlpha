@@ -115,6 +115,7 @@ nav:
     - 02-guardrails/index.md
     - Pollution containment: 02-guardrails/pollution-containment.md
     - Minimal-sufficient bus: 02-guardrails/minimal-sufficient-bus.md
+    - Retrieval discipline: 02-guardrails/retrieval-discipline.md
     - Hallucination defense: 02-guardrails/hallucination-defense.md
     - Stale snapshot detection: 02-guardrails/stale-snapshot-detection.md
     - Failure modes: 02-guardrails/failure-modes.md
@@ -127,6 +128,7 @@ nav:
     - Axis declarations: 03-tunables/axis-declarations.md
     - Concurrency modes: 03-tunables/concurrency-modes.md
     - Context patterns: 03-tunables/context-patterns.md
+    - Retrieval surface: 03-tunables/retrieval-surface.md
     - AI model choices: 03-tunables/ai-model-choices.md
     - Work granularity lanes: 03-tunables/work-granularity-lanes.md
     - Stage taxonomies: 03-tunables/stage-taxonomies.md
