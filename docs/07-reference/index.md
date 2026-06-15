@@ -6,6 +6,8 @@ description: "CompassAlpha technical reference: the framework spec, stamp templa
 
 > *The lookup layer. When you know what you need and want the exact spec, definition, or template — start here.*
 
+In plain terms: this is the "look it up fast" section — exact definitions, copy-paste templates, and rule formats, with no story or background. It's for people who already know roughly what they're after and just want the precise version. New here? Start with [the mental model](../00-foundation/mental-model.md) and come back once the ideas feel familiar.
+
 The Foundation and Axioms sections teach the framework. The Tunables and Toggles sections explain its customization surface. This **Reference** section is different: it is the consolidated, terse, accurate lookup layer. It does not re-teach — it indexes, defines, and provides copy-pasteable artifacts.
 
 Use it the way you'd use a man page or a language reference: jump to the exact thing, read the spec, leave.

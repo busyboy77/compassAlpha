@@ -6,7 +6,11 @@ description: "CompassAlpha community: contributing, code of conduct, roadmap, ch
 
 > How to participate in CompassAlpha — contributing, conduct, governance, and where the framework is headed.
 
-CompassAlpha is a living framework. This section is for everyone who wants to follow it, use it, or help shape it.
+In plain terms: this is the "people" section. It explains how to ask questions, report problems, suggest changes, and understand who makes the calls — whether you're just curious, trying CompassAlpha out, or want to help improve it.
+
+New here? Start with [the mental model](../00-foundation/mental-model.md).
+
+CompassAlpha is a living framework — one that keeps changing as people use it and improve it. This section is for everyone who wants to follow it, use it, or help shape it.
 
 ## Pages
 

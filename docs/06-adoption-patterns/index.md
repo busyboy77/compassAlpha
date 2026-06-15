@@ -6,7 +6,11 @@ description: "Worked examples of CompassAlpha in action: doctrine cycles, Phase 
 
 > *Theory tells you the rules. Worked examples show you the rhythm. This section walks a single fictional project through every lane the framework supports.*
 
-The [Axioms](../01-axioms/index.md) and [Guardrails](../02-guardrails/index.md) tell you what CompassAlpha **prevents**. The [Tunables](../03-tunables/index.md) tell you what you can **adjust**. This section answers the question every adopter actually asks first:
+In plain terms: this is the "show, don't tell" section — step-by-step stories of a made-up project getting real work done with CompassAlpha, so you can see what a normal day actually looks like before you try it yourself. It's for anyone who has skimmed the concepts and now wants to watch them in motion.
+
+New here? Start with [the mental model](../00-foundation/mental-model.md).
+
+The [Axioms](../01-axioms/index.md) (the framework's fixed rules) and [Guardrails](../02-guardrails/index.md) (the mistakes it blocks) tell you what CompassAlpha **prevents**. The [Tunables](../03-tunables/index.md) tell you what you can **adjust**. This section answers the question every adopter actually asks first:
 
 > *"OK — but what does a day of running this thing actually look like?"*
 

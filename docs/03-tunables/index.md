@@ -6,6 +6,10 @@ description: "Tunables: the CompassAlpha customization surface — concurrency, 
 
 > *Everything in [Axioms](../01-axioms/index.md) and [Guardrails](../02-guardrails/index.md) is `[INVARIANT]`. Everything here is `[TUNABLE]` — the dials a project sets when it adopts CompassAlpha.*
 
+In plain terms: this is the section of settings you get to choose. Some rules in CompassAlpha never change; the ones here are the knobs — how fast, how careful, how much to spend — that each team turns to fit its own work. It's for anyone setting up CompassAlpha for a project and deciding how it should run.
+
+New here? Start with [the mental model](../00-foundation/mental-model.md).
+
 `[TUNABLE]`
 
 ## What "tunable" means

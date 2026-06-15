@@ -6,6 +6,8 @@ description: "Guardrails: how CompassAlpha prevents the four multi-agent AI path
 
 > Where the [Axioms](../01-axioms/index.md) state the invariant *rules*, **Guardrails** document the concrete *failure modes* those rules exist to prevent — what each failure looks like, how the framework detects it, and how to recover when it happens anyway.
 
+In plain terms: this section is the catalogue of things that can go wrong when AI agents work together, and what to do about each one — useful whether you are setting a federation up or fixing one that has gone sideways. New here? Start with [the mental model](../00-foundation/mental-model.md).
+
 ## Axioms vs. guardrails
 
 The two sections are companions, read from opposite directions:

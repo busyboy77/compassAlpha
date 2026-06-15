@@ -6,6 +6,8 @@ description: "Getting started with CompassAlpha: prerequisites, greenfield setup
 
 > *Two ways in: stand up a fresh federation (greenfield) or adopt CompassAlpha over a codebase you already have (brownfield). Both land in the same place — a federation whose state of record is git.*
 
+**In plain terms:** this is the hands-on setup section — the click-by-click guide for people who are ready to actually try CompassAlpha on a project. If you've decided to use it and want to get something running, you're in the right place. New here and still figuring out what this is? Start with [the mental model](../00-foundation/mental-model.md) first.
+
 This section takes you from zero to your first piece of work flowing through the bus. Everything here is practical: repos to create, files to stamp, commands to run, gates to pass. The conceptual grounding lives in [Foundation](../00-foundation/index.md) and [Axioms](../01-axioms/index.md) — if a term here is unfamiliar, those are the place to look it up.
 
 !!! note "Source-available licensing"

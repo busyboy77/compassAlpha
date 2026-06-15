@@ -8,6 +8,8 @@ description: "Toggles: when each CompassAlpha parameter may change — at runtim
 
 `[TOGGLES — timing discipline over the tunable surface]`
 
+New here? This section is about *timing* — for each setting you can change, it tells you **when** it's safe to change it: right away, only when the work reaches a clean stopping point, or basically never. It's for anyone tuning how a project runs and wanting to avoid changing a rule while that rule is still in use. New to the whole framework? Start with [the mental model](../00-foundation/mental-model.md).
+
 ## TL;DR
 
 [Tunables](../03-tunables/index.md) answer **what** you can configure. Toggles answer **when** a given setting may safely change. Every tunable in CompassAlpha carries a *flip-timing class*: some can flip mid-cycle without anyone noticing, some can only flip when the work pauses at a cycle boundary, and some are set once at adoption and are effectively permanent for the project's lifetime.
