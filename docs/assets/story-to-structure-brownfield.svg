@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 820" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="abf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+  </defs>
+
+  <rect width="1500" height="820" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="88" fill="#1f2a36"/>
+  <text x="750" y="38" text-anchor="middle" font-size="27" font-weight="700" fill="#ffffff">Start From a Story &#8212; Existing Project</text>
+  <text x="750" y="65" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Bring a project you already have into CompassAlpha &#8212; non-destructively</text>
+
+  <!-- ============ PARALLEL-TRACK BAND ============ -->
+  <rect x="50" y="104" width="1400" height="50" rx="10" fill="#eef2f0" stroke="#4a8a4a" stroke-width="1.6" stroke-dasharray="7 5"/>
+  <text x="750" y="125" text-anchor="middle" font-size="13" font-weight="700" fill="#2a5a2a">LIVE SYSTEM &#8212; stays on its own parallel track, running and untouched</text>
+  <text x="750" y="143" text-anchor="middle" font-size="11" fill="#3a6a3a" font-style="italic">incorporation is non-destructive &#183; pilot one component first &#183; every step revertible</text>
+
+  <!-- arrows between panels -->
+  <line x1="308" y1="408" x2="342" y2="408" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#abf)"/>
+  <line x1="602" y1="408" x2="636" y2="408" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#abf)"/>
+  <line x1="896" y1="408" x2="930" y2="408" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#abf)"/>
+  <line x1="1190" y1="408" x2="1224" y2="408" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#abf)"/>
+
+  <!-- ===== P1 · STORY ===== -->
+  <rect x="50" y="172" width="256" height="450" rx="11" fill="#f0ede4" stroke="#a89968" stroke-width="1.8"/>
+  <rect x="50" y="172" width="256" height="44" rx="11" fill="#e7e0cf"/><rect x="50" y="200" width="256" height="16" fill="#e7e0cf"/>
+  <text x="178" y="200" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">1 &#183; STORY</text>
+  <text x="178" y="238" text-anchor="middle" font-size="11" fill="#5a4d20">an existing project</text>
+  <rect x="68" y="256" width="220" height="180" rx="8" fill="#ffffff" stroke="#a89968" stroke-width="1.2"/>
+  <text x="80" y="280" font-size="10" fill="#6a5a28" font-style="italic">"I have an existing</text>
+  <text x="80" y="296" font-size="10.5" fill="#2a3a4a" font-weight="700">Helpdesk app with</text>
+  <text x="80" y="312" font-size="10" fill="#6a5a28" font-style="italic">components:</text>
+  <text x="80" y="330" font-size="10.5" fill="#2a3a4a" font-weight="700">tickets, agents,</text>
+  <text x="80" y="346" font-size="10.5" fill="#2a3a4a" font-weight="700">knowledge-base.</text>
+  <text x="80" y="366" font-size="10" fill="#6a5a28" font-style="italic">Convert it &amp; print</text>
+  <text x="80" y="382" font-size="10" fill="#6a5a28" font-style="italic">the scope."</text>
+  <text x="178" y="416" text-anchor="middle" font-size="10" fill="#7a6a38" font-style="italic">nothing changes by asking</text>
+
+  <!-- ===== P2 · COMPATIBLE COMPASSES ===== -->
+  <rect x="344" y="172" width="258" height="450" rx="11" fill="#eef4f9" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="344" y="172" width="258" height="44" rx="11" fill="#dce8f4"/><rect x="344" y="200" width="258" height="16" fill="#dce8f4"/>
+  <text x="473" y="200" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">2 &#183; COMPATIBLE COMPASSES</text>
+  <text x="473" y="236" text-anchor="middle" font-size="10.5" fill="#3b6ea5">reverse-engineered from real code</text>
+  <g>
+    <rect x="362" y="252" width="222" height="58" rx="7" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.2"/>
+    <text x="372" y="271" font-size="11" font-weight="700" fill="#1a4a7a">tickets</text>
+    <text x="372" y="289" font-size="9.5" fill="#5a7aa0">60K/30K/10K as the code</text>
+    <text x="372" y="304" font-size="9.5" fill="#5a7aa0">actually implements it</text>
+    <rect x="362" y="318" width="222" height="50" rx="7" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.2"/>
+    <text x="372" y="337" font-size="11" font-weight="700" fill="#1a4a7a">agents</text>
+    <text x="372" y="355" font-size="9.5" fill="#5a7aa0">assignment + routing, as-is</text>
+    <rect x="362" y="376" width="222" height="50" rx="7" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.2"/>
+    <text x="372" y="395" font-size="11" font-weight="700" fill="#1a4a7a">knowledge-base</text>
+    <text x="372" y="413" font-size="9.5" fill="#5a7aa0">publish workflow, as-is</text>
+  </g>
+  <text x="473" y="446" text-anchor="middle" font-size="9.5" fill="#5a7aa0" font-style="italic">anchored to real files &#183; nothing misrepresented</text>
+
+  <!-- ===== P3 · CHARTER EXTRACTED ===== -->
+  <rect x="638" y="172" width="258" height="450" rx="11" fill="#fbf3e2" stroke="#c79a3a" stroke-width="1.8"/>
+  <rect x="638" y="172" width="258" height="44" rx="11" fill="#f4e6c6"/><rect x="638" y="200" width="258" height="16" fill="#f4e6c6"/>
+  <text x="767" y="200" text-anchor="middle" font-size="13.5" font-weight="700" fill="#7a5a18">3 &#183; CHARTER v0.1</text>
+  <text x="767" y="236" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7a5a18">EXTRACTED, not invented</text>
+  <text x="767" y="256" text-anchor="middle" font-size="10" fill="#8a6a28">the rules the project</text>
+  <text x="767" y="271" text-anchor="middle" font-size="10" fill="#8a6a28">already lives by</text>
+  <rect x="656" y="286" width="222" height="70" rx="8" fill="#ffffff" stroke="#c79a3a" stroke-width="1.3"/>
+  <text x="767" y="307" text-anchor="middle" font-size="10" fill="#8a6a28">candidate invariant:</text>
+  <text x="767" y="324" text-anchor="middle" font-size="10" font-weight="700" fill="#7a5a18">"a ticket is never</text>
+  <text x="767" y="339" text-anchor="middle" font-size="10" font-weight="700" fill="#7a5a18">deleted, only closed"</text>
+  <rect x="656" y="368" width="222" height="58" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.4"/>
+  <text x="767" y="392" text-anchor="middle" font-size="11" font-weight="700" fill="#8a2a2a">DRAFT</text>
+  <text x="767" y="410" text-anchor="middle" font-size="9.5" fill="#9a3a3a">a discovery &#8212; a guess until ratified</text>
+  <text x="767" y="446" text-anchor="middle" font-size="9.5" fill="#8a6a28" font-style="italic">which is why it must be confirmed next</text>
+
+  <!-- ===== P4 · AXES (amendment first) ===== -->
+  <rect x="932" y="172" width="258" height="450" rx="11" fill="#f1f6f1" stroke="#4a8a4a" stroke-width="1.8"/>
+  <rect x="932" y="172" width="258" height="44" rx="11" fill="#e0f0e0"/><rect x="932" y="200" width="258" height="16" fill="#e0f0e0"/>
+  <text x="1061" y="200" text-anchor="middle" font-size="14" font-weight="700" fill="#2a5a2a">4 &#183; AXES</text>
+  <text x="1061" y="236" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">amendment FIRST, then build</text>
+  <rect x="950" y="252" width="222" height="86" rx="8" fill="#ffffff" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="1061" y="274" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">amendment axis</text>
+  <text x="1061" y="293" text-anchor="middle" font-size="10" fill="#3a6a3a">review &amp; ratify the</text>
+  <text x="1061" y="308" text-anchor="middle" font-size="10" fill="#3a6a3a">extracted Charter</text>
+  <text x="1061" y="327" text-anchor="middle" font-size="9.5" fill="#5a8a5a" font-style="italic">UNLOCKED &#183; doctrine-first</text>
+  <text x="1061" y="356" text-anchor="middle" font-size="15" fill="#4a8a4a">&#8595;</text>
+  <rect x="950" y="362" width="222" height="64" rx="8" fill="#ffffff" stroke="#4a8a4a" stroke-width="1.3"/>
+  <text x="1061" y="384" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">build axis</text>
+  <text x="1061" y="402" text-anchor="middle" font-size="10" fill="#3a6a3a">build on a Charter you trust</text>
+  <text x="1061" y="418" text-anchor="middle" font-size="9.5" fill="#5a8a5a" font-style="italic">LOCKED</text>
+  <text x="1061" y="446" text-anchor="middle" font-size="9.5" fill="#3a6a3a" font-style="italic">+ axis-N (review/QA/ops) later</text>
+
+  <!-- ===== P5 · PRINTED SCOPE ===== -->
+  <rect x="1224" y="172" width="226" height="450" rx="11" fill="#1f2a36"/>
+  <text x="1337" y="202" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">5 &#183; SCOPE</text>
+  <text x="1337" y="224" text-anchor="middle" font-size="10" fill="#a0aabb">your conversion plan</text>
+  <rect x="1242" y="240" width="190" height="262" rx="8" fill="#2a3744" stroke="#3b6ea5" stroke-width="1"/>
+  <text x="1254" y="262" font-size="9" fill="#cfe0f0" font-family="JetBrains Mono, monospace">PROJECT Helpdesk</text>
+  <text x="1254" y="278" font-size="8.5" fill="#a0aabb" font-family="JetBrains Mono, monospace">brownfield (non-destr.)</text>
+  <text x="1254" y="302" font-size="9" fill="#9ad09a" font-family="JetBrains Mono, monospace">COMPASSES 3</text>
+  <text x="1254" y="318" font-size="8.5" fill="#a0aabb" font-family="JetBrains Mono, monospace">tickets agents kb</text>
+  <text x="1254" y="342" font-size="9" fill="#e6c878" font-family="JetBrains Mono, monospace">CHARTER v0.1</text>
+  <text x="1254" y="358" font-size="8.5" fill="#e8a0a0" font-family="JetBrains Mono, monospace">EXTRACTED — ratify</text>
+  <text x="1254" y="382" font-size="9" fill="#9ad09a" font-family="JetBrains Mono, monospace">AXES</text>
+  <text x="1254" y="398" font-size="8.5" fill="#a0aabb" font-family="JetBrains Mono, monospace">amend &#8594; build</text>
+  <text x="1254" y="422" font-size="9" fill="#9ad09a" font-family="JetBrains Mono, monospace">INTEGRITY</text>
+  <text x="1254" y="438" font-size="8.5" fill="#a0aabb" font-family="JetBrains Mono, monospace">parallel &#183; revertible</text>
+  <text x="1254" y="454" font-size="8.5" fill="#a0aabb" font-family="JetBrains Mono, monospace">pilot = kb</text>
+  <text x="1254" y="478" font-size="9" fill="#ffffff" font-family="JetBrains Mono, monospace">FIRST ratify Charter</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="50" y="640" width="1400" height="118" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="670" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">Two things differ from greenfield &#8212; and one promise stays.</text>
+  <text x="750" y="696" text-anchor="middle" font-size="12.5" fill="#5a4d20"><tspan font-weight="700">Extracted, not invented:</tspan> the Charter is the rules your project already follows, surfaced from real code.</text>
+  <text x="750" y="718" text-anchor="middle" font-size="12.5" fill="#5a4d20"><tspan font-weight="700">Ratify before build:</tspan> the amendment axis runs first, because a discovered rulebook is a guess until a human confirms it.</text>
+  <text x="750" y="740" text-anchor="middle" font-size="12.5" fill="#2a5a2a"><tspan font-weight="700">The promise:</tspan> your live system is never at risk &#8212; parallel track, pilot-first, fully revertible.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="784" width="6" height="8" rx="1"/><rect x="699" y="778" width="6" height="14" rx="1"/><rect x="708" y="772" width="6" height="20" rx="1"/></g>
+    <text x="722" y="792" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

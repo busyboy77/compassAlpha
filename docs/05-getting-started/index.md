@@ -24,7 +24,7 @@ CompassAlpha meets you wherever your project is today.
 
 If you're not sure which you are: do you have a codebase with users, history, and obligations you can't drop? You're brownfield. Starting from a blank slate? You're greenfield. Most real adoptions are brownfield — and that path is the harder, more interesting one. CompassAlpha treats it as a first-class journey, not an afterthought.
 
-**Just have an idea, not a repo yet?** The gentlest way in is [**Start from a story**](start-from-a-story.md) — describe your project in plain English and watch it turn into compasses, a Charter, and axes *before* you set anything up. No jargon required to begin.
+**Just have an idea, not a repo yet?** The gentlest way in is [**Start from a story**](start-from-a-story.md) — describe your project in plain English and watch it turn into compasses, a Charter, and axes *before* you set anything up. No jargon required to begin. **Already have a codebase?** [**Start from a story — existing project**](start-from-a-story-brownfield.md) converts it into CompassAlpha non-destructively.
 
 ## What "getting started" actually delivers
 

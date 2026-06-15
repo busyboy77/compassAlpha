@@ -146,6 +146,7 @@ nav:
   - Getting Started:
     - 05-getting-started/index.md
     - Start from a story: 05-getting-started/start-from-a-story.md
+    - Start from a story (existing project): 05-getting-started/start-from-a-story-brownfield.md
     - Prerequisites: 05-getting-started/prerequisites.md
     - Greenfield setup: 05-getting-started/greenfield-setup.md
     - Brownfield onboarding: 05-getting-started/brownfield-onboarding.md

@@ -12,7 +12,7 @@ The gentlest way to begin: you do **not** need to learn the framework's vocabula
 
 In plain terms: you say *"I want to build X, made of parts A, B, and C"*, and the framework gives each part its own planning document, writes down the project's rules, and lays out the order of work. No setup and no jargon are needed to **start** — the structure is the output, not the prerequisite.
 
-This is the **greenfield** path — starting a brand-new project from scratch. (Already have an existing, pre-AI-era codebase you want to bring in? That's the *brownfield* path — see [Brownfield onboarding](brownfield-onboarding.md).)
+This is the **greenfield** path — starting a brand-new project from scratch. (Already have an existing, pre-AI-era codebase you want to bring in? That's the *brownfield* path — see [Start From a Story — Existing Project](start-from-a-story-brownfield.md).)
 
 ## A few words you'll meet (defined once, here)
 
@@ -105,7 +105,7 @@ That scope is your starting map. From here you follow the ordinary [greenfield s
 - **One component → one compass**, each written 60K → 30K → 10K so the *why* is fixed before the *detail*.
 - **The Charter is your project-wide rulebook**, derived either **lean** (rules grow as you go) or **preference-led** (rules set up front).
 - **Axes take turns** — settle the rules, lock them, build; never both at once.
-- This is the **greenfield** path; bringing in an existing codebase is the [brownfield](brownfield-onboarding.md) path.
+- This is the **greenfield** path; bringing in an existing codebase is the [brownfield path](start-from-a-story-brownfield.md).
 
 ---
 
