@@ -8,7 +8,11 @@ description: "How a tier pulls the slice it needs from substrate on demand — t
 
 `[TUNABLE — retrieval mechanism]`
 
+New here? This page is about how an AI agent fetches just the small piece of a file it needs — instead of reading the whole thing — so its limited working memory doesn't fill up with stuff it never asked for. You care because that "fetch the slice, not the file" habit is what keeps a federation of agents fast, cheap, and focused.
+
 ## TL;DR
+
+In plain terms: agents pass each other a *pointer* ("the answer is in this file") and grab the actual detail only when they need it. This page is the knob for *how* that grab works. Read on for the two retrieval methods and the four supporting settings.
 
 The [minimal-sufficient bus](../02-guardrails/minimal-sufficient-bus.md) relays a pointer and keeps the detail in substrate, **pulled on demand**. This page is the dial for *how* that pull happens. Two grades sit on the surface: **lexical / grep-grade** (the default — `git grep` / ripgrep, path- and tag-scoped, no infrastructure, rebuildable for free) and **embeddings / vector** (opt-in — semantic retrieval for where lexical misses). Around the grade sit four more dials: what's indexed, chunk granularity, refresh cadence, and per-tier scope. The whole surface is **provider-agnostic**, and the index is always a **rebuildable cache derived from git, never a source of truth**. The `[INVARIANT]` constraints that keep retrieval from becoming a back-door — tier-partitioned scope, `as-of` + re-verify, pointer-not-truth — live in [Retrieval discipline](../02-guardrails/retrieval-discipline.md) and are in force behind every dial here.
 
@@ -188,6 +192,13 @@ Vector is provisioned **only when every box passes** — this checklist is the a
 - [ ] **Chunk size tuned** so a hit is minimal-sufficient (no oversized chunks).
 
 Until every box is checked, **stay on lexical** — an unfinished vector setup is the [back-door](../02-guardrails/retrieval-discipline.md), not an upgrade.
+
+## Remember this
+
+- **Start with lexical (plain text search).** It is `git grep` / ripgrep — already built into your agent, free, needs no setup, and handles almost every "where did we write X" lookup. Most teams never need anything more.
+- **Only reach for vector (semantic search) when keyword search keeps missing** — i.e. the thing you need is worded nothing like what you'd search for. It costs money and infrastructure, so opt in deliberately.
+- **The index is a throwaway cache, never the original.** You can delete it and rebuild it from git at any time; nothing important should live *only* in it.
+- This is a customization dial — to see where it sits in the bigger picture, visit [the mental model](../00-foundation/mental-model.md).
 
 ## How this connects
 

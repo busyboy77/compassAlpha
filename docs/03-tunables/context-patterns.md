@@ -8,7 +8,11 @@ description: "How much context each tier carries, across what scope, and for how
 
 `[TUNABLE — context usage]`
 
+This page is about a simple question: **how much should each AI agent in your team remember, and for how long?** Remember too little and it keeps re-learning the same things; remember too much and it gets cluttered, slow, and confused. The settings below ("dials") let you tune that balance — and the defaults are chosen so you don't have to fiddle until you have a reason to.
+
 ## TL;DR
+
+A quick map before the detail: each tier (the senior planner, the mid-level coordinator, and the hands-on worker) carries its own "memory load," and you can adjust how big it is and how often it gets a clean slate.
 
 Several independent dials control how much context each tier holds and over what scope: **mentor session lifecycle**, **doer context depth**, **cross-tier visibility**, **memory accumulation rate**, **digest verbosity**, and **rotation cadence**. These trade pollution-containment and cost against continuity and intelligence. The conservative defaults bias toward containment (fresh-per-event sessions, own-folder-only visibility, verbose digests). They are largely independent — combining them differently yields the [operating presets](../04-toggles/operating-presets.md). The [firewall](../01-axioms/firewall.md) and [hard labour rule](../01-axioms/hard-labour-rule.md) are `[INVARIANT]` underneath all of them.
 
@@ -111,6 +115,13 @@ Boot-light is safe *because* durable learnings live in memory and git — never 
 - **Switch digests to concise** only for high-throughput lanes where you don't need forensic depth.
 - **Tighten rotation cadence** if you observe fatigue signals before the calendar; loosen if rotations feel premature.
 - **Never go to full cross-tier visibility.** It breaks the firewall axiom; use parent-summary if you genuinely need more continuity awareness.
+
+## Remember this
+
+- **A "dial" is just a setting for how much an agent remembers and over what scope.** There are six of them, and they're mostly independent — you can turn one without disturbing the others.
+- **The defaults lean toward "keep it clean."** Fresh sessions, see-only-your-own-folder, detailed records. That's the safe starting point; loosen a dial only when you have a concrete reason.
+- **A fresh start is not amnesia.** Anything worth keeping lives in git and in the memory layer before a session refreshes — so booting light reloads less, it never throws knowledge away.
+- **The lower the tier, the more often it should start fresh.** The senior planner runs long for continuity; the hands-on worker gets a clean slate for every task. If unsure how the tiers fit together, see [the mental model](../00-foundation/mental-model.md).
 
 ## How this connects
 

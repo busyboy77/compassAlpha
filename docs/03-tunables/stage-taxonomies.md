@@ -8,7 +8,11 @@ description: "The lifecycle vocabulary each axis and lane uses. The words your s
 
 `[TUNABLE — stage names per axis + per lane]`
 
+This page is the list of named steps a piece of work moves through — from "just started" to "done and locked" — and it explains why letting each kind of work name its own steps (while keeping the same ending) keeps everyone agreeing on where things stand.
+
 ## TL;DR
+
+The short version: every kind of work gets its own short list of named steps it passes through, but they all finish the same way — freeze, check, tag, archive.
 
 Each axis and lane declares its own **lifecycle stage vocabulary** — the named states a unit of work passes through from launch to FROZEN. These stages drive Tier-2 status grids, inbox file naming, ratification-gate definitions, and the audit trail. The build axis uses `CP1 → CP2 → CP3`; the doctrine axis uses `S1 → S5`; Polish and Surgical lanes use slim taxonomies. Project-specific stage names are `[TUNABLE]`; the framework requires only three structural properties: monotonic progression, a defined freeze-to-tag tail, and a terminal FROZEN state. The stage taxonomy is one of the most important things a new project authors at adoption.
 
@@ -146,6 +150,13 @@ Beyond those, stage vocabulary is fully tunable.
 - **Fewer stages for simpler deliverables.** A code axis with no document-tiering needs fewer WIP stages than a doctrine axis.
 - **Keep the freeze-to-tag tail intact** — it's what makes a tag mean "ratified."
 - **Stay strict on cycle-tail acceptance** for regulated work; go liberal only when speed outranks predictable tag semantics.
+
+## Remember this
+
+- A **stage** is just a named step a piece of work is currently sitting in — like "being implemented" or "frozen." The list of those steps is the *stage taxonomy*.
+- You get to name and count the steps to fit your kind of work, but every list must end the same way: freeze, gate-check, tag, then a final FROZEN state. That shared ending is what makes a tag mean "this was ratified."
+- These stage names aren't decoration — status grids, inbox file names, and the audit trail all read them to answer "where does this work stand?"
+- Stages are part of the wider customization story; if the big picture is fuzzy, revisit [the mental model](../00-foundation/mental-model.md).
 
 ## How this connects
 

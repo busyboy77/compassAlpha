@@ -8,7 +8,11 @@ description: "What carries forward across cycles, how fast it accumulates, and w
 
 `[TUNABLE — memory content + accumulation rate; INVARIANT — append-mostly, never silently deleted]`
 
+This page is about how the federation *remembers lessons* so it never has to learn the same one twice — and which knobs you get to set for how much it writes down and whether anything is ever filed away.
+
 ## TL;DR
+
+In plain terms: a **memory** is a small note the federation keeps so future work starts already knowing a lesson, instead of rediscovering it the hard way. You can tune how eagerly notes get written and how they're tidied — but you can never quietly throw one away.
 
 **Memories** are durable, cross-cycle, cross-axis learnings — discrete files that every tier reads at boot, so a future tier inherits a lesson without re-learning it. Memory is **append-mostly**: superseded memories are marked HISTORICAL, never silently deleted (`[INVARIANT]`). What's tunable is the **accumulation rate** (how readily you capture a memory), the **scope** (cross-axis vs per-axis), and the **garbage-collection policy** (whether anything ever fully retires at major-version boundaries). The conservative default is **liberal capture + cross-axis scope + retire-never (HISTORICAL-mark only)**. The trade is learning speed against memory-noise.
 
@@ -87,6 +91,13 @@ Even under major-version retirement, nothing is *deleted* — it moves out of th
 - **Cross-axis unless your axes have genuinely disjoint failure modes.** Most lessons transfer.
 - **Retire-never until boot reads get heavy** (multi-year federations). Then adopt major-version retirement — move HISTORICAL items to cold archive, never delete.
 - **A memory that recurs as a correctness need → graduate it** into an invariant or tooling per the [enrichment rule-of-three](invariants-toolings-agents.md).
+
+## Remember this
+
+- A memory is just a durable note that says "we already learned this" — so the next person (or tier) doesn't pay for the lesson twice.
+- The one rule you can't change: a memory is never silently deleted. When it's outdated, you mark it HISTORICAL and keep it — so the trail of *why* always survives.
+- The knobs you *do* turn: how readily you write notes down (liberal vs. conservative), who reads them (everyone vs. per-axis), and whether old notes ever move to a cold archive.
+- New to this? The safe starting point is the default: write notes freely, share them across the whole federation, and never retire anything. For where this fits the bigger picture, see [the mental model](../00-foundation/mental-model.md).
 
 ## How this connects
 

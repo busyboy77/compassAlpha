@@ -8,7 +8,11 @@ description: "How many dispatches run at once. The primary speed-vs-risk dial."
 
 `[TUNABLE — concurrency mode]`
 
+This page is about one choice: do you let the AI work on one thing at a time, or several things at once? Doing more at once is faster, but it's also riskier — so this is the main dial you'll reach for when you want to trade safety for speed.
+
 ## TL;DR
+
+In plain terms: pick how many jobs run at the same time. One-at-a-time is the safe, slow default; running several together is faster but easier to get wrong.
 
 Concurrency mode chooses **how many units of work proceed simultaneously**. The four modes — sequential (LAYGO), pipelined, parallel-independent, parallel-doer — trade wall-clock speed against pollution and dependency risk. The conservative default is **sequential (LAYGO)**: one dispatch at a time, maximum context cleanliness, lowest risk, slowest. Most projects graduate to pipelined after the first cycle proves the rhythm. The git-layer mechanics ([commit discipline + worktrees](../01-axioms/git-foundations.md)) make every mode race-safe at the storage layer, but the *coordination* risk still rises with concurrency.
 
@@ -102,6 +106,13 @@ These are detailed in [Git foundations](../01-axioms/git-foundations.md). Concur
 4. **A single dispatch decomposes into many independent slices → Parallel-doer.** Budget for ordered integration.
 
 Weigh each step by the cost of getting dependency tracking wrong. If a stale-base read would be expensive to roll back (regulated/compliance work), stay at LAYGO or Pipelined.
+
+## Remember this
+
+- **One dial, one trade-off:** more work at once buys speed and costs safety. That's the whole idea behind the four modes.
+- **Start slow on purpose.** Run one job at a time (LAYGO) for your first cycle, then graduate to pipelined once you trust the rhythm.
+- **The storage layer is always safe** — git keeps parallel work from corrupting files. The risk that grows with concurrency is *coordination*: two jobs making assumptions that only clash later.
+- New here? The four modes sit inside [the mental model](../00-foundation/mental-model.md) as one of the dials you tune after the basics click.
 
 ## How this connects
 

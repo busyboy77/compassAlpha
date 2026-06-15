@@ -8,7 +8,11 @@ description: "An axis is a thin declaration: four fields + three tier roles. Eve
 
 `[TUNABLE]`
 
+An **axis** is just one "lane of work" your team runs — like a lane for writing code, or a lane for writing the rules. This page shows you how to add a new lane without rewriting anything: you fill in a short form, and the lane borrows all the shared rules automatically.
+
 ## TL;DR
+
+In plain terms: there's one shared rulebook (the **master**), and each lane of work (an **axis**) is a tiny form that points back to that rulebook instead of repeating it. Adding a lane means filling in the form — not rewriting the rules.
 
 A CompassAlpha federation is structured by **inheritance**: one master protocol holds every substantive rule, and each **work axis** is a thin declaration that names its tiers and a handful of settings, then inherits everything else. The default federation ships with two axes — **build** (produces code) and **doctrine** (produces governing documents). Adding a third axis (review, ops, AI-training, pen-test, …) is mechanical: name three tier roles, fill the declaration template, inherit the rest. You author no parallel rule sections. This page is the customization surface for declaring axes.
 
@@ -151,6 +155,13 @@ Because incorporation is **additive and read-only against existing state**, a ne
 - [Stage taxonomies](stage-taxonomies.md) is where an axis declares its cycle-stage vocabulary.
 - [Work granularity lanes](work-granularity-lanes.md) is where an axis declares which lanes it enables.
 - The [full parameter matrix](full-parameter-matrix.md) lists the axis-level tunables alongside project, operational, cultural, and tech-stack ones.
+
+## Remember this
+
+- An **axis** is one lane of work (writing code, writing doctrine, auditing, …). You can have one lane or several.
+- You never copy the rules into a new lane. There's one shared rulebook (the **master**), and every lane inherits it — so adding a lane is filling in a short form, not rewriting the framework.
+- The form makes only a handful of real choices: what the lane produces, how its work is staged, when it runs relative to the Charter, and what kicks off a new round. Everything else is borrowed.
+- Start with one lane and add more only when you actually need them. If the lanes feel like new "roles," it helps to revisit [the mental model](../00-foundation/mental-model.md).
 
 ---
 

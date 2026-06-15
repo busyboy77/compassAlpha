@@ -8,9 +8,11 @@ description: "Five axes in tension. No combination optimizes all of them. Tuning
 
 `[TUNABLE]`
 
+New here? This page is your map to the dials you can turn when you set up CompassAlpha — and it explains why turning one up usually turns another down, so you choose on purpose rather than by accident.
+
 ## TL;DR
 
-CompassAlpha exposes a tunable design space along **five primary axes**: speed, intelligence, cost, risk, predictability. They pull against each other. Every tuning decision spends one axis to buy another. The framework's job is to make the trade explicit so you choose deliberately instead of discovering the cost after the fact. The structural rules behind the dials remain `[INVARIANT]` no matter where you set them.
+The short version: you get five things to balance, and you can't max out all of them at once — so tuning means deciding which one you're willing to give up. CompassAlpha exposes a tunable design space along **five primary axes**: speed, intelligence, cost, risk, predictability. They pull against each other. Every tuning decision spends one axis to buy another. The framework's job is to make the trade explicit so you choose deliberately instead of discovering the cost after the fact. The structural rules behind the dials remain `[INVARIANT]` no matter where you set them.
 
 
 [![The five-axis tunable trade-off space — Speed, Intelligence, Cost, Risk, Predictability — with project-profile bias points](../assets/five-axis-tradeoff.svg)](../assets/five-axis-tradeoff.svg)
@@ -90,6 +92,13 @@ This is the single most important thing to internalize about tunables: the dials
 5. Re-observe. Tuning is iterative, not one-shot.
 
 Do not tune every dial up front. Most adopters touch three or four parameters in their first year.
+
+## Remember this
+
+- There is no perfect setting. Every dial you turn up spends one of the other five axes — speed, intelligence, cost, risk, or predictability. Tuning is choosing where to give, not how to win everywhere.
+- Start from a preset that matches your project, run one cycle, then adjust only the one or two dials that actually hurt. Don't tune everything up front.
+- The dials sit *on top of* a fixed correctness floor — the invariant rules never move, no matter where you set the dials.
+- If the trade-offs feel abstract, [the mental model](../00-foundation/mental-model.md) shows where these dials sit in the bigger picture.
 
 ## How this connects
 

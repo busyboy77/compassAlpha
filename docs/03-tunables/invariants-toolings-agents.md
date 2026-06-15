@@ -8,7 +8,11 @@ description: "The three enrichment surfaces. Each compounds intelligence against
 
 `[TUNABLE — federation enrichment]`
 
+This page is about the three ways a project gets smarter as it grows — the rules it enforces, the scripts it automates, and the AI helpers it specialises — and how to add them without paying for more than you need.
+
 ## TL;DR
+
+**In short:** a project can buy quality by adding rules, automation, and specialised AI roles — but each one also costs time to maintain, so add them slowly and only when they earn their keep.
 
 A federation gets smarter over time through three **enrichment surfaces**: project **invariants** (correctness rules enforced everywhere), **toolings** (automation — audits, validators, dashboards), and **specialised agents** (AI roles tuned for specific work types). All three compound the **intelligence ↔ cost** trade-off: more of each raises the deliverable's quality and the per-cycle cost. The recommended evolution is **start lean and add when a pattern repeats three times** and the marginal benefit is observable. A mature federation accumulates many invariants, several toolings, and a handful of agents over many cycles — biased toward intelligence; a lean federation stays cheap and fast with a lower quality floor.
 
@@ -124,6 +128,13 @@ Note: enforcement strictness is strict even at Bootstrap. You start with *few* i
 3. **Toolings before agents** when in doubt — toolings have the better long-run cost shape (author once, run free).
 4. **Keep what you have current.** A drifted tooling or stale agent gives false confidence; retire it or fix it.
 5. **Bias rich for regulated/high-stakes work; bias lean for small/exploratory work.**
+
+## Remember this
+
+- A project gets smarter through three surfaces: **invariants** (rules it always enforces), **toolings** (scripts that check things automatically), and **specialised agents** (AI helpers tuned for one kind of work).
+- Each one raises quality but also costs effort to keep current — so start with almost none and earn each addition.
+- The **rule of three** is your guide: when the same problem shows up three times, that's when it's worth automating or codifying.
+- Toolings are the best bargain over time — write the check once, and it runs free every cycle after that. See how these dials fit the bigger picture in [the mental model](../00-foundation/mental-model.md).
 
 ## How this connects
 

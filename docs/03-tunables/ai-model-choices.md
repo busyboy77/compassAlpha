@@ -8,7 +8,11 @@ description: "Different tiers can run on different models. The per-tier intellig
 
 `[TUNABLE — model selection]`
 
+This page is about a choice you get to make: which AI model powers each layer of your agent team — and how to balance "smartest possible" against "what it costs to run."
+
 ## TL;DR
+
+**In plain terms:** you don't have to use one model for everything. The smarter models cost more, so you can put the expensive, capable ones where deep thinking is needed and cheaper ones where the work is simple. Here's how that trade-off plays out.
 
 Each tier can run on a different AI model, traded by cost against intelligence. The conservative default is **top-tier everywhere** — maximum intelligence floor, and consistency as part of the trust anchor. Cost-optimized projects route mid-tier models to lighter work (simple Doer slices, formulaic orchestration) while keeping top-tier where architectural judgment matters. Multi-provider setups are possible but carry real integration cost. CompassAlpha is **protocol-first and tool-agnostic** — it specifies how tiers behave, not which model runs them — so model choice is a genuine dial, not a fixed dependency.
 
@@ -103,6 +107,15 @@ Mixed providers can capture cost savings, but the integration cost is genuine: e
 3. **If orchestration volume is the pain → mid-tier Mentor-2**, keeping Mentor-1 top-tier.
 4. **Mid-tier Doer with relaxed gates → never.** If you drop the Doer's model, raise the verification gates to compensate.
 5. **Mixed providers → only when single-provider savings are exhausted** and you can absorb the integration cost.
+
+## Remember this
+
+- **Different jobs, different models.** Each tier (the layers of your agent team) can run on its own model — you size the brainpower to the work.
+- **Start by spending more, not less.** Run everything on the top-tier model for your first cycle. Learn your workload before you start cutting cost.
+- **Cut cost where the work is simple, never where judgment lives.** Routing easy slices to a cheaper model is the safest saving; dropping the model on hard work just creates expensive mistakes.
+- **A cheaper worker needs a stricter inspector.** If you downgrade the Doer's model, tighten the verification gates to catch what it misses.
+
+For how all the tiers fit together, see [the mental model](../00-foundation/mental-model.md).
 
 ## How this connects
 

@@ -8,7 +8,11 @@ description: "Every tunable in one place — five categories, with defaults and 
 
 `[TUNABLE]`
 
+This page is the single big lookup table of every setting you *can* change in CompassAlpha — what each one does, what its safe starting value is, and how far you can push it. Think of it as the settings menu for the whole framework: you don't need to touch most of it, but when you want to adjust something, you look it up here.
+
 ## TL;DR
+
+The big picture: almost everything here ships with a sensible default, you'll only ever tweak a handful, and the truly structural rules can't be tweaked at all.
 
 This is the consolidated reference for **every** `[TUNABLE]` parameter in CompassAlpha, grouped into five categories: **project-level**, **axis-level**, **operational**, **cultural**, and **tech-stack**. Each row gives the default and the range. Defaults shown are the conservative defaults (a regulated multi-tenant profile bias: intelligence + low risk). The structural rules ([firewall](../01-axioms/firewall.md), [hard labour](../01-axioms/hard-labour-rule.md), [bus](../01-axioms/bus-protocol.md), [persistence](../01-axioms/persistence-law.md), dual validation) are `[INVARIANT]` and appear here only where a *bounded* sub-choice exists.
 
@@ -120,6 +124,13 @@ If you read nothing else, these are the dials with the highest leverage for a ne
 5. **Lanes enabled** — enable all four, holding Surgical until first close.
 
 Everything else can ride the conservative defaults until a specific pain motivates a change.
+
+## Remember this
+
+- This is a reference table, not a checklist. You don't configure all of it — you look things up here when you need them.
+- Every row has a default that's safe to start with. New adopters typically change only three or four parameters in the whole first year.
+- A `[TUNABLE]` is a dial you may turn; an `[INVARIANT]` is fixed by design and only its named sub-choice (if any) is yours to set. The fixed ones are the framework's load-bearing walls — see [the mental model](../00-foundation/mental-model.md).
+- When in doubt, leave it on the default and let real pain — not guesswork — tell you what to tune.
 
 ## How this connects
 

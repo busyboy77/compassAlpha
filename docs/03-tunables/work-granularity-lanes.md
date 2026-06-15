@@ -8,9 +8,11 @@ description: "Match the ceremony to the size of the change. The same federation 
 
 `[TUNABLE — per-lane policies + which lanes a preset enables]`
 
+This page explains how CompassAlpha sizes the process to fit the job — so a tiny "make this button blue" request doesn't get the same heavyweight treatment as a major design change, and you don't have to choose between a framework that's too formal for small work or too loose for big work.
+
 ## TL;DR
 
-CompassAlpha supports work at **four granularity levels** — Doctrine Cycle, Phase 3, Polish Lane, Surgical Strike — each with a ceremony level matched to the size of the change. Lane choice is a **triage decision** made at incoming-request time. All four lanes share the same load-bearing rules (firewall, hard labour, bus, persistence, commit discipline) and differ only in ceremony and gating. This is what makes CompassAlpha usable for every daily request, not just big projects — the difference between "an academic ideal for large work" and "the smartest tooling the project has." Which lanes a project enables is `[TUNABLE]`; that all four exist is `[INVARIANT]`.
+A "lane" here is just a level of process ceremony — how many review steps, sign-offs, and paperwork a change goes through. CompassAlpha supports work at **four granularity levels** — Doctrine Cycle, Phase 3, Polish Lane, Surgical Strike — each with a ceremony level matched to the size of the change. Lane choice is a **triage decision** made at incoming-request time. All four lanes share the same load-bearing rules (firewall, hard labour, bus, persistence, commit discipline) and differ only in ceremony and gating. This is what makes CompassAlpha usable for every daily request, not just big projects — the difference between "an academic ideal for large work" and "the smartest tooling the project has." Which lanes a project enables is `[TUNABLE]`; that all four exist is `[INVARIANT]`.
 
 ## The dial
 
@@ -106,6 +108,13 @@ Operating presets enable or restrict lanes:
 - **Enable all four early** unless you're risk-averse/regulated (then forbid Surgical and route even cosmetics through Polish with full audit).
 - **Hold Surgical until first close** on a new adoption — prove ceremony before relaxing it.
 - **When a request is ambiguous between two lanes, pick the heavier one.** Under-ceremony is the more expensive mistake.
+
+## Remember this
+
+- **Match the ceremony to the size of the change.** A button-colour tweak and a Charter amendment go through the same federation, but at very different weights — that's the whole point of lanes.
+- **The lighter lanes drop ceremony, never the safety rules.** Even a one-line "Surgical Strike" still routes through a tier, goes on the bus, and is executed by the Doer (never the founder) — only the review steps and paperwork shrink.
+- **When in doubt, pick the heavier lane.** Doing too little process is the costlier mistake; you can always relax later.
+- New here? Start with [the mental model](../00-foundation/mental-model.md) to see how these lanes sit inside the wider federation.
 
 ## How this connects
 
