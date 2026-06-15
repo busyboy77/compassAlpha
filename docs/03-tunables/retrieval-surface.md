@@ -16,6 +16,39 @@ The [minimal-sufficient bus](../02-guardrails/minimal-sufficient-bus.md) relays 
 
 "Pull on demand" is only as light as the pull. If a receiver answers a detail question by reading the whole LEDGER, the whole tagged return, or the whole commit history, the bus stayed light but the *pull* flooded the receiver's context — the relay vector of pollution simply reopened one step downstream. Retrieval closes it: the receiver pulls the **minimal-sufficient slice** instead of the whole file. This dial sets the mechanism that makes the pull surgical; the [discipline guardrail](../02-guardrails/retrieval-discipline.md) keeps that mechanism honest.
 
+## Choosing your pathway
+
+[![Choosing your retrieval pathway — a decision gate routing every adopter to the zero-setup lexical default (Lane A) and the few with semantic misses + infra to the opt-in vector lane (Lane B), with both bound by the same three constraints](../assets/retrieval-pathway.svg)](../assets/retrieval-pathway.svg)
+
+<small>*One gate, two lanes. **Where:** the gate routes by need — almost everyone to Lane A. **How:** Lane A is `git grep`/ripgrep, native and zero-setup; Lane B is embeddings → store → pointer, wired via MCP on Claude Code or baked into the loop on a local model. **Why:** Lane A gives immediate budget relief at no cost; Lane B buys semantic recall for the few who provision it. Both lanes obey the same three constraints — no harness exemption.*</small>
+
+Two lanes sit on this surface. Pick by need, not by appetite — most adopters stay in Lane A forever.
+
+| | **Lane A — default (start here)** | **Lane B — advanced (opt-in)** |
+|---|---|---|
+| Grade | lexical / grep-grade | embeddings / vector |
+| Setup | **none** — native to the harness | bring-your-own-infra |
+| Cost | none — no vendor, no embeddings | embeddings + store + index-build |
+| Budget relief | immediate — pull the slice, not the file | same, plus semantic recall |
+| Who | every adopter, any harness | those who hit real semantic misses |
+| Help needed | none — *you already have it* | self-served (see the [runbook](#runbook-provisioning-and-switching-grades) + reference below) |
+
+**Lane A is the provisioned happy path.** Lexical retrieval is already what an agent harness does natively — Claude Code's `grep`/`glob`, or `git grep`/ripgrep on a local model. It needs nothing, costs nothing, and *immediately* relieves the budget/context problem the bus would otherwise create. Turn it on and stop here unless you have a concrete reason not to.
+
+**Lane B is opt-in and self-served.** Reach for it only when lexical demonstrably misses — the slice you need is phrased unlike any query that would find it. It is the natural fit for **self-hosted / local models** (Qwen and the like), where you control the loop and can bake retrieval in. On **Claude Code** it is reachable too — you wire a vector / semantic-search source through an **MCP** server (or a custom tool/hook); Claude Code *consumes* retrieval but does not *host the index*, so you still provision the store yourself.
+
+### Harness × model — where vector plugs in
+
+| | Claude Code | Local model (Qwen, etc.) |
+|---|---|---|
+| Lexical | native (`grep`/`glob`) | you build it (`git grep` / ripgrep) |
+| Vector | via an **MCP** server / custom tool (consume; don't host the index) | baked into the loop directly |
+| Index / embeddings | host yourself, expose via MCP | host, call inline |
+| Customization | through defined seams (MCP / tools / hooks / sub-agents) | full loop control |
+| Fit for heavy vector | possible, heavier wiring | natural fit |
+
+Whichever cell you land in, the same three [discipline constraints](../02-guardrails/retrieval-discipline.md) bind — there is no harness exemption.
+
 ## The dials
 
 ### 1. Retrieval grade
@@ -124,6 +157,17 @@ All three [discipline constraints](../02-guardrails/retrieval-discipline.md) hol
 - **Phase 3 — Stamp freshness.** Record the watermark (the commit each namespace was built from) so every hit can carry `as of <commit>`.
 - **Phase 4 — Wire refresh.** Trigger rebuild on substrate advance per the [cadence dial](#4-refresh-cadence); server-side; never on a tier's budget.
 - **Phase 5 — Query path.** The tier queries **only its own namespace** → top-k candidate pointers → re-reads the **frozen blob** at the tag → cites the substrate. The chunk is never pasted as the answer.
+
+### Reference setup (a worked vector path)
+
+The framework mandates no stack, but a concrete reference shortens Lane B. A maintained, on-thesis path:
+
+- **Chunking + embedding:** Anthropic's **Contextual Retrieval** — prepend each chunk's context before embedding, so a hit is self-locating and minimal-sufficient. That is the same goal as the bus discipline, which is why it composes cleanly with the `as-of` + pointer-not-truth constraints rather than fighting them.
+- **Embeddings provider:** any — Anthropic offers no first-party embeddings endpoint and points to **Voyage AI**; substitute whatever your stack prefers.
+- **Vector store:** any.
+- **Wiring:** expose the store to the agent as an **MCP** retrieval server (the harness-agnostic seam), or call it inline on a local model.
+
+Every component is **swappable** — this is a reference, not a requirement, exactly as Claude Code is the *reference* harness rather than a mandated one. Whatever you pick still has to clear the [acceptance bar](#acceptance-bar-what-fully-provisioned-means).
 
 ### The switch (the toggle)
 

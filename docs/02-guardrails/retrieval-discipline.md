@@ -34,6 +34,8 @@ Retrieval is **partitioned per tier**. Each tier's index covers only what that t
 
 A [forensic descent](stale-snapshot-detection.md#forensic-descent-before-action) across the firewall remains what it always was — a deliberate, narrow, transient, **un-mirrored** act on a real trigger (escalation, exit-study). It is *not* mechanized into routine retrieval. The moment retrieval becomes the standing way a tier sees across the boundary, the firewall is gone.
 
+This holds **regardless of harness**. A vector store wired in through a single MCP server that every tier queries is the same global-index back-door, just behind a protocol — give each tier its own namespace or endpoint. A local model that bakes retrieval into its own loop is bound identically. The partition is a property of the index, not of the agent that queries it.
+
 ### 2. As-of stamping + re-verify against the frozen blob — the index is a snapshot
 
 Every index is a snapshot by construction: it is computed at index-time, and the substrate advances afterward. So every retrieval hit carries an **`as of <commit>`** watermark, and **for any load-bearing use the tier re-reads the frozen blob at the relevant tag** before citing or acting ([provenance law](../01-axioms/provenance-law.md#verification-before-action); [stale-snapshot detection](stale-snapshot-detection.md#forensic-descent-before-action)). Retrieval tells you *where to look*; provenance still governs *what you cite*. A hit is a lead, never a verdict.
