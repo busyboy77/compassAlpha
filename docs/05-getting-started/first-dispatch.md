@@ -6,6 +6,8 @@ description: "Running your first piece of work end-to-end through the bus: Mento
 
 > *Running your first piece of work end-to-end through the bus: Mentor-1 → Mentor-2 → Doer and back. Flush-before-disclose at every step, gates at every seam. This is the federation's heartbeat.*
 
+**In plain terms:** this page walks you through getting one small task done by the AI team for the very first time — who hands work to whom, where the code gets written, and how every step is saved to git before anyone says a word about it. Do it once and the whole rhythm clicks.
+
 You've booted a clean session ([first boot](first-boot.md)). Now you move a real piece of work all the way through the federation and watch state land on disk + at origin before anyone discusses it. By the end you'll have one completed dispatch and a working mental model of the whole rhythm.
 
 We'll use the small first dispatch you chose during setup — say, **scaffold an `auth/` module skeleton** in the substrate.
@@ -39,7 +41,7 @@ Mentor-1 ──brief──▶ Mentor-2 ──slice brief──▶ Doer
 Mentor-1 ◀──close pkg── Mentor-2 ◀──tagged digest──┘
 ```
 
-Each arrow is a **bus message**: a file written into the recipient's inbox, committed + pushed to reviewer-state, followed by a one-line founder ping. Content never travels in chat. See the [bus protocol](../01-axioms/bus-protocol.md).
+Each arrow is a **bus message** — the federation's word for one unit of hand-off. In practice it's just a file: written into the recipient's inbox, committed and pushed to reviewer-state (the shared git repo the tiers coordinate through), then followed by a one-line founder ping. The real content never travels in chat. See the [bus protocol](../01-axioms/bus-protocol.md).
 
 ---
 
@@ -112,7 +114,7 @@ COMMIT DISCIPLINE: worktree + commit-tree + refspec push; NEVER mix planes.
 
 ## Step 3 — The Doer does the labour
 
-The founder spawns a fresh Doer session. It boots from its composed brief, then works under strict [git foundations](../01-axioms/git-foundations.md) discipline. **Two planes, never crossed.**
+The founder spawns a fresh Doer session. It boots from its composed brief, then works under strict [git foundations](../01-axioms/git-foundations.md) discipline. The Doer keeps **two planes** apart and never crosses them: the *data plane* (the substrate repo, where the actual code lands) and the *control plane* (reviewer-state, where the team's messages and status go). One git command never reaches into both.
 
 **Data plane — the deliverable goes to substrate:**
 
@@ -217,5 +219,12 @@ Work advances through **flush triggers T0–T7**. The ones you exercised in this
 ```
 
 You now have a working federation with one closed dispatch behind it. From here, repeat the rhythm — and for a brownfield team, walk the revertible cutover.
+
+## Remember this
+
+- **Work flows down, the result flows up.** A brief goes Mentor-1 → Mentor-2 → Doer; the finished code and a short digest come back the same path. That loop is the whole job — everything else is detail. See [the mental model](../00-foundation/mental-model.md).
+- **Only the Doer touches the code.** The mentors decide and check; the Doer writes. Keeping the two planes separate is what keeps the audit trail clean.
+- **Save first, talk second.** Every hand-off lands on disk and at origin *before* anyone is pinged — so nothing important ever lives only in a chat window.
+- **One dispatch teaches the rhythm.** Once you've run this small task end to end, every later one is the same beats, repeated.
 
 ## Next: [Cutover from a pre-AI project →](cutover-from-pre-AI-project.md)

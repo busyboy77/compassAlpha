@@ -6,7 +6,9 @@ description: "Adopting CompassAlpha over a codebase you already have. A pre-exis
 
 > *Adopting CompassAlpha over a codebase you already have. A pre-existing project walks in with code, culture, obligations, and tooling — but no doctrine layer. This is the phased journey for extracting one.*
 
-Most real adoptions are brownfield. You don't get to start from a blank slate; you have a running system with users, history, and tribal knowledge. The rules that govern your codebase — its Charter, its module boundaries, its invariants — already exist, but they're **buried in code and people's heads**, not written down as doctrine.
+**In plain terms:** this page is for when you already have a working project — real code, real users, real history — and you want to start running it the CompassAlpha way without stopping everything to rebuild from scratch. It walks you through doing that gradually, one piece at a time.
+
+Most real adoptions are brownfield. You don't get to start from a blank slate; you have a running system with users, history, and tribal knowledge. The rules that govern your codebase already exist — its **Charter** (the project-wide constitution), its module boundaries, its invariants (the things that must always stay true) — but they're **buried in code and people's heads**, not written down as *doctrine*: the explicit, agreed-on rules a CompassAlpha federation works to.
 
 Extracting that doctrine is the hard, valuable work brownfield onboarding does. CompassAlpha treats it as a **first-class, phased journey** — not an afterthought. You will not boil the ocean. You'll onboard one or two pilot modules first, prove the rhythm, and expand from there while the rest of the project keeps running on your existing workflow.
 
@@ -168,5 +170,12 @@ Brownfield onboarding is also a **people** change. Decide explicitly:
 ```
 
 For a concrete, revertible, step-by-step walkthrough of moving an existing project under CompassAlpha — using Auth / Billing / Reporting as the worked example — see [Cutover from a pre-AI project](cutover-from-pre-AI-project.md).
+
+## Remember this
+
+- **You don't have to convert everything at once.** Pick one or two well-bounded modules, prove the rhythm there, and let the rest of the project keep running the way it already does.
+- **Your rules already exist — you're writing them down, not inventing them.** Brownfield onboarding is mostly the work of extracting the rules already living in your code and your team's heads into explicit doctrine.
+- **Document how the system actually works, not how you wish it worked.** When the code and the team's story disagree, that's a decision to surface, not a gap to paper over.
+- **Keep your first Charter small.** A handful of rules you can genuinely defend beats a long list that's half wishful thinking. New here? Start with [the mental model](../00-foundation/mental-model.md).
 
 ## Next: [First boot →](first-boot.md)

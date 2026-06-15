@@ -6,6 +6,8 @@ description: "A concrete, revertible, step-by-step walkthrough for a team moving
 
 > *A concrete, revertible, step-by-step walkthrough for a team moving an existing project under CompassAlpha. Worked end-to-end with Auth / Billing / Reporting as the example modules. No big bang — every step can be undone.*
 
+If you already have a working codebase and want to start using CompassAlpha on it without risking your live project, this page shows you exactly how — one small, undoable step at a time, so your team can stop and roll back at any point.
+
 This is the hands-on companion to [brownfield onboarding](brownfield-onboarding.md). Where that page describes the five-phase *journey*, this page is the *worked walkthrough*: the exact moves a team makes, in order, with the safety property that **nothing here destroys or freezes your existing workflow until you choose to retire it**.
 
 The example is a small SaaS with three modules — **Auth**, **Billing**, **Reporting** — running on a conventional pull-request workflow with CI. No AI agents, no doctrine layer. We move it under CompassAlpha module by module.
@@ -113,7 +115,7 @@ Review, ratify, and **LOCK** it. A LOCKED Charter is the precondition for the bu
 
 ## Step 5 — Route Auth through CompassAlpha; keep Billing/Reporting legacy
 
-This is the parallel-track. From now on:
+This is the parallel-track — the two ways of working run side by side for a while, neither blocking the other. From now on:
 
 - **Auth changes** go through CompassAlpha: Mentor-1 brief → Mentor-2 slice → Doer commits via worktree + commit-tree + refspec push → gate → tag. Exactly the [first dispatch](first-dispatch.md) rhythm.
 - **Billing and Reporting changes** keep using your existing PR workflow and CI. Untouched.
@@ -185,6 +187,15 @@ Even here, "retire" means *stop using*, not *delete* — your old CI config and 
 [ ] Billing graduated, then Reporting; Charter amended via standard doctrine cycle as needed
 [ ] legacy workflow retired LAST, deliberately, after all modules proven
 ```
+
+---
+
+## Remember this
+
+- **You never have to bet the whole project at once.** Every step except the last is additive or runs in parallel — you can stop, watch how it goes, and undo it at any phase boundary.
+- **CompassAlpha runs *alongside* your old workflow,** not instead of it. One module moves over while the rest keep shipping the way they always have.
+- **Migrate by module, hardest last.** Start with a well-bounded, widely-depended-on piece (Auth here), graduate the riskier ones once it's stable, and retire the old way only after everything has proven itself.
+- **Writing down your project's rules pays off immediately** — it becomes onboarding material and often surfaces real bugs (like the 24h-vs-12h session mismatch) the moment you compare the docs to the code. For the bigger picture of why these pieces fit together, see [the mental model](../00-foundation/mental-model.md).
 
 ---
 

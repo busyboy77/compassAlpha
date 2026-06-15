@@ -6,6 +6,8 @@ description: "Four things, no more: a git host, an AI agent harness, a founder/r
 
 > *Four things, no more: a git host, an AI agent harness, a founder/relay, and a state-of-record remote. If you have these, you can run a CompassAlpha federation.*
 
+New here? This page is a simple checklist of the four things you need before you start — a computer to run on, an AI assistant that can start fresh each time, one person to keep an eye on it, and a safe place online to store the work. If you've used git and a coding AI before, you probably already have most of these.
+
 CompassAlpha is a [framework, not a tool](../00-foundation/framework-not-tool.md) — there is nothing to `npm install`. What you assemble instead is a small set of capabilities. This page is the checklist. Nothing here is exotic; most teams already have three of the four.
 
 ## The four prerequisites
@@ -79,6 +81,15 @@ Both repos need a durable git remote. This is what makes *"state of the federati
 - [ ] A discipline of **`git pull --ff-only` before every push** — never `--rebase`, never `merge` for tier work. (Full rationale in [git foundations](../01-axioms/git-foundations.md).)
 
 The two remotes are separate on purpose. The [firewall](../01-axioms/firewall.md) is *structural by directory and remote separation*: a reviewer-state commit physically cannot land on a substrate branch, because they are different repos with different `.git/` databases and different origins.
+
+---
+
+## Remember this
+
+- **Four things, that's the whole list:** a machine to run on, an AI assistant, one human relay, and an online place to store both repos. Tick all four and you're ready.
+- **"Fresh-session-per-slice" is the one non-negotiable** — your AI assistant must be able to start each task from a clean slate, with no memory of the last one. That clean start is what keeps the work honest.
+- **The one human (the founder) does less than you'd expect** — they pass short notes and settle rare judgement calls. They do not read or decide everything. Resisting the urge to over-help is itself a skill.
+- For the bigger picture of how these pieces fit together, see [the mental model](../00-foundation/mental-model.md).
 
 ---
 

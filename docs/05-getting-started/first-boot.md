@@ -6,6 +6,8 @@ description: "Booting your first tier session: the T0 boot-integrity ritual, the
 
 > *Booting your first tier session: the T0 boot-integrity ritual, the reading order, and the START status grid that doubles as a drift check. Every session, every tier, every time — this is how a CompassAlpha session begins.*
 
+New here? This page is the start-up checklist an AI session runs before it does any work — a short, fixed routine that proves the session is looking at the real, current state of the project (not stale memory) before it touches anything.
+
 You've set up your repos and stamped your tiers ([greenfield](greenfield-setup.md) or [brownfield](brownfield-onboarding.md)). Now you boot a session for the first time. This page is the boot ritual — it applies to *every* tier session you will ever run, so it's worth getting into your bones now.
 
 A session that skips boot is a session operating on assumptions instead of disk. The boot ritual is what makes *"state of the federation = state of git"* trustworthy at the start of every turn.
@@ -19,7 +21,7 @@ A session that skips boot is a session operating on assumptions instead of disk.
 
 ## What "boot" means
 
-When the founder spawns a fresh AI session in a tier's home folder and the session reads its stamped `CLAUDE.md`, that session **boots**. Boot is the **T0 flush trigger** — the first of the [flush triggers T0–T7](first-dispatch.md#the-gates-that-protect-a-dispatch). At T0 the session does not start working. First it proves it is grounded in reality.
+When the founder spawns a fresh AI session in a tier's home folder and the session reads its stamped `CLAUDE.md`, that session **boots**. Boot is the **T0 flush trigger** — a "flush" is the moment a session syncs itself with disk, and T0 is the very first one, before any other (the full set is the [flush triggers T0–T7](first-dispatch.md#the-gates-that-protect-a-dispatch)). At T0 the session does not start working. First it proves it is grounded in reality — that what it believes matches what is actually written down.
 
 The T0 contract, in order:
 
@@ -85,7 +87,7 @@ The START grid is not decoration — it is the **drift detector**. Each line ass
 | `LEFTOVERS` | Open deferred items | …the count disagrees with `LEFTOVERS.md` |
 | `DISK` | Disk == understanding, GH-sync 0/0 | …`git status` is dirty or local ≠ origin |
 
-The most important line is `DISK`. **`GH-sync 0/0`** means local has zero commits ahead and zero behind origin — local exactly equals the state of record. If it's not `0/0`, you are not booted on the true state.
+The most important line is `DISK`. **`GH-sync 0/0`** means your local copy has zero commits ahead and zero behind origin (the shared remote on GitHub) — in plain terms, your copy is an exact match for the official, shared one. If it's not `0/0`, you are not booted on the true state, and anything you do risks building on a stale picture.
 
 ---
 
@@ -131,5 +133,12 @@ For your very first session (Mentor-1, build axis):
 ```
 
 Once a session boots clean, it's ready to move work. That's the next page.
+
+## Remember this
+
+- **Boot before you work.** Every session, every tier, starts by reading the same artifacts in the same fixed order — then proves they all agree before it touches anything.
+- **The START grid is a smoke alarm, not a formality.** If any of its six lines can't be filled truthfully from what's on disk, that's drift — stop and reconcile first.
+- **`GH-sync 0/0` is the green light.** It means your copy exactly equals the shared one. Anything else means you're not on the true state yet.
+- This ritual is how CompassAlpha keeps "the state of the project is whatever git says" honest. If the routine feels heavy at first, see how it fits the bigger picture in [the mental model](../00-foundation/mental-model.md).
 
 ## Next: [First dispatch →](first-dispatch.md)

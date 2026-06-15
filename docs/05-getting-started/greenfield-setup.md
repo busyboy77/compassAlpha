@@ -6,6 +6,8 @@ description: "Stand up a fresh federation from nothing: two repos, stamped tiers
 
 > *Stand up a fresh federation from nothing: two repos, stamped tiers, a first axis declaration, a bus inbox layout. About a day of setup, then you're ready for [first boot](first-boot.md).*
 
+**New here?** This is the checklist for starting a brand-new project from scratch. You'll create two folders, drop in a few files, and end the day with a working setup your AI agents can boot into. No prior experience with the framework required — just follow the seven steps in order.
+
 This page assumes you've cleared the [prerequisites](prerequisites.md). It walks the greenfield path — a brand-new project with no prior doctrine and no legacy obligations. (If you have an existing codebase, go to [brownfield onboarding](brownfield-onboarding.md) instead.)
 
 The whole setup is seven steps. Each produces real artifacts on disk that you commit and push. Nothing load-bearing stays in your head.
@@ -19,7 +21,7 @@ The whole setup is seven steps. Each produces real artifacts on disk that you co
 
 ## Step 1 — Create the two repos as siblings
 
-The substrate (your project) and the reviewer-state (federation meta-state) are **two distinct repos in two distinct sibling directories**. They never cross-commit; that separation is the [firewall](../01-axioms/firewall.md).
+You keep two separate git repositories, side by side. The **substrate** is your actual project — the code you ship. The **reviewer-state** is where the federation keeps its own bookkeeping: who decided what, what's pending, how rotations happened. These are **two distinct repos in two distinct sibling directories** (sibling = they sit next to each other, neither inside the other). They never cross-commit; that separation is the [firewall](../01-axioms/firewall.md).
 
 ```bash
 # substrate — the thing you build
@@ -38,7 +40,7 @@ git -C /path/to/reviewer-state remote add origin <reviewer-state-remote-url>
 
 ## Step 2 — Drop the master into reviewer-state
 
-The master protocol holds every substantive rule, stated once. Your axes inherit from it.
+The **master** is the single rulebook that states every substantive rule once. You don't rewrite it per project — your customizations (called axes) inherit from it.
 
 ```bash
 # copy the CompassAlpha master into the reviewer-state root
@@ -110,7 +112,7 @@ Inbox filenames follow `from-<sender-tier>-<event>[-<discriminator>].md`, e.g. `
 
 ## Step 5 — Stamp your three tiers
 
-Each tier boots from a `CLAUDE.md` that tells a generic AI session who it is. This is how the harness becomes a specific tier. The three stamps, dropped into the homes from step 4:
+A **tier** is a role in the chain of command, and a **stamp** is the `CLAUDE.md` file that tells a fresh, generic AI session which role it's playing. This is how an off-the-shelf session becomes a specific tier — it reads its stamp on boot and knows who it is. The three stamps, dropped into the homes from step 4:
 
 ### Mentor-1 stamp (`tier-1-mentor/CLAUDE.md`)
 
@@ -217,5 +219,12 @@ This is LAYGO pacing — *lay the rhythm before you go fast*. Once dispatch #1 c
 ```
 
 With all boxes ticked, boot your first session.
+
+## Remember this
+
+- **Two folders, never nested.** Your project (substrate) and the federation's bookkeeping (reviewer-state) live side by side. Keeping them apart is what protects each from the other.
+- **You don't edit the rulebook.** The master stays as-is; you shape your project through thin axis declarations and tunables that layer on top.
+- **Every step lands a real file you commit.** Nothing important lives only in your head or the chat — it's all on disk, pushed, and auditable.
+- **Start tiny on purpose.** Your first dispatch should be a one-file change. The goal is to prove the rhythm works before you trust it with anything big. If the moving parts here feel abstract, see [the mental model](../00-foundation/mental-model.md) for the big picture.
 
 ## Next: [First boot →](first-boot.md)
