@@ -16,7 +16,7 @@ CompassAlpha is young, and its governance reflects that. *Governance* simply mea
 
 ## Final authority during v0.x
 
-The **founder** of CompassAlpha holds **final say** over its direction during the v0.x line. This is a *BDFL-style arrangement* — "Benevolent Dictator For Life", a common open-source pattern where one trusted person makes the final call when the group can't agree. Where a decision cannot be resolved by consensus, the founder decides. This keeps the early framework coherent while its core doctrine is still settling.
+The **founder** of CompassAlpha holds **final say** over its direction during the v0.x line. This is a *BDFL-style arrangement* — "Benevolent Dictator For Life", a governance pattern common in community-led software projects where one trusted person makes the final call when the group can't agree. Where a decision cannot be resolved by consensus, the founder decides. This keeps the early framework coherent while its core doctrine is still settling.
 
 ## How doctrine changes flow
 
