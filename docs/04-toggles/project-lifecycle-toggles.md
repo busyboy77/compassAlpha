@@ -8,9 +8,11 @@ description: "The set-once decisions. Made at adoption, effectively permanent �
 
 `[TOGGLES — class: LIFECYCLE]`
 
+This page covers the handful of choices you make *once*, when you first adopt CompassAlpha — things like your project's name and where its files live. They feel like settings, but in practice they're permanent: changing one later is a moving job, not a switch you flip. Read this so you pick them carefully up front.
+
 ## TL;DR
 
-A **project-lifecycle toggle** is a setting baked so deeply into the federation that changing it isn't a flip at all — it's a **migration**. These are the decisions you make when you adopt CompassAlpha: the project name, the repo paths, the tier names, the choice of VCS, the canonical artifact set. They get encoded into file paths, bus inbox names, boot reads, and tier homes. Once the federation has run even one cycle, those encodings are everywhere on disk and at origin.
+These are the decisions you set at the start and then leave alone. A **project-lifecycle toggle** is a setting baked so deeply into the federation that changing it isn't a flip at all — it's a **migration** (a deliberate, multi-step move of state, not a one-line config change). These are the decisions you make when you adopt CompassAlpha: the project name, the repo paths, the tier names, the choice of VCS, the canonical artifact set. They get encoded into file paths, bus inbox names, boot reads, and tier homes. Once the federation has run even one cycle, those encodings are everywhere on disk and at origin.
 
 The honest framing: **treat these as permanent.** They *can* change, but only through a deliberate migration that rewrites state. Don't go looking for a runtime dial — there isn't one.
 
@@ -67,6 +69,13 @@ These don't "flip wrong" so much as **break if you treat them as flippable**:
 - **Swapping VCS** isn't a CompassAlpha federation anymore — it's a different thing wearing the name.
 
 When you genuinely need to change one of these, do it as a planned migration. See [Getting started](../05-getting-started/index.md) for the adoption and brownfield-migration flows.
+
+## Remember this
+
+- These are **set-once** decisions. Choose them carefully at adoption, then treat them as fixed — they get stamped into file paths, message names, and history all over the place.
+- Changing one later isn't a switch; it's a **migration** — real, deliberate work that rewrites state. The framework will even halt and warn you if it spots a name or path that no longer matches what's on disk. That's it protecting you, not breaking.
+- A couple of these aren't really choices at all: **git is the bus**, and **only one writer at a time** — both are locked invariants, not dials.
+- If you're still building your picture of how tiers, the bus, and persistence fit together, start with [the mental model](../00-foundation/mental-model.md).
 
 ## Defaults
 

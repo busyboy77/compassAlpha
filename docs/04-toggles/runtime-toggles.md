@@ -8,7 +8,11 @@ description: "What you can safely change mid-cycle, without pausing the work."
 
 `[TOGGLES — class: RUNTIME]`
 
+This page lists the settings you're allowed to change *while the work is happening* — the dials you can turn without stopping anything, because they only affect the next piece of work, never the piece already underway. If you've ever wished you could ease off the gas mid-journey without pulling over, this is the page for you.
+
 ## TL;DR
+
+In plain terms: these are the safe-to-change-anytime settings. Here's why they're safe.
 
 A **runtime toggle** is a setting that governs only work *not yet started*. You can flip it any time — mid-cycle, mid-dispatch, between turns — and the change lands cleanly because nothing currently in flight depends on the old value. The mechanism that makes this safe is the [hard-labour rule](../01-axioms/hard-labour-rule.md): the Doer is *fresh-spawned per unit of work*, so each new spawn simply reads the current value. The slice already running keeps the value it was born with.
 
@@ -71,6 +75,13 @@ The reference defaults bias toward correctness and intelligence over cost: `xhig
 - They're safe *because* of the [hard-labour rule](../01-axioms/hard-labour-rule.md) (fresh-spawn-per-slice) and the [firewall](../01-axioms/firewall.md) (no shared mutable state across tiers).
 - Contrast with [Cycle toggles](cycle-toggles.md), which *cannot* flip mid-cycle, and [Project-lifecycle toggles](project-lifecycle-toggles.md), which are set once.
 - Several runtime toggles move together inside the named [Operating presets](operating-presets.md).
+
+## Remember this
+
+- **Runtime toggles are the safe ones.** Flip them whenever you like — the change lands on the *next* piece of work, never the one already running. Nothing in flight gets yanked out from under it.
+- **"Safe to flip" isn't the same as "free to flip."** Loosening provenance checks or dropping effort on a hard slice won't break the machinery — but it can quietly lower the quality of what comes back. Match the dial to the moment.
+- **The whole reason this works** is that each worker (the Doer) is born fresh for one slice and reads its settings at birth. If that idea is new to you, start with [the mental model](../00-foundation/mental-model.md).
+- **Don't confuse these with the other toggle classes.** [Cycle toggles](cycle-toggles.md) can't change mid-cycle; [project-lifecycle toggles](project-lifecycle-toggles.md) are set once. Runtime toggles are the only ones you turn on the fly.
 
 ---
 

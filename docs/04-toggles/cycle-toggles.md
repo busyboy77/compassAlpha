@@ -8,9 +8,11 @@ description: "What may change only at a cycle boundary — including the charter
 
 `[TOGGLES — class: CYCLE]`
 
+These are the settings you can only change at the start or end of a work cycle — never in the middle — because they decide the basic shape of how a whole cycle runs. Get the timing right and the team flows; flip one too early and half the work runs by different rules than the other half.
+
 ## TL;DR
 
-A **cycle toggle** governs the *shape of a whole cycle*: how dispatches interleave, which axis is active, what "closed" means, what the stages are called. You cannot flip it mid-cycle, because half the cycle would run under one shape and half under another. Cycle toggles flip only at a **clean seam** — a dispatch close, a cycle close, or a charter posture transition.
+A "cycle" is one full round of work (think: a sprint with a clear opening and closing). A **cycle toggle** governs the *shape of a whole cycle*: how dispatches interleave, which axis is active, what "closed" means, what the stages are called. You cannot flip it mid-cycle, because half the cycle would run under one shape and half under another. Cycle toggles flip only at a **clean seam** — a dispatch close, a cycle close, or a charter posture transition.
 
 The headline cycle toggle is the **charter posture** (`LOCKED ↔ UNLOCKED`). It is not a dial you nudge; it is a state machine with exactly two stable states and two named transitions. Getting its timing wrong races the active axis against the very work meant to govern it.
 
@@ -31,7 +33,7 @@ The headline cycle toggle is the **charter posture** (`LOCKED ↔ UNLOCKED`). It
 
 This is the spine of the whole section, so it gets the full treatment.
 
-A CompassAlpha federation has a **charter state machine** with two stable states and two transitions:
+The "charter" is the federation's rulebook. A **state machine** here just means it lives in one of a fixed set of named states and moves between them only through named, deliberate transitions — never by drifting. A CompassAlpha federation has a charter state machine with two stable states and two transitions:
 
 ```
                    ┌────────────────────────────────────────┐
@@ -68,7 +70,7 @@ An axis declared `DECOUPLED` (e.g. a future review/audit axis independent of cha
 
 ### Concurrency mode
 
-LAYGO (one unit at a time) / Pipelined / Parallel-independent / Parallel-doer. This defines how dispatches interleave across the cycle. You cannot switch from sequential to parallel halfway through — the in-flight dispatches were planned under the old interleaving. Settle it at the boundary, run the whole cycle under one mode.
+How much work runs at once. LAYGO (one unit at a time) / Pipelined / Parallel-independent / Parallel-doer. This defines how dispatches interleave across the cycle. You cannot switch from sequential to parallel halfway through — the in-flight dispatches were planned under the old interleaving. Settle it at the boundary, run the whole cycle under one mode.
 
 ### Cycle-tail acceptance
 
@@ -102,6 +104,13 @@ The common thread: a cycle toggle changed mid-cycle splits the cycle into two in
 ## Defaults
 
 Reference defaults: `LOCKED` posture (build axis active), LAYGO concurrency, strict cycle-tail, §9 depth ~20–30, fresh-per-event Mentor-2, 2–4 week rotation. These are the [Conservative preset](operating-presets.md). The [Balanced](operating-presets.md) and [Throughput](operating-presets.md) presets relax concurrency to Pipelined / Parallel after the first cycle proves the rhythm.
+
+## Remember this
+
+- **A cycle toggle is a "between-rounds" setting.** It shapes how an entire cycle runs, so changing it mid-cycle would split that cycle into two halves running by different rules. Always wait for a clean seam — a dispatch close, a cycle close, or a charter posture transition.
+- **The charter posture (`LOCKED ↔ UNLOCKED`) is the big one.** It hands the federation between the build axis and the doctrine axis. Flipping it at the wrong moment is the most damaging timing mistake in the framework, which is why two gates guard the transition.
+- **Defaults are deliberately conservative.** Start locked, one-thing-at-a-time, strict "done." You only relax these once the team's rhythm has proven itself.
+- New here? These switches make the most sense once you have [the mental model](../00-foundation/mental-model.md) of axes, cycles, and tiers.
 
 ## Connections
 

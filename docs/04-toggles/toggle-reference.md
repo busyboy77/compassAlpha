@@ -6,11 +6,13 @@ description: "The complete switch list. Every changeable setting, classified by 
 
 > *The complete switch list. Every changeable setting, classified by **when** it may flip.*
 
+New here? This page is the one-stop list of every setting you can change in CompassAlpha, and — just as important — *when* it's safe to change each one. Some settings you can flip any time; others you must wait for the right moment, or you'll break work that's already running.
+
 `[TOGGLES — the master classification table]`
 
 ## TL;DR
 
-This is the map. Every tunable that CompassAlpha exposes appears here exactly once, tagged with its **flip-timing class** — Runtime, Cycle-boundary, or Project-lifecycle — plus a one-line note on *why* it sits in that class and what breaks if you flip it early.
+This is the map. Each "toggle" is a setting you can change, and its **flip-timing class** tells you the soonest safe moment to change it. Every tunable that CompassAlpha exposes appears here exactly once, tagged with its class — Runtime (change any time), Cycle-boundary (wait for a natural pause between work cycles), or Project-lifecycle (effectively set-once, at adoption) — plus a one-line note on *why* it sits in that class and what breaks if you flip it early.
 
 Read the [overview](index.md) first for what the three classes mean. Read the per-class pages ([Runtime](runtime-toggles.md), [Cycle](cycle-toggles.md), [Project-lifecycle](project-lifecycle-toggles.md)) for the detailed reasoning. This page is the lookup table you return to.
 
@@ -74,6 +76,13 @@ The two `[INVARIANT]` rows that *do* appear above (VCS = git, single-live-writer
 - **Founder involvement** is classed `RUNTIME` because the founder can always choose to lean in on a specific request — but per the [hard-labour rule](../01-axioms/hard-labour-rule.md) and §18, *standing* involvement above RELAY + lost+found bloats founder cognitive load and erodes the [trust anchor](../01-axioms/persistence-law.md). Flip it situationally, not structurally.
 - **Charter posture** is the most consequential cycle toggle in the framework. It gets its own detailed treatment on the [Cycle toggles](cycle-toggles.md) page — it is *not* a dial you nudge.
 - **Mentor-1 lifecycle** appears under both Cycle and Lifecycle framings deliberately: it's foundational enough to treat as set-once, but a mature project may revisit it at a cycle boundary. When in doubt, treat it as `LIFECYCLE`.
+
+## Remember this
+
+- A **toggle** is just a changeable setting. Its **flip-timing class** answers one question: when is it safe to change?
+- Three classes, simplest rule of thumb: `RUNTIME` = change any time, `CYCLE` = wait for a clean break between work cycles, `LIFECYCLE` = decide once, at adoption.
+- The danger isn't *what* you change — it's *when*. Flipping a cycle-shape or set-once setting mid-flight can break work that's already in motion, which is exactly why this table exists.
+- If a setting you expected isn't here, it's probably an `[INVARIANT]` — a rule the framework never lets you flip. Those live in [the mental model](../00-foundation/mental-model.md) as fixed foundations, not dials.
 
 ## Connections
 

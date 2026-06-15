@@ -8,11 +8,13 @@ description: "Named bundles of settings. Pick one to start, then tune from there
 
 `[TOGGLES — named preset bundles]`
 
+Think of this page as a menu of ready-made setups. Instead of hand-picking dozens of individual settings, you pick the one bundle that fits your situation — like choosing a camera's "Sport" or "Night" mode instead of dialing in every exposure setting yourself — and adjust from there.
+
 ## TL;DR
 
-Rather than setting every [tunable](../03-tunables/index.md) individually and then reasoning about every [flip-timing class](toggle-reference.md), a project can start from a **named preset** — a coherent bundle of toggle values that have been chosen to work together. Pick the preset that matches your context, adopt its values, then tune from there.
+A **preset** is a starter pack of settings that are known to work well together. Rather than setting every [tunable](../03-tunables/index.md) individually and then reasoning about every [flip-timing class](toggle-reference.md) (when each setting is safe to change), a project can start from a **named preset** — a coherent bundle of toggle values that have been chosen to work together. Pick the preset that matches your context, adopt its values, then tune from there.
 
-Each preset *locks* certain settings (you commit to them for the project's posture) and leaves others *flippable* (you adjust as you learn). There are also three **anti-presets** — combinations that look tempting but trade away CompassAlpha's correctness guarantees for marginal gains. Don't use them.
+Each preset *locks* certain settings (you commit to them for the project's posture — its overall stance on speed, cost, and risk) and leaves others *flippable* (you adjust them as you learn). There are also three **anti-presets** — combinations that look tempting but trade away CompassAlpha's correctness guarantees for marginal gains. Don't use them.
 
 
 [![The operating presets as a matrix of tuning-dial choices, plus the anti-presets danger zone](../assets/operating-presets-matrix.svg)](../assets/operating-presets-matrix.svg)
@@ -87,6 +89,13 @@ The through-line: each anti-preset stacks loosened settings *multiplicatively*. 
 ## The line presets cannot cross
 
 Presets and tuning operate on the **performance / cost / risk surface only.** The structural rules — the seven [axioms](../01-axioms/index.md), the [guardrails](../02-guardrails/index.md), the load-bearing invariants — remain fixed across *every* preset and every combination. No preset can toggle the [firewall](../01-axioms/firewall.md), the [hard-labour rule](../01-axioms/hard-labour-rule.md), the [persistence law](../01-axioms/persistence-law.md), the [bus protocol](../01-axioms/bus-protocol.md), or the [provenance law](../01-axioms/provenance-law.md). Tuning changes how fast and how cheap; it never changes what is correct.
+
+## Remember this
+
+- A **preset** is a starting setup, not a contract. Pick the one closest to your situation, then tune as you learn — projects routinely graduate from one preset to another.
+- When you're brand-new, start with **Bootstrap**: it keeps things slow and safe so you can prove the rhythm before you optimize anything.
+- The **anti-presets** are real temptations, not strawmen. The danger isn't any single loosened setting — it's stacking several at once, which quietly removes the safety nets that catch mistakes.
+- Presets only adjust speed, cost, and risk. They can never weaken the structural rules — the axioms and guardrails stay fixed no matter which preset you pick. If this distinction is fuzzy, revisit [the mental model](../00-foundation/mental-model.md).
 
 ## Connections
 
