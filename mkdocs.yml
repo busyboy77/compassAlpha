@@ -145,6 +145,7 @@ nav:
     - Operating presets: 04-toggles/operating-presets.md
   - Getting Started:
     - 05-getting-started/index.md
+    - Start from a story: 05-getting-started/start-from-a-story.md
     - Prerequisites: 05-getting-started/prerequisites.md
     - Greenfield setup: 05-getting-started/greenfield-setup.md
     - Brownfield onboarding: 05-getting-started/brownfield-onboarding.md

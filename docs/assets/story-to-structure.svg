@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 760" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="aflow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+  </defs>
+
+  <rect width="1500" height="760" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="88" fill="#1f2a36"/>
+  <text x="750" y="38" text-anchor="middle" font-size="27" font-weight="700" fill="#ffffff">Start From a Story</text>
+  <text x="750" y="65" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Plain words in &#8594; a coherent CompassAlpha structure out &#8212; the greenfield path</text>
+
+  <!-- arrows between panels -->
+  <line x1="308" y1="330" x2="342" y2="330" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#aflow)"/>
+  <line x1="602" y1="330" x2="636" y2="330" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#aflow)"/>
+  <line x1="896" y1="330" x2="930" y2="330" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#aflow)"/>
+  <line x1="1190" y1="330" x2="1224" y2="330" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#aflow)"/>
+
+  <!-- ===== P1 · STORY ===== -->
+  <rect x="50" y="120" width="256" height="420" rx="11" fill="#f0ede4" stroke="#a89968" stroke-width="1.8"/>
+  <rect x="50" y="120" width="256" height="44" rx="11" fill="#e7e0cf"/><rect x="50" y="148" width="256" height="16" fill="#e7e0cf"/>
+  <text x="178" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#4a3f18">1 &#183; STORY</text>
+  <text x="178" y="186" text-anchor="middle" font-size="11.5" fill="#5a4d20">plain-English brief</text>
+  <text x="178" y="206" text-anchor="middle" font-size="10.5" fill="#6a5a28">role &#183; project &#183; components</text>
+  <text x="178" y="222" text-anchor="middle" font-size="10.5" fill="#6a5a28">&#183; charter mode</text>
+  <rect x="68" y="244" width="220" height="160" rx="8" fill="#ffffff" stroke="#a89968" stroke-width="1.2"/>
+  <text x="80" y="266" font-size="10" fill="#6a5a28" font-style="italic">"As a reader, I want</text>
+  <text x="80" y="282" font-size="10" fill="#6a5a28" font-style="italic">Bookshelf, with</text>
+  <text x="80" y="298" font-size="10" fill="#6a5a28" font-style="italic">components:</text>
+  <text x="80" y="316" font-size="10.5" fill="#2a3a4a" font-weight="700">catalog, shelves,</text>
+  <text x="80" y="332" font-size="10.5" fill="#2a3a4a" font-weight="700">accounts.</text>
+  <text x="80" y="352" font-size="10" fill="#6a5a28" font-style="italic">Each in its own</text>
+  <text x="80" y="368" font-size="10" fill="#6a5a28" font-style="italic">compass. Charter:</text>
+  <text x="80" y="386" font-size="10.5" fill="#2a3a4a" font-weight="700">lean."</text>
+  <text x="178" y="424" text-anchor="middle" font-size="10" fill="#7a6a38" font-style="italic">no jargon needed to start</text>
+
+  <!-- ===== P2 · COMPASSES ===== -->
+  <rect x="344" y="120" width="258" height="420" rx="11" fill="#eef4f9" stroke="#3b6ea5" stroke-width="1.8"/>
+  <rect x="344" y="120" width="258" height="44" rx="11" fill="#dce8f4"/><rect x="344" y="148" width="258" height="16" fill="#dce8f4"/>
+  <text x="473" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a4a7a">2 &#183; COMPASSES</text>
+  <text x="473" y="184" text-anchor="middle" font-size="11" fill="#3b6ea5">one per component &#183; each 60K/30K/10K</text>
+  <!-- three mini compasses -->
+  <g>
+    <rect x="362" y="200" width="222" height="100" rx="7" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.2"/>
+    <text x="372" y="219" font-size="11" font-weight="700" fill="#1a4a7a">catalog</text>
+    <text x="372" y="238" font-size="9.5" fill="#5a7aa0">60K  why a book is the source of truth</text>
+    <text x="372" y="256" font-size="9.5" fill="#5a7aa0">30K  create / edit / de-dupe</text>
+    <text x="372" y="274" font-size="9.5" fill="#5a7aa0">10K  book table &#183; ISBN rule &#183; events</text>
+    <text x="372" y="292" font-size="9" fill="#9aaabf" font-style="italic">why fixed before detail</text>
+    <rect x="362" y="308" width="222" height="46" rx="7" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.2"/>
+    <text x="372" y="327" font-size="11" font-weight="700" fill="#1a4a7a">shelves</text>
+    <text x="372" y="345" font-size="9.5" fill="#5a7aa0">60K / 30K / 10K  &#8594; needs accounts</text>
+    <rect x="362" y="362" width="222" height="46" rx="7" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.2"/>
+    <text x="372" y="381" font-size="11" font-weight="700" fill="#1a4a7a">accounts</text>
+    <text x="372" y="399" font-size="9.5" fill="#5a7aa0">60K / 30K / 10K  &#8594; identity for all</text>
+  </g>
+  <text x="473" y="430" text-anchor="middle" font-size="10" fill="#5a7aa0" font-style="italic">cross-refs keep them coherent</text>
+
+  <!-- ===== P3 · CHARTER ===== -->
+  <rect x="638" y="120" width="258" height="420" rx="11" fill="#fbf3e2" stroke="#c79a3a" stroke-width="1.8"/>
+  <rect x="638" y="120" width="258" height="44" rx="11" fill="#f4e6c6"/><rect x="638" y="148" width="258" height="16" fill="#f4e6c6"/>
+  <text x="767" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#7a5a18">3 &#183; CHARTER</text>
+  <text x="767" y="184" text-anchor="middle" font-size="11" fill="#8a6a28">the project-wide rulebook</text>
+  <text x="767" y="202" text-anchor="middle" font-size="10.5" fill="#8a6a28">invariants + primitives</text>
+  <rect x="656" y="222" width="222" height="86" rx="8" fill="#ffffff" stroke="#c79a3a" stroke-width="1.3"/>
+  <text x="767" y="244" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7a5a18">lean (default)</text>
+  <text x="767" y="263" text-anchor="middle" font-size="10" fill="#8a6a28">rules grow as the project</text>
+  <text x="767" y="278" text-anchor="middle" font-size="10" fill="#8a6a28">teaches you what they are</text>
+  <text x="767" y="297" text-anchor="middle" font-size="9.5" fill="#a07a30" font-style="italic">best when exploring</text>
+  <rect x="656" y="318" width="222" height="86" rx="8" fill="#ffffff" stroke="#c79a3a" stroke-width="1.3"/>
+  <text x="767" y="340" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7a5a18">preference-led</text>
+  <text x="767" y="359" text-anchor="middle" font-size="10" fill="#8a6a28">rules set up front from</text>
+  <text x="767" y="374" text-anchor="middle" font-size="10" fill="#8a6a28">your stated preferences</text>
+  <text x="767" y="393" text-anchor="middle" font-size="9.5" fill="#a07a30" font-style="italic">best when you know them</text>
+  <text x="767" y="430" text-anchor="middle" font-size="10" fill="#8a6a28" font-style="italic">every compass inherits it</text>
+
+  <!-- ===== P4 · AXES ===== -->
+  <rect x="932" y="120" width="258" height="420" rx="11" fill="#f1f6f1" stroke="#4a8a4a" stroke-width="1.8"/>
+  <rect x="932" y="120" width="258" height="44" rx="11" fill="#e0f0e0"/><rect x="932" y="148" width="258" height="16" fill="#e0f0e0"/>
+  <text x="1061" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#2a5a2a">4 &#183; AXES</text>
+  <text x="1061" y="184" text-anchor="middle" font-size="11" fill="#3a6a3a">tracks of work, in order</text>
+  <rect x="950" y="206" width="222" height="84" rx="8" fill="#ffffff" stroke="#4a8a4a" stroke-width="1.3"/>
+  <text x="1061" y="228" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">doctrine pass</text>
+  <text x="1061" y="247" text-anchor="middle" font-size="10" fill="#3a6a3a">write the Charter + each</text>
+  <text x="1061" y="262" text-anchor="middle" font-size="10" fill="#3a6a3a">compass's 60K (the why)</text>
+  <text x="1061" y="281" text-anchor="middle" font-size="9.5" fill="#5a8a5a" font-style="italic">rulebook UNLOCKED</text>
+  <text x="1061" y="312" text-anchor="middle" font-size="15" fill="#4a8a4a">&#8595;</text>
+  <rect x="950" y="320" width="222" height="84" rx="8" fill="#ffffff" stroke="#4a8a4a" stroke-width="1.3"/>
+  <text x="1061" y="342" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2a5a2a">build axis</text>
+  <text x="1061" y="361" text-anchor="middle" font-size="10" fill="#3a6a3a">write code against the</text>
+  <text x="1061" y="376" text-anchor="middle" font-size="10" fill="#3a6a3a">settled compasses</text>
+  <text x="1061" y="395" text-anchor="middle" font-size="9.5" fill="#5a8a5a" font-style="italic">rulebook LOCKED</text>
+  <text x="1061" y="430" text-anchor="middle" font-size="10" fill="#3a6a3a" font-style="italic">take turns &#183; never overlap</text>
+
+  <!-- ===== P5 · PRINTED SCOPE ===== -->
+  <rect x="1224" y="120" width="226" height="420" rx="11" fill="#1f2a36"/>
+  <text x="1337" y="150" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">5 &#183; SCOPE</text>
+  <text x="1337" y="174" text-anchor="middle" font-size="10.5" fill="#a0aabb">your starting map (printed)</text>
+  <rect x="1242" y="192" width="190" height="220" rx="8" fill="#2a3744" stroke="#3b6ea5" stroke-width="1"/>
+  <text x="1254" y="214" font-size="9.5" fill="#cfe0f0" font-family="JetBrains Mono, monospace">PROJECT Bookshelf</text>
+  <text x="1254" y="232" font-size="9.5" fill="#cfe0f0" font-family="JetBrains Mono, monospace">mode  lean greenfield</text>
+  <text x="1254" y="256" font-size="9.5" fill="#9ad09a" font-family="JetBrains Mono, monospace">COMPASSES 3</text>
+  <text x="1254" y="272" font-size="9" fill="#a0aabb" font-family="JetBrains Mono, monospace">catalog shelves</text>
+  <text x="1254" y="286" font-size="9" fill="#a0aabb" font-family="JetBrains Mono, monospace">accounts</text>
+  <text x="1254" y="310" font-size="9.5" fill="#e6c878" font-family="JetBrains Mono, monospace">CHARTER v0.1</text>
+  <text x="1254" y="326" font-size="9" fill="#a0aabb" font-family="JetBrains Mono, monospace">inv: stable book ID</text>
+  <text x="1254" y="350" font-size="9.5" fill="#9ad09a" font-family="JetBrains Mono, monospace">AXES</text>
+  <text x="1254" y="366" font-size="9" fill="#a0aabb" font-family="JetBrains Mono, monospace">doctrine &#8594; build</text>
+  <text x="1254" y="390" font-size="9.5" fill="#ffffff" font-family="JetBrains Mono, monospace">FIRST build catalog</text>
+  <text x="1337" y="430" text-anchor="middle" font-size="10" fill="#a0aabb" font-style="italic">follow it from here</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="50" y="566" width="1400" height="106" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="596" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">You start in plain English; the structure is the output, not a prerequisite.</text>
+  <text x="750" y="622" text-anchor="middle" font-size="12.5" fill="#5a4d20"><tspan font-weight="700">Where:</tspan> each step names one artifact (story &#8594; compasses &#8594; Charter &#8594; axes &#8594; scope). &#160; <tspan font-weight="700">How:</tspan> every compass descends 60K&#8594;30K&#8594;10K so the why is fixed before the detail.</text>
+  <text x="750" y="644" text-anchor="middle" font-size="12.5" fill="#5a4d20"><tspan font-weight="700">Why:</tspan> one component &#8594; one compass, all under one Charter, keeps a brand-new codebase coherent from the first sentence you write.</text>
+  <text x="750" y="663" text-anchor="middle" font-size="11.5" fill="#6a5a28" font-style="italic">Greenfield path &#183; bringing in an existing codebase is the brownfield path.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="712" width="6" height="8" rx="1"/><rect x="699" y="706" width="6" height="14" rx="1"/><rect x="708" y="700" width="6" height="20" rx="1"/></g>
+    <text x="722" y="720" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>
