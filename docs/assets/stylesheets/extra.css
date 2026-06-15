@@ -1,0 +1,17 @@
+/* Make SVG illustrations render large and readable inside the glightbox lightbox.
+   Our diagrams are vector (SVG) with a viewBox + intrinsic width/height, so they
+   scale crisply — fill most of the viewport rather than a tiny default box. */
+.glightbox-container .gslide-image img,
+.gslide-image img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 94vw !important;
+  max-height: 88vh !important;
+  object-fit: contain;
+}
+
+/* The zoom/“view full size” interaction needs the media to be able to exceed
+   the viewport; allow the zoomed image to grow. */
+.glightbox-container .gslide-media {
+  max-width: 94vw;
+}

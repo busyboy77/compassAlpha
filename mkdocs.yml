@@ -91,7 +91,14 @@ markdown_extensions:
 plugins:
   - search:
       separator: '[\s​\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - glightbox
+  - glightbox:
+      zoomable: true
+      draggable: true
+      width: "100%"
+      height: auto
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 extra_javascript:
   - assets/javascripts/permalink-copy.js
