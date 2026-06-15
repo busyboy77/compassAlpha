@@ -4,6 +4,8 @@ description: "What changed in CompassAlpha, version by version. Newest first."
 
 # Changelog
 
+This page is the project's history book: a list of what changed in each release, newest at the top. Skim it to see what's new, what was fixed, or what moved since you last looked.
+
 > What changed in CompassAlpha, version by version. Newest first.
 
 This changelog records notable changes to the framework and its documentation portal. It groups changes under **Added**, **Changed**, **Deprecated**, **Removed**, **Fixed**, and **Security** as they apply. Versions follow the framework's own release line; see the [Roadmap](roadmap.md) for what each milestone means.

@@ -6,6 +6,8 @@ description: "The path from v0.1 DRAFT to a stable v1.0."
 
 > The path from v0.1 DRAFT to a stable v1.0.
 
+This page is a plain progress report: where CompassAlpha is today, what's left to do, and how we'll know it's ready for everyday reliance. If you're deciding whether to lean on it now or wait, this is the page that tells you.
+
 CompassAlpha is young. This page describes where it is, what stands between here and a stable release, and how we will know we have arrived. It is deliberately milestone-based rather than date-based — the framework matures when the work is done, not when a calendar says so.
 
 ## Where we are now
@@ -37,7 +39,7 @@ The portal is authored end to end; this phase now tightens cross-references and 
 
 ### Phase 2 — Harden through use
 
-Doctrine only proves itself in contact with reality. This phase is about running the framework, finding the rough edges, and feeding what we learn back into the doctrine through the normal doctrine-cycle discipline.
+The doctrine — the framework's written rules and conventions — only proves itself in contact with reality. This phase is about running the framework, finding the rough edges, and feeding what we learn back into the doctrine through the normal doctrine-cycle discipline (the routine of proposing a change, reviewing it, and locking it in).
 
 ### Phase 3 — Re-lock for stability
 
@@ -58,6 +60,12 @@ We will tag **v1.0** when all three of the following hold:
 3. **Real adoption** — at least **one greenfield** project (built on CompassAlpha from the start) and **one brownfield** project (an existing system adopting it) are running on the framework.
 
 Until those are met, expect breaking changes between v0.x releases.
+
+## Remember this
+
+- **v0.1 means "drafted, not yet locked."** The portal is written end to end, but the rules can still change between v0.x releases — so try it, shape it, but don't depend on stability yet.
+- **v1.0 is milestone-based, not date-based.** It ships when three things hold: a full doctrine cycle closes, outside contributors review it, and at least one greenfield and one brownfield project run on it.
+- New to the framework? Start with [the mental model](../00-foundation/mental-model.md) before tracking where it's headed here.
 
 ## A licensing note in context
 

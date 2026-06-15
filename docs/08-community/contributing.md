@@ -6,6 +6,8 @@ description: "How to help shape CompassAlpha — and how your contributions are 
 
 > How to help shape CompassAlpha — and how your contributions are licensed.
 
+**New here?** This page tells you how to pitch in — whether you spotted a typo, found something confusing, or want to suggest a real change to how the framework works. It also explains, in plain terms, what happens to your contribution once you submit it.
+
 Contributions are welcome. Because CompassAlpha is a framework — a constitution plus conventions plus worked examples — most contributions are about *doctrine and documentation* as much as code. This page explains the channels and the ground rules.
 
 ## Ways to contribute
@@ -17,7 +19,7 @@ Contributions are welcome. Because CompassAlpha is a framework — a constitutio
 
 ## How doctrine proposals work
 
-A doctrine proposal changes the framework's behavior or its invariants, so it travels through the framework's own **doctrine-cycle discipline** rather than landing as an ad-hoc edit:
+A *doctrine proposal* is any change to the framework's rules or behavior — the parts other adopters depend on. Because of that ripple effect, it doesn't just land as a quick edit; it travels through the framework's own **doctrine-cycle discipline** (a small, deliberate review path):
 
 1. Open a discussion that states the problem the change solves and the smallest change that solves it.
 2. Cite the substrate — point to the exact page, axiom, or section affected, by path.
@@ -48,6 +50,13 @@ This is a lightweight inbound-license note, not a separate legal contract; submi
 
 !!! note "Trademarks are not licensed"
     "CompassAlpha" and "gradus" are trademarks of gradus. Nothing here grants rights to those names or logos. You may, of course, refer to the framework by name to describe origin or interoperability.
+
+## Remember this
+
+- Every contribution counts — fixing a typo or flagging a confusing page is just as welcome as proposing a new rule.
+- Small fixes are fast; bigger changes to the framework's rules go through a short review so nothing surprising slips in.
+- Writing things down (on disk, not just in chat) is the habit that keeps everyone's work durable and easy to trace — it mirrors [the mental model](../00-foundation/mental-model.md) the whole framework runs on.
+- By submitting, you agree your work ships under the project's license and that gradus can relicense it — read the licensing section before you send a large contribution.
 
 ## See also
 

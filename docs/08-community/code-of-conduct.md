@@ -4,6 +4,8 @@ description: "The behavior we expect of everyone who takes part in the CompassAl
 
 # Code of Conduct
 
+New here? This page is the simple promise we all make to each other: argue about the ideas as hard as you like, but always treat people with respect.
+
 > The behavior we expect of everyone who takes part in the CompassAlpha community.
 
 CompassAlpha is built in the open, and the quality of the framework depends on the quality of the conversation around it. This code of conduct applies to all project spaces — issues, discussions, pull requests, and any official channel — and to anyone who participates in them.
