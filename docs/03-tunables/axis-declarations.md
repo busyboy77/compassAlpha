@@ -16,6 +16,10 @@ In plain terms: there's one shared rulebook (the **master**), and each lane of w
 
 A CompassAlpha federation is structured by **inheritance**: one master protocol holds every substantive rule, and each **work axis** is a thin declaration that names its tiers and a handful of settings, then inherits everything else. The default federation ships with two axes — **build** (produces code) and **doctrine** (produces governing documents). Adding a third axis (review, ops, AI-training, pen-test, …) is mechanical: name three tier roles, fill the declaration template, inherit the rest. You author no parallel rule sections. This page is the customization surface for declaring axes.
 
+![The three Charter postures an axis can declare — LOCKED and UNLOCKED alternate (never both at once); DECOUPLED runs continuously alongside, reading the Charter read-only](../assets/charter-postures.svg)
+
+<small>*Declaring an axis chooses its posture toward the rulebook. LOCKED and UNLOCKED take turns, so a build never races an amendment; DECOUPLED day-2 axes (ops, QA, audit) run continuously, read the Charter read-only, and can only request a change — never make one directly.*</small>
+
 ## The dial
 
 Most projects start with one axis (`build`) and add a second (`doctrine`) once the rhythm is proven. Some never need more than one. Some grow to four. The dial is **how many axes you declare and what each one produces** — every axis inherits the same firewall, bus, hard-labour, and persistence rules from the master, so the marginal cost of an axis is a declaration, not a rewrite.

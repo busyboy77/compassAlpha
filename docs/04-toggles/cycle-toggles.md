@@ -29,6 +29,10 @@ The headline cycle toggle is the **charter posture** (`LOCKED ↔ UNLOCKED`). It
 | Mentor-2 lifecycle | fresh-per-event | per-dispatch | cycle boundary |
 | Rotation cadence | 2–4 weeks | 1–6 weeks | cycle boundary |
 
+![The Charter alternation as a two-state machine — LOCKED (the build axis runs) and UNLOCKED (the doctrine axis runs), with the transitions that open and close an amendment epoch](../assets/cycle-alternation.svg)
+
+<small>*Two states, one at a time: build under a LOCKED rulebook, UNLOCK to amend it, ratify the amendment package and bump the charter version, then RE-LOCK. They never run together — that is what stops a build from racing the rules being changed.*</small>
+
 ## The charter posture state machine
 
 This is the spine of the whole section, so it gets the full treatment.

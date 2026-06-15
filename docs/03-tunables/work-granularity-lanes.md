@@ -18,6 +18,10 @@ A "lane" here is just a level of process ceremony — how many review steps, sig
 
 Every project has all four lanes available structurally. The tunable is **which lanes a preset enables** and **the per-lane policies** (gate strictness, tag ceremony, status-grid requirements). Get the lane-set wrong — too few enabled — and the framework feels like over-engineering; get it right and it feels like the project's smartest tooling.
 
+![The four work-granularity lanes as a descending ceremony ladder — Doctrine Cycle, Phase 3, Polish, Surgical — heavier change and more ceremony to the left, lighter to the right](../assets/work-granularity-lanes.svg)
+
+<small>*Match the ceremony to the change. Heaviest at left (Doctrine Cycle — weeks, full gates), lightest at right (Surgical — minutes). Over-ceremony a one-line fix and you waste days; under-ceremony a structural change and you race the rules. Each lighter lane is a relaxation of the Doctrine Cycle.*</small>
+
 ## The four lanes
 
 | Lane | Granularity | Examples | Tier ceremony | Gates | Tag | Turnaround |
