@@ -84,6 +84,14 @@ Every tier turn follows this pattern:
 
 Spawn the right tier session as needed; deliver one-line trigger pings. **Content moves entirely through git; the founder's clipboard carries zero substantive content.**
 
+## The federation at work — orders across both axes
+
+Both work axes run the same three tiers and the same bus. Orders flow *down* the tiers as **sub-bumps** (a brief or directive); tagged returns flow *up* as **up-bumps**; and the founder relays one-liner pings between axes. Only the Doer ever touches the substrate, and the two axes take turns — so the build never races the rules.
+
+![How orders flow across both axes via the bus protocol — the doctrine axis and the build axis, each Mentor-1 → Mentor-2 → Doer, with the founder relaying between them and the bus carrying sub-bump orders down and up-bump tagged returns up](../assets/federation-orders-bus.svg)
+
+<small>*Orders ride the bus, not the chat. The bus carries orders down (sub-bump) and tagged returns up (up-bump); the founder relays one-liners across axes; only the Doer touches the substrate; the two axes never run at once. Each axis names its own three tiers — Mentor-1 / Mentor-2 / Doer are the reference names.*</small>
+
 ## Why this exists
 
 ### Reason 1: Founder cognitive load minimization

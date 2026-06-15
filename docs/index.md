@@ -6,9 +6,9 @@ description: "CompassAlpha is a source-available framework for coordinating mult
 
 > *"A framework, not a tool. State of the federation = state of git."*
 
-CompassAlpha is a source-available framework for orchestrating multi-tier AI-agent federations on substantial codebases and doctrine work. It is the reference framework for **GitAI** — a category that applies GitOps' coordination patterns to multi-agent AI operations.
+> **The point of CompassAlpha: a codebase that stays coherent as it grows** — one canonical way to do each thing, **enforced by an AI-agent federation against a single doctrine**, never left to each agent's guess. Say a component's vision in plain words; the federation grows it down through every layer — 60K ideology → 30K mechanics → 10K schema → code — all bound to that one doctrine. [How code coherence works →](00-foundation/codebase-coherence.md)
 
-> **Say the vision; get a coherent codebase grown from it** — state a component's 60K ideology in plain words, and the federation elaborates it down through 30K mechanics → 10K schema → code, every layer coherent with the doctrine above. [How it works →](00-foundation/codebase-coherence.md)
+CompassAlpha is the source-available framework that orchestrates those multi-tier AI-agent federations on substantial codebases and doctrine work — the reference framework for **GitAI** (GitOps' coordination patterns applied to multi-agent AI). Coherence is what you get; the federation, the bus protocol, and git are how it's delivered.
 
 ![CompassAlpha — the federation framework on one page](assets/federation-diagram.svg)
 

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 840" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="adown" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,0 L5,10 z" fill="#3b6ea5"/></marker>
+    <marker id="aup" viewBox="0 0 10 10" refX="5" refY="1" markerWidth="7" markerHeight="7" orient="auto"><path d="M5,0 L10,10 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="arelay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a89968"/></marker>
+  </defs>
+
+  <rect width="1500" height="840" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="90" fill="#1f2a36"/>
+  <text x="750" y="40" text-anchor="middle" font-size="27" font-weight="700" fill="#ffffff">How Orders Flow — Two Axes, One Bus</text>
+  <text x="750" y="67" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Tiers give and receive orders through the bus protocol; the founder relays between axes; the axes take turns</text>
+
+  <!-- ============ FOUNDER RELAY ============ -->
+  <rect x="590" y="108" width="320" height="58" rx="11" fill="#f0ede4" stroke="#a89968" stroke-width="2"/>
+  <text x="750" y="133" text-anchor="middle" font-size="14.5" font-weight="700" fill="#4a3f18">Founder — the relay</text>
+  <text x="750" y="153" text-anchor="middle" font-size="11" fill="#6a5a28" font-style="italic">one-liner pings · low cognitive load · never a per-decision arbiter</text>
+  <!-- relay arrows to each axis Mentor-1 -->
+  <path d="M610,166 C470,196 410,210 390,238" fill="none" stroke="#a89968" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arelay)"/>
+  <path d="M890,166 C1030,196 1090,210 1110,238" fill="none" stroke="#a89968" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arelay)"/>
+
+  <!-- alternation note (center) -->
+  <rect x="636" y="436" width="228" height="64" rx="10" fill="#fff" stroke="#5a6a7a" stroke-width="1.4"/>
+  <text x="750" y="462" text-anchor="middle" font-size="18" font-weight="700" fill="#2a3a4a">&#8644;</text>
+  <text x="750" y="482" text-anchor="middle" font-size="10.5" fill="#2a3a4a">axes alternate — only</text>
+  <text x="750" y="496" text-anchor="middle" font-size="10.5" fill="#2a3a4a">one runs at a time</text>
+
+  <!-- ============ DOCTRINE AXIS (left) ============ -->
+  <rect x="110" y="200" width="520" height="468" rx="12" fill="#f1f6f1" stroke="#4a8a4a" stroke-width="1.8"/>
+  <rect x="110" y="200" width="520" height="50" rx="12" fill="#e0f0e0"/><rect x="110" y="232" width="520" height="18" fill="#e0f0e0"/>
+  <text x="370" y="224" text-anchor="middle" font-size="15" font-weight="700" fill="#2a5a2a">DOCTRINE AXIS</text>
+  <text x="370" y="242" text-anchor="middle" font-size="11" fill="#3a6a3a" font-style="italic">Charter UNLOCKED · changes the rulebook</text>
+
+  <rect x="150" y="266" width="440" height="62" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="370" y="291" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">Mentor-1</text>
+  <text x="370" y="311" text-anchor="middle" font-size="10.5" fill="#5a7aa0">mentor · holds the cycle · never touches substrate</text>
+
+  <rect x="150" y="406" width="440" height="62" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="370" y="431" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">Mentor-2</text>
+  <text x="370" y="451" text-anchor="middle" font-size="10.5" fill="#5a7aa0">orchestrator · slices the work · never touches substrate</text>
+
+  <rect x="150" y="546" width="440" height="62" rx="9" fill="#cfe0f0" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="370" y="571" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">Doer</text>
+  <text x="370" y="591" text-anchor="middle" font-size="10.5" fill="#3b6ea5">the only tier that touches the substrate</text>
+  <!-- bus arrows M1<->M2 -->
+  <line x1="300" y1="332" x2="300" y2="402" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#adown)"/>
+  <text x="250" y="372" text-anchor="end" font-size="9.5" fill="#1a4a7a">sub-bump</text><text x="250" y="385" text-anchor="end" font-size="9" fill="#5a7aa0">order / brief</text>
+  <line x1="440" y1="402" x2="440" y2="332" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#aup)"/>
+  <text x="490" y="372" font-size="9.5" fill="#2a5a2a">up-bump</text><text x="490" y="385" font-size="9" fill="#5a8a5a">tagged return</text>
+  <!-- bus arrows M2<->Doer -->
+  <line x1="300" y1="472" x2="300" y2="542" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#adown)"/>
+  <line x1="440" y1="542" x2="440" y2="472" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#aup)"/>
+
+  <!-- ============ BUILD AXIS (right) ============ -->
+  <rect x="870" y="200" width="520" height="468" rx="12" fill="#f1f6f1" stroke="#4a8a4a" stroke-width="1.8"/>
+  <rect x="870" y="200" width="520" height="50" rx="12" fill="#e0f0e0"/><rect x="870" y="232" width="520" height="18" fill="#e0f0e0"/>
+  <text x="1130" y="224" text-anchor="middle" font-size="15" font-weight="700" fill="#2a5a2a">BUILD (DEV) AXIS</text>
+  <text x="1130" y="242" text-anchor="middle" font-size="11" fill="#3a6a3a" font-style="italic">Charter LOCKED · writes code against the rulebook</text>
+
+  <rect x="910" y="266" width="440" height="62" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="1130" y="291" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">Mentor-1</text>
+  <text x="1130" y="311" text-anchor="middle" font-size="10.5" fill="#5a7aa0">mentor · holds the cycle · never touches substrate</text>
+
+  <rect x="910" y="406" width="440" height="62" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="1130" y="431" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">Mentor-2</text>
+  <text x="1130" y="451" text-anchor="middle" font-size="10.5" fill="#5a7aa0">orchestrator · slices the work · never touches substrate</text>
+
+  <rect x="910" y="546" width="440" height="62" rx="9" fill="#cfe0f0" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="1130" y="571" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">Doer</text>
+  <text x="1130" y="591" text-anchor="middle" font-size="10.5" fill="#3b6ea5">the only tier that touches the substrate</text>
+  <line x1="1060" y1="332" x2="1060" y2="402" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#adown)"/>
+  <text x="1010" y="372" text-anchor="end" font-size="9.5" fill="#1a4a7a">sub-bump</text><text x="1010" y="385" text-anchor="end" font-size="9" fill="#5a7aa0">order / brief</text>
+  <line x1="1200" y1="402" x2="1200" y2="332" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#aup)"/>
+  <text x="1250" y="372" font-size="9.5" fill="#2a5a2a">up-bump</text><text x="1250" y="385" font-size="9" fill="#5a8a5a">tagged return</text>
+  <line x1="1060" y1="472" x2="1060" y2="542" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#adown)"/>
+  <line x1="1200" y1="542" x2="1200" y2="472" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#aup)"/>
+
+  <!-- ============ NAMING NOTE ============ -->
+  <rect x="110" y="684" width="1280" height="30" rx="7" fill="#eef2f6" stroke="#5a6a7a" stroke-width="1.2"/>
+  <text x="750" y="704" text-anchor="middle" font-size="11" fill="#2a3a4a">Each axis names its own three tiers (the axis-declaration tunable). <tspan font-weight="700">Mentor-1 / Mentor-2 / Doer</tspan> are the reference names.</text>
+
+  <!-- ============ CAPTION STRIP ============ -->
+  <rect x="110" y="724" width="1280" height="86" rx="10" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="751" text-anchor="middle" font-size="13" font-weight="700" fill="#4a3f18">Orders ride the bus, not the chat — and only the Doer ever touches the code.</text>
+  <text x="750" y="773" text-anchor="middle" font-size="11.5" fill="#5a4d20"><tspan font-weight="700">How:</tspan> the bus carries orders DOWN (sub-bump) and tagged returns UP (up-bump); the founder relays one-liners across axes. &#160; <tspan font-weight="700">Where:</tspan> two axes, each a three-tier stack.</text>
+  <text x="750" y="793" text-anchor="middle" font-size="11.5" fill="#5a4d20"><tspan font-weight="700">Why:</tspan> state crosses tiers through git (not chat), mentors never do labour, and the two axes never run at once — so the build never races the rules.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="822" width="6" height="6" rx="1"/><rect x="699" y="818" width="6" height="10" rx="1"/><rect x="708" y="814" width="6" height="14" rx="1"/></g>
+    <text x="722" y="828" font-size="12" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

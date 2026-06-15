@@ -6,6 +6,8 @@ description: "Codebase coherence is CompassAlpha's core distinction: the AI fede
 
 > *One canonical way to do each thing — enforced against the doctrine, not left to each agent's discretion. The codebase stays uniform as it grows, across sessions and across teams.*
 
+**This is CompassAlpha's flagship — AI-powered code coherence.** Everything else in the framework exists to make it possible: a codebase that stays coherent as it grows, because an AI-agent federation builds every layer against one doctrine.
+
 New here? This page explains how CompassAlpha keeps a codebase tidy and consistent when many AI agents (and many people) are all editing it — so the same job always gets done the same way, instead of everyone inventing their own version.
 
 ## TL;DR
