@@ -10,7 +10,7 @@ CompassAlpha is a source-available framework for orchestrating multi-tier AI-age
 
 > **Say the vision; get a coherent codebase grown from it** — state a component's 60K ideology in plain words, and the federation elaborates it down through 30K mechanics → 10K schema → code, every layer coherent with the doctrine above. [How it works →](00-foundation/codebase-coherence.md)
 
-[![CompassAlpha — the federation framework on one page](assets/federation-diagram.svg)](assets/federation-diagram.svg)
+![CompassAlpha — the federation framework on one page](assets/federation-diagram.svg)
 
 <small>*The whole framework on one page — inheritance · the two axes + future-axis slot · work-granularity lanes · stage taxonomies · the bus protocol · load-bearing rules · trade-offs · tunables. Click to open full size.*</small>
 
@@ -24,7 +24,7 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
     Read the Foundation pages in order (~20 minutes):
 
-    1. [**The mental model**](00-foundation/mental-model.md) — read this first: the eight ideas to carry into everything else
+    1. [**The mental model**](00-foundation/mental-model.md) — the core ideas the framework rests on
     2. [**Framework, not tool**](00-foundation/framework-not-tool.md) — what CompassAlpha is, what it's not
     3. [**Origin — why GitAI**](00-foundation/origin-story.md) — the failures that forced the framework
     4. [**The Constitution**](00-foundation/constitution.md) — the 7 invariant axioms + the doctrine model

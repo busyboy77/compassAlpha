@@ -19,7 +19,7 @@ CompassAlpha's claim that *"state of the federation = state of git"* rests on sp
 The triad: **`GIT_INDEX_FILE` per session + worktree per session + `commit-tree` plumbing**.
 
 
-[![Parallel Doers kept race-safe by per-session index, per-Doer worktree, and atomic refspec push](../assets/git-foundations-parallel-doer-safety.svg)](../assets/git-foundations-parallel-doer-safety.svg)
+![Parallel Doers kept race-safe by per-session index, per-Doer worktree, and atomic refspec push](../assets/git-foundations-parallel-doer-safety.svg)
 
 <small>*Race-safety by construction: isolated index, per-Doer worktree, and atomic refspec push let multiple Doers work in parallel without clobber — and the two planes never cross-commit.*</small>
 

@@ -16,7 +16,7 @@ In plain terms: don't forward the whole conversation — forward a short note th
 
 Every message that crosses the relay bus between tiers should be **minimal-sufficient**: as complete as the receiver needs to act or decide, and *no more*. The full explanatory detail — the reasoning, the dead-ends, the sibling churn — is **persisted in the sender's own substrate files** and pulled by the receiver *only when needed*. Relay a pointer or a concise delta digest; never shove a full transcript across the bus. This is the **bus vector of [pollution containment](pollution-containment.md)**: where that guardrail keeps context from bleeding across the tier *hierarchy*, this one keeps it from being *pushed* across the *bus*. The result is lightly loaded but intelligent threads at every tier — `[INVARIANT]` in principle; the message *form* is the tunable.
 
-[![The minimal-sufficient bus — a concise message crosses the bus while full detail stays in substrate pulled on demand, versus bump-everything that floods the receiver's context](../assets/minimal-sufficient-bus.svg)](../assets/minimal-sufficient-bus.svg)
+![The minimal-sufficient bus — a concise message crosses the bus while full detail stays in substrate pulled on demand, versus bump-everything that floods the receiver's context](../assets/minimal-sufficient-bus.svg)
 
 <small>*Left: a concise bus-message carries just enough to act; the detail lives in the sender's substrate and is pulled on demand, so the receiver stays light and clear-headed. Right: shoving the full transcript across the bus floods the receiver's context — heavy pollution, resources spent, no intelligence gained.*</small>
 

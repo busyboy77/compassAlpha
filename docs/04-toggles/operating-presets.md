@@ -17,7 +17,7 @@ A **preset** is a starter pack of settings that are known to work well together.
 Each preset *locks* certain settings (you commit to them for the project's posture — its overall stance on speed, cost, and risk) and leaves others *flippable* (you adjust them as you learn). There are also three **anti-presets** — combinations that look tempting but trade away CompassAlpha's correctness guarantees for marginal gains. Don't use them.
 
 
-[![The operating presets as a matrix of tuning-dial choices, plus the anti-presets danger zone](../assets/operating-presets-matrix.svg)](../assets/operating-presets-matrix.svg)
+![The operating presets as a matrix of tuning-dial choices, plus the anti-presets danger zone](../assets/operating-presets-matrix.svg)
 
 <small>*Named bundles of toggle values that work together — pick one as a starting point, tune from there, and avoid the anti-presets that dismantle the guardrails.*</small>
 

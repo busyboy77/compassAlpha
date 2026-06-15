@@ -13,7 +13,7 @@ CompassAlpha did not begin as a framework. It began as a frustration — a found
 ---
 
 
-[![The four pathologies of multi-agent AI work, each mapped to the axiom or guardrail that defends it](../assets/four-pathologies-defense.svg)](../assets/four-pathologies-defense.svg)
+![The four pathologies of multi-agent AI work, each mapped to the axiom or guardrail that defends it](../assets/four-pathologies-defense.svg)
 
 <small>*Each predictable failure of multi-agent work is answered by a specific defense — the framework is the set of those defenses, not a hope.*</small>
 

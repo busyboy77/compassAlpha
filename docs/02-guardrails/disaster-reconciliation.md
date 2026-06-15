@@ -16,7 +16,7 @@ In plain terms: a crash can leave your git storage in a half-broken state, but t
 
 An unclean event — power loss, a hard kill, a host crash, a disk fault — can leave a federation's git planes damaged: zeroed objects, a truncated index, a broken ref, an interrupted pre-commit artifact. CompassAlpha's posture is that **the disaster's implication on the substrate is minimized by design**: [flush-before-disclose](../01-axioms/persistence-law.md) plus push-to-origin bound the loss to the genuinely-unflushed, and an **aggressive, read-only reconciliation across every persisted plane** — run *before any tier boots* — verifies the bound held and repairs within it. The recovery is not improvised; it is a rehearsed protocol that ends with the federation booting at the seam the control-plane LEDGER dictates, with loss never exceeding the in-flight sliver.
 
-[![Bounded disaster implication — an unclean event hits both planes, loss is bounded to the unflushed sliver, origin is the backstop, and a four-step dual-plane reconciliation recovers within the bound](../assets/bounded-disaster.svg)](../assets/bounded-disaster.svg)
+![Bounded disaster implication — an unclean event hits both planes, loss is bounded to the unflushed sliver, origin is the backstop, and a four-step dual-plane reconciliation recovers within the bound](../assets/bounded-disaster.svg)
 
 <small>*The blast radius is bounded by construction: everything pushed to origin is intact; only the in-flight, unflushed sliver is ever at risk. The dual-plane reconciliation — freeze → recon ×2 → repair-in-bound → resume — confirms the bound and recovers within it.*</small>
 

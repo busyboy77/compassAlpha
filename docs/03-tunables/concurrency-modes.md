@@ -16,12 +16,12 @@ In plain terms: pick how many jobs run at the same time. One-at-a-time is the sa
 
 Concurrency mode chooses **how many units of work proceed simultaneously**. The four modes — sequential (LAYGO), pipelined, parallel-independent, parallel-doer — trade wall-clock speed against pollution and dependency risk. The conservative default is **sequential (LAYGO)**: one dispatch at a time, maximum context cleanliness, lowest risk, slowest. Most projects graduate to pipelined after the first cycle proves the rhythm. The git-layer mechanics ([commit discipline + worktrees](../01-axioms/git-foundations.md)) make every mode race-safe at the storage layer, but the *coordination* risk still rises with concurrency.
 
-[![Delegation modes — Mode 1 pure RELAY vs Mode 2 Mentor-2-owns-Doer, a cycle-boundary toggle](../assets/delegation-modes.svg)](../assets/delegation-modes.svg)
+![Delegation modes — Mode 1 pure RELAY vs Mode 2 Mentor-2-owns-Doer, a cycle-boundary toggle](../assets/delegation-modes.svg)
 
 <small>*A related but separate dial: the **delegation mode** (who coordinates with whom) is its own cycle-boundary toggle that composes with the concurrency mode (how many run at once).*</small>
 
 
-[![The concurrency modes as side-by-side timelines, from sequential to parallel-Doer](../assets/concurrency-modes-timeline.svg)](../assets/concurrency-modes-timeline.svg)
+![The concurrency modes as side-by-side timelines, from sequential to parallel-Doer](../assets/concurrency-modes-timeline.svg)
 
 <small>*How dispatches overlap — from one-at-a-time to parallel Doers under one orchestrator — and the speed-versus-risk each buys.*</small>
 

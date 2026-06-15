@@ -14,7 +14,7 @@ In plain terms: when lots of contributors touch one codebase, they tend to solve
 
 The hard problem in multi-agent (and multi-team) software work is not writing code — it is keeping a *growing* codebase **coherent**: one canonical way to do each thing, used everywhere, instead of N near-duplicate, subtly-divergent ways. CompassAlpha treats coherence as a **first-class, enforced property**, not a hope. The doctrine layer — the [Charter](constitution.md), its [Invariants](glossary.md#invariants), [Primitives](glossary.md#primitives), and per-component [Compasses](glossary.md#compass) — is the single source of truth; the federation reasons and builds **against** it, and the [provenance law](../01-axioms/provenance-law.md) forbids acting on memory instead of substrate. Doctrine → coherent code.
 
-[![Codebase coherence — one canonical definition per concept, called by every component, versus divergent duplicate copies](../assets/codebase-coherence.svg)](../assets/codebase-coherence.svg)
+![Codebase coherence — one canonical definition per concept, called by every component, versus divergent duplicate copies](../assets/codebase-coherence.svg)
 
 <small>*The single source of truth in practice: one canonical definition per concept, called by every component (left) — instead of divergent, duplicated copies that drift apart (right).*</small>
 
@@ -42,7 +42,7 @@ The outcome: **one canonical way per concept — no duplicated implementations, 
 
 This is the part you can demo. (Throughout, "60K", "30K", "10K" and "grass-root" are altitudes — think of zooming in from a high-level view of the whole product down to the individual lines of code.) You supply the **60K ideology in plain words** — the vision, the principles, why the domain matters — and the federation **elaborates it downward**, one altitude at a time, each layer bound to the one above:
 
-[![An AI federation cycling around one coherent core — the doctrine and dev axes (and any further axis you add) all build against the same AI-enforced coherence](../assets/compass-cycle.svg)](../assets/compass-cycle.svg)
+![An AI federation cycling around one coherent core — the doctrine and dev axes (and any further axis you add) all build against the same AI-enforced coherence](../assets/compass-cycle.svg)
 
 - **60K — Ideology** — your stated vision: principles, named theses, why this domain matters.
 - **30K — Mechanics** — state machines, lifecycles, primitives, and invariants, derived from the ideology.

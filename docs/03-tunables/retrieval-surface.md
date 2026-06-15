@@ -22,7 +22,7 @@ The [minimal-sufficient bus](../02-guardrails/minimal-sufficient-bus.md) relays 
 
 ## Choosing your pathway
 
-[![Choosing your retrieval pathway — a decision gate routing every adopter to the zero-setup lexical default (Lane A) and the few with semantic misses + infra to the opt-in vector lane (Lane B), with both bound by the same three constraints](../assets/retrieval-pathway.svg)](../assets/retrieval-pathway.svg)
+![Choosing your retrieval pathway — a decision gate routing every adopter to the zero-setup lexical default (Lane A) and the few with semantic misses + infra to the opt-in vector lane (Lane B), with both bound by the same three constraints](../assets/retrieval-pathway.svg)
 
 <small>*One gate, two lanes. **Where:** the gate routes by need — almost everyone to Lane A. **How:** Lane A is `git grep`/ripgrep, native and zero-setup; Lane B is embeddings → store → pointer, wired via MCP on Claude Code or baked into the loop on a local model. **Why:** Lane A gives immediate budget relief at no cost; Lane B buys semantic recall for the few who provision it. Both lanes obey the same three constraints — no harness exemption.*</small>
 

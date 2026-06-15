@@ -13,7 +13,7 @@ A quick note on two terms you'll see throughout. A **lane** is just a named way 
 This is the worked example for the **Incident Response lane** — a fifth work-granularity lane that lives within (or cross-cuts) the [Ops axis](sample-day2-ops.md). It exists because the other lanes are all designed for *planned* work, and a production outage at 02:00 is not planned. Incident Response is **faster than a [Surgical Strike](sample-surgical.md)**: it must be, because the meter is running.
 
 
-[![The incident-response timeline with the narrow MITIGATE flush-relaxation window marked as the exception](../assets/incident-response-timeline.svg)](../assets/incident-response-timeline.svg)
+![The incident-response timeline with the narrow MITIGATE flush-relaxation window marked as the exception](../assets/incident-response-timeline.svg)
 
 <small>*The one sanctioned exception to flush-before-disclose: a narrow live-mitigation window, with the audit re-flushed at postmortem and the founder notified post-fact.*</small>
 

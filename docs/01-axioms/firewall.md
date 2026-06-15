@@ -19,7 +19,7 @@ Each tier in the federation operates within a **confined persistence domain** �
 This axiom is the structural defense against context pollution.
 
 
-[![The reviewer-state folder tree — each tier reads only its own inbox; a parent's view of a sub-tier folder is opaque during routine flow](../assets/firewall-folder-structure.svg)](../assets/firewall-folder-structure.svg)
+![The reviewer-state folder tree — each tier reads only its own inbox; a parent's view of a sub-tier folder is opaque during routine flow](../assets/firewall-folder-structure.svg)
 
 <small>*Spatial containment: each tier reads only its own folder and inbox; descending into a sub-tier's folder is a deliberate, triggered act — never routine.*</small>
 

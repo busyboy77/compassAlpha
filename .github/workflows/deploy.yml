@@ -44,7 +44,7 @@ jobs:
       - name: Install MkDocs Material
         run: |
           pip install --upgrade pip
-          pip install mkdocs-material
+          pip install mkdocs-material mkdocs-glightbox
 
       - name: Build site
         # Portal complete — all nav-referenced pages exist — so --strict is back

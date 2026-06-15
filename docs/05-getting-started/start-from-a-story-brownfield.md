@@ -25,7 +25,7 @@ In addition to the terms on the [greenfield page](start-from-a-story.md#a-few-wo
 
 ## The flow, at a glance
 
-[![Start from a story, brownfield — an existing project is read and decomposed into compatible compasses, a Charter v0.1 is extracted from the rules it already follows, the amendment axis ratifies that Charter first, then the build axis runs, all on a parallel track that leaves the live system untouched](../assets/story-to-structure-brownfield.svg)](../assets/story-to-structure-brownfield.svg)
+![Start from a story, brownfield — an existing project is read and decomposed into compatible compasses, a Charter v0.1 is extracted from the rules it already follows, the amendment axis ratifies that Charter first, then the build axis runs, all on a parallel track that leaves the live system untouched](../assets/story-to-structure-brownfield.svg)
 
 <small>*The brownfield flow differs from greenfield in two ways: the Charter is **extracted** from rules the project already follows (not invented), and the **amendment axis runs first** to ratify that extracted Charter before any building. Throughout, your live system stays on its own **parallel track** — the incorporation is non-destructive and revertible.*</small>
 

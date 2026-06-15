@@ -27,7 +27,7 @@ That's the whole vocabulary you need to follow this page.
 
 ## The flow, at a glance
 
-[![Start from a story — a plain-English brief is decomposed into one compass per component, a Charter is derived in lean or preference-led mode, the axes are presented in order, and a printed scope comes out](../assets/story-to-structure.svg)](../assets/story-to-structure.svg)
+![Start from a story — a plain-English brief is decomposed into one compass per component, a Charter is derived in lean or preference-led mode, the axes are presented in order, and a printed scope comes out](../assets/story-to-structure.svg)
 
 <small>*Left to right: your **story** comes in; it's **decomposed** into one compass per component (each at 60K/30K/10K); a **Charter** is derived (lean or preference-led); the **axes** are laid out in build order; and a **printed scope** comes out the other side. The detail of each step is below.*</small>
 

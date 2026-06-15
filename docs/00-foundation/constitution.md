@@ -12,7 +12,7 @@ CompassAlpha is structured constitutionally — like a written constitution for 
 
 ## The four-layer constitutional model
 
-[![The four-layer constitutional model — Axioms (bedrock) · Guardrails · Tunables · Toggles](../assets/four-layer-model.svg)](../assets/four-layer-model.svg)
+![The four-layer constitutional model — Axioms (bedrock) · Guardrails · Tunables · Toggles](../assets/four-layer-model.svg)
 
 **Higher layers DERIVE from lower layers.** Toggles bundle tunables. Tunables operate on top of guardrails. Guardrails defend the axioms. The axioms are the bedrock.
 
@@ -122,7 +122,7 @@ Same axioms, same guardrails. Different project = different tunables + toggles. 
 
 ## The doctrine substrate: Charter, Compasses, and Axis annexes
 
-[![Team federation — one Charter at the top, distributed teams inheriting it, Git as the glue](../assets/team-federation.svg)](../assets/team-federation.svg)
+![Team federation — one Charter at the top, distributed teams inheriting it, Git as the glue](../assets/team-federation.svg)
 
 <small>*Team federation: a single Charter at the top, inherited by distributed teams **wherever they sit**, with **Git as the glue** that binds them into one coherent codebase — the essence of GitAI. Click to open full size.*</small>
 
@@ -146,7 +146,7 @@ The three named artifacts under the Charter each sit at a deliberate altitude, a
 
 This is the constitutional spirit applied to the doctrine itself: **Invariants are maximally controlled, Primitives lock the shared contracts yet stay extensible, and Compasses are the loosened, per-component surface** — tight at the center, flexible at the edges.
 
-[![Charter, Compasses and axis annexes — and the GO-UP-BUMP / sub-bump ladder](../assets/charter-bump-ladder.svg)](../assets/charter-bump-ladder.svg)
+![Charter, Compasses and axis annexes — and the GO-UP-BUMP / sub-bump ladder](../assets/charter-bump-ladder.svg)
 
 ### Version bumps: GO-UP-BUMP vs sub-bump
 

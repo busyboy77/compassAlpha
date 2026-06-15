@@ -19,7 +19,7 @@ All inter-tier communication uses **inbox files in the recipient's folder**. The
 **Content moves through git. The founder's clipboard carries zero substantive content.**
 
 
-[![The inbox-in-destination-folder flow across sender, control-plane, founder, and recipient lanes](../assets/bus-protocol-flow.svg)](../assets/bus-protocol-flow.svg)
+![The inbox-in-destination-folder flow across sender, control-plane, founder, and recipient lanes](../assets/bus-protocol-flow.svg)
 
 <small>*Content rides git from sender to origin to recipient; the founder's relay is reduced to a one-line trigger ping carrying zero substantive content.*</small>
 

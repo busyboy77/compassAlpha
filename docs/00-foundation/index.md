@@ -8,7 +8,7 @@ description: "Start here: what CompassAlpha is, the four-layer constitutional mo
 
 ## Pages
 
-1. [**The mental model**](mental-model.md) — **read this first.** The eight ideas to carry into every other page — loaded light for novice and fatigued expert alike.
+1. [**The mental model**](mental-model.md) — the core ideas the framework rests on; the foundation every other page builds on.
 2. [**Framework, not tool**](framework-not-tool.md) — the philosophy. Why CompassAlpha is a protocol specification, not a runnable artifact.
 3. [**Origin — why GitAI**](origin-story.md) — the story: the failures and requirements that forced the framework, and why each part was carved out.
 4. [**Constitution**](constitution.md) — the framework's foundational document. The 7 invariant axioms + the customization surface.

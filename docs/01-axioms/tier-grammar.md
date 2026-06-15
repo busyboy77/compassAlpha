@@ -17,7 +17,7 @@ In short: every line of work in CompassAlpha is run by a three-person chain — 
 CompassAlpha specifies **exactly three tiers per axis** (an *axis* is one line of work, like building features or writing docs): a top mentor, a middle orchestrator, and a doer at the bottom. The names are project-specific; the positions and their distinct responsibilities are inviolable. This is the foundational structural rule from which all other axioms derive.
 
 
-[![The three-tier hierarchy — Mentor-1, Mentor-2, Doer — with the labour-boundary firewall separating the mentors from the only tier that touches substrate](../assets/tier-grammar-pyramid.svg)](../assets/tier-grammar-pyramid.svg)
+![The three-tier hierarchy — Mentor-1, Mentor-2, Doer — with the labour-boundary firewall separating the mentors from the only tier that touches substrate](../assets/tier-grammar-pyramid.svg)
 
 <small>*The tier stack: mentors orchestrate and never touch substrate; the Doer does all substrate labour. The labour-boundary firewall sits between them.*</small>
 

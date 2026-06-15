@@ -15,7 +15,7 @@ New here? This page is your map to the dials you can turn when you set up Compas
 The short version: you get five things to balance, and you can't max out all of them at once — so tuning means deciding which one you're willing to give up. CompassAlpha exposes a tunable design space along **five primary axes**: speed, intelligence, cost, risk, predictability. They pull against each other. Every tuning decision spends one axis to buy another. The framework's job is to make the trade explicit so you choose deliberately instead of discovering the cost after the fact. The structural rules behind the dials remain `[INVARIANT]` no matter where you set them.
 
 
-[![The five-axis tunable trade-off space — Speed, Intelligence, Cost, Risk, Predictability — with project-profile bias points](../assets/five-axis-tradeoff.svg)](../assets/five-axis-tradeoff.svg)
+![The five-axis tunable trade-off space — Speed, Intelligence, Cost, Risk, Predictability — with project-profile bias points](../assets/five-axis-tradeoff.svg)
 
 <small>*The customization surface as a trade-space: every preset is a point on these five axes; the invariants underneath them never move.*</small>
 

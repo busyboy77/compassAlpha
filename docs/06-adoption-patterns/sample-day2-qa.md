@@ -15,7 +15,7 @@ The four lanes ([Doctrine](sample-doctrine-cycle.md), [Phase 3](sample-phase3.md
 This is the worked example for the **QA axis**.
 
 
-[![The Day-2 QA axis running decoupled from the build axis, touching only at handoff bus messages](../assets/day2-qa-decoupled-axis.svg)](../assets/day2-qa-decoupled-axis.svg)
+![The Day-2 QA axis running decoupled from the build axis, touching only at handoff bus messages](../assets/day2-qa-decoupled-axis.svg)
 
 <small>*A Day-2 axis runs on its own track, coupled to the build axis only by bus handoffs at intake and verdict.*</small>
 

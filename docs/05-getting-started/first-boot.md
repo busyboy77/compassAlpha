@@ -15,7 +15,7 @@ A session that skips boot is a session operating on assumptions instead of disk.
 ---
 
 
-[![The T0 boot ritual as an ordered read sequence ending in the START status-grid drift check](../assets/first-boot-t0-ritual.svg)](../assets/first-boot-t0-ritual.svg)
+![The T0 boot ritual as an ordered read sequence ending in the START status-grid drift check](../assets/first-boot-t0-ritual.svg)
 
 <small>*A fresh session boots light and in order — master, stamp, axis, ledger, memory, inbox, sync check — then prints the START grid as a drift gate.*</small>
 
