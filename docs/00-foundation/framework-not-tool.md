@@ -51,19 +51,34 @@ What it deliberately leaves open is everything that should stay yours — which 
 
 Adopting CompassAlpha looks like this:
 
+**Step 1: Create a reviewer-state repository.**
+
 ```bash
-# Step 1: Create a reviewer-state repository
 mkdir -p ~/projects/MyProjectReviewer && cd ~/projects/MyProjectReviewer
-git init
-git remote add origin git@github.com:you/MyProjectReviewer.git
-
-# Step 2: Read the CompassAlpha constitution + axioms (in this portal)
-# Step 3: Author your axis declarations (~30 lines of markdown)
-# Step 4: Stamp the boot template for your top-tier mentor (~50 lines)
-# Step 5: Start your AI agent in that folder, point it at this portal
-
-# That's it. No CompassAlpha binary, no daemon, no API key.
 ```
+
+This makes a new folder for your reviewer state and then moves you into it. `mkdir -p` creates the folder (the `-p` flag means it won't complain if parent folders are missing and quietly creates them too), and `cd` ("change directory") is what makes that folder your current working location so the next commands act inside it.
+
+```bash
+git init
+```
+
+This turns the current folder into a git repository — that is, it tells git to start tracking the history of everything in here. Git is the version-control system that records every change over time; CompassAlpha uses it as the durable, auditable record of the federation's work.
+
+```bash
+git remote add origin git@github.com:you/MyProjectReviewer.git
+```
+
+This links your local repository to a copy hosted online (here, on GitHub). A "remote" is just a named pointer to that hosted copy; by convention the main one is called `origin`. Adding it lets you later push your local history up to the host so it's backed up and shareable. Swap in your own host and path.
+
+Then, with the folder in place:
+
+- **Step 2:** Read the CompassAlpha constitution + axioms (in this portal).
+- **Step 3:** Author your axis declarations (~30 lines of markdown).
+- **Step 4:** Stamp the boot template for your top-tier mentor (~50 lines).
+- **Step 5:** Start your AI agent in that folder, point it at this portal.
+
+That's it. No CompassAlpha binary, no daemon, no API key.
 
 All you have done is create a folder, add some markdown files, and start an AI agent. The framework's value lives entirely in **what those markdown files contain** — the protocols, conventions, and rules — not in any executable.
 

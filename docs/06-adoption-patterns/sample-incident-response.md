@@ -61,9 +61,21 @@ This is the time-bounded exception. The responder mitigates **immediately** — 
 ```bash
 # Immediate mitigation — applied during the relaxed window
 git -C /path/to/substrate commit -m "billing(hotfix): webhook handler accepts amount_received fallback [INC-2026-06-09]"
+```
+
+This records the hotfix as a commit (a saved snapshot of the change) in the shared repository. The `-C /path/to/substrate` part tells git which repository folder to act on, and the `-m` part attaches a message describing the fix; that message carries the incident ID `[INC-2026-06-09]` so the change can later be traced back to this exact outage.
+
+```bash
 git -C /path/to/substrate push origin main:main
+```
+
+This uploads the just-made commit from the local repository to the shared remote one (`origin`), updating its `main` branch from the local `main` branch — so the fix is now in the canonical place the deploy reads from. The `main:main` means "push my local `main` onto the remote's `main`."
+
+```bash
 # fast redeploy of the webhook service only
 ```
+
+This is a placeholder note, not a command: it marks the point where only the webhook service is redeployed (rather than the whole system), keeping the recovery fast and narrowly scoped.
 
 The responder also re-queues the failed callbacks so missed `payment_succeeded` events replay. Error rate drops to 0%. **Bleeding stopped.**
 
@@ -101,8 +113,15 @@ The postmortem tags the incident closed:
 
 ```bash
 git -C /path/to/substrate tag -a inc-2026-06-09-billing-webhook-resolved -m "Billing webhook outage: resolved + postmortem"
+```
+
+This creates a git tag — a permanent, named bookmark pointing at this moment in the repository's history. The `-a` makes it an annotated tag (one that stores its own message and author), and the `-m` text describes what it marks. Naming the tag after the incident gives the resolved outage a stable landmark anyone can jump straight to later.
+
+```bash
 git -C /path/to/substrate push origin inc-2026-06-09-billing-webhook-resolved
 ```
+
+This uploads that tag to the shared remote repository (`origin`), so the bookmark exists for the whole team and not just on the responder's machine — making the closed-out incident discoverable in the canonical history.
 
 ## What the Ops/incident status grid shows at close
 

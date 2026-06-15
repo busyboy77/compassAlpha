@@ -76,11 +76,33 @@ The Platform Engineer reports the staging smoke is green and surfaces the go-liv
 ```bash
 # Deploy record committed to substrate (data plane)
 git -C /path/to/substrate add ops/deploys/reporting-v1.3.md
+```
+
+This stages the deploy record file — the written account of this cutover — so git is ready to save it. The `-C /path/to/substrate` tells git to act inside the substrate (the git repository that stores the team's shared state), no matter where you run the command from. Staging means "mark this file to be included in the next save."
+
+```bash
 git -C /path/to/substrate commit -m "ops: reporting-v1.3 prod cutover record"
+```
+
+This saves the staged file as a permanent, timestamped snapshot in the repository's history (a "commit"). The `-m` flag attaches a short message describing what the snapshot is, so anyone reading the history later knows this commit recorded the production cutover.
+
+```bash
 git -C /path/to/substrate push origin main:main
+```
+
+This uploads the new commit from your local copy to the shared remote repository (`origin`) so the rest of the team sees it. `main:main` means "send my `main` branch to the remote's `main` branch" — the branch being the primary line of work everyone shares.
+
+```bash
 git -C /path/to/substrate tag -a ops-reporting-v1.3-deployed -m "Ops: reporting-v1.3 live in prod"
+```
+
+This puts a named bookmark (a "tag") on the deploy commit so it can be found instantly later without hunting through history. The `-a` makes it an annotated tag (one that carries its own message and author), and `-m` sets that message.
+
+```bash
 git -C /path/to/substrate push origin ops-reporting-v1.3-deployed
 ```
+
+This uploads the tag to the shared remote so everyone else can see the bookmark too — tags are not sent automatically by the earlier push, so they need their own upload.
 
 ### OBSERVE — the continuous part
 

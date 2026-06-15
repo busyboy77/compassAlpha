@@ -37,12 +37,28 @@ A single Doer turn is **two separate `git -C` operations**: commit the deliverab
 ```bash
 # data plane — the deliverable
 git -C /path/to/substrate <commit-discipline ...>
+```
 
+First, commit the actual work product into the project repo (the "data plane"). The `-C /path/to/substrate` part tells git to act on that specific folder, no matter where you happen to be standing.
+
+```bash
 # control plane — the return + judicial state
 git -C /path/to/reviewer-state add <inbox-file> <ledger>
+```
+
+Now switch to the bookkeeping repo (the "control plane") and stage two files: the return note that reports the work back, and the ledger that records what happened. "Stage" means mark these files to be included in the next commit.
+
+```bash
 git -C /path/to/reviewer-state commit -m "..."
+```
+
+Record those staged files as a permanent commit in the bookkeeping repo, with a short message describing the change.
+
+```bash
 git -C /path/to/reviewer-state push origin main:main
 ```
+
+Send that commit up to the shared remote copy of the bookkeeping repo so the rest of the federation can see it. `main:main` means "publish my local `main` branch onto the remote's `main` branch."
 
 The pollution firewall is **structural by directory separation**: because the reviewer-state repo is outside the substrate working tree, a reviewer commit *cannot* land on a substrate branch. See [the firewall](../01-axioms/firewall.md).
 
@@ -57,22 +73,44 @@ Never use plain `git add` + `git commit` for federation work. Plain `git add` mo
 ```bash
 # 1. Point this session at its OWN index file (per-session staging area).
 export GIT_INDEX_FILE=/path/to/substrate/.doer-tmp/<scope>/<slice>/index
+```
 
+Set an environment variable that tells every git command in this session to use a private staging area at the given path, instead of the one shared default. This is what keeps two agents from tripping over each other's staged files.
+
+```bash
 # 2. Stage changes into THAT index (run inside the slice worktree, see §3).
 git -C <worktree> update-index --add <file>     # or read-tree + manipulation
+```
 
+Add a file to that private staging area. `update-index --add` is the lower-level equivalent of `git add`, and because step 1 redirected the index, the change lands in this session's own staging area.
+
+```bash
 # 3. Write a tree object from the isolated index.
 TREE_SHA=$(git -C <worktree> write-tree)
+```
 
+Snapshot the staged files into a "tree" — git's internal record of a folder's contents — and capture its identifier in a variable. This freezes exactly what was staged so the next step can build a commit from it.
+
+```bash
 # 4. Build a commit pointing at that tree, parented on the base.
 COMMIT_SHA=$(git -C <worktree> commit-tree "$TREE_SHA" -p <parent-sha> -m "<message>")
+```
 
+Create a commit object from that snapshot, attached to the starting commit named by `-p` (its "parent"), and capture the new commit's identifier. Unlike `git commit`, this builds the commit directly without touching any branch yet.
+
+```bash
 # 5. Move the branch ref to the new commit.
 git -C <worktree> update-ref refs/heads/<branch> "$COMMIT_SHA"
+```
 
+Point the branch at the commit you just built. A branch is just a movable label for a commit, and this is what makes the new commit the tip of `<branch>`.
+
+```bash
 # 6. Publish via explicit refspec (see §4).
 git -C <worktree> push origin <branch>:<branch>
 ```
+
+Send the branch up to the shared remote, spelling out source and destination so the publish targets exactly one branch (see §4 for why that matters).
 
 `GIT_INDEX_FILE` is a per-process pointer to *which* index a git invocation uses. A unique path per session gives each session its own staging area; siblings cannot see or stomp on each other's stage. This is `[INVARIANT]` — it is what prevents sibling-session contamination under any concurrency mode.
 
@@ -86,14 +124,24 @@ A **worktree** is a separate folder where one repo can have a different branch c
 # Cut a worktree from the cycle-tip SHA into a gitignored, slice-local path.
 git -C /path/to/substrate worktree add \
     /path/to/substrate/.doer-tmp/<scope>/<slice>/wt  <cycle-tip-SHA>
+```
 
+Create a new working folder at the given path, checked out to the starting commit (`<cycle-tip-SHA>`). This gives the agent its own copy of the files to edit, separate from everyone else's.
+
+```bash
 # Operate entirely inside it.
 git -C /path/to/substrate/.doer-tmp/<scope>/<slice>/wt <commands ...>
+```
 
+Run all of the agent's git work against that dedicated folder by naming it with `-C`. Because each agent has its own folder, their edits can't collide.
+
+```bash
 # Remove it at a clean slice close (the worktree is volatile).
 git -C /path/to/substrate worktree remove \
     /path/to/substrate/.doer-tmp/<scope>/<slice>/wt
 ```
+
+Delete the worktree folder once the work is finished and committed. It is scratch space, not something to keep — the committed history already holds everything that matters.
 
 `git worktree` lets one repository have multiple branches checked out in separate directories, sharing only the append-only, concurrency-safe `.git/` object database. Sibling Doers never collide on working files. The worktree IS the Doer's disk-home — hot, volatile, pluggable — satisfying the persistence law (on disk) while keeping scratch off the committed substrate. The `.doer-tmp/` path is gitignored in the substrate; do not commit scratch into the project.
 
@@ -108,11 +156,28 @@ Before every push to the **reviewer-state** repo, fetch first:
 ```bash
 # fetch-before-push on the control plane (single-live-writer safety)
 git -C /path/to/reviewer-state pull --ff-only
+```
+
+Pull down any new commits from the remote first. `--ff-only` ("fast-forward only") means git will only accept the update if your local copy hasn't diverged — if it has, the command fails loudly instead of quietly merging, which is exactly the warning you want.
+
+```bash
 # ... make your changes / write inbox file ...
 git -C /path/to/reviewer-state add <files>
+```
+
+After making your edits, stage the changed files — mark them to be included in the next commit.
+
+```bash
 git -C /path/to/reviewer-state commit -m "<message>"
+```
+
+Record the staged files as a permanent commit, with a short message describing what changed.
+
+```bash
 git -C /path/to/reviewer-state push origin main:main
 ```
+
+Send the commit up to the shared remote's `main` branch. Because you pulled first, this push should go through cleanly.
 
 `pull --ff-only` refuses to create a merge commit — if the local branch has diverged, it fails loudly rather than silently merging. Combined with [single-live-writer](../02-guardrails/single-live-writer.md) discipline, this keeps the state-of-record clean.
 
@@ -140,12 +205,23 @@ At boot (T0) and before disclosure, confirm local == origin. A clean federation 
 ```bash
 # fetch refs, then compare local tip to origin tip
 git -C /path/to/reviewer-state fetch origin
+```
+
+Download the latest branch pointers from the remote without changing any of your files. This refreshes git's picture of where the remote stands, so the next command can compare against it.
+
+```bash
 git -C /path/to/reviewer-state rev-list --left-right --count origin/main...main
 # expect: 0      0      → in sync
+```
 
+Count how many commits your local `main` is ahead of and behind the remote `main`. Two zeros means the two are identical; anything else means they have drifted apart and you should reconcile before doing more work.
+
+```bash
 # the SHA that appears on the DISK line of the status grid
 git -C /path/to/reviewer-state rev-parse --short HEAD
 ```
+
+Print the short identifier of the commit you are currently sitting on. This is the SHA you record on the status grid so anyone can confirm which exact state you were working from.
 
 Any non-zero count is drift — halt and reconcile before acting (T0 boot-integrity).
 
@@ -153,8 +229,15 @@ To verify an applied tag actually reached the remote (the `TAGS-APPLIED` stage):
 
 ```bash
 git -C /path/to/substrate push origin <tag>
+```
+
+Send a tag — a fixed, named marker on a specific commit — up to the remote. Tags are not pushed automatically with ordinary commits, so this step publishes it explicitly.
+
+```bash
 git -C /path/to/substrate ls-remote --tags origin <tag>   # confirm it's there
 ```
+
+Ask the remote which tags it actually holds, filtered to the one you just pushed. If it comes back, you have proof the tag really landed rather than just assuming the push worked.
 
 ---
 

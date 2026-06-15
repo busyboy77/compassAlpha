@@ -96,9 +96,16 @@ The most important line is `DISK`. **`GH-sync 0/0`** means your local copy has z
 ```bash
 # from the tier's home repo
 git -C /path/to/reviewer-state fetch origin
+```
+
+This downloads the latest commits from `origin` (the shared copy of the repo on GitHub) into your local repo without changing any of your files yet. The `-C /path/to/reviewer-state` part just tells git which folder to operate in, so you don't have to be standing inside it. It's the "go see what's changed upstream" step — after it, your local view of origin is up to date.
+
+```bash
 git -C /path/to/reviewer-state status -sb
 # expect: "## main...origin/main"  with nothing ahead/behind and a clean tree
 ```
+
+This prints a short summary of how your local copy compares to origin: whether you have changes that haven't been saved (a "dirty" tree), and whether you're ahead or behind the shared copy. The `-sb` flags ask for the short format with a branch-tracking header. You want to see `## main...origin/main` with no "ahead"/"behind" note and no listed files — that confirms you're an exact match for the shared state.
 
 If you're ahead: a prior session flushed but didn't push — push it (`pull --ff-only` then refspec push) before proceeding. If you're behind: pull (`--ff-only`) to pick up sibling writers. If the tree is dirty: there's unflushed state — flush and commit it before you trust the grid.
 

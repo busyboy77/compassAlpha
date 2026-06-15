@@ -46,8 +46,15 @@ Your existing project repo *becomes* the substrate. You don't move or restructur
 ```bash
 # your existing project is already at /path/to/substrate (with its own remote)
 git init /path/to/reviewer-state
+```
+
+This creates a brand-new, empty git repository at `/path/to/reviewer-state` — the "reviewer-state" repo that will hold CompassAlpha's coordination records. `git init` just sets up the repository's internal tracking; it doesn't touch your existing project at all.
+
+```bash
 git -C /path/to/reviewer-state remote add origin <reviewer-state-remote-url>
 ```
+
+This tells the new reviewer-state repo where its remote (the shared copy on a server like GitHub) lives, naming that remote `origin` — the conventional default name. `git -C /path/to/reviewer-state` means "run this command inside that directory" without having to switch into it first, so you can push and pull the reviewer-state separately from your main project.
 
 Drop in the master, author the canonical state artifacts, lay out the bus tree, stamp the tiers — exactly [greenfield setup](greenfield-setup.md) steps 2–6. Your substrate's existing branches, CI, and PR process keep working untouched.
 

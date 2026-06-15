@@ -125,9 +125,21 @@ Gates GREEN → Mentor-1 issues **GO-SUB-BUMP**. Mentor-2 applies the per-entity
 
 ```bash
 git -C /path/to/substrate tag -a billing-compass-v0.1 -m "Billing compass S1-S5 frozen"
+```
+
+This creates an *annotated tag* — a permanent, named bookmark on the current commit, carrying a message. `git -C /path/to/substrate` means "run this git command inside that repository folder" without first moving into it. The tag `billing-compass-v0.1` marks the exact code state where the Billing compass was frozen, so you can always return to it.
+
+```bash
 git -C /path/to/substrate push origin billing-compass-v0.1
+```
+
+This uploads that tag to `origin` — the shared remote copy of the repository (typically on GitHub) that the whole team and every agent see. Until you push, the tag exists only on this machine; pushing makes the frozen marker official and visible to everyone.
+
+```bash
 git -C /path/to/substrate ls-remote --tags origin | grep billing-compass-v0.1   # verify
 ```
+
+This asks the remote to list all its tags, then `grep` filters that list down to lines containing `billing-compass-v0.1`. If the tag name comes back, the push genuinely landed on the remote — a quick proof rather than an assumption.
 
 The founder is **out of the mechanical tag loop** — veto only.
 

@@ -26,12 +26,28 @@ You keep two separate git repositories, side by side. The **substrate** is your 
 ```bash
 # substrate — the thing you build
 git init /path/to/substrate
-git -C /path/to/substrate remote add origin <substrate-remote-url>
+```
 
+This creates a brand-new, empty git repository in the folder for your actual project. A git repository ("repo") is a folder whose every change is tracked and versioned.
+
+```bash
+git -C /path/to/substrate remote add origin <substrate-remote-url>
+```
+
+This points the substrate repo at its home on a hosting service (such as GitHub). `git -C <folder>` runs the command as if you were standing inside that folder. A "remote" named `origin` is the address git pushes your commits to; replace `<substrate-remote-url>` with the real URL.
+
+```bash
 # reviewer-state — the federation's judicial / coordination state
 git init /path/to/reviewer-state
+```
+
+This creates the second, separate empty repository — the one that holds the federation's bookkeeping rather than your shipped code.
+
+```bash
 git -C /path/to/reviewer-state remote add origin <reviewer-state-remote-url>
 ```
+
+This points the reviewer-state repo at its own separate remote address, keeping its history fully independent from the substrate's.
 
 !!! warning "Sibling, never nested"
     `/path/to/reviewer-state` must be **outside** `/path/to/substrate`'s working tree. If reviewer-state lived inside the substrate, reviewer commits could land on a substrate branch and the structural firewall would collapse. Keep them side by side.
@@ -79,10 +95,27 @@ Commit and push:
 
 ```bash
 git -C /path/to/reviewer-state add -A
+```
+
+This stages every new and changed file in the reviewer-state repo, marking them to be saved in the next commit. `-A` means "all files".
+
+```bash
 git -C /path/to/reviewer-state pull --ff-only
+```
+
+This fetches any changes from the remote first and applies them. `--ff-only` ("fast-forward only") tells git to refuse if your local and remote histories have diverged, so you never accidentally create a tangled merge — you pull before you push.
+
+```bash
 git -C /path/to/reviewer-state commit -m "scaffold: master + canonical state artifacts"
+```
+
+This saves the staged files as a single permanent snapshot in the repo's history. The text after `-m` is the commit message describing what changed.
+
+```bash
 git -C /path/to/reviewer-state push origin main:main
 ```
+
+This sends your new commit up to the remote. `origin main:main` means "push my local `main` branch to the remote's `main` branch" — being explicit about both ends so the commit lands exactly where intended.
 
 ---
 

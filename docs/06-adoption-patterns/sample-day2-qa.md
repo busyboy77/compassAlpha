@@ -104,8 +104,15 @@ The confirmed failure is a judgment call, so the QA Lead surfaces a **founder-ca
 
 ```bash
 git -C /path/to/substrate tag -a qa-reporting-v1.3-pass -m "QA conditional pass: 17/18; email-failure fast-follow tracked"
+```
+
+This creates an *annotated tag* — a permanent, named bookmark on the current commit — called `qa-reporting-v1.3-pass`, with a message recording the verdict. `git -C /path/to/substrate` tells git to run inside that repository folder without first changing directory into it. The tag marks exactly which version of the work QA approved, so anyone can find that point later.
+
+```bash
 git -C /path/to/substrate push origin qa-reporting-v1.3-pass
 ```
+
+This uploads that tag to the shared remote repository (`origin` is the default name for it), so the approval bookmark is visible to everyone, not just on this one machine.
 
 The email-failure fix is onboarded to `LEFTOVERS.md` (trigger T7 discipline applies to DECOUPLED axes too).
 

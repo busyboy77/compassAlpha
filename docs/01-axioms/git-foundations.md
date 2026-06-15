@@ -43,22 +43,44 @@ These six rules ARE the commit discipline. Terse to state; load-bearing to enfor
 ```bash
 # Set per-session index
 export GIT_INDEX_FILE=/path/to/session-specific/index
+```
 
+This sets an environment variable (a value the running shell remembers) telling git to use a private staging file for this session instead of the repository's shared default. The staging area — git calls it the "index" — is where you list the changes that will go into your next commit; giving each session its own means two sessions can't trip over each other's lists.
+
+```bash
 # Stage changes into THIS index
 git update-index --add <file>
+```
 
+This adds the named file to the private staging list you just set up. `update-index` is the low-level way to stage a file; it writes only into the index pointed at by `GIT_INDEX_FILE`, so the change is recorded in your isolated staging area and nowhere else.
+
+```bash
 # Write a tree object from the index
 TREE_SHA=$(git write-tree)
+```
 
+This takes a snapshot of everything currently staged and saves it as a "tree" — git's stored picture of a directory at one moment. The `$( )` captures the snapshot's ID (a SHA, git's unique fingerprint for any stored object) into the `TREE_SHA` variable so the next command can refer to it.
+
+```bash
 # Create a commit object pointing to that tree
 COMMIT_SHA=$(git commit-tree $TREE_SHA -p <parent-sha> -m "msg")
+```
 
+This creates the actual commit: it wraps the snapshot (`$TREE_SHA`) with a message (`-m`) and a link to the previous commit (`-p`, the parent), then captures the new commit's fingerprint into `COMMIT_SHA`. Building the commit directly like this avoids the shared-index side effects of the everyday `git commit`.
+
+```bash
 # Update the branch ref
 git update-ref refs/heads/<branch> $COMMIT_SHA
+```
 
+This points the named branch at the commit you just made. A branch is simply a movable label pointing at one commit; `update-ref` moves that label to `$COMMIT_SHA`, so the branch now includes your new work.
+
+```bash
 # Push via explicit refspec
 git push origin <branch>:<remote-branch>
 ```
+
+This sends your branch up to the shared remote repository (`origin`). The `<branch>:<remote-branch>` part names exactly which local branch goes to which remote branch, so the upload targets one precise place and nothing else.
 
 **Why NOT plain `git add` + `git commit`:** plain `git add` modifies `.git/index` (the shared default index file). Two parallel sessions calling `git add` simultaneously stomp on each other's stages. The contamination is **silent and confounds debugging** — commits look correct on the surface but contain sibling-session deltas.
 
@@ -69,13 +91,23 @@ git push origin <branch>:<remote-branch>
 ```bash
 # Each Doer gets its own worktree
 git worktree add /path/to/substrate/.work-tmp/<entity>/<slice>/wt <cycle-tip-SHA>
+```
 
+This creates a separate working folder (a "worktree") checked out from the same repository, starting at the commit you name (`<cycle-tip-SHA>`). A worktree is a fully usable copy of the project files backed by the one repository, so each agent can edit its own folder without disturbing anyone else's.
+
+```bash
 # Doer runs with -C to that worktree
 git -C /path/to/substrate/.work-tmp/<entity>/<slice>/wt status
+```
 
+This runs `git status` inside that worktree folder. The `-C <path>` flag tells git to act as if it were started in that folder, so the command reports on this agent's own working copy regardless of where the shell happens to be.
+
+```bash
 # Cleanup at clean close
 git worktree remove /path/to/substrate/.work-tmp/<entity>/<slice>/wt
 ```
+
+This deletes the worktree folder once the work is done and committed. Removing it through git (rather than just deleting the folder) keeps the repository's bookkeeping tidy, so leftover worktrees don't accumulate.
 
 **Why NOT the main working tree:** if multiple Doers share `/path/to/substrate/`, they overwrite each other's file edits. The first Doer checking out a different branch clobbers the second's working state.
 
@@ -104,8 +136,15 @@ A Doer turn = TWO separate git operations:
 
 ```bash
 git -C /path/to/substrate ...          # data plane
+```
+
+This runs a git command against the substrate repository — the place where the actual work product lives. The `-C` flag pins the command to that specific repository folder so the deliverable is committed there and only there.
+
+```bash
 git -C /path/to/reviewer-state ...     # control plane
 ```
+
+This runs a separate git command against the reviewer-state repository — the messaging side, where an agent files its report back to whoever is reviewing. Because it is a distinct command pointed at a distinct repository, the report can never accidentally land in the work-product repo.
 
 This is the structural firewall: commits **cannot** cross-pollute because the git contexts are different.
 
@@ -181,8 +220,15 @@ Worktrees and scratch directories accumulate if not cleaned. The framework speci
 
 ```bash
 git worktree remove /path/to/substrate/.work-tmp/<entity>/<slice>/wt
+```
+
+This removes the agent's dedicated worktree folder through git, freeing it and updating the repository's record of active worktrees so none are left dangling.
+
+```bash
 rm -rf /path/to/substrate/.work-tmp/<entity>/<slice>/  # if scratch lives there
 ```
+
+This deletes the leftover scratch folder and everything inside it. `rm` removes files, `-r` makes it descend into the folder, and `-f` skips the are-you-sure prompts — useful for clearing temporary working space once the slice is finished.
 
 Sloppy projects leave `.work-tmp/` cluttered. Disciplined projects clean.
 

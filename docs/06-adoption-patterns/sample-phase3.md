@@ -77,9 +77,21 @@ The Doer commits to substrate (data plane), then writes a digest into Mentor-2's
 ```bash
 # Data plane (substrate)
 git -C /path/to/substrate add reporting/migrations/ reporting/models/scheduled_export.ts
+```
+
+This stages the new files — the migration and the model — for the next commit. `git add` tells git which changed files to include; `-C /path/to/substrate` just means "run this in that directory" so you don't have to move there first.
+
+```bash
 git -C /path/to/substrate commit -m "reporting: scheduled_export schema + migration"
+```
+
+This records the staged files as a permanent, labelled snapshot in the project's history. The `-m` text is the commit message — a short note saying what changed, so anyone reading the history later knows why.
+
+```bash
 git -C /path/to/substrate push origin main:main
 ```
+
+This uploads the new commit to the shared remote copy of the project (`origin`) so the rest of the team can see it. `main:main` means "send my `main` branch to the remote's `main` branch."
 
 Mentor-2 triages the return (stage `TRIAGING`), applies per-stage substantive review, then briefs S2, then S3. The S3 Doer is told explicitly to **call Notifications**, not to build a mailer — enforcing the Federation Contract from the inherited compass.
 
@@ -112,9 +124,21 @@ Gates GREEN → **GO-TAG**. Mentor-2 applies the exit tag and verifies it landed
 
 ```bash
 git -C /path/to/substrate tag -a reporting-v1.3 -m "Scheduled exports: schema + CRUD + runner"
+```
+
+This attaches a permanent version label, `reporting-v1.3`, to the current commit. A tag is a named bookmark for a specific point in history; `-a` makes it an "annotated" tag that also stores the `-m` message, so the release has a description you can read back later.
+
+```bash
 git -C /path/to/substrate push origin reporting-v1.3
+```
+
+This uploads the new tag to the shared remote (`origin`). Tags aren't sent automatically with a normal push, so you name the tag explicitly to make the release label visible to everyone.
+
+```bash
 git -C /path/to/substrate ls-remote --tags origin | grep reporting-v1.3   # TAGS-APPLIED
 ```
+
+This checks that the tag actually arrived on the remote. `ls-remote --tags origin` lists every tag the remote knows about, and `grep reporting-v1.3` filters that list down to just the line you're looking for — if it prints, the tag landed.
 
 Stage advances `GO-TAG → TAGS-APPLIED → CLOSED`. Mentor-1 sends the STAND-DOWN ack; Mentor-2's judicial folder is archived (`FROZEN`).
 

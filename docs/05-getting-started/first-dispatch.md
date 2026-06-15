@@ -68,10 +68,27 @@ Then Mentor-1 flushes and publishes — **flush before disclose**:
 
 ```bash
 git -C /path/to/reviewer-state pull --ff-only
+```
+
+First, sync your local copy of reviewer-state with origin (the canonical copy on the server). `-C /path/to/reviewer-state` runs the command in that repo without changing directory; `--ff-only` means only accept changes that fast-forward cleanly — if someone else's work would collide, git stops rather than guessing. This guarantees you build on top of the latest shared state.
+
+```bash
 git -C /path/to/reviewer-state add -A
+```
+
+Stage every change in the repo (`-A` = all: new, modified, and deleted files) so git knows exactly what goes into the next snapshot. Here that's the brief file you just wrote into Mentor-2's inbox.
+
+```bash
 git -C /path/to/reviewer-state commit -m "mentor-1: auth dispatch brief"
+```
+
+Record the staged changes as a permanent, timestamped snapshot (a commit) in the local history. `-m` supplies the commit message inline — a short label describing what this snapshot is.
+
+```bash
 git -C /path/to/reviewer-state push origin main:main   # verify GH-sync 0/0 after
 ```
+
+Upload your local commit to origin so the rest of the team can see it. `main:main` pushes your local `main` branch to the remote `main` branch. The comment reminds you to confirm the GH-sync indicator reads 0/0 afterwards — meaning nothing is left un-pushed.
 
 Only **after** the file is on disk and at origin does Mentor-1 ping the founder: *"ready for Mentor-2."* The founder relays: *"pull + read your inbox."*
 
@@ -120,16 +137,51 @@ The founder spawns a fresh Doer session. It boots from its composed brief, then 
 
 ```bash
 export GIT_INDEX_FILE=/path/to/substrate/.work-tmp/auth/s1/index
+```
+
+Point git at a private staging area (the *index*) just for this slice. The index is git's scratchpad of "what will go into the next commit"; by setting `GIT_INDEX_FILE` to a slice-specific path, this Doer's staging never collides with anyone else's. `export` makes the setting apply to the git commands that follow in this shell.
+
+```bash
 git -C /path/to/substrate worktree add /path/to/substrate/.work-tmp/auth/s1/wt <cycle-tip-SHA>
+```
 
+Create an isolated working folder (a *worktree*) checked out at `<cycle-tip-SHA>` — the exact commit the dispatch is built on. A worktree lets you edit files for this slice in their own directory without disturbing the main checkout, so parallel work stays cleanly separated.
+
+```bash
 # ...create auth/ dir, entrypoint, placeholder test in the worktree...
+```
 
+This is a placeholder comment, not a command — it marks where you actually write the slice's files (the `auth/` directory, its entry point, and a placeholder test) inside the worktree you just created.
+
+```bash
 git --work-tree=/path/to/substrate/.work-tmp/auth/s1/wt update-index --add auth/__init__ auth/entrypoint auth/test_imports
+```
+
+Stage the three new files into this slice's private index. `--work-tree=...` tells git to read the files from your slice worktree, and `update-index --add` records each named path as ready to commit. Naming the files explicitly keeps the commit tight — only intended files get in.
+
+```bash
 TREE=$(git -C /path/to/substrate write-tree)
+```
+
+Freeze the staged content into a *tree object* — git's immutable snapshot of the directory layout — and save its identifier in the shell variable `TREE`. The `$( )` captures the command's output so the next steps can reference it.
+
+```bash
 COMMIT=$(git -C /path/to/substrate commit-tree $TREE -p <cycle-tip-SHA> -m "auth/s1: skeleton")
+```
+
+Build a commit from that tree without touching any branch. `-p <cycle-tip-SHA>` sets the parent (so history links back to the dispatch base) and `-m` gives the message; the resulting commit's identifier is stored in `COMMIT`. This low-level approach is what keeps the two planes from accidentally mixing.
+
+```bash
 git -C /path/to/substrate update-ref refs/heads/feat/auth-s1-skeleton $COMMIT
+```
+
+Point the branch `feat/auth-s1-skeleton` at the commit you just created. `update-ref` writes the branch pointer directly, making the new commit the tip of that feature branch.
+
+```bash
 git -C /path/to/substrate push origin feat/auth-s1-skeleton:feat/auth-s1-skeleton
 ```
+
+Upload the feature branch to origin so the deliverable lands in the shared substrate. The `local:remote` form pushes your `feat/auth-s1-skeleton` branch to a remote branch of the same name, where Mentor-2 can later review it.
 
 **Control plane — the return goes to reviewer-state** (a *separate* `git -C`, never mixed with the above):
 
@@ -148,11 +200,33 @@ OPEN: none.
 
 ```bash
 git -C /path/to/reviewer-state pull --ff-only
+```
+
+Sync reviewer-state with origin before writing to it, accepting only clean fast-forward updates, so your digest goes on top of the latest shared state.
+
+```bash
 git -C /path/to/reviewer-state add -A
+```
+
+Stage all changes in reviewer-state — here, the digest file you just wrote into Mentor-2's inbox — so they're queued for the next commit.
+
+```bash
 git -C /path/to/reviewer-state commit -m "doer auth/s1: return digest"
+```
+
+Snapshot the staged digest into reviewer-state's history with a descriptive message, making the hand-off a permanent, auditable record.
+
+```bash
 git -C /path/to/reviewer-state push origin main:main
+```
+
+Upload that commit to origin so Mentor-2 can pull and read the digest. Note this is a separate `git -C` on reviewer-state, never combined with the substrate commands above — that separation is what keeps the control plane and data plane apart.
+
+```bash
 git -C /path/to/substrate worktree remove /path/to/substrate/.work-tmp/auth/s1/wt   # cleanup
 ```
+
+Delete the temporary slice worktree now that its work is committed and pushed. The slice's commit lives safely in git history, so the scratch folder is no longer needed — removing it keeps the substrate tidy.
 
 Ping founder: *"auth/s1 done, ready for Mentor-2."* The Doer session is now disposable — it is never reused for another slice.
 
@@ -172,8 +246,15 @@ Mentor-1 pulls, reads the close package, ratifies the dispatch, and applies the 
 
 ```bash
 git -C /path/to/substrate tag -a auth-skeleton-v0.1 <commit-SHA> -m "auth skeleton dispatch closed"
+```
+
+Attach a permanent, named marker (an *annotated tag*, `-a`) to the exact commit that closed the dispatch. Unlike a branch, a tag never moves — it pins a fixed point in history. `-m` records why this point matters, giving the close a durable label anyone can find later.
+
+```bash
 git -C /path/to/substrate push origin auth-skeleton-v0.1
 ```
+
+Upload the tag to origin (tags are not pushed by branch pushes, so this is a separate step) so the ratification marker is visible to the whole team, not just locally.
 
 Mentor-1 updates the LEDGER (the dispatch is now `closed`), flushes + pushes reviewer-state, and prints an END status grid. Your first dispatch is complete — and every piece of it is reconstructable from git log.
 

@@ -60,9 +60,21 @@ The fresh Doer pulls, makes the one-line edit, confirms the page renders, and co
 
 ```bash
 git -C /path/to/substrate add auth/views/login.tsx
+```
+
+This stages the one edited file — telling git which change you want included in the next commit. The `-C /path/to/substrate` part just runs git as if you were standing inside that project folder, so you don't have to change directories first.
+
+```bash
 git -C /path/to/substrate commit -m "auth: login primary button → brand-blue token"
+```
+
+This records the staged change as a permanent, dated entry in the project's history (a *commit*), with the `-m` message describing what changed and why. This is what makes the work durable and auditable.
+
+```bash
 git -C /path/to/substrate push origin main:main
 ```
+
+This uploads the new commit from your local copy to the shared remote repository (`origin`), onto its `main` branch — so the fix is now live on trunk for everyone, not just on your machine.
 
 The Doer is **fresh-per-turn** here — meaning it spins up clean for this one request and is discarded afterward, carrying no memory forward. That is even lighter than *fresh-per-slice* (a Doer that lives across a few related steps). It did one request and dies; nothing carries forward.
 

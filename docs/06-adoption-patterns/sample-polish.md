@@ -70,11 +70,33 @@ The Doer commits via the same commit-discipline as every other lane (this never 
 
 ```bash
 git -C /path/to/substrate add billing/views/invoices_table.tsx
+```
+
+This stages the one file the Doer changed — it tells git "include this edited file in the next snapshot." The `-C /path/to/substrate` part just runs git inside the project folder without having to move into it first.
+
+```bash
 git -C /path/to/substrate commit -m "billing: invoice status filter dropdown"
+```
+
+This records the staged change as a permanent snapshot (a *commit*) in the project's history, with the short message after `-m` describing what changed.
+
+```bash
 git -C /path/to/substrate push origin main:main
+```
+
+This uploads the new commit to the shared remote copy of the project (`origin`) so the team's history matches yours. `main:main` means "send my local `main` branch to the remote `main` branch."
+
+```bash
 git -C /path/to/substrate tag -a polish-invoice-filter-v1.0 -m "Polish: invoice status filter"
+```
+
+This pins a named marker (a *tag*) onto this commit so the change is easy to find later. `-a` makes it an annotated tag (one that carries its own label and message), and `-m` sets that message.
+
+```bash
 git -C /path/to/substrate push origin polish-invoice-filter-v1.0
 ```
+
+Tags aren't sent by a normal push, so this uploads the tag you just created to the remote, making the marker visible to everyone.
 
 ### DONE — loop closes
 
