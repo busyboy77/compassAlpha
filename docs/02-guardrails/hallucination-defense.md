@@ -16,6 +16,10 @@ In plain terms: an AI will sometimes "remember" a decision, a spec detail, or a 
 
 AI tiers fabricate plausible-but-false institutional memory — "I remember we decided X," "the Auth spec defines three roles," "the founder ruled DEFER on that." Confidently wrong, and indistinguishable from confidently right at the moment of utterance. CompassAlpha's defense is **verification-at-citation**: a tier's recall is treated as a *hypothesis* until checked against the immutable substrate (the committed codebase or doctrine source at a specific tag). The hallucination is caught at verification time, before it becomes the premise of the next decision. This is the operational face of the [provenance law](../01-axioms/provenance-law.md).
 
+![The verify-at-citation loop — state the claim, locate the substrate, read the frozen blob, compare; on a match proceed and cite, on a mismatch correct](../assets/verify-at-citation.svg)
+
+<small>*Before acting on anything you remember: state the claim, locate the substrate, read the frozen blob, and compare. Match → proceed and cite; mismatch → it was a hallucination, correct it. The fabrication is caught at the compare step, before it becomes the next decision's premise.*</small>
+
 ## The failure it prevents
 
 A language model does not know the difference between a memory it formed and a memory it invented. Both arrive with the same fluency. In a long-lived federation this is corrosive in a way ordinary single-session use is not:

@@ -16,6 +16,10 @@ In plain terms: don't trust memory, check the source. Every important claim has 
 
 Every load-bearing claim in the federation must be **traceable to substrate** — the project's actual codebase or doctrine source repo at a specific commit/tag. AI institutional memory ("I remember we decided X") is NEVER authoritative without substrate verification. This is the framework's structural defense against AI hallucination.
 
+![Cite by substrate, not recall — a claim verified against the frozen file at its tag yields a grounded citation; a claim taken from memory ships an unverified hallucination](../assets/cite-by-substrate.svg)
+
+<small>*A claim checked against the frozen substrate (`git show <tag>:<file>`) becomes a grounded citation; a claim trusted from memory can ship a confident falsehood. Memory is a hypothesis; the committed blob is the fact.*</small>
+
 ## The rule
 
 ### Cite by substrate, not by recall

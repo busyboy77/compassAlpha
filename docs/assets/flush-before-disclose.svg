@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1500" height="700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="700" fill="#fafaf8"/>
+
+  <!-- HEADER -->
+  <rect x="0" y="0" width="1500" height="90" fill="#1f2a36"/>
+  <text x="750" y="40" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">Flush Before Disclose</text>
+  <text x="750" y="67" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Every load-bearing fact lands on disk and at origin BEFORE it is spoken — nothing load-bearing lives only in chat</text>
+
+  <!-- the correct flow -->
+  <rect x="60" y="124" width="280" height="86" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.8"/>
+  <text x="200" y="158" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1a4a7a">a load-bearing fact</text>
+  <text x="200" y="180" text-anchor="middle" font-size="10.5" fill="#3a5a7a">a decision · a tag · a ledger entry</text>
+
+  <line x1="340" y1="167" x2="392" y2="167" stroke="#4a8a4a" stroke-width="2.6" marker-end="url(#ag)"/>
+
+  <!-- FLUSH gate -->
+  <rect x="396" y="116" width="320" height="160" rx="12" fill="#eef6ee" stroke="#4a8a4a" stroke-width="2.2"/>
+  <text x="556" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#2a5a2a">the FLUSH gate</text>
+  <rect x="416" y="160" width="280" height="32" rx="6" fill="#fff" stroke="#4a8a4a" stroke-width="1.2"/><text x="556" y="181" text-anchor="middle" font-size="11" fill="#2a5a2a">1 · write to disk</text>
+  <rect x="416" y="198" width="280" height="32" rx="6" fill="#fff" stroke="#4a8a4a" stroke-width="1.2"/><text x="556" y="219" text-anchor="middle" font-size="11" fill="#2a5a2a">2 · commit + push to origin</text>
+  <rect x="416" y="236" width="280" height="32" rx="6" fill="#fff" stroke="#4a8a4a" stroke-width="1.2"/><text x="556" y="257" text-anchor="middle" font-size="11" fill="#2a5a2a">3 · read-back to verify</text>
+
+  <line x1="716" y1="167" x2="768" y2="167" stroke="#4a8a4a" stroke-width="2.6" marker-end="url(#ag)"/>
+
+  <!-- THEN disclose -->
+  <rect x="772" y="124" width="300" height="86" rx="11" fill="#f0ede4" stroke="#a89968" stroke-width="1.8"/>
+  <text x="922" y="158" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4a3f18">THEN disclose</text>
+  <text x="922" y="180" text-anchor="middle" font-size="10.5" fill="#6a5a28">a one-line ping to the founder</text>
+
+  <!-- ordering label -->
+  <text x="556" y="300" text-anchor="middle" font-size="11" fill="#5a8a5a" font-style="italic">disk + origin first; the spoken word comes last</text>
+
+  <!-- ===== the crash test ===== -->
+  <line x1="60" y1="344" x2="1440" y2="344" stroke="#cfcabc" stroke-width="1.4"/>
+  <text x="60" y="378" font-size="14" font-weight="700" fill="#33445a">The test: the host loses power right here. What survives?</text>
+
+  <!-- survives -->
+  <rect x="60" y="398" width="660" height="120" rx="12" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <polyline points="92,448 104,460 128,434" fill="none" stroke="#2a5a2a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="432" text-anchor="middle" font-size="14" font-weight="700" fill="#2a5a2a">flushed first — it survives</text>
+  <text x="400" y="460" text-anchor="middle" font-size="11.5" fill="#3a6a3a">the fact is on disk and at origin; a fresh session</text>
+  <text x="400" y="478" text-anchor="middle" font-size="11.5" fill="#3a6a3a">boots, reads it back, and continues exactly where it left off</text>
+  <text x="400" y="502" text-anchor="middle" font-size="10.5" fill="#5a8a5a" font-style="italic">bounded, recoverable</text>
+
+  <!-- evaporates -->
+  <rect x="780" y="398" width="660" height="120" rx="12" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.8"/>
+  <path d="M812,460 L826,432 L840,460 z" fill="#fdf3f3" stroke="#c44a4a" stroke-width="2.4" stroke-linejoin="round"/><rect x="824" y="443" width="4" height="9" rx="1.5" fill="#8a2a2a"/><circle cx="826" cy="456" r="2.2" fill="#8a2a2a"/>
+  <text x="1120" y="432" text-anchor="middle" font-size="14" font-weight="700" fill="#8a2a2a">disclosed from chat only — it evaporates</text>
+  <text x="1120" y="460" text-anchor="middle" font-size="11.5" fill="#9a3a3a">the fact lived only in the volatile session; the crash takes it.</text>
+  <text x="1120" y="478" text-anchor="middle" font-size="11.5" fill="#9a3a3a">the founder was told something the substrate can't confirm</text>
+  <text x="1120" y="502" text-anchor="middle" font-size="10.5" fill="#b06a6a" font-style="italic">unbounded loss · trust erodes</text>
+
+  <!-- CAPTION -->
+  <rect x="60" y="544" width="1380" height="118" rx="10" fill="#eef2f6" stroke="#5a6a7a" stroke-width="1.3"/>
+  <text x="750" y="572" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2a3a4a">Persist, then speak — never the other way around.</text>
+  <text x="750" y="598" text-anchor="middle" font-size="12" fill="#3a4a5a"><tspan font-weight="700">Why:</tspan> an AI session is volatile; a host can lose power. Whatever was only spoken is gone, and a "done" the disk can't confirm is exactly what erodes the founder's trust.</text>
+  <text x="750" y="618" text-anchor="middle" font-size="12" fill="#3a4a5a"><tspan font-weight="700">How:</tspan> write → commit + push → read-back to verify, and only then ping. <tspan font-weight="700">Where:</tspan> at every flush trigger, before any disclosure crosses the bus.</text>
+  <text x="750" y="642" text-anchor="middle" font-size="11.5" fill="#5a6a7a" font-style="italic">State of the federation = state of git. If it isn't in git, it didn't happen.</text>
+
+  <!-- FOOTER -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="676" width="6" height="6" rx="1"/><rect x="699" y="672" width="6" height="10" rx="1"/><rect x="708" y="668" width="6" height="14" rx="1"/></g>
+    <text x="722" y="682" font-size="12" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

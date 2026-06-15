@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1500" height="700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a8a4a"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c44a4a"/></marker>
+  </defs>
+
+  <rect width="1500" height="700" fill="#fafaf8"/>
+
+  <!-- HEADER -->
+  <rect x="0" y="0" width="1500" height="90" fill="#1f2a36"/>
+  <text x="750" y="40" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">Cite by Substrate, Not by Recall</text>
+  <text x="750" y="67" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Every load-bearing claim is traceable to a frozen file at a commit — an AI's memory is a hypothesis, never the source of truth</text>
+
+  <!-- claim node -->
+  <rect x="600" y="118" width="300" height="74" rx="11" fill="#f0ede4" stroke="#a89968" stroke-width="1.8"/>
+  <text x="750" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#4a3f18">a load-bearing claim</text>
+  <text x="750" y="170" text-anchor="middle" font-size="10.5" fill="#6a5a28">"the Auth roles are Viewer → Editor → Owner"</text>
+
+  <!-- two paths -->
+  <line x1="680" y1="192" x2="470" y2="244" stroke="#4a8a4a" stroke-width="2.4" marker-end="url(#ag)"/>
+  <text x="520" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#2a5a2a">verify first</text>
+  <line x1="820" y1="192" x2="1030" y2="244" stroke="#c44a4a" stroke-width="2.4" marker-end="url(#ar)"/>
+  <text x="980" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#8a2a2a">cite from memory</text>
+
+  <!-- RIGHT path: substrate (left side) -->
+  <rect x="90" y="252" width="660" height="250" rx="12" fill="#eef6ee" stroke="#4a8a4a" stroke-width="2"/>
+  <text x="420" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#2a5a2a">read the frozen substrate</text>
+  <rect x="120" y="300" width="600" height="40" rx="7" fill="#fff" stroke="#4a8a4a" stroke-width="1.2"/>
+  <text x="420" y="325" text-anchor="middle" font-size="11.5" fill="#2a5a2a" font-family="JetBrains Mono, monospace">git show auth-v0.1:docs/spec/auth.md  §3</text>
+  <text x="420" y="364" text-anchor="middle" font-size="11" fill="#3a6a3a">the committed file at the relevant tag — immutable,</text>
+  <text x="420" y="382" text-anchor="middle" font-size="11" fill="#3a6a3a">the same for every session, today and next month</text>
+  <rect x="120" y="402" width="600" height="78" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.4"/>
+  <polyline points="150,444 162,456 186,430" fill="none" stroke="#2a5a2a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="430" y="436" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">grounded cite</text>
+  <text x="430" y="458" text-anchor="middle" font-size="10.5" fill="#3a6a3a">claim now reads: "Viewer → Editor → Admin → Owner"</text>
+  <text x="430" y="474" text-anchor="middle" font-size="10.5" fill="#3a6a3a">(memory was wrong — substrate corrected it), cited as file @ tag</text>
+
+  <!-- WRONG path: recall (right side) -->
+  <rect x="770" y="252" width="640" height="250" rx="12" fill="#fdf3f3" stroke="#c44a4a" stroke-width="2"/>
+  <text x="1090" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#8a2a2a">trust the recollection</text>
+  <rect x="800" y="300" width="580" height="40" rx="7" fill="#fff" stroke="#c44a4a" stroke-width="1.2"/>
+  <text x="1090" y="325" text-anchor="middle" font-size="11.5" fill="#8a2a2a" font-style="italic">"I remember we decided three roles…"</text>
+  <text x="1090" y="364" text-anchor="middle" font-size="11" fill="#9a3a3a">an AI can fabricate plausible-but-false history;</text>
+  <text x="1090" y="382" text-anchor="middle" font-size="11" fill="#9a3a3a">two sessions can "remember" the same event differently</text>
+  <rect x="800" y="402" width="580" height="78" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.4"/>
+  <path d="M832,444 L846,416 L860,444 z" fill="#fdeaea" stroke="#c44a4a" stroke-width="2.4" stroke-linejoin="round"/><rect x="844" y="427" width="4" height="9" rx="1.5" fill="#8a2a2a"/><circle cx="846" cy="440" r="2.2" fill="#8a2a2a"/>
+  <text x="1110" y="430" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a2a2a">unverified — a hallucination ships</text>
+  <text x="1110" y="452" text-anchor="middle" font-size="10.5" fill="#9a3a3a">the founder decides on a hierarchy that never existed;</text>
+  <text x="1110" y="468" text-anchor="middle" font-size="10.5" fill="#9a3a3a">downstream work drifts from the real history</text>
+
+  <!-- CAPTION -->
+  <rect x="90" y="524" width="1320" height="140" rx="10" fill="#eef2f6" stroke="#5a6a7a" stroke-width="1.3"/>
+  <text x="750" y="552" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2a3a4a">Memory is a hypothesis; the committed blob is the fact.</text>
+  <text x="750" y="578" text-anchor="middle" font-size="12" fill="#3a4a5a"><tspan font-weight="700">Why:</tspan> AI models invent confident, plausible falsehoods, and different sessions recall differently. Forcing every claim to an immutable substrate catches the fabrication at verification time.</text>
+  <text x="750" y="598" text-anchor="middle" font-size="12" fill="#3a4a5a"><tspan font-weight="700">How:</tspan> before acting on a recalled fact, read it back from <tspan font-family="JetBrains Mono, monospace">git show &lt;tag&gt;:&lt;file&gt;</tspan> and cite that — never the worktree, never the ledger summary, never the session's memory.</text>
+  <text x="750" y="622" text-anchor="middle" font-size="12" fill="#3a4a5a"><tspan font-weight="700">Where:</tspan> for every architectural fact, primitive, prior decision, or founder ruling — the citation references the frozen artifact at its tag.</text>
+  <text x="750" y="646" text-anchor="middle" font-size="11.5" fill="#5a6a7a" font-style="italic">One truth on disk resolves any he-said-she-said between sessions instantly.</text>
+
+  <!-- FOOTER -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="676" width="6" height="6" rx="1"/><rect x="699" y="672" width="6" height="10" rx="1"/><rect x="708" y="668" width="6" height="14" rx="1"/></g>
+    <text x="722" y="682" font-size="12" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

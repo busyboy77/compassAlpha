@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1500" height="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 720" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+  </defs>
+
+  <rect width="1500" height="720" fill="#fafaf8"/>
+
+  <!-- HEADER -->
+  <rect x="0" y="0" width="1500" height="90" fill="#1f2a36"/>
+  <text x="750" y="40" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">A Snapshot Rots — true at the instant, false a moment later</text>
+  <text x="750" y="67" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">A mentor only sees a sub-tier through tagged returns; between them, the sub-tier moves on silently — by design</text>
+
+  <!-- time axis -->
+  <text x="60" y="128" font-size="12" font-weight="700" fill="#33445a">time →</text>
+  <line x1="60" y1="138" x2="1300" y2="138" stroke="#c9c3b4" stroke-width="2" marker-end="url(#ag)"/>
+
+  <!-- REALITY lane (sub-tier actually advances) -->
+  <text x="60" y="186" font-size="12.5" font-weight="700" fill="#2a5a2a">the sub-tier (reality)</text>
+  <rect x="240" y="160" width="180" height="56" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/><text x="330" y="184" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">S2a</text><text x="330" y="202" text-anchor="middle" font-size="9.5" fill="#3a6a3a">T0 · tagged return</text>
+  <line x1="420" y1="188" x2="500" y2="188" stroke="#4a8a4a" stroke-width="2" marker-end="url(#ag)"/>
+  <rect x="500" y="160" width="180" height="56" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/><text x="590" y="184" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">S3</text><text x="590" y="202" text-anchor="middle" font-size="9.5" fill="#3a6a3a">T+1 · no return sent</text>
+  <line x1="680" y1="188" x2="760" y2="188" stroke="#4a8a4a" stroke-width="2" marker-end="url(#ag)"/>
+  <rect x="760" y="160" width="180" height="56" rx="9" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.6"/><text x="850" y="184" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2a5a2a">S4</text><text x="850" y="202" text-anchor="middle" font-size="9.5" fill="#3a6a3a">T+2 · still no return</text>
+  <text x="1050" y="192" font-size="10.5" fill="#5a8a5a" font-style="italic">the firewall means the mentor isn't told — this is correct</text>
+
+  <!-- MENTOR note lane (frozen) -->
+  <text x="60" y="320" font-size="12.5" font-weight="700" fill="#1a4a7a">the mentor's note</text>
+  <rect x="240" y="296" width="700" height="56" rx="9" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="590" y="320" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">"module in-flight at S2a"</text>
+  <text x="590" y="338" text-anchor="middle" font-size="9.5" fill="#3a5a7a">recorded once at T0 — and never updated, because no return arrived</text>
+
+  <!-- the rot gap -->
+  <line x1="850" y1="216" x2="850" y2="296" stroke="#c44a4a" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <rect x="956" y="296" width="344" height="56" rx="9" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.6"/>
+  <text x="1128" y="320" text-anchor="middle" font-size="11.5" font-weight="700" fill="#8a2a2a">the gap = ROT</text>
+  <text x="1128" y="338" text-anchor="middle" font-size="9.5" fill="#9a3a3a">note says S2a; reality is S4 — drifting further every turn</text>
+
+  <!-- two outcomes -->
+  <!-- LEAK -->
+  <rect x="60" y="392" width="660" height="120" rx="12" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.8"/>
+  <text x="390" y="420" text-anchor="middle" font-size="13.5" font-weight="700" fill="#8a2a2a">treated as live → the firewall leak</text>
+  <text x="390" y="446" text-anchor="middle" font-size="11" fill="#9a3a3a">founder asks "where is it?" — mentor reads its note and</text>
+  <text x="390" y="464" text-anchor="middle" font-size="11" fill="#9a3a3a">answers "S2a", authoritatively. It's two stages stale.</text>
+  <text x="390" y="490" text-anchor="middle" font-size="10.5" fill="#b06a6a" font-style="italic">honest when recorded · a confident falsehood when used</text>
+
+  <!-- CAUGHT -->
+  <rect x="780" y="392" width="660" height="120" rx="12" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.8"/>
+  <text x="1110" y="420" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2a5a2a">stamped "as of" → caught</text>
+  <text x="1110" y="446" text-anchor="middle" font-size="11" fill="#3a6a3a">the note reads "S2a, as of T0 — no return since."</text>
+  <text x="1110" y="464" text-anchor="middle" font-size="11" fill="#3a6a3a">The date flags its own age; before acting, re-verify (forensic descent).</text>
+  <text x="1110" y="490" text-anchor="middle" font-size="10.5" fill="#5a8a5a" font-style="italic">"current" = "as of the last return", never "live"</text>
+
+  <!-- CAPTION -->
+  <rect x="60" y="540" width="1380" height="140" rx="10" fill="#eef2f6" stroke="#5a6a7a" stroke-width="1.3"/>
+  <text x="750" y="568" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2a3a4a">The firewall isn't the bug — pretending to know live state you haven't re-fetched is.</text>
+  <text x="750" y="594" text-anchor="middle" font-size="12" fill="#3a4a5a"><tspan font-weight="700">Why it's inevitable:</tspan> the firewall deliberately stops the mentor from auto-reading the sub-tier, so its only window is the snapshots in tagged returns. Between returns, reality moves and the note rots.</text>
+  <text x="750" y="614" text-anchor="middle" font-size="12" fill="#3a4a5a"><tspan font-weight="700">How to defend:</tspan> stamp every recorded sub-tier state with the date it was true and the return it came from — an un-dated line can't be audited; a dated one announces its own staleness.</text>
+  <text x="750" y="638" text-anchor="middle" font-size="12" fill="#3a4a5a"><tspan font-weight="700">Where:</tspan> in every mentor note about a sub-tier. If a decision needs live state, forensic-descend to re-verify — don't cite the rotting value.</text>
+  <text x="750" y="662" text-anchor="middle" font-size="11.5" fill="#5a6a7a" font-style="italic">The cure is never "read the sub-tier continuously" — that just re-introduces context pollution.</text>
+
+  <!-- FOOTER -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="694" width="6" height="6" rx="1"/><rect x="699" y="690" width="6" height="10" rx="1"/><rect x="708" y="686" width="6" height="14" rx="1"/></g>
+    <text x="722" y="700" font-size="12" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

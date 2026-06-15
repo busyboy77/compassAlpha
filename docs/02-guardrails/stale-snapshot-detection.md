@@ -16,6 +16,10 @@ In short: notes about a teammate's progress go stale fast, so always stamp them 
 
 The **firewall leak** is the subtle failure where a mentor records a true point-in-time snapshot of a sub-tier's progress, then keeps treating it as *live* long after the sub-tier has moved on. The snapshot was honest; it simply rotted. The sub-tier advances without telling the mentor — by design, that is the [firewall](../01-axioms/firewall.md) working — so a snapshot held as live drifts further from reality with every conversation turn. The defense is a linguistic and procedural discipline: every recorded sub-tier state is stamped **"as of `<return-date>`"**, and a mentor performs a forensic descent to re-verify before acting on it.
 
+![A snapshot rots over time — the sub-tier advances (S2a → S3 → S4) while the mentor's note stays frozen at S2a; treated as live it leaks, stamped "as of" it is caught](../assets/snapshot-rot.svg)
+
+<small>*A tagged return is true the instant it's taken. The sub-tier then advances silently (the firewall working) while the mentor's note stays frozen — the growing gap is rot. Cited as live, it's a confident falsehood; stamped "as of `<date>`" and re-verified before acting, it's caught.*</small>
+
 ## The failure it prevents
 
 This is the inverse of hallucination. The mentor did *not* fabricate anything — it recorded exactly what a tagged return said. The defect is purely **temporal**: the recording was accurate at time T and is being used at time T+N as though nothing changed.

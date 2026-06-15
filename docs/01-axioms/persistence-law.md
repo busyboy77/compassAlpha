@@ -18,6 +18,10 @@ Every load-bearing state change must be **written to disk + pushed to origin + r
 
 **If state isn't on disk, it doesn't exist.**
 
+![Flush before disclose — a load-bearing fact passes the flush gate (write to disk, commit and push to origin, read-back to verify) before it is disclosed, so a host crash never loses it](../assets/flush-before-disclose.svg)
+
+<small>*Persist, then speak. A load-bearing fact is written to disk, pushed to origin, and read back to verify — only then is it disclosed. If the host loses power, a flushed fact survives in git; one that lived only in chat evaporates, and a "done" the disk can't confirm is what erodes trust.*</small>
+
 ## The rule
 
 ### Flush-before-disclose
