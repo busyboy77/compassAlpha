@@ -6,7 +6,9 @@ description: "GitAI: git as the coordination, durability and audit layer for mul
 
 > *State of the federation = state of git.*
 
-CompassAlpha is the reference framework for a new operational category: **GitAI** — using git as the coordination, durability, and audit layer for multi-agent AI operations.
+New here? This page names the *kind of thing* CompassAlpha is. Just as "GitOps" became the shorthand for "run your servers from git," **GitAI** is the shorthand for "run a team of AI agents from git" — and understanding the category helps you place everything else you'll read.
+
+CompassAlpha is the reference framework for a new operational category: **GitAI** — using git (the version-control system most projects already use to track code) as the coordination, durability, and audit layer for multi-agent AI operations. In plain terms: many AI agents work together, and git is the shared notebook they all read from and write to.
 
 ## Lineage
 
@@ -125,6 +127,13 @@ If you want to understand CompassAlpha's specific GitAI implementation:
 
 - [Axioms](../01-axioms/) — the inviolable rules
 - [Bus protocol](../01-axioms/bus-protocol.md) — the core coordination mechanism
+
+## Remember this
+
+- **GitAI is a category, not a product.** It's the name for "coordinate a team of AI agents using git as the shared source of truth" — the way GitOps named "run infrastructure from git."
+- **Git is the shared notebook.** Every agent's state, every message, and the full history all live in git, so any session can be rebuilt from it and "disaster recovery" is just a `git pull`.
+- **CompassAlpha is a *framework*, not a *platform*.** It's the protocol agents follow — like HTTP or IMAP. You bring your own git host, AI agent, and compute. For how the pieces fit together, see [the mental model](mental-model.md).
+- **It plays well with others.** GitAI complements RAG, agent libraries (LangChain, AutoGen), and AIOps — it doesn't replace them.
 
 ---
 

@@ -6,6 +6,8 @@ description: "The CompassAlpha constitution: 7 invariant axioms, guardrails, tun
 
 > *Provisioned as a constitution: a small inviolable foundation + everything else explicitly tunable on top.*
 
+New here? This page is the map of how CompassAlpha is organized: a few rules that never change, a few that protect you, and a lot of dials you set to fit your own project. Read it once and you'll know where everything else in the docs lives.
+
 CompassAlpha is structured constitutionally — like a written constitution for a polity. There's a small set of **inviolable principles** (axioms), a set of **protective rules** (guardrails), and then a wide surface of **decisions you make for your specific project** (tunables and toggles).
 
 ## The four-layer constitutional model
@@ -68,7 +70,7 @@ The five primary axes in tension (no combination optimizes all):
 - ⚠ **RISK** — pollution, hallucination, drift, replay
 - 📐 **PREDICTABILITY** — cycle/scope estimability
 
-A conservative profile biases toward **intelligence + low-risk** (LAYGO — *Learn As You Go* — concurrency, pure RELAY, fresh-per-slice, xhigh effort, strict provenance). Other project profiles want other bias points.
+A conservative profile biases toward **intelligence + low-risk** (LAYGO — *Learn As You Go*, meaning each step is taken in sequence and the next one starts only once the last is understood — concurrency, pure RELAY, fresh-per-slice, xhigh effort, strict provenance). Other project profiles want other bias points.
 
 Tunable categories:
 
@@ -199,6 +201,15 @@ The constitution evolves. Like real-world constitutions, it has amendment cycles
 - **Toggles**: extended in lockstep with tunables
 
 A reference federation's doctrine cycle (e.g. Charter v0.4 → v0.5) is itself the amendment process for the framework. Each cycle is documented in the [Changelog](../08-community/changelog.md).
+
+---
+
+## Remember this
+
+- CompassAlpha is built like a constitution: a tiny set of rules that never change (the **axioms**), a set that protects you (the **guardrails**), and a wide surface of dials you set for your own project (**tunables and toggles**).
+- The layers stack downward: toggles bundle tunables, tunables sit on guardrails, and guardrails defend the axioms. Higher layers can't override lower ones.
+- You only need to *internalize* the axioms and guardrails. Tunables and toggles are reference material — look them up when you need them.
+- Every federation governs by **one Charter** as its single source of truth; each component gets a **Compass** under it, so teams can spread out without the codebase drifting apart. For the bigger picture of how the pieces fit, see [the mental model](mental-model.md).
 
 ---
 

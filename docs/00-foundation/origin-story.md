@@ -6,6 +6,8 @@ description: "Why CompassAlpha exists: the multi-agent AI failures — context p
 
 > *Every rule in this framework is a scar. Here is how each one was earned.*
 
+**New here? In plain terms:** this page is the true story of *why* CompassAlpha exists. One founder tried to get several AI assistants to work together on a single real codebase, watched it go wrong in the same handful of ways every time, and built a set of rules so it would stop. If you ever want to know what a particular rule is *for*, the answer is almost always on this page — every rule maps back to a specific thing that broke.
+
 CompassAlpha did not begin as a framework. It began as a frustration — a founder with one substantial codebase, several capable AI agents, and no working way to make them collaborate without the work quietly corrupting itself. The framework is the abstraction of what finally made that collaboration hold. This page tells that story, and shows **why each artifact and each role was carved out**.
 
 ---
@@ -41,7 +43,7 @@ And the human — the founder — would be told "done, it's committed and pushed
 
 ## The four failures
 
-Those four perspectives are four named **pathologies** — and they recur in *every* ad-hoc multi-agent setup, not just this one:
+Those four perspectives are four named **pathologies** — recurring, predictable ways the work breaks — and they show up in *every* ad-hoc multi-agent setup, not just this one:
 
 1. **Context pollution** — a tier absorbs detail it shouldn't carry (the helpful mentor), and its judgement degrades.
 2. **Hallucination drift** — confident assertions that never happened on disk (the false memory) propagate as fact.
@@ -63,7 +65,7 @@ Sitting with the wreckage, a small set of non-negotiable requirements emerged. N
 - **Coordination must survive death.** A session can crash, a host can power down mid-turn — and the work must resume from exactly where it was, with no human re-explaining anything.
 - **Parallel work must not clobber.** Two sessions writing at once must be safe by construction.
 
-Notice what every one of these requires: a **single, durable, inspectable, append-only state of record** that all tiers and the human share. The question became — what could possibly be that substrate?
+Notice what every one of these requires: a **single, durable, inspectable, append-only state of record** — one shared place that survives crashes, that you can read at any time, and that you only ever add to (never silently rewrite) — held in common by all the agents and the human. The question became — what could possibly be that shared place (the *substrate*)?
 
 ---
 
@@ -122,6 +124,15 @@ Finally, the work itself has two distinct modes that must not run simultaneously
 None of the above was designed in the abstract. Every rule on this page was forced by a real failure in a real production multi-agent federation running against a substantial live codebase, iterated over many cycles until the work stopped rotting. The framework is the **abstraction** of those proven patterns — stripped of any one project's domain, generalized to the universal vocabulary of Mentor-1 / Mentor-2 / Doer, Charter, Ledger, and bus.
 
 It is published **source-available** by gradus so that other founders facing the same four pathologies don't have to re-earn every scar to find the structure that heals them.
+
+---
+
+## Remember this
+
+- **Every rule has a story.** Nothing in CompassAlpha is decoration — each rule exists to stop a specific failure that actually happened: agents drifting out of their lane, inventing memories, claiming work that wasn't really saved, or quietly corrupting each other's output.
+- **There are four failures, over and over.** Context pollution, hallucination drift, role confusion, and trust erosion. If you only remember one thing, remember these — almost everything else in the framework is a defense against them.
+- **Git is the shared source of truth.** "If it isn't committed and pushed, it didn't happen." That single idea — the work's real state lives in git, not in any chat — is what makes the whole thing survive crashes and let you stop double-checking everything by hand.
+- **Want the bigger picture?** See [the mental model](mental-model.md) for how these pieces fit together at a glance.
 
 ---
 

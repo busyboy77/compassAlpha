@@ -6,9 +6,13 @@ description: "CompassAlpha is a framework, not a tool: a constitution and protoc
 
 > *The single most important framing in CompassAlpha. If you skip this page and assume CompassAlpha is a tool, you will fail to adopt it.*
 
+In plain terms: this page explains that CompassAlpha is a set of rules and conventions you read and apply — not a program you download and run. Get this distinction right and everything else in the portal will make sense.
+
 ## TL;DR
 
-CompassAlpha is a **constitution + protocol specification + a set of conventions** for coordinating multi-tier AI-agent federations. It is **not**:
+The short version: you don't install CompassAlpha; you adopt its rules and use them with the tools you already have.
+
+CompassAlpha is a **constitution + protocol specification + a set of conventions** (a written rulebook plus shared vocabulary, not software) for coordinating multi-tier AI-agent federations — that is, teams of AI agents working together in defined roles. It is **not**:
 
 - A tool you `pip install` or `npm install`
 - A SaaS you subscribe to
@@ -146,6 +150,15 @@ Framework-form was chosen over tool-form deliberately, and three forces made the
 3. **Tier specialization** — each project's tiers carry domain-specific names and responsibilities that no one-size-fits-all tool could hold cleanly. Specialization-by-stamping is what makes the framework work.
 
 These are the decisions CompassAlpha makes once, and then exports to every project that adopts it.
+
+---
+
+## Remember this
+
+- **CompassAlpha is something you read and apply, not something you install.** No binary, no daemon, no API key — just markdown files you write and an AI agent you already use.
+- **The value lives in the rules, not in any executable.** Think HTTP or a constitution: the specification is what's worth having, and many implementations can be built on top of it.
+- **You keep your own tools.** Your git, your AI agent, your host, your CI/CD all stay yours; the framework only governs how the pieces collaborate.
+- If the difference between "framework" and "tool" still feels abstract, [the mental model](mental-model.md) page lays out the bigger picture it fits into.
 
 ---
 

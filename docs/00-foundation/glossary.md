@@ -6,6 +6,8 @@ description: "CompassAlpha glossary: Charter, Compass, Invariants, Primitives, a
 
 > Canonical vocabulary. Use these terms exactly. This glossary defines framework-level vocabulary, which applies universally; each adopting project names its own tiers, entities, and stages on top.
 
+New here? This is your dictionary for CompassAlpha. The framework uses a handful of precise words — *Charter*, *Compass*, *tier*, *axis* — that mean specific things. Skim it once to get oriented, then come back and look up any term that trips you up as you read the rest of the portal. You don't need to memorize it; you just need to know where it lives.
+
 ## Core vocabulary (framework-level, INVARIANT)
 
 ### Annex
@@ -24,6 +26,8 @@ Future axes are extensible: review, ops, AI-training, etc.
 
 ### Charter
 
+*Plain version: the one rulebook the whole federation answers to — the constitution at the top.*
+
 The federation's **single** master constitutional document — one per federation, the source of truth every tier and human cohort is bound to. Components live under it as [Compasses](#compass); [axes](#axis) attach as [annexes](#annex). Raised by **GO-UP-BUMP** (see [Bump](#bump)). Has a state machine:
 - **LOCKED** — read-only; the build axis runs
 - **UNLOCKED** — editable; the doctrine axis runs
@@ -39,6 +43,8 @@ Axes alternate temporally based on Charter state.
 A [Charter posture](#axis) for an axis that runs **continuously**, outside the LOCKED↔UNLOCKED alternation. A DECOUPLED axis reads the Charter **read-only**, never locks or blocks it, and may only *request* a Charter amendment through the doctrine axis. Day-2 axes (ops, QA, audit) are typically DECOUPLED.
 
 ### Compass
+
+*Plain version: a local rulebook for one piece of the project, living under the one Charter — where each component sets its own house rules.*
 
 A doctrine document for one component/entity/scope in the project, governed **under the single [Charter](#charter)**. Tiered at three altitudes:
 - **60K** — Ideology section: principles, named theses, why-this-domain-matters
@@ -115,6 +121,8 @@ The project's actual codebase / doctrine source repo. **Separate from the review
 Annotated git tag marking a dispatch close. Immutable. The federation's ratification artifact. Pushed via explicit refspec.
 
 ### Tier
+
+*Plain version: who does what — the top two tiers plan and coordinate, the bottom tier writes the code.*
 
 A role in an axis's hierarchy. CompassAlpha uses three tiers per axis: Mentor-1, Mentor-2, Doer.
 
@@ -277,5 +285,12 @@ Throughout the portal:
 If you see one of these markers, you're at a decision or known-gap point.
 
 ---
+
+## Remember this
+
+- This page is a reference, not a reading assignment — look terms up as you need them; don't try to swallow it whole.
+- Five words carry most of the weight: a **Charter** (the one rulebook), **Compasses** (local rulebooks beneath it), **axes** (parallel work streams), **tiers** (who plans vs. who codes), and **Doer** (the only role that touches your actual code). Learn these first and the rest falls into place.
+- `[INVARIANT]` terms are fixed across every CompassAlpha project; `[TUNABLE]` ones you get to set yourself. The badges tell you which is which.
+- For how these terms fit together as one picture, see [the mental model](mental-model.md).
 
 ## Next: [01 Axioms →](../01-axioms/)

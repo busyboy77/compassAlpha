@@ -6,7 +6,11 @@ description: "Codebase coherence is CompassAlpha's core distinction: the AI fede
 
 > *One canonical way to do each thing — enforced against the doctrine, not left to each agent's discretion. The codebase stays uniform as it grows, across sessions and across teams.*
 
+New here? This page explains how CompassAlpha keeps a codebase tidy and consistent when many AI agents (and many people) are all editing it — so the same job always gets done the same way, instead of everyone inventing their own version.
+
 ## TL;DR
+
+In plain terms: when lots of contributors touch one codebase, they tend to solve the same problem in slightly different ways, and the code slowly turns into a mess. CompassAlpha stops that by making "the one right way to do each thing" an enforced rule, not a polite suggestion.
 
 The hard problem in multi-agent (and multi-team) software work is not writing code — it is keeping a *growing* codebase **coherent**: one canonical way to do each thing, used everywhere, instead of N near-duplicate, subtly-divergent ways. CompassAlpha treats coherence as a **first-class, enforced property**, not a hope. The doctrine layer — the [Charter](constitution.md), its [Invariants](glossary.md#invariants), [Primitives](glossary.md#primitives), and per-component [Compasses](glossary.md#compass) — is the single source of truth; the federation reasons and builds **against** it, and the [provenance law](../01-axioms/provenance-law.md) forbids acting on memory instead of substrate. Doctrine → coherent code.
 
@@ -36,7 +40,7 @@ The outcome: **one canonical way per concept — no duplicated implementations, 
 
 ## From a 60K vision to bit-level — how a Compass is grown
 
-This is the part you can demo. You supply the **60K ideology in plain words** — the vision, the principles, why the domain matters — and the federation **elaborates it downward**, one altitude at a time, each layer bound to the one above:
+This is the part you can demo. (Throughout, "60K", "30K", "10K" and "grass-root" are altitudes — think of zooming in from a high-level view of the whole product down to the individual lines of code.) You supply the **60K ideology in plain words** — the vision, the principles, why the domain matters — and the federation **elaborates it downward**, one altitude at a time, each layer bound to the one above:
 
 [![An AI federation cycling around one coherent core — the doctrine and dev axes (and any further axis you add) all build against the same AI-enforced coherence](../assets/compass-cycle.svg)](../assets/compass-cycle.svg)
 
@@ -70,6 +74,13 @@ Coherence is not only a point-in-time property; it has to survive the codebase's
 - **[Provenance law](../01-axioms/provenance-law.md)** — cite-by-substrate; the mechanism that forbids reinventing a concept from memory.
 - **[The doctrine substrate](constitution.md#the-doctrine-substrate-charter-compasses-and-axis-annexes)** — one Charter, Compasses, axis annexes; the single-source-of-truth shape.
 - **[Invariants, toolings & specialised agents](../03-tunables/invariants-toolings-agents.md)** — the mechanized conformance checks.
+
+## Remember this
+
+- **Coherence means: one right way to do each thing, used everywhere** — not many near-duplicate versions that slowly drift apart.
+- **The doctrine on disk is the single source of truth.** Agents must build against it and cite it, so they can't quietly invent a second way of doing the same thing.
+- **Say the vision in plain words; get a coherent codebase grown from it** — the AI federation fills in every layer down to the code, all bound to that one vision.
+- New to the bigger picture? Start with [the mental model](mental-model.md) to see where coherence fits among CompassAlpha's core ideas.
 
 ---
 
