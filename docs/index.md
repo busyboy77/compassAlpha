@@ -24,12 +24,13 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
     Read the Foundation pages in order (~20 minutes):
 
-    1. [**Framework, not tool**](00-foundation/framework-not-tool.md) — what CompassAlpha is, what it's not
-    2. [**Origin — why GitAI**](00-foundation/origin-story.md) — the failures that forced the framework
-    3. [**The Constitution**](00-foundation/constitution.md) — the 7 invariant axioms + the doctrine model
-    4. [**Codebase coherence**](00-foundation/codebase-coherence.md) — the core point of distinction
-    5. [**GitAI category**](00-foundation/gitai-category.md) — where CompassAlpha fits
-    6. [**Glossary**](00-foundation/glossary.md) — the canonical vocabulary
+    1. [**The mental model**](00-foundation/mental-model.md) — read this first: the eight ideas to carry into everything else
+    2. [**Framework, not tool**](00-foundation/framework-not-tool.md) — what CompassAlpha is, what it's not
+    3. [**Origin — why GitAI**](00-foundation/origin-story.md) — the failures that forced the framework
+    4. [**The Constitution**](00-foundation/constitution.md) — the 7 invariant axioms + the doctrine model
+    5. [**Codebase coherence**](00-foundation/codebase-coherence.md) — the core point of distinction
+    6. [**GitAI category**](00-foundation/gitai-category.md) — where CompassAlpha fits
+    7. [**Glossary**](00-foundation/glossary.md) — the canonical vocabulary
 
 === "Evaluating adoption?"
 

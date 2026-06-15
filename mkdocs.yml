@@ -96,6 +96,7 @@ nav:
   - Home: index.md
   - Foundation:
     - 00-foundation/index.md
+    - The mental model (start here): 00-foundation/mental-model.md
     - Framework, not tool: 00-foundation/framework-not-tool.md
     - Origin — why GitAI: 00-foundation/origin-story.md
     - Constitution: 00-foundation/constitution.md

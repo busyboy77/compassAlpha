@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 980" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a6a28"/></marker>
+  </defs>
+
+  <rect width="1500" height="980" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="92" fill="#1f2a36"/>
+  <text x="750" y="40" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">The CompassAlpha Mental Model</text>
+  <text x="750" y="68" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Eight ideas to carry &#8212; novice-first, loaded light, the same scaffold for beginner and fatigued expert</text>
+
+  <!-- ============ BAND 1 · WHY ============ -->
+  <rect x="40" y="108" width="1420" height="118" rx="11" fill="#fdf3f3" stroke="#c44a4a" stroke-width="1.6"/>
+  <text x="64" y="134" font-size="14" font-weight="700" fill="#8a2a2a">WHY IT EXISTS &#8212; it prevents four failures</text>
+  <text x="64" y="153" font-size="11" fill="#9a3a3a" font-style="italic">every rule traces to one of these</text>
+  <g font-size="12.5" font-weight="600" fill="#8a2a2a">
+    <rect x="64" y="164" width="320" height="46" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.2"/><text x="224" y="192" text-anchor="middle">context pollution</text>
+    <rect x="404" y="164" width="320" height="46" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.2"/><text x="564" y="192" text-anchor="middle">hallucination drift</text>
+    <rect x="744" y="164" width="320" height="46" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.2"/><text x="904" y="192" text-anchor="middle">role confusion</text>
+    <rect x="1084" y="164" width="352" height="46" rx="8" fill="#fdeaea" stroke="#c44a4a" stroke-width="1.2"/><text x="1260" y="192" text-anchor="middle">trust erosion</text>
+  </g>
+
+  <!-- ============ BAND 2 · THE MACHINE ============ -->
+  <rect x="40" y="240" width="1420" height="118" rx="11" fill="#eef4f9" stroke="#3b6ea5" stroke-width="1.6"/>
+  <text x="64" y="266" font-size="14" font-weight="700" fill="#1a4a7a">THE MACHINE &#8212; three tiers over git</text>
+  <text x="64" y="285" font-size="11" fill="#3b6ea5" font-style="italic">only the Doer touches the substrate; mentors never do labour</text>
+  <g>
+    <rect x="64" y="296" width="300" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.3"/><text x="214" y="320" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">Mentor-1</text><text x="214" y="337" text-anchor="middle" font-size="10" fill="#5a7aa0">mentor</text>
+    <line x1="368" y1="320" x2="408" y2="320" stroke="#3b6ea5" stroke-width="2" marker-end="url(#ad)"/>
+    <rect x="412" y="296" width="300" height="48" rx="8" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.3"/><text x="562" y="320" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">Mentor-2</text><text x="562" y="337" text-anchor="middle" font-size="10" fill="#5a7aa0">orchestrator</text>
+    <line x1="716" y1="320" x2="756" y2="320" stroke="#3b6ea5" stroke-width="2" marker-end="url(#ad)"/>
+    <rect x="760" y="296" width="300" height="48" rx="8" fill="#cfe0f0" stroke="#3b6ea5" stroke-width="1.8"/><text x="910" y="320" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a4a7a">Doer</text><text x="910" y="337" text-anchor="middle" font-size="10" fill="#3b6ea5">the only substrate toucher</text>
+    <rect x="1088" y="296" width="348" height="48" rx="8" fill="#ffffff" stroke="#3b6ea5" stroke-width="1.3" stroke-dasharray="5 4"/><text x="1262" y="318" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a7a">git = the bus &amp; the memory</text><text x="1262" y="335" text-anchor="middle" font-size="10" fill="#5a7aa0" font-style="italic">state of the federation = state of git</text>
+  </g>
+
+  <!-- ============ BAND 3 · THE RHYTHM ============ -->
+  <rect x="40" y="372" width="1420" height="104" rx="11" fill="#f1f6f1" stroke="#4a8a4a" stroke-width="1.6"/>
+  <text x="64" y="398" font-size="14" font-weight="700" fill="#2a5a2a">THE RHYTHM &#8212; two axes take turns</text>
+  <text x="64" y="417" font-size="11" fill="#3a6a3a" font-style="italic">never concurrent, or the build races the rules being changed</text>
+  <g>
+    <rect x="64" y="428" width="600" height="38" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.3"/><text x="364" y="452" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2a5a2a">BUILD axis &#183; writes code &#183; Charter LOCKED</text>
+    <text x="730" y="453" text-anchor="middle" font-size="20" font-weight="700" fill="#4a8a4a">&#8644;</text>
+    <rect x="796" y="428" width="640" height="38" rx="8" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.3"/><text x="1116" y="452" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2a5a2a">DOCTRINE axis &#183; changes the rules &#183; Charter UNLOCKED</text>
+  </g>
+
+  <!-- ============ BAND 4 · THE WORK ============ -->
+  <rect x="40" y="490" width="1420" height="200" rx="11" fill="#f0ede4" stroke="#a89968" stroke-width="1.6"/>
+  <text x="64" y="516" font-size="14" font-weight="700" fill="#4a3f18">THE WORK &#8212; vision descends through five stages</text>
+  <text x="64" y="535" font-size="11" fill="#6a5a28" font-style="italic">say the vision; grow a coherent codebase down from it &#183; every lighter lane is a relaxation of this</text>
+  <!-- altitude ladder -->
+  <g font-size="12" font-weight="700">
+    <rect x="64" y="548" width="270" height="46" rx="8" fill="#fbf3e2" stroke="#c79a3a" stroke-width="1.3"/><text x="199" y="570" text-anchor="middle" fill="#7a5a18">60K &#183; ideology</text><text x="199" y="586" text-anchor="middle" font-size="10" font-weight="400" fill="#8a6a28">why it exists</text>
+    <text x="350" y="576" text-anchor="middle" font-size="16" fill="#8a6a28">&#8595;</text>
+    <rect x="368" y="548" width="270" height="46" rx="8" fill="#fbf3e2" stroke="#c79a3a" stroke-width="1.3"/><text x="503" y="570" text-anchor="middle" fill="#7a5a18">30K &#183; mechanics</text><text x="503" y="586" text-anchor="middle" font-size="10" font-weight="400" fill="#8a6a28">how the parts move</text>
+    <text x="654" y="576" text-anchor="middle" font-size="16" fill="#8a6a28">&#8595;</text>
+    <rect x="672" y="548" width="270" height="46" rx="8" fill="#fbf3e2" stroke="#c79a3a" stroke-width="1.3"/><text x="807" y="570" text-anchor="middle" fill="#7a5a18">10K &#183; schema</text><text x="807" y="586" text-anchor="middle" font-size="10" font-weight="400" fill="#8a6a28">executable detail</text>
+    <text x="958" y="576" text-anchor="middle" font-size="16" fill="#8a6a28">&#8595;</text>
+    <rect x="976" y="548" width="270" height="46" rx="8" fill="#efe7d2" stroke="#c79a3a" stroke-width="1.6"/><text x="1111" y="570" text-anchor="middle" fill="#7a5a18">code</text><text x="1111" y="586" text-anchor="middle" font-size="10" font-weight="400" fill="#8a6a28">grass-roots</text>
+  </g>
+  <!-- S1..S5 mapping -->
+  <line x1="64" y1="618" x2="1436" y2="618" stroke="#a89968" stroke-width="1" stroke-dasharray="3 4"/>
+  <text x="64" y="640" font-size="11.5" font-weight="700" fill="#4a3f18">S1</text><text x="92" y="640" font-size="11" fill="#6a5a28">recon + 60K ideology</text>
+  <text x="370" y="640" font-size="11.5" font-weight="700" fill="#4a3f18">S2</text><text x="398" y="640" font-size="11" fill="#6a5a28">30K mechanics</text>
+  <text x="674" y="640" font-size="11.5" font-weight="700" fill="#4a3f18">S3</text><text x="702" y="640" font-size="11" fill="#6a5a28">10K schema</text>
+  <text x="978" y="640" font-size="11.5" font-weight="700" fill="#4a3f18">S4</text><text x="1006" y="640" font-size="11" fill="#6a5a28">grass-root evidence</text>
+  <text x="1240" y="640" font-size="11.5" font-weight="700" fill="#4a3f18">S5</text><text x="1268" y="640" font-size="11" fill="#6a5a28">close + reconcile</text>
+  <text x="750" y="672" text-anchor="middle" font-size="11.5" fill="#5a4d20" font-style="italic">freeze &#8594; four gates &#8594; sub-bump tag &#8594; ratify &#8594; the Charter re-locks</text>
+
+  <!-- ============ BAND 5 · THE RULEBOOK ============ -->
+  <rect x="40" y="704" width="1420" height="108" rx="11" fill="#eef2f6" stroke="#5a6a7a" stroke-width="1.6"/>
+  <text x="64" y="730" font-size="14" font-weight="700" fill="#2a3a4a">THE RULEBOOK &#8212; four layers, hardest to softest</text>
+  <text x="64" y="749" font-size="11" fill="#5a6a7a" font-style="italic">know the layer and you know whether you may change it</text>
+  <g font-size="12.5" font-weight="700">
+    <rect x="64" y="760" width="336" height="44" rx="8" fill="#e2e8ee" stroke="#5a6a7a" stroke-width="1.3"/><text x="232" y="781" text-anchor="middle" fill="#2a3a4a">AXIOMS</text><text x="232" y="797" text-anchor="middle" font-size="10" font-weight="400" fill="#5a6a7a">invariant</text>
+    <rect x="412" y="760" width="336" height="44" rx="8" fill="#e2e8ee" stroke="#5a6a7a" stroke-width="1.3"/><text x="580" y="781" text-anchor="middle" fill="#2a3a4a">GUARDRAILS</text><text x="580" y="797" text-anchor="middle" font-size="10" font-weight="400" fill="#5a6a7a">invariant</text>
+    <rect x="760" y="760" width="336" height="44" rx="8" fill="#eaf1f8" stroke="#3b6ea5" stroke-width="1.3"/><text x="928" y="781" text-anchor="middle" fill="#1a4a7a">TUNABLES</text><text x="928" y="797" text-anchor="middle" font-size="10" font-weight="400" fill="#3b6ea5">configurable</text>
+    <rect x="1108" y="760" width="328" height="44" rx="8" fill="#eaf1f8" stroke="#3b6ea5" stroke-width="1.3"/><text x="1272" y="781" text-anchor="middle" fill="#1a4a7a">TOGGLES</text><text x="1272" y="797" text-anchor="middle" font-size="10" font-weight="400" fill="#3b6ea5">live switches</text>
+  </g>
+
+  <!-- ============ CARRY-LIGHT STRIP ============ -->
+  <rect x="40" y="828" width="1420" height="58" rx="10" fill="#1f2a36"/>
+  <text x="750" y="853" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">Carry these eight; pull the detail on demand.</text>
+  <text x="750" y="873" text-anchor="middle" font-size="11.5" fill="#a0aabb" font-style="italic">Novice-first is not a beginner's concession &#8212; it is how a federation stays light enough to stay intelligent.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="690" y="922" width="6" height="8" rx="1"/><rect x="699" y="916" width="6" height="14" rx="1"/><rect x="708" y="910" width="6" height="20" rx="1"/></g>
+    <text x="722" y="930" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>
