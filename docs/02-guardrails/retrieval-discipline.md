@@ -8,7 +8,11 @@ description: "Retrieval narrows where to look; it never decides what is true. A 
 
 `[INVARIANT — retrieval constraints]` `[TUNABLE — the mechanism, see the retrieval surface]`
 
+When an AI agent needs one fact buried in a big file, it's tempting to let a search tool fetch it automatically — this page explains how to use that kind of search safely, so the agent finds *where to look* without accidentally reading things it shouldn't, trusting outdated copies, or quoting the search result as if it were the truth.
+
 ## TL;DR
+
+**In short:** "Search" here means a retrieval system (RAG, or a lighter keyword version) that pulls the one relevant slice of a file instead of the whole thing. Used carelessly, it quietly re-creates three mistakes the framework already bans. The fix is three rules, spelled out below.
 
 The [minimal-sufficient bus](minimal-sufficient-bus.md) says the detail stays in substrate, **pulled only on demand** — but it never specifies *how* a receiver pulls. Left unspecified, "pull on demand" degrades into reading the *whole* LEDGER, the *whole* return, the *whole* history to find the one slice a decision turns on — and that full-read is itself a pollution event. **Retrieval** (RAG, or its leaner lexical cousin) is the mechanization of the pull: retrieve the *minimal-sufficient slice*, not the whole file. It is powerful — and it opens a new failure surface, because a naïve retrieval index **re-implements three pathologies the constitution already forbids**: auto-reading across the [firewall](../01-axioms/firewall.md), treating a [stale snapshot](stale-snapshot-detection.md) as live, and citing recall over [substrate](../01-axioms/provenance-law.md). This page names that failure class — **the retrieval back-door** — and fixes the three `[INVARIANT]` constraints that keep retrieval honest. *Which* retrieval mechanism a project uses is `[TUNABLE]` — see [the retrieval surface](../03-tunables/retrieval-surface.md).
 
@@ -85,6 +89,12 @@ A mentor retrieves a chunk of a spec and cites it directly in a brief — never 
 | Index refresh cadence | per-commit to substrate it indexes | per-commit / scheduled / on-demand |
 
 The **constraints** — tier-partitioned scope, as-of + re-verify, pointer-not-truth — are `[INVARIANT]`. The **mechanism** that satisfies them is `[TUNABLE]` and lives on [the retrieval surface](../03-tunables/retrieval-surface.md).
+
+## Remember this
+
+- **Search tells you *where* to look, never *what* is true.** A hit is a lead to chase, not an answer to quote — open the real file at the right version and cite that.
+- **Each tier searches only its own stuff.** One shared search index that everyone can query is a back-door around the boundaries the framework draws — see [the mental model](../00-foundation/mental-model.md) for why those tier boundaries exist.
+- **A search index goes stale the moment it's built.** Treat it like a cache you can throw away and rebuild from git — never the official record of anything.
 
 ## How this connects to other axioms and guardrails
 

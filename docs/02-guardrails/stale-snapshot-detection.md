@@ -8,7 +8,11 @@ description: "A snapshot is true at the instant it is taken and false a moment l
 
 `[INVARIANT]`
 
+This page is about a quiet trap: a mentor writes down where a teammate's work stood at one moment, then keeps repeating that note as if it were still true — long after the work has moved on. Here you'll learn how to spot that "frozen note" problem and how the framework stops it.
+
 ## TL;DR
+
+In short: notes about a teammate's progress go stale fast, so always stamp them with *when* they were true and re-check before acting.
 
 The **firewall leak** is the subtle failure where a mentor records a true point-in-time snapshot of a sub-tier's progress, then keeps treating it as *live* long after the sub-tier has moved on. The snapshot was honest; it simply rotted. The sub-tier advances without telling the mentor — by design, that is the [firewall](../01-axioms/firewall.md) working — so a snapshot held as live drifts further from reality with every conversation turn. The defense is a linguistic and procedural discipline: every recorded sub-tier state is stamped **"as of `<return-date>`"**, and a mentor performs a forensic descent to re-verify before acting on it.
 
@@ -83,6 +87,13 @@ If a decision actually requires *live* sub-tier state — not just a status repo
 **Detection.** Scan mentor notes for any sub-tier state lacking an `as of <date>` stamp — that is an un-auditable line and a leak candidate. A stamped line whose date is old relative to the cycle's pace is a leak waiting to be cited. The [failure-modes](failure-modes.md#firewall-leak-stale-snapshot-treated-as-live) index lists this as the firewall-leak class.
 
 **Recovery.** Re-stamp the offending notes with explicit "as of" framing. Before acting on any sub-tier state, forensic-descend to re-verify or request an interim tagged return. Re-anchor any decision that was made against the stale value. The cure is never "read the sub-tier folder continuously" — that re-introduces [context pollution](pollution-containment.md). The cure is to know the snapshot's age and refuse to treat it as live.
+
+## Remember this
+
+- A snapshot of someone's work is only true at the moment you took it. Treating it as live later is the failure this guardrail catches.
+- Stamp every note about a teammate's state with *when* it was true and *where* it came from. An unstamped note can't be audited for rot.
+- When asked "where are they now?", say what you last heard *and when* — never promote an old snapshot to a live fact.
+- Need live state? Go look again (a "forensic descent") rather than trusting the old note — but don't start reading their work continuously, or you trade one problem for another. If the idea of safe boundaries between tiers is new, start with [the mental model](../00-foundation/mental-model.md).
 
 ## How this connects to other axioms and guardrails
 

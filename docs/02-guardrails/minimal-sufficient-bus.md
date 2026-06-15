@@ -8,7 +8,11 @@ description: "The relay bus carries the minimal-sufficient message — the least
 
 `[INVARIANT — minimal-sufficient relay]` `[TUNABLE — pointer vs. concise digest]`
 
+This page explains a simple habit: when one agent hands work to another, send just enough for them to act — a short note and a pointer to where the full story lives — instead of dumping everything you know. It matters because an agent buried in someone else's details thinks worse, not better.
+
 ## TL;DR
+
+In plain terms: don't forward the whole conversation — forward a short note that says "here's what changed and where to look," and leave the rest on disk for the other agent to read if they actually need it.
 
 Every message that crosses the relay bus between tiers should be **minimal-sufficient**: as complete as the receiver needs to act or decide, and *no more*. The full explanatory detail — the reasoning, the dead-ends, the sibling churn — is **persisted in the sender's own substrate files** and pulled by the receiver *only when needed*. Relay a pointer or a concise delta digest; never shove a full transcript across the bus. This is the **bus vector of [pollution containment](pollution-containment.md)**: where that guardrail keeps context from bleeding across the tier *hierarchy*, this one keeps it from being *pushed* across the *bus*. The result is lightly loaded but intelligent threads at every tier — `[INVARIANT]` in principle; the message *form* is the tunable.
 
@@ -88,6 +92,13 @@ The *principle* — minimal-sufficient on the bus, detail persisted and pulled o
 - **[Context patterns](../03-tunables/context-patterns.md)** holds the boot-light discipline that stops the detail-files from becoming the new pollution.
 - **[Retrieval discipline](retrieval-discipline.md)** mechanizes the pull-on-demand this guardrail relies on — and bounds it, so retrieving the detail doesn't reopen the pollution at the pull step.
 - **[Brief completeness](brief-completeness.md)** sets the floor: the minimal-sufficient message is still *complete as a pointer* — sufficiency trims volume, never required fields.
+
+## Remember this
+
+- **Send the least the receiver needs to act — and no more.** Enough to act unambiguously, then stop. That's "minimal-*sufficient*."
+- **The detail isn't lost — it's parked.** Write the full reasoning to your own files on disk; the other agent pulls it only if a decision actually depends on it.
+- **This works in both directions.** Handing work down or bubbling a change up, the rule is the same: a short message on the bus, the detail in substrate.
+- **A lighter agent is a smarter agent.** Spending its limited attention on judgment instead of absorbing noise is exactly why this guardrail exists — see [the mental model](../00-foundation/mental-model.md).
 
 ---
 

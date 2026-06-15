@@ -8,7 +8,11 @@ description: "The known ways a federation breaks — each with its symptom and i
 
 `[INVARIANT — these are the known failure classes]`
 
+This page is a catalogue of the ways an AI-agent team can break — and, for each one, the exact steps to recover. Think of it as the troubleshooting chapter: when something goes wrong, you look it up here instead of inventing a fix on the spot.
+
 ## TL;DR
+
+In plain terms: here are the six known ways a federation (a team of AI agents working together) can fail, each paired with a tested recovery. Naming a failure here is a promise that there's a fixed, repeatable way to recover from it.
 
 CompassAlpha enumerates the failure classes a multi-tier AI federation actually hits and pins a recovery to each: **power-down**, **rotation mid-flight**, **firewall leak**, **delegated-context pollution**, **AI memory drift**, and **brief-incomplete improvisation**. The list is a contract — naming a failure mode is committing to a deterministic recovery for it. A federation that hits a failure *not* on this list has found a framework gap worth reporting; a federation that hits one *on* it should already know exactly what to do.
 
@@ -67,6 +71,13 @@ Most AI-collaboration setups treat failures as surprises and recover by improvis
 
 !!! note "The list is a living contract"
     These are the *known* classes as of v0.1. The framework's commitment is that each has a deterministic recovery — and that any failure encountered in the field which is *not* reducible to one of these is treated as a discovery, documented, and folded into a future revision. The goal is a federation where "what do we do now?" always has a pre-written answer.
+
+## Remember this
+
+- Failures here are treated as a known, finite list — not surprises. The moment something breaks is the worst moment to start improvising a fix, so the fix is written down in advance.
+- Every failure class is paired with a recovery you can run from disk alone, even in a brand-new session that wasn't around when things went wrong.
+- The list is a contract: if you hit a failure that *isn't* here, that's a gap in the framework worth reporting — not just bad luck.
+- If the terms above feel abstract, [the mental model](../00-foundation/mental-model.md) shows how the pieces (tiers, the firewall, the durable record) fit together so these recoveries make sense.
 
 ## How this connects to other axioms and guardrails
 

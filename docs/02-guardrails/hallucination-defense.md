@@ -8,7 +8,11 @@ description: "Memory is a hypothesis, never a fact. Every load-bearing claim is 
 
 `[INVARIANT]`
 
+This page is about a simple, dangerous habit of AI: it can state something with total confidence that simply isn't true — and you can't tell the difference by listening. Here you'll see how CompassAlpha catches those confident fabrications before anyone acts on them.
+
 ## TL;DR
+
+In plain terms: an AI will sometimes "remember" a decision, a spec detail, or a founder's ruling that never actually happened — and say it just as smoothly as a real one. The fix is to never trust the AI's memory for anything important; instead, check the claim against the real, written-down record before acting. Here's the longer version.
 
 AI tiers fabricate plausible-but-false institutional memory — "I remember we decided X," "the Auth spec defines three roles," "the founder ruled DEFER on that." Confidently wrong, and indistinguishable from confidently right at the moment of utterance. CompassAlpha's defense is **verification-at-citation**: a tier's recall is treated as a *hypothesis* until checked against the immutable substrate (the committed codebase or doctrine source at a specific tag). The hallucination is caught at verification time, before it becomes the premise of the next decision. This is the operational face of the [provenance law](../01-axioms/provenance-law.md).
 
@@ -89,6 +93,13 @@ Tiers may keep memory files — but a memory entry is valid only as a **pointer 
 **Detection.** A hallucination is detected at step 4 of the procedure above — the moment a confidently-stated claim fails to match the frozen substrate. The whole point of mandatory verification is that detection happens *before* action, not after the founder notices the drift.
 
 **Recovery.** Correct the claim, surface the correction explicitly (do not silently swallow it — the founder's trust depends on seeing the system self-correct), and re-anchor any downstream decisions that were built on the false premise. If a fabricated founder ruling was propagated, the recovery includes re-confirming the actual founder intent, not just deleting the bad citation.
+
+## Remember this
+
+- An AI's memory is a **guess**, not a fact — confidently wrong sounds exactly like confidently right, so treat every load-bearing claim as unverified until checked.
+- The check is simple: **look it up in the frozen, committed record** (a file at a specific tag), not in the AI's recollection. Cite by substrate, not by recall.
+- The most dangerous fabrication is a **founder ruling that never happened** — it borrows real authority for a decision no one made. Every cited ruling must point to a locatable commit, or it isn't a ruling.
+- This is one piece of the bigger picture — see [the mental model](../00-foundation/mental-model.md) for how verification fits the whole federation.
 
 ## How this connects to other axioms and guardrails
 

@@ -8,7 +8,11 @@ description: "No placeholders cross the relay boundary. The dispatching tier kno
 
 `[INVARIANT]`
 
+When one tier hands work to another, this page says the handoff note must spell out *every* detail the receiver needs — no blanks, no "you figure it out." This matters to you because a blank in that note forces the receiver to either freeze or guess, and both break the chain.
+
 ## TL;DR
+
+In short: hand off work with all the details filled in, or the receiver gets stuck or guesses wrong.
 
 A **brief** is the package a dispatching tier hands down — Mentor-1 → Mentor-2, or Mentor-2 → Doer. The completeness rule says every operational precondition in that brief must be filled with a **concrete value** at the moment of relay: never a `<placeholder>`, never "founder provides at boot," never "create per convention" left to the receiver's judgment. The dispatching tier is the only party that *knows* the dispatch's actuals; the doer cannot reconstruct them. An incomplete brief is therefore not a small omission — it is a forced choice between two failures: the doer stalls, or the doer **improvises authority it was never given**.
 
@@ -80,6 +84,13 @@ Because it is tiny, an over-loaded mentor can simply drop it — and then the re
 **Detection.** Scan outbound briefs for any field containing a `<placeholder>`, the words "founder provides," "per convention" without a named convention, or "the usual." Each is a completeness defect. On the receiving side, the Doer's first act on any brief is a completeness check — an unfilled load-bearing field is caught *before* work starts, not after.
 
 **Recovery.** The Doer escalates — `[[DOER→MENTOR-2 · <slice> · BRIEF-INCOMPLETE]]` — naming the missing field, and waits. It does **not** improvise. The dispatching tier fills the actual value (which it knows and the Doer does not) and re-relays the corrected brief. If a Doer already improvised before the check, treat the improvised artifact as suspect: verify its branch, base, and tag against what the brief *should* have said, and re-home it if it landed wrong.
+
+## Remember this
+
+- A **brief** is the handoff note one tier gives another. Complete means every detail the receiver needs is already filled in with a real value — branch names, the commit to start from, where to save, what to call the finished work.
+- A blank field is never harmless. It forces the receiver to stall or to improvise authority it was never given — and "improvise" usually means a quiet wrong guess that surfaces much later.
+- If you receive a brief with a hole in it, you escalate back up and wait. You do not fill the hole yourself. Only the tier that sent the brief knows the right value.
+- This connects to [the mental model](../00-foundation/mental-model.md): completeness is the contract that lets each tier hand off cleanly without the human up top having to step back in.
 
 ## How this connects to other axioms and guardrails
 

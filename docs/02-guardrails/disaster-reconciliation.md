@@ -8,7 +8,11 @@ description: "Whatever the disaster — power loss, hard kill, host crash — it
 
 `[INVARIANT — dual-plane reconciliation after any unclean event]` `[TUNABLE — the exact recon + repair commands]`
 
+This page is about what happens when the lights go out mid-work — a crash, a power cut, a force-kill — and how CompassAlpha makes sure that costs you almost nothing. The short version: anything already saved to the shared remote is safe, and a careful checkup runs and repairs every storage area *before* any agent is allowed to start working again.
+
 ## TL;DR
+
+In plain terms: a crash can leave your git storage in a half-broken state, but the framework is built so the damage can only ever reach the small bit of work that hadn't been saved yet — and a thorough, look-don't-touch checkup confirms that and fixes the rest before anyone resumes.
 
 An unclean event — power loss, a hard kill, a host crash, a disk fault — can leave a federation's git planes damaged: zeroed objects, a truncated index, a broken ref, an interrupted pre-commit artifact. CompassAlpha's posture is that **the disaster's implication on the substrate is minimized by design**: [flush-before-disclose](../01-axioms/persistence-law.md) plus push-to-origin bound the loss to the genuinely-unflushed, and an **aggressive, read-only reconciliation across every persisted plane** — run *before any tier boots* — verifies the bound held and repairs within it. The recovery is not improvised; it is a rehearsed protocol that ends with the federation booting at the seam the control-plane LEDGER dictates, with loss never exceeding the in-flight sliver.
 
@@ -94,6 +98,13 @@ Faced with local corruption, an operator reclones from origin "to be safe." Orig
 | Resume authority | control-plane LEDGER seam | LEDGER seam (recommended) / last-clean-checkpoint |
 
 The *principle* — every plane reconciled before any boot, loss bounded to the unflushed — is `[INVARIANT]`. The *commands and depth* are `[TUNABLE]`.
+
+## Remember this
+
+- **A crash is a shrug, not a catastrophe — by design.** Anything pushed to the shared remote (origin) survives any local mishap; only work that was still in-flight is ever at risk.
+- **Check every storage area, not just the obvious one.** A federation writes to more than one git repo (the code, plus a control-plane that tracks who's doing what). Either can break on its own, so you reconcile all of them before booting anything.
+- **Look before you touch.** Run the read-only checkup first, never `git gc` on a damaged repo, and let the "ahead/behind" answer decide how to repair — that's what keeps a bounded loss from becoming a real one.
+- This guardrail is the safety net under [the mental model](../00-foundation/mental-model.md): durable state lives on the remote, so the local machine is always disposable.
 
 ## How this connects to other axioms and guardrails
 

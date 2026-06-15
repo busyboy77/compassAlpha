@@ -8,7 +8,11 @@ description: "One writer holds jurisdiction at a time. Everyone else fetches bef
 
 `[INVARIANT]`
 
+This page explains the simple rule that stops two AI sessions from quietly overwriting each other's saved work: at any moment, only one of them is allowed to write the shared "official record," and anyone else must catch up before they save. You care because without it, a decision or update can vanish with no error to warn you.
+
 ## TL;DR
+
+In plain terms: when several sessions share one source of truth, you need exactly one to be the "writer" at a time so they don't stomp on each other's saves. Here's how that works in detail.
 
 The **clobber** is the failure where two sessions write the state-of-record concurrently and one silently overwrites the other's work — a decision, a ledger update, a ratification, gone without a trace. CompassAlpha prevents it with **single-live-writer**: only the tier currently holding jurisdiction writes the state-of-record repo while it holds it. A rotation *transfers* jurisdiction; it does not create a second writer. Any out-of-jurisdiction party (an outgoing tier kept as backstop, a sibling parallel worker) **fetches before it pushes** and never clobbers the live writer. Combined with path-partitioned writes, this makes file-level conflicts structurally impossible and reduces the whole problem to ref-races that a fast-forward handles.
 
@@ -72,6 +76,13 @@ The state-of-record repo and the substrate deliverable repo are physically separ
 **Detection.** A push that *succeeds without a fetch* on an out-of-jurisdiction session is the smell. So is any two writers sharing a path, or any `git add` that spans the two repos. At the history level, a force-style overwrite or an unexpected non-fast-forward warning indicates a contended ref.
 
 **Recovery.** If a clobber is suspected, the lost write is recoverable from git's reflog and the loser's local objects — fetch the overwritten commit by sha and re-apply it onto the current tip. Going forward, restore the discipline: confirm a single jurisdiction-holder, enforce `--ff-only` before every push, and re-partition any colliding paths. If two planes were crossed, audit both remotes for misplaced commits and move them to the correct repo.
+
+## Remember this
+
+- **One writer at a time, on purpose.** Only the session currently "holding the pen" writes the official record. Handing the pen to another session is a clean transfer, not a free-for-all — there are never two equal writers at once.
+- **Always catch up before you save.** Anyone not holding the pen fetches the latest first, so they build *on top of* the live writer's work instead of *over* it. This is what makes a silent clobber impossible.
+- **Keep different writers in different files.** Parallel workers write to their own uniquely-named files, never a shared one — so their saves can't collide.
+- **The danger is the silence.** A clobber doesn't crash; the lost work just disappears with no error. That's why these rules are structural, not "be careful." For how this fits the bigger picture, see [the mental model](../00-foundation/mental-model.md).
 
 ## How this connects to other axioms and guardrails
 

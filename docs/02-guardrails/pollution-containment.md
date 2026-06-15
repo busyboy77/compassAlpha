@@ -8,7 +8,11 @@ description: "Each tier sees only what it owns. Context bleed across tiers is co
 
 `[INVARIANT]`
 
+In plain terms: this page explains how the framework stops one part of an AI-agent team from getting clogged with details it was never meant to handle — and why that clogging quietly wrecks the team's judgment if you let it.
+
 ## TL;DR
+
+The short version: each layer of the team should only carry the detail it actually owns; the structure keeps the rest out automatically. Here's the precise version.
 
 **Context pollution** is the failure where a tier's working context fills with detail it does not own — a parent absorbing a child's slice-level churn, a mid-tier absorbing a doer's reasoning footprints. Polluted context makes judgment slower (cognitive overhead) and worse (the tier saw the trees and lost the forest). CompassAlpha contains it structurally: the [firewall](../01-axioms/firewall.md) confines each tier to its own folder, and **state-tracking scope** confines each mentor to its own granularity. Containment is a property of the structure, not a discipline you remember to apply.
 
@@ -95,6 +99,13 @@ CompassAlpha defaults to **pure RELAY** — separate sessions handing off via pa
 - **[Stale-snapshot detection](stale-snapshot-detection.md)** is the failure that occurs when containment succeeds *spatially* but a tier still treats an old summary as live — the inverse risk.
 - **[Single-live-writer](single-live-writer.md)** prevents a parallel-writer variant where overlapping writers cross-contaminate each other's folders.
 - **[The minimal-sufficient bus](minimal-sufficient-bus.md)** is the sibling guardrail for the *relay* vector: this page stops a tier from auto-reading what it doesn't own; that one stops a sender from *pushing* detail the receiver never needed across the bus.
+
+## Remember this
+
+- **Pollution is detail leaking into the wrong layer.** When a higher tier soaks up the moment-to-moment work of a lower one, it gets slower (more to chew on) and worse (it can no longer see the bigger picture it exists to see).
+- **You don't avoid it by being careful — the structure does it for you.** Each tier only ever reads its own folder, and only sees a tidy summary of what's below. Reaching across that line is a deliberate, logged act, never the easy default.
+- **When a session does get cluttered, you throw it away, not clean it.** Everything important already lives on disk, so you flush, rotate to a fresh session, and reboot clean. Refresh is cheap; foggy judgment is not.
+- For the bigger picture of how these tiers and folders fit together, see [the mental model](../00-foundation/mental-model.md).
 
 ---
 
