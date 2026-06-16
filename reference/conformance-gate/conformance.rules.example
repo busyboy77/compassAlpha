@@ -1,0 +1,22 @@
+# CompassAlpha · Conformance rules (example)
+# -----------------------------------------------------------------------------
+# These rules are the machine-checkable subset of YOUR Charter. The gate
+# enforces exactly what is listed here, fail-closed — nothing more, nothing less.
+# Replace every line below with rules derived from your own invariants and
+# canonical-ways. Keep it short; a rules file you trust beats a long one you don't.
+#
+# Format:
+#   forbid       <ERE regex>  :: <message shown when it matches>
+#   require-cite <path-glob>          # commits touching these must cite substrate
+#
+# Lines starting with # are comments. One rule per line.
+
+# --- example forbid rules (Charter "canonical ways" / invariants) ------------
+forbid  parseFloat\(.*(price|amount|total|money)  :: Money is integer minor units, never a float (Charter invariant).
+forbid  (SELECT|INSERT|UPDATE).*FROM.*\$\{          :: No string-interpolated SQL; use the repository layer (Charter canonical way).
+forbid  FIXME                                       :: Resolve FIXMEs (or convert to a tracked ticket) before merge.
+
+# --- example require-cite rule (provenance law) ------------------------------
+# Commits that change doctrine or schema must cite the substrate they derive from.
+require-cite  docs/spec/*
+require-cite  *.schema.*

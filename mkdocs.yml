@@ -179,6 +179,7 @@ nav:
   - Reference:
     - 07-reference/index.md
     - Full manifesto: 07-reference/manifesto-full.md
+    - Conformance gate (enforcement primitive): 07-reference/conformance-gate.md
     - Stamp templates: 07-reference/templates/index.md
     - Status grids: 07-reference/status-grids.md
     - Hierarchy tags: 07-reference/hierarchy-tags.md

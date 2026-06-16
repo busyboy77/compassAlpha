@@ -188,6 +188,8 @@ Each step lands on an **immutable, dated, attributable** commit — which is exa
 
 If your federation can write decisions but a newcomer can't reconstruct the *why* of a given artifact from git alone, that's a provenance gap to close — not a tooling nicety to defer.
 
+The produce side can also be **mechanically enforced**: the [conformance gate](../07-reference/conformance-gate.md)'s `require-cite` rule fails a commit closed when it touches a doctrine/schema path but cites no substrate — so "cite by substrate" becomes a gate, not just a habit.
+
 ## Variations / tunables on top
 
 | Tunable | Default | Range |
