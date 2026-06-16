@@ -22,6 +22,8 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
 === "First time here?"
 
+    Not sure how much of the framework you need? Start with [**the adoption ladder**](05-getting-started/the-adoption-ladder.md) — it maps adoption as rungs you climb at your own pace, and helps you find the one that fits you today (many start by simply [borrowing it solo](05-getting-started/borrow-compassalpha-solo.md)).
+
     Have a project in mind already? Jump straight to [Start from a story](05-getting-started/start-from-a-story.md) (new idea) or [its brownfield companion](05-getting-started/start-from-a-story-brownfield.md) (existing codebase).
 
     Read the Foundation pages in order (~20 minutes):
@@ -65,7 +67,9 @@ CompassAlpha earns its ceremony on **substantial, multi-component work built by 
 
 If you're a **solo developer on a small, one-off project**, the full federation — two repos, three tiers, doctrine cycles — is honestly **more than you need today**. That's a straight answer, not a sales dodge.
 
-But one idea is worth borrowing **even with a single AI assistant and no federation**: keep a small **Charter** (write down the one canonical way to do each recurring thing) and **cite by substrate** (let decisions live in git, not in a chat you'll lose). That alone prevents most *coherence drift* — the slow sprawl of three slightly-different ways to do the same thing — for almost no ceremony. Grow into the rest of the framework if and when your project does.
+But one idea is worth borrowing **even with a single AI assistant and no federation**: keep a small **Charter** (write down the one canonical way to do each recurring thing) and **cite by substrate** (let decisions live in git, not in a chat you'll lose). That alone prevents most *coherence drift* — the slow sprawl of three slightly-different ways to do the same thing — for almost no ceremony.
+
+This is the lowest rung of CompassAlpha, and it's a real one — written up step by step, with a copy-paste Charter, in [**Borrow CompassAlpha (solo)**](05-getting-started/borrow-compassalpha-solo.md). Grow into the rest of the framework if and when your project does — [**the adoption ladder**](05-getting-started/the-adoption-ladder.md) maps the climb, rung by rung, and names the signal that means it's time for the next one.
 
 ---
 

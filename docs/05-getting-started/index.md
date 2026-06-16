@@ -10,6 +10,9 @@ description: "Getting started with CompassAlpha: prerequisites, greenfield setup
 
 This section takes you from zero to your first piece of work flowing through the bus. Everything here is practical: repos to create, files to stamp, commands to run, gates to pass. The conceptual grounding lives in [Foundation](../00-foundation/index.md) and [Axioms](../01-axioms/index.md) — if a term here is unfamiliar, those are the place to look it up.
 
+!!! tip "Not sure how much of the framework you actually need?"
+    Adoption isn't all-or-nothing. Start with [**the adoption ladder**](the-adoption-ladder.md) — it lays out adoption as rungs you climb at your own pace and helps you pick the one that fits you *today*. The lowest rung, [**Borrow CompassAlpha (solo)**](borrow-compassalpha-solo.md), is a real, complete starting point for a single developer with one AI assistant — no federation required.
+
 !!! note "Source-available licensing"
     CompassAlpha is distributed under the **Business Source License 1.1** — *source-available*. You may read, modify, and evaluate the framework freely. **Commercial / production use requires a license.** See [COMMERCIAL.md](https://github.com/busyboy77/compassAlpha/blob/main/COMMERCIAL.md) before you put a CompassAlpha federation into production. The framework is published by **gradus** ([gradus.pk](https://gradus.pk)).
 

@@ -156,6 +156,8 @@ nav:
     - Operating presets: 04-toggles/operating-presets.md
   - Getting Started:
     - 05-getting-started/index.md
+    - The adoption ladder: 05-getting-started/the-adoption-ladder.md
+    - Borrow CompassAlpha (solo): 05-getting-started/borrow-compassalpha-solo.md
     - Start from a story: 05-getting-started/start-from-a-story.md
     - Start from a story (existing project): 05-getting-started/start-from-a-story-brownfield.md
     - Prerequisites: 05-getting-started/prerequisites.md
