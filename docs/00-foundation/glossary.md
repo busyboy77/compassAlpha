@@ -10,6 +10,17 @@ New here? This is your dictionary for CompassAlpha. The framework uses a handful
 
 ## Core vocabulary (framework-level, INVARIANT)
 
+### Altitude (60K / 30K / 10K)
+
+A **zoom metaphor** for how much detail a layer of a [Compass](#compass) carries — borrowed from aircraft altitude, **not** literal feet, tokens, or lines of code. Zooming in from a plane:
+
+- **60K** — the whole-country view: the *why* (ideology, principles, named theses).
+- **30K** — the city view: the *how* (mechanics — state machines, lifecycles, primitives, invariants).
+- **10K** — the street view: the *exact* detail (schema, routes, engine, events — executable).
+- **code / grass-root** — the ground: the implementation itself.
+
+The descent settles the *why* before the *exact detail*, so every layer derives from the one above it. See [Codebase coherence](codebase-coherence.md).
+
 ### Annex
 
 The form in which a declared [axis](#axis) attaches to the federation [Charter](#charter): the axis's declaration plus any axis-specific invariants and primitives, registered in the `AXES` manifest. Axes are annexes under the **one** Charter — they never get a competing charter.

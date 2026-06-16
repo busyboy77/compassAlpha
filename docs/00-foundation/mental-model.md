@@ -10,6 +10,9 @@ description: "The CompassAlpha mental model — the core ideas the framework res
 
 It rests on eight ideas. Hold these, and every other page in the portal reads as detail hanging off one of them.
 
+!!! tip "Hit a word you don't know? Keep the glossary open."
+    CompassAlpha uses a handful of precise terms (*Charter*, *Compass*, *axis*, *substrate*, *primitive*…). Every one is defined in the [**glossary**](glossary.md) — open it in a second tab and look up anything that trips you. You don't have to memorize the vocabulary to follow along; you just need to know where it lives.
+
 ![The CompassAlpha mental model on one page — four failures it prevents, the three-tier machine over git, the two alternating axes, the altitude descent through five stages, and the four-layer rulebook](../assets/mental-model.svg)
 
 <small>***Why** the framework exists (four failures), **the machine** (three tiers over git), **the rhythm** (two axes alternating), **the work** (vision descending through five stages), and **the rulebook** (four layers, hardest to softest). Every deep-dive page is detail hung on one of these.*</small>
@@ -24,7 +27,7 @@ It rests on eight ideas. Hold these, and every other page in the portal reads as
 
 4. **Two axes that take turns.** A **build axis** writes code while the rulebook is **LOCKED**; a **doctrine axis** changes the rulebook while it is **UNLOCKED**. They *alternate* — never at once, or the build races the very rules being changed. [→ Axis declarations](../03-tunables/axis-declarations.md)
 
-5. **Vision descends into code.** Each layer is one zoom level lower than the last: **60K (the *why*) → 30K (how the parts move) → 10K (exact schema) → code.** Say a component's vision in plain words and the federation grows a coherent codebase down from it. [→ Codebase coherence](codebase-coherence.md)
+5. **Vision descends into code.** Picture zooming in from a plane: **60K feet** is the whole-country view (the *why*), **30K** is the city (how the parts move), **10K** is the street (the exact schema), then **code** is the ground. *The numbers are a zoom metaphor — "altitudes," not literal feet, tokens, or lines of code.* Say a component's vision in plain words and the federation grows a coherent codebase down from it. [→ Codebase coherence](codebase-coherence.md)
 
 6. **The heaviest lane is five stages.** A full doctrine cycle runs **S1 → S5** (substrate recon + ideology → mechanics → schema → grass-roots evidence → close). **Every lighter kind of work is a *relaxation* of this one** — learn it once, and the rest of the framework is subtraction. [→ Sample doctrine cycle](../06-adoption-patterns/sample-doctrine-cycle.md)
 
