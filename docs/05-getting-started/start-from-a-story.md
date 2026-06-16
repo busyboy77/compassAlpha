@@ -1,16 +1,16 @@
 ---
-description: "Start a new CompassAlpha project from a plain-English story. You describe what you want to build in everyday words; the federation turns that brief into a CompassAlpha structure — one compass per component, a Charter, and the axes you step through. The greenfield story-driven onboarding playbook."
+description: "Start a new CompassAlpha project from a plain-English story. You describe what you want to build in everyday words, then sketch that brief into a CompassAlpha structure by hand — one compass per component, a Charter, and the axes you step through — using the worked example as your guide. The greenfield story-driven onboarding playbook."
 ---
 
 # Start From a Story
 
 > *Describe your project in plain words. Get back a CompassAlpha structure you can build against.*
 
-The gentlest way to begin: you do **not** need to learn the framework's vocabulary first. You write a short, everyday description of what you want to build — a "user story" — and the federation translates it into the CompassAlpha structure for you. This page walks a complete newcomer through that translation, step by step, defining every term as it appears. (Brand-new to the framework? Read [the mental model](../00-foundation/mental-model.md) first — it's the eight ideas everything here rests on.)
+The gentlest way to begin: you do **not** need to learn the framework's vocabulary first. You write a short, everyday description of what you want to build — a "user story" — and then sketch it out into the CompassAlpha structure yourself, by hand, following this page as you go. There's no federation running yet at the idea stage; this is a guided thinking exercise, and the worked example below is your template. This page walks a complete newcomer through that translation, step by step, defining every term as it appears. (Brand-new to the framework? Read [the mental model](../00-foundation/mental-model.md) first — it's the eight ideas everything here rests on.)
 
 ## TL;DR
 
-In plain terms: you say *"I want to build X, made of parts A, B, and C"*, and the framework gives each part its own planning document, writes down the project's rules, and lays out the order of work. No setup and no jargon are needed to **start** — the structure is the output, not the prerequisite.
+In plain terms: you say *"I want to build X, made of parts A, B, and C"*, and then — guided by the example here — you give each part its own planning document, write down the project's rules, and lay out the order of work. No setup and no jargon are needed to **start** — the structure is something you sketch out, not a prerequisite you must learn first.
 
 This is the **greenfield** path — starting a brand-new project from scratch. (Already have an existing, pre-AI-era codebase you want to bring in? That's the *brownfield* path — see [Start From a Story — Existing Project](start-from-a-story-brownfield.md).)
 
@@ -56,7 +56,7 @@ Three components named: `catalog`, `shelves`, `accounts`. That's all the framewo
 
 ## Step 2 — Each component becomes a compass
 
-The federation creates **one compass per component** — three here. Each compass is built at the three zoom levels, top to bottom, so the *why* is settled before the *exact detail*:
+You sketch out **one compass per component** — three here — using the example as your guide. Each compass is drafted at the three zoom levels, top to bottom, so the *why* is settled before the *exact detail*:
 
 | Compass | 60K — the why | 30K — the how | 10K — the exact detail |
 |---|---|---|---|
@@ -97,7 +97,7 @@ AXES:           doctrine pass (write Charter + 60K) → build axis (LOCKED)
 FIRST CYCLE:    author the three compasses' 60K, then build catalog
 ```
 
-That scope is your starting map. From here you follow the ordinary [greenfield setup](greenfield-setup.md) to stand up the repos and tiers, and the [sample doctrine cycle](../06-adoption-patterns/sample-doctrine-cycle.md) to see a compass authored end-to-end.
+That scope is your starting map — and you drew it by hand, no setup required. From here, standing it up gets more technical: you follow the ordinary [greenfield setup](greenfield-setup.md) to bring up the repos and tiers, and the [sample doctrine cycle](../06-adoption-patterns/sample-doctrine-cycle.md) to see a compass authored end-to-end. If that feels like a lot, the **Bootstrap** preset is the smallest way to start — one tier, the bare minimum switched on ([operating presets →](../04-toggles/operating-presets.md)).
 
 ## Remember this
 

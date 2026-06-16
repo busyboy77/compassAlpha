@@ -92,7 +92,7 @@ Run it through the tiers:
 2. **Mentor-2** slices: SURVEY slice, DRAFT slice, CROSS-REFERENCE slice.
 3. **Doer (SURVEY)** reads Auth's code, README, commit history; interviews the team; returns an inventory of what Auth *actually does* — e.g. "sessions expire after 24h", "passwords hashed with algorithm X", "every login emits an event Reporting consumes".
 4. **Doer (DRAFT)** writes the Auth compass at three altitudes.
-5. **Doer (CROSS-REFERENCE)** checks every doctrine claim against the code. Discrepancy found: the README says 24h sessions but the code says 12h. That's a **founder-call** — Mentor-1 surfaces it; the founder rules which is doctrine; the compass records the truth.
+5. **Doer (CROSS-REFERENCE)** checks every doctrine claim against the code. Discrepancy found: the README says 24h sessions but the code says 12h. That's a [**founder-call**](../00-foundation/glossary.md) — Mentor-1 surfaces it; the founder rules which is doctrine; the compass records the truth.
 6. **Mentor-1** ratifies; the Auth compass is **frozen as v0.1** and tagged.
 
 You now have the first written doctrine the project has ever had — and you discovered a real discrepancy in the process.
@@ -169,6 +169,25 @@ Once Auth, Billing, and Reporting are all CompassAlpha-managed and stable, retir
 - Pre-existing debt is visible in `LEFTOVERS.md` and being worked down.
 
 Even here, "retire" means *stop using*, not *delete* — your old CI config and PR history remain as record. The cutover is complete.
+
+---
+
+## How a managed change reaches production
+
+A fair question from any cautious lead: *the reverts above describe undoing the **process** — but how does a CompassAlpha-managed change actually reach the running system, and what catches a bad one?* This is the production boundary, and it's worth being precise about.
+
+**CompassAlpha does not ship anything.** It governs *how* work is coordinated and authored — the tiers, the briefs, the slices, the gate, the audit trail. It is **not** a CI/CD or deploy tool, and it does not replace your existing tests, CI, code review, or deploy pipeline. A CompassAlpha-managed change is an **ordinary commit on your substrate repo**. It still flows through your existing tests → CI → review → deploy exactly as before. Nothing reaches production just because a Doer wrote it; your pipeline remains the authority over what ships.
+
+**The gate catches bad changes early — before your pipeline ever sees them.** Each slice clears an objective exit **gate-check** (pass/fail) at the Mentor-2 tier. A change that fails the gate is **not accepted into the deliverable** in the first place. So a defective change is blocked at authoring time, upstream of the commit ever entering your CI — your existing checks become the second line of defence, not the first.
+
+**A bad change is reverted at the code level, like any git change.** Because every managed change *is* a commit, rolling one back is ordinary git work: `git revert` (or reset) the offending commit and re-tag. This is **distinct from, and in addition to,** the process-level revert described throughout this page (routing a module back to the legacy workflow). The two operate at different layers:
+
+| To undo… | You… | Layer |
+|---|---|---|
+| A single bad **change** that was authored and committed | `git revert`/reset the commit on the substrate, then re-tag | Code |
+| A module's **way of working** under CompassAlpha | Route the module's process back to the legacy workflow | Process |
+
+You keep both levers. A committed mistake is reverted as a commit; a decision to step a whole module back to legacy is a separate, process-level move.
 
 ---
 

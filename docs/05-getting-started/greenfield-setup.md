@@ -12,6 +12,9 @@ This page assumes you've cleared the [prerequisites](prerequisites.md). It walks
 
 The whole setup is seven steps. Each produces real artifacts on disk that you commit and push. Nothing load-bearing stays in your head.
 
+!!! tip "Smallest viable first day"
+    This page goes into the full detail, but you don't have to absorb all of it at once. If you want the gentlest possible start, begin in the **Bootstrap** [operating preset](../04-toggles/operating-presets.md) — the minimal-footprint posture that keeps the machinery quiet while you find your feet. You can dial the rest up later. Work through the steps below at your own pace; nothing here has to be done in one sitting.
+
 ---
 
 
@@ -57,6 +60,8 @@ This points the reviewer-state repo at its own separate remote address, keeping 
 ## Step 2 — Drop the master into reviewer-state
 
 The **master** is the single rulebook that states every substantive rule once. You don't rewrite it per project — your customizations (called axes) inherit from it.
+
+Where does `COMPASS_ALPHA_FRAMEWORK_v0.1.md` come from? The master document is the framework's full manifesto. To get it, either clone [the repository](https://github.com/busyboy77/compassAlpha) and copy the master out of it, or save the [full manifesto](../07-reference/manifesto-full.md) to disk under the filename `COMPASS_ALPHA_FRAMEWORK_v0.1.md`. Either way you end up with that file sitting next to the `cp` command below.
 
 ```bash
 # copy the CompassAlpha master into the reviewer-state root
@@ -235,7 +240,7 @@ Good first dispatches:
 - Scaffold an empty module directory (e.g. an `auth/` package skeleton).
 - Wire a single trivial function with a single test.
 
-This is LAYGO pacing — *lay the rhythm before you go fast*. Once dispatch #1 closes cleanly, you trust the machinery.
+This is [LAYGO](../00-foundation/glossary.md) pacing — *Learn As You Go*. Once dispatch #1 closes cleanly, you trust the machinery.
 
 ---
 

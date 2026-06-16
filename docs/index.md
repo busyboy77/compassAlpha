@@ -22,6 +22,8 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
 === "First time here?"
 
+    Have a project in mind already? Jump straight to [Start from a story](05-getting-started/start-from-a-story.md) (new idea) or [its brownfield companion](05-getting-started/start-from-a-story-brownfield.md) (existing codebase).
+
     Read the Foundation pages in order (~20 minutes):
 
     1. [**The mental model**](00-foundation/mental-model.md) — the core ideas the framework rests on
@@ -36,6 +38,8 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
     Jump to **Getting Started**:
 
+    - [**Start from a story**](05-getting-started/start-from-a-story.md) — describe a new product idea in plain English and get a CompassAlpha plan (greenfield).
+    - [**Start from a story — existing project**](05-getting-started/start-from-a-story-brownfield.md) — bring an existing codebase in non-destructively (brownfield).
     - [**Prerequisites**](05-getting-started/prerequisites.md) — what you need before adopting
     - [**Greenfield setup**](05-getting-started/greenfield-setup.md) — fresh project path
     - [**Brownfield onboarding**](05-getting-started/brownfield-onboarding.md) — pre-AI era project path

@@ -8,6 +8,8 @@ description: "Adopting CompassAlpha over a codebase you already have. A pre-exis
 
 **In plain terms:** this page is for when you already have a working project — real code, real users, real history — and you want to start running it the CompassAlpha way without stopping everything to rebuild from scratch. It walks you through doing that gradually, one piece at a time.
 
+Throughout this section, **"component" and "module" are used interchangeably** — a component of your project *is* a module you onboard.
+
 Most real adoptions are brownfield. You don't get to start from a blank slate; you have a running system with users, history, and tribal knowledge. The rules that govern your codebase already exist — its **Charter** (the project-wide constitution), its module boundaries, its invariants (the things that must always stay true) — but they're **buried in code and people's heads**, not written down as *doctrine*: the explicit, agreed-on rules a CompassAlpha federation works to.
 
 Extracting that doctrine is the hard, valuable work brownfield onboarding does. CompassAlpha treats it as a **first-class, phased journey** — not an afterthought. You will not boil the ocean. You'll onboard one or two pilot modules first, prove the rhythm, and expand from there while the rest of the project keeps running on your existing workflow.
@@ -15,8 +17,8 @@ Extracting that doctrine is the hard, valuable work brownfield onboarding does. 
 !!! note "Greenfield is simpler"
     If you're starting from nothing, you don't need any of this — go to [greenfield setup](greenfield-setup.md). Brownfield is the path for a codebase with existing weight.
 
-!!! note "Commercial use"
-    Onboarding a real production codebase is production use. Confirm your [commercial license](https://github.com/busyboy77/compassAlpha/blob/main/COMMERCIAL.md) before you go past the pilot.
+!!! note "Evaluate freely first"
+    Non-commercial and evaluation use is free — explore the framework, run a pilot, prove the rhythm at no cost. A license is only needed once you move to commercial/production use of a real codebase. When you get there, see [COMMERCIAL.md](https://github.com/busyboy77/compassAlpha/blob/main/COMMERCIAL.md) for the details.
 
 ---
 
@@ -36,6 +38,9 @@ Extracting that doctrine is the hard, valuable work brownfield onboarding does. 
 | **4. Expansion** | months → years | More modules onboard · Charter evolves · eventually all modules become CompassAlpha-managed. |
 
 The phases overlap in practice. Phase 3 begins the moment your first pilot module has a frozen doctrine, even while a second module is still in Phase 1.
+
+!!! note "What month one roughly looks like"
+    A **rough estimate**, not a guarantee — your numbers depend on module size and how well-understood the code is (the phase ranges above are the real bounds). But the shape is reassuring: in the **first few weeks** you stand up the skeleton (Phase 0) and begin the pilot module's Charter extraction and ratification (Phases 1–2). **Shortly after** that first compass freezes, you build your first new feature *on the pilot* under CompassAlpha. From there you **expand module by module** while the rest of the project keeps running untouched. The cost is bounded to one module at a time, not the whole codebase up front.
 
 ---
 
@@ -77,7 +82,7 @@ SURVEY → DRAFT → CROSS-REFERENCE → REVIEW → FREEZE-AS-v0.1
 
 The Discovery Doctrine Cycle flows through the same three tiers as any other work:
 
-- **Mentor-1** owns the cycle, ratifies the frozen compass, surfaces founder-calls (e.g. "the code does X but the team says the rule is Y — which is doctrine?").
+- **Mentor-1** owns the cycle, ratifies the frozen compass, surfaces [founder-calls](../00-foundation/glossary.md) (e.g. "the code does X but the team says the rule is Y — which is doctrine?").
 - **Mentor-2** orchestrates the extraction of one module, slicing it into Doer-sized survey/draft chunks.
 - **The Doer** does the actual reading of code and drafting — it's the only tier that touches substrate, even when "touching" means *reading* the existing code to extract its rules.
 

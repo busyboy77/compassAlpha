@@ -62,7 +62,7 @@ Exactly one human plays the **founder** role. It is a deliberately narrow job:
 
 - [ ] **Trigger bus.** Spawns the right tier session when needed; delivers one-line pings: *"ready for Mentor-2"* / *"pull + read your inbox at `<path>`."* The founder's clipboard carries **zero substantive content** — all content moves through git.
 - [ ] **Rotation rotater.** Initiates rotation of the Mentor-1 tier at clean seams.
-- [ ] **Lost+found arbiter.** Decides genuine *founder-call* items only — scope / intent / agenda / value decisions that cannot be derived from substrate + AI consensus + the tier hierarchy. These are rare.
+- [ ] **Lost+found arbiter.** Decides genuine [*founder-call*](../00-foundation/glossary.md) items only — scope / intent / agenda / value decisions that cannot be derived from substrate + AI consensus + the tier hierarchy. These are rare.
 
 A small team may share the founder role, but they must act as a **single founder-role** — one voice into the bus, one lost+found backstop. The founder is *not* a per-decision arbiter and *not* a copy-paste relay of message bodies.
 

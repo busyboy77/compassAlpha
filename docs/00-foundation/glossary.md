@@ -71,6 +71,10 @@ A complete CompassAlpha installation: a reviewer-state repo, an AI agent harness
 
 The human in the loop. **Relay bus + lost+found backstop**, NOT a per-decision arbiter. The founder's role is deliberately narrow ([→](../03-tunables/full-parameter-matrix.md)).
 
+### founder-call
+
+A decision or question that only the [founder](#founder) can resolve. Because the founder is a low-cognitive-load relay and the lost+found arbiter — not a per-decision authority — a tier surfaces a founder-call only when it hits something it genuinely cannot decide on its own: code and team knowledge disagree, a scope choice needs an owner, or a [trust anchor](#trust-anchor) is at risk. The tier escalates a crisp, single question for the founder's ruling rather than guessing.
+
 ### Inbox
 
 A subfolder in each tier's home. Receives messages from other tiers via the bus protocol. Path-partitioned multi-writer.
@@ -78,6 +82,10 @@ A subfolder in each tier's home. Receives messages from other tiers via the bus 
 ### Invariants
 
 Charter-level rules that must hold **everywhere, always** — the non-negotiables. **Placement:** the federation [Charter](#charter), cross-component. **Controls:** maximal — they lock down what can never break federation-wide and are **not tunable**. **Loosens:** nothing. **Why:** the bedrock of [codebase coherence](codebase-coherence.md). Marked `[INVARIANT]`.
+
+### LAYGO
+
+**Learn As You Go.** The lean, develop-as-you-progress pacing where rhythm and rules emerge as the project proves them, rather than being fully specified up front. Doctrine and cadence are discovered through cycles and lifted in (see [LIFT-WATCH](#lift-watch)) instead of pre-declared in full.
 
 ### LIFT-WATCH
 
