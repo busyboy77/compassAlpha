@@ -39,10 +39,11 @@ _internal/             ← gitignored author space · graduation-candidate captu
 ## Status at session boot
 
 - **v0.1 — portal AUTHORED, VALIDATED, POLISHED, and LIVE:** https://busyboy77.github.io/compassAlpha/
-- **All 8 sections complete** (~50 pages) + 8 concept diagrams + per-page SEO/OG meta + content-safety deploy gate + robots.txt/sitemap.
+- **All 9 sections complete** (~60 pages) + concept diagrams w/ lightbox + per-page SEO/OG meta + content-safety deploy gate + robots.txt/sitemap.
+- **Onboarding is a named ladder, Rung 0→4** (Sketch · Borrow · Bootstrap · Federate · Scale), each a real page; idea-only non-coders enter at Rung 0 (`start-with-an-idea.md`). **9 guardrails.** A **dogfooded conformance gate** (`reference/conformance-gate/`, `07-reference/conformance-gate.md`) runs fail-closed in CI.
 - **Repository:** https://github.com/busyboy77/compassAlpha (public)
 - **License:** Business Source License 1.1 (source-available; converts to Apache 2.0 on 2030-06-09) · commercial use → `COMMERCIAL.md`
-- **CI/build:** `.github/workflows/deploy.yml` = `mkdocs build --strict` → `scripts/content-safety.sh site` (denylist gate) → Pages deploy. Local build: `/tmp/ca-venv/bin/mkdocs build --strict`.
+- **CI/build:** `.github/workflows/deploy.yml` = **conformance gate (dogfood, fail-closed)** → `mkdocs build --strict` → `scripts/content-safety.sh site` (denylist gate) → Pages deploy. Local build: `/tmp/ca-venv/bin/mkdocs build --strict`.
 
 ## Read-on-boot artifacts
 
@@ -50,14 +51,13 @@ _internal/             ← gitignored author space · graduation-candidate captu
 2. **`docs/index.md`** — portal home · 4-layer mental model · navigation
 3. **This file** — session orientation
 
-## What's next (the build is DONE — remaining work is graduation + founder to-dos)
+## What's next (the build is DONE — remaining work is founder-gated)
 
-- **Graduate `_internal/` captures to public docs — ONLY on founder's go:**
-  - `recovery-after-unclean-shutdown.md` → a Day-2 / reference recovery page.
-  - `delegation-modes-vision.md` → Mode-2 sub-agent context-volatility refinement into `03-tunables/` (concurrency-modes / context-patterns).
-  - `onboarding-storytelling-vision.md` → story-driven onboarding (greenfield + brownfield) — **do not build until founder says go.**
-- **Founder's external to-dos (not ours to do):** Google Search Console + sitemap submission (the SEO unlock — site is indexable, just undiscovered); launch post.
-- **Model:** Fable 5 vs Opus 4.8 A/B eval — pending founder decision (he'll say when).
+- **Graduate `_internal/` captures — ONLY on founder's go:** `delegation-modes-vision.md` → Mode-2 refinement into `03-tunables/`. (Story-driven onboarding's no-code Rung 0 slice is built; the broader auto-derive mechanism stays **hold-until-go**.)
+- **Open onboarding/enforcement follow-ons (founder-gated):** worked proof-of-value, front-door ordering, per-page enforced-vs-convention clarity, multi-team governance depth — **detail + rationale live in the private rotation handoff** (`_internal/SESSION-HANDOFF.md`).
+- **The real unlock is non-doc: a first real adopter** — it moves the maturity / production-evidence ceiling; founder's to make.
+- **Founder's external to-dos:** Google Search Console + sitemap submission; launch post.
+- **Model:** Fable 5 deferred — stays on Opus 4.8 until founder says go.
 - Cross-page redundancy is a **deliberate** layered-with-cross-links choice — not a gap; don't "consolidate" it blindly.
 
 Persistence law in force throughout. Status grids at session START + END.
