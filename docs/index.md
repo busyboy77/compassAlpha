@@ -59,6 +59,16 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
 ---
 
+## Is CompassAlpha for you (yet)?
+
+CompassAlpha earns its ceremony on **substantial, multi-component work built by more than one AI agent, over many cycles** — a real codebase, new or existing, where keeping every part coherent across sessions and contributors actually matters.
+
+If you're a **solo developer on a small, one-off project**, the full federation — two repos, three tiers, doctrine cycles — is honestly **more than you need today**. That's a straight answer, not a sales dodge.
+
+But one idea is worth borrowing **even with a single AI assistant and no federation**: keep a small **Charter** (write down the one canonical way to do each recurring thing) and **cite by substrate** (let decisions live in git, not in a chat you'll lose). That alone prevents most *coherence drift* — the slow sprawl of three slightly-different ways to do the same thing — for almost no ceremony. Grow into the rest of the framework if and when your project does.
+
+---
+
 ## The four-layer mental model
 
 CompassAlpha is structured in four conceptual layers, from most-rigid to most-flexible:

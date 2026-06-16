@@ -3,6 +3,8 @@
 > **A framework, not a tool.** Source-available federation framework for multi-tier AI-agent collaboration on substantial codebases. The reference framework for **GitAI** — using git as the coordination, durability, and audit layer for multi-agent AI operations.
 
 > **What it gives you: a codebase that stays coherent as it grows** — one canonical way to do each thing, enforced by an AI-agent federation against one doctrine, not left to each agent's guess. *Say the vision; get a coherent codebase grown from it.* → [How code coherence works](docs/00-foundation/codebase-coherence.md)
+>
+> **Best fit:** substantial, multi-component codebases built by multiple AI agents over many cycles. Solo on a tiny one-off? It's likely more than you need today — but you can still borrow the core idea: keep a Charter and cite decisions to git, and most coherence drift goes away. See [Is CompassAlpha for you?](https://busyboy77.github.io/compassAlpha/#is-compassalpha-for-you-yet)
 
 [![License: BSL 1.1](https://img.shields.io/badge/license-BSL%201.1-blue.svg)](LICENSE)
 [![Commercial use](https://img.shields.io/badge/commercial%20use-license%20required-orange.svg)](COMMERCIAL.md)

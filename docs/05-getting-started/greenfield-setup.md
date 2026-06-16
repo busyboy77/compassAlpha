@@ -13,7 +13,7 @@ This page assumes you've cleared the [prerequisites](prerequisites.md). It walks
 The whole setup is seven steps. Each produces real artifacts on disk that you commit and push. Nothing load-bearing stays in your head.
 
 !!! tip "Smallest viable first day"
-    This page goes into the full detail, but you don't have to absorb all of it at once. If you want the gentlest possible start, begin in the **Bootstrap** [operating preset](../04-toggles/operating-presets.md) — the minimal-footprint posture that keeps the machinery quiet while you find your feet. You can dial the rest up later. Work through the steps below at your own pace; nothing here has to be done in one sitting.
+    This page goes into the full detail, but you don't have to absorb all of it at once. If you want the gentlest possible start, begin in the **Bootstrap** [operating preset](../04-toggles/operating-presets.md) — the *leanest posture*: it's still the full setup (two repos, three tiers), but tuned to keep the machinery slow and quiet while you find your feet. You can dial the rest up later. Work through the steps below at your own pace; nothing here has to be done in one sitting.
 
 ---
 
