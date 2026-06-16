@@ -166,6 +166,8 @@ Two bump levels keep the hierarchy honest:
 
 A cohort team releases only against the **current chartered Compass**; any cross-cutting change must flow through a **GO-UP-BUMP**, never an ad-hoc release. That discipline is what prevents "someone had an idea and shipped" from fracturing a multi-team codebase.
 
+For a worked walkthrough of several teams each owning a component under one Charter — including how the founder/relay avoids becoming a bottleneck and how teams sit on different adoption rungs at once — see [Multi-team federation](../06-adoption-patterns/multi-team-federation.md).
+
 ---
 
 ## The "provisioned as a constitution" property

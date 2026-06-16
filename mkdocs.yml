@@ -169,6 +169,7 @@ nav:
     - Cutover from pre-AI project: 05-getting-started/cutover-from-pre-AI-project.md
   - Adoption Patterns:
     - 06-adoption-patterns/index.md
+    - Multi-team federation: 06-adoption-patterns/multi-team-federation.md
     - Sample doctrine cycle: 06-adoption-patterns/sample-doctrine-cycle.md
     - Sample Phase 3 dispatch: 06-adoption-patterns/sample-phase3.md
     - Sample Polish Lane: 06-adoption-patterns/sample-polish.md

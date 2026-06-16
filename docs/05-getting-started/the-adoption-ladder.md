@@ -69,6 +69,14 @@ The lightest possible start. You don't stand up any of the federation machinery 
 
 Here you stand up the actual framework: **two repos** (one for code, one as the state-of-record) and the **three tiers** (a senior planner, a coordinator, and the hands-on builder). You run it under the **Bootstrap preset** — the leanest *posture*, not a stripped-down framework. It's the full setup with every dial turned to slow-and-safe so nothing moves faster than you can follow.
 
+!!! tip "Coming from Rung 1? This is a step, not a wall."
+    The jump from Rung 1 can look bigger than it is, because two new ideas arrive at once. In plain words:
+
+    - **Two repos** — one holds your **code**, the other is the federation's **notebook** (who decided what, what's pending). Keeping them apart means the record of *why* never gets tangled with the *what*. You make two folders; you don't learn anything new to do it.
+    - **Three tiers** — instead of one assistant juggling everything, the work splits across a **planner**, a **coordinator**, and a **builder**. That's not more for *you* to do; it's how the machinery keeps each part focused so nothing gets muddled.
+
+    On **Bootstrap** these run slow and quiet while you find your feet, and you don't memorize any of it — [the mental model](../00-foundation/mental-model.md) explains the ideas, and [greenfield setup](greenfield-setup.md) walks the steps one at a time. Nobody stands this up in one sitting.
+
 **What you get:** the complete safety net, dialled gentle — cycles that **lock** the rulebook while code is written, and gates that check work before it lands.
 
 **Climb when:** your first cycle closes cleanly and the alternating rhythm (settle the rules → lock → build) feels natural rather than effortful.
@@ -101,7 +109,7 @@ The top of the ladder. You onboard modules **one at a time**, add axes as new ki
 
 **You're at the top:** from here you *tune*, you don't climb. The remaining surface is the [tunables](../03-tunables/) and [toggles](../04-toggles/).
 
-→ For existing large systems, the safe path in is [cutover from a pre-AI project](cutover-from-pre-AI-project.md) — non-destructive, parallel-track, revertible.
+→ For existing large systems, the safe path in is [cutover from a pre-AI project](cutover-from-pre-AI-project.md) — non-destructive, parallel-track, revertible. Coordinating **several teams across several components**? See [multi-team federation](../06-adoption-patterns/multi-team-federation.md) — including how the relay avoids becoming a bottleneck and how teams sit on different rungs at once.
 
 ---
 

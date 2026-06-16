@@ -12,6 +12,14 @@ This page assumes you've cleared the [prerequisites](prerequisites.md). It walks
 
 The whole setup is seven steps. Each produces real artifacts on disk that you commit and push. Nothing load-bearing stays in your head.
 
+!!! note "Just climbed from Rung 1? The two ideas this page assumes, in plain words"
+    If you've been [borrowing CompassAlpha solo](borrow-compassalpha-solo.md) and this page suddenly looks heavier, it's really just **two new ideas** — defined here so nothing below is a surprise:
+
+    - **Two repos** — one holds your **code** (the *substrate*); the other is the federation's **notebook** (the *reviewer-state*: who decided what, what's pending, how rotations went). Keeping them separate stops the record of *why* from tangling with the *what*. In practice: you make two folders side by side.
+    - **Three tiers** — the work splits across a **planner** (Mentor-1), a **coordinator** (Mentor-2), and the **hands-on builder** (Doer), instead of one session doing everything. It isn't more work for *you* — it's how the machinery keeps each part focused so context stays clean.
+
+    That's the whole conceptual jump. You don't memorize any of it; [the mental model](../00-foundation/mental-model.md) has the ideas, and the steps below are click-by-click.
+
 !!! tip "Smallest viable first day"
     This page goes into the full detail, but you don't have to absorb all of it at once. If you want the gentlest possible start, begin in the **Bootstrap** [operating preset](../04-toggles/operating-presets.md) — the *leanest posture*: it's still the full setup (two repos, three tiers), but tuned to keep the machinery slow and quiet while you find your feet. You can dial the rest up later. Work through the steps below at your own pace; nothing here has to be done in one sitting.
 
