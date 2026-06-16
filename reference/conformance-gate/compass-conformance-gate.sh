@@ -104,7 +104,27 @@ elif [ "$MODE" = "--tree" ] && [ "${#forbid_re[@]}" -gt 0 ]; then
 fi
 
 # --- require-cite checks (commit messages over a range) ----------------------
-CITE_RE='@ [A-Za-z0-9._/-]+|Ref:|[a-f0-9]{7,40}'
+# A citation is valid only if it RESOLVES to a real object in this repo — a tag,
+# branch, or sha that git rev-parse can verify. Matching the *shape* of a ref is
+# not enough (a fabricated "Ref:" or a random hex string would pass); we resolve
+# each candidate against the object store so an invalid citation fails closed.
+resolves_citation() {   # $1 = commit message → 0 if a real substrate ref is cited
+  local msg="$1" cand cands
+  cands=$(printf '%s\n' "$msg" \
+            | grep -oE '(@|Ref:)[[:space:]]*[A-Za-z0-9._/-]+' \
+            | sed -E 's/^(@|Ref:)[[:space:]]*//')
+  cands="$cands
+$(printf '%s\n' "$msg" | grep -oE '[0-9a-f]{7,40}')"
+  while IFS= read -r cand; do
+    [ -n "$cand" ] || continue
+    if git rev-parse --verify --quiet "${cand}^{commit}" >/dev/null 2>&1; then
+      return 0
+    fi
+  done <<EOF
+$cands
+EOF
+  return 1
+}
 if [ "$MODE" = "--range" ] && [ "${#cite_glob[@]}" -gt 0 ]; then
   while IFS= read -r sha; do
     [ -n "$sha" ] || continue
@@ -115,8 +135,9 @@ if [ "$MODE" = "--range" ] && [ "${#cite_glob[@]}" -gt 0 ]; then
     done
     if [ "$touched" = "1" ]; then
       msg=$(git log -1 --pretty=%B "$sha")
-      if ! printf '%s' "$msg" | grep -qE "$CITE_RE"; then
-        emit "✗ UNCITED: commit ${sha:0:9} touches a cite-required path but its message cites no substrate (tag/sha/Ref:)."
+      if ! resolves_citation "$msg"; then
+        emit "✗ UNCITED: commit ${sha:0:9} touches a cite-required path but cites no RESOLVABLE substrate"
+        emit "    (no tag/sha/Ref: in its message resolves to a real object in this repo)."
         fail=1
       fi
     fi

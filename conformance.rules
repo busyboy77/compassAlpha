@@ -1,0 +1,12 @@
+# CompassAlpha · conformance rules (this repository's own Charter slice)
+# -----------------------------------------------------------------------------
+# CompassAlpha dogfoods its own conformance gate: these rules are enforced
+# FAIL-CLOSED in CI before the docs deploy (see .github/workflows/deploy.yml).
+# A violation blocks the build — the framework holds itself to a rule it can't
+# water down silently. See docs/07-reference/conformance-gate.md.
+
+# Naming discipline (Charter): the project is "source-available", never "open-source".
+forbid  open[-[:space:]]source                                          :: Naming: CompassAlpha is "source-available", never "open-source".
+
+# Internal-only working names must never appear in published doctrine (no meta-leak).
+forbid  (grandfather|cartographer|compass-architect|doctrine-architect)  :: Internal-only working name must not appear in published doctrine.

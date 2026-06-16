@@ -46,6 +46,14 @@ jobs:
           pip install --upgrade pip
           pip install mkdocs-material mkdocs-glightbox
 
+      - name: Conformance gate (dogfood)
+        # CompassAlpha runs its OWN reference conformance gate against its source,
+        # fail-closed, before building — so the framework is held to a Charter rule
+        # it can't water down silently. See docs/07-reference/conformance-gate.md.
+        run: |
+          bash reference/conformance-gate/compass-conformance-gate.sh --tree docs      ./conformance.rules
+          bash reference/conformance-gate/compass-conformance-gate.sh --tree reference ./conformance.rules
+
       - name: Build site
         # Portal complete — all nav-referenced pages exist — so --strict is back
         # on to fail the build on broken links, bad refs, or nav drift.

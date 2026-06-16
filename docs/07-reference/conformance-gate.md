@@ -28,15 +28,46 @@ The gate carries no project knowledge of its own. You write the rules, derived f
 # forbid       <ERE regex>  :: <message shown when it matches>
 # require-cite <path-glob>          # commits touching these must cite substrate
 
-forbid  parseFloat\(.*(price|amount|total|money)  :: Money is integer minor units, never a float (Charter invariant).
-forbid  (SELECT|INSERT|UPDATE).*FROM.*\$\{          :: No string-interpolated SQL; use the repository layer.
-forbid  FIXME                                       :: Resolve FIXMEs (or convert to a tracked ticket) before merge.
+# The gate matches text, so one rules file carries rules for every language.
+forbid  parseFloat\(.*(price|amount|total|money)       :: [JS]  Money is integer minor units, never a float.
+forbid  (mysqli_query|->query)\(.*\$_(GET|POST|REQUEST) :: [PHP] No SQL built from a raw superglobal; use prepared statements.
+forbid  FIXME                                          :: Resolve FIXMEs (or convert to a tracked ticket) before merge.
 
 require-cite  docs/spec/*
 require-cite  *.schema.*
 ```
 
-Keep it short. A rules file you trust beats a long one you don't — encode the handful of rules whose violation actually hurts.
+Keep it short. A rules file you trust beats a long one you don't — encode the handful of rules whose violation actually hurts. The gate is **language-agnostic**: it pattern-matches text, so it works the same for JavaScript, PHP, Python, Go, or anything else — you just write the rule.
+
+## Worked example — watch it block
+
+A PHP file builds a query straight from a request superglobal — a classic injection, and against the `[PHP]` rule above:
+
+```php
+<?php
+function findUser($db) {
+    $id = $_GET['id'];
+    return mysqli_query($db, "SELECT * FROM users WHERE id = $_GET[id]");
+}
+```
+
+Run the gate over it (CI mode):
+
+```console
+$ bash compass-conformance-gate.sh --tree app ./conformance.rules
+✗ FORBIDDEN: [PHP] No SQL built from a raw superglobal; use prepared statements.
+    pattern: (mysqli_query|->query)\(.*\$_(GET|POST|REQUEST)
+    app/UserRepository.php:4:    return mysqli_query($db, "SELECT * FROM users WHERE id = $_GET[id]");
+
+Conformance gate FAILED — the change is blocked. Fix the violations above,
+or open a doctrine cycle to change the rule deliberately (never silently).
+$ echo $?
+1
+```
+
+Exit 1 — the commit or merge is **blocked**, with the file, line, and the Charter rule it broke. Fix the code (use a prepared statement) and the gate exits 0. That is the whole point: the rule stops being something a reviewer might catch and becomes something the pipeline *won't let through*.
+
+For the provenance side, `require-cite` is checked the same way over a commit range — and a citation only counts if it **resolves to a real object**: a commit that touches `docs/spec/*` but whose message cites a tag/sha that doesn't exist in the repo fails closed, so a citation can't be faked by writing a plausible-looking `Ref:`.
 
 ## The gate
 
@@ -80,7 +111,9 @@ A failed gate fails the job; nothing merges. That is the difference between *doc
 
 ## Why fail-closed matters
 
-A gate that warns and lets the change through is a suggestion. A gate that **fails closed** — defaults to *block* on any violation, and on its own errors — is a control: the only way past it is to conform, or to change the rule **deliberately** (open a [doctrine cycle](../06-adoption-patterns/sample-doctrine-cycle.md), amend the rule, re-lock) rather than silently. CompassAlpha already dogfoods exactly this shape for its own publishing pipeline; the conformance gate is that pattern, handed to you as a primitive to adapt.
+A gate that warns and lets the change through is a suggestion. A gate that **fails closed** — defaults to *block* on any violation, and on its own errors — is a control: the only way past it is to conform, or to change the rule **deliberately** (open a [doctrine cycle](../06-adoption-patterns/sample-doctrine-cycle.md), amend the rule, re-lock) rather than silently.
+
+**CompassAlpha dogfoods this gate.** Its own CI runs this exact script against its source before every docs deploy — enforcing the project's naming and no-leak Charter rules fail-closed — so the framework is held to a rule it can't water down silently. The script you adapt is the script the framework runs on itself.
 
 ## Honest limits (so you wire it with eyes open)
 

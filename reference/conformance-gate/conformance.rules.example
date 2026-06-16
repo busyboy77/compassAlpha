@@ -12,9 +12,12 @@
 # Lines starting with # are comments. One rule per line.
 
 # --- example forbid rules (Charter "canonical ways" / invariants) ------------
-forbid  parseFloat\(.*(price|amount|total|money)  :: Money is integer minor units, never a float (Charter invariant).
-forbid  (SELECT|INSERT|UPDATE).*FROM.*\$\{          :: No string-interpolated SQL; use the repository layer (Charter canonical way).
-forbid  FIXME                                       :: Resolve FIXMEs (or convert to a tracked ticket) before merge.
+# The gate is language-agnostic — it matches text, so one rules file can carry
+# rules for every language in your codebase. Tag each message with its language.
+forbid  parseFloat\(.*(price|amount|total|money)       :: [JS] Money is integer minor units, never a float (Charter invariant).
+forbid  (SELECT|INSERT|UPDATE).*FROM.*\$\{              :: [JS] No string-interpolated SQL; use the repository layer (Charter canonical way).
+forbid  (mysqli_query|->query)\(.*\$_(GET|POST|REQUEST) :: [PHP] No SQL built from a raw superglobal; use prepared statements.
+forbid  FIXME                                          :: Resolve FIXMEs (or convert to a tracked ticket) before merge.
 
 # --- example require-cite rule (provenance law) ------------------------------
 # Commits that change doctrine or schema must cite the substrate they derive from.
