@@ -6,6 +6,9 @@ description: "The 7 invariant axioms of CompassAlpha: tier grammar, firewall, pe
 
 > The 7 foundational rules. **Cannot be modified without forking the framework.** Read once, internalize forever.
 
+!!! note "This governs *changing* the rules — not *how much* you adopt"
+    "Cannot be modified" means you don't water down a rule for a unit you've brought under CompassAlpha. It is **not** an all-or-nothing demand: adoption is incremental and per-unit, and different teams can sit on [different rungs](../05-getting-started/the-adoption-ladder.md) at the same time. Immutable rules, incremental rollout.
+
 New here? This section lists the seven non-negotiable rules that hold a CompassAlpha setup together — the ground rules every agent and human plays by. It's for anyone who wants to understand *why the framework is shaped the way it is* before customizing anything. (New to all of this? Start with [the mental model](../00-foundation/mental-model.md).)
 
 Every axiom defends against one or more of the [four pathologies](../02-guardrails/index.md) — the recurring ways multi-agent work goes wrong. Break an axiom and you let its pathology back in.

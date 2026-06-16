@@ -24,6 +24,9 @@ When you adopt CompassAlpha, you accept the axioms unchanged, you accept the gua
 
 These rules **cannot be modified** without forking the framework. They define what CompassAlpha **is**.
 
+!!! note "“Cannot be modified” is about the rules — not how much you adopt at once"
+    Accepting the axioms unchanged does **not** mean converting your whole estate on day one. Adoption is **incremental and per-unit**: you bring one project, module, or team under CompassAlpha at a time — that's the whole point of [the adoption ladder](../05-getting-started/the-adoption-ladder.md) and the [brownfield parallel-track](../05-getting-started/brownfield-onboarding.md), where governed and not-yet-governed units run side by side. The axioms govern *each unit you bring in, whenever you bring it in* — and **different teams can sit on different rungs at the same time, indefinitely**. What you can't do is keep a unit under CompassAlpha while quietly watering down a rule *for that unit* — that part is what would require forking. Immutable rules, incremental rollout.
+
 | # | Axiom | One-line essence | Detail |
 |---|---|---|---|
 | 1 | **Tier grammar** | Mentor-1 / Mentor-2 / Doer per axis | [→](../01-axioms/tier-grammar.md) |
