@@ -1,5 +1,5 @@
 ---
-description: "The CompassAlpha adoption ladder — a you're-here → next-safe-step map of how to adopt the framework at your own pace. Four named rungs (Borrow, Bootstrap, Federate, Scale), each with what you adopt, what you get, and the signal to climb. Start on the rung that fits you today; it is the same framework all the way up, never a different product."
+description: "The CompassAlpha adoption ladder — a you're-here → next-safe-step map of how to adopt the framework at your own pace. Five named rungs (Sketch, Borrow, Bootstrap, Federate, Scale), each with what you adopt, what you get, and the signal to climb. Start on the rung that fits you today — even with just an idea and no code; it is the same framework all the way up, never a different product."
 ---
 
 # The Adoption Ladder
@@ -10,7 +10,7 @@ A common worry on first contact with CompassAlpha is *"this looks like a lot —
 
 This page is your map: **find your rung, see what it gives you, and know the single signal that means it's time for the next one.** The same framework runs all the way up — climbing means *adopting more of it*, never switching to a different product.
 
-## The four rungs at a glance
+## The five rungs at a glance
 
 ![The adoption ladder — five rising rungs starting from Rung 0 'Sketch' (just an idea, no code) through Borrow, Bootstrap, Federate, and Scale. Each rung shows who it's for, what you do or adopt, what you get, and the signal to climb. A red marker on the ground reads 'start where you fit — no code? Rung 0; one dev? Rung 1; both fine.' One Charter plus cite-by-substrate carries up every rung above 0.](../assets/adoption-ladder.svg)
 

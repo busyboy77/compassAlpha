@@ -56,6 +56,9 @@ These are the **failure modes the framework defends against**, with documented r
 | **Failure modes catalog** | 6 known classes + recovery | [→](../02-guardrails/failure-modes.md) |
 | **Brief completeness** | Improvisation by Doers on incomplete briefs | [→](../02-guardrails/brief-completeness.md) |
 | **Single-live-writer** | Cross-session clobber on shared state | [→](../02-guardrails/single-live-writer.md) |
+| **Minimal-sufficient bus** | Bus bloat / context overload across tiers | [→](../02-guardrails/minimal-sufficient-bus.md) |
+| **Retrieval discipline** | Retrieval (RAG) re-introducing pollution / stale / ungrounded context | [→](../02-guardrails/retrieval-discipline.md) |
+| **Disaster reconciliation** | State divergence after an unclean shutdown / crash | [→](../02-guardrails/disaster-reconciliation.md) |
 
 Guardrails are NOT independent of axioms — they DERIVE from axioms. The single-live-writer guardrail derives from the firewall axiom. Stale snapshot detection derives from the firewall + persistence axioms.
 
@@ -110,7 +113,7 @@ A worked example: a conservative profile biased toward intelligence + low-risk.
 
 ```
 LAYER 1 (axioms):     all 7 axioms in force (always — invariant)
-LAYER 2 (guardrails): all 6 guardrails active (always — derived from axioms)
+LAYER 2 (guardrails): all 9 guardrails active (always — derived from axioms)
 LAYER 3 (tunables):
                       concurrency = LAYGO
                       context_patterns = {fresh-per-slice doer, verbose digests, liberal memory}
@@ -192,7 +195,7 @@ A practical order:
 
 1. **Now**: skim this page (you're here)
 2. **Next 30 minutes**: read all 7 axioms ([→](../01-axioms/))
-3. **Next hour**: read all 6 guardrails ([→](../02-guardrails/))
+3. **Next hour**: read all 9 guardrails ([→](../02-guardrails/))
 4. **Next 2-3 hours**: skim the tunables (don't memorize) ([→](../03-tunables/))
 5. **As needed**: refer to toggles when you need a specific switch ([→](../04-toggles/))
 
