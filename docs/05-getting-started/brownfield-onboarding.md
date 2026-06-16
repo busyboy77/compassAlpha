@@ -58,6 +58,19 @@ Goal: a working federation skeleton and a chosen pilot.
 
 Phase 0 ends when you have a skeleton federation and one pilot module selected.
 
+### When there are no clean seams (the tangled monolith)
+
+Steps 2–3 quietly assume your codebase *has* well-bounded modules to inventory and pick from. Many don't. A tangled monolith — shared mutable state, circular dependencies, no enforced boundaries, "everything imports everything" — offers no self-contained module to point at. This is common, and it is **not** a reason you can't adopt; it just means you do a **seam-finding** step before you pick a pilot.
+
+The goal is not to untangle the monolith first (that's a years-long project, and you'd be boiling the ocean). The goal is to find the **smallest defensible boundary you can reason about and govern** — even if it isn't a "module" in the code's current structure:
+
+- **Look for a vertical slice, not a package.** A single user-facing capability or workflow (one endpoint family, one job, one screen's data path) often has a more findable boundary than any folder does. Govern the slice, not the directory.
+- **Draw the boundary by contract, not by file layout.** Define the pilot as "everything reachable through *this* interface / *this* set of entry points." The boundary is the contract you can name and defend, even while the code behind it still sprawls.
+- **Pick the slice with the fewest inbound surprises.** Trace what calls *into* your candidate. The best first pilot is the slice whose callers you can actually enumerate — so the doctrine you extract isn't immediately undermined by an unseen path.
+- **Treat the boundary itself as the first piece of doctrine.** "Here is the line around the pilot, and here is what crosses it" is a legitimate — often the most valuable — first thing the Discovery Doctrine Cycle writes down. Naming a seam where there was none is real coherence work.
+
+If you genuinely cannot draw *any* defensible boundary, that finding is itself a founder-call: the honest first step may be a small, deliberate refactor to *create* one seam, run as its own bounded piece of work — not a blind attempt to onboard the whole tangle at once.
+
 ---
 
 ## Phase 1 — Doctrine extraction (the Discovery Doctrine Cycle)

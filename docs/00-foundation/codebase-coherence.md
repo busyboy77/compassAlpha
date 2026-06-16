@@ -70,6 +70,18 @@ When many human teams build under the **one** Charter (see [the doctrine substra
 
 Coherence is not only a point-in-time property; it has to survive the codebase's evolution. New requirements, new modules, and new rules enter through the **doctrine cycle** rather than ad hoc, so that today's canonical way stays canonical tomorrow. *(A formal intake pipeline for keeping doctrine and code coherent as both grow is on the [roadmap](../08-community/roadmap.md).)*
 
+### Coherence reaches past the source — to what's derived from it
+
+Source code is not the only thing built from a Primitive or a schema. A change to a canonical definition also has to reach everything **derived** from it that lives *downstream* of the source text: generated API clients and SDKs, cached or denormalized data, a trained or fine-tuned model that learned the old schema, an ETL or analytics pipeline shaped to the old contract. These artifacts don't recompile when you edit doctrine — they **lag it silently**, and that lag is coherence drift wearing a different coat. The codebase reads coherent while a downstream model still answers by yesterday's schema.
+
+So a doctrine change to a Primitive or schema carries a **propagation obligation**, not just an edit:
+
+- **Enumerate the derived artifacts** the changed definition feeds — name them in the Compass, the same way source dependencies are named.
+- **Decide the propagation for each:** regenerate (clients/SDKs), backfill or re-migrate (data), retrain or re-version (models), or declare an explicit **compatibility window** during which old and new coexist.
+- **Don't close the cycle until the derived artifacts are reconciled or the window is recorded.** A Primitive change whose downstream artifacts still reflect the old contract is an *open* coherence gap, even though every source file is consistent.
+
+The rule is the same one coherence always enforces — one canonical way, everywhere it's used — extended honestly to the places a definition is *used by being derived from*, not only the places it's *called*.
+
 ## How this connects
 
 - **[Primitives](glossary.md#primitives) & [Invariants](glossary.md#invariants)** — the canonical definitions and the non-negotiables coherence is built on.

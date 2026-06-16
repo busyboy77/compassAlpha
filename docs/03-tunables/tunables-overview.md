@@ -56,6 +56,20 @@ Different projects sit naturally at different points on the surface:
 
 The framework's conservative defaults bias hard toward **intelligence + low risk** — the right bias for a regulated multi-tenant profile where doctrine errors are expensive to roll back. A small source-available project can legitimately choose the opposite bias. Neither is "wrong"; they're different points on the same surface.
 
+## When an axis is a constraint, not a dial
+
+The bias points above assume you're free to *choose* where to give. Sometimes you're not. An external mandate — a regulator, a contract, a compliance regime — can make one axis **non-negotiable**, and that changes the nature of the problem: the axis stops being a dial you turn and becomes a **constraint that shrinks the reachable surface**. The presets that violate the constraint are simply off the menu; you tune only among what's left.
+
+The sharpest case is **provability**. If every change must be audit-ready and traceable to an immutable source ([provenance law](../01-axioms/provenance-law.md), read-back side), then:
+
+- Provenance verification is pinned to **strict** — it is no longer a speed-vs-correctness dial you can relax.
+- Risk tolerance is pinned **low** — the risk-tolerant presets that buy speed by skipping verification are unreachable.
+- You are pinned to the **conservative bias** (intelligence + low risk), regardless of how much you'd prefer to move fast.
+
+The practical consequence: **you cannot have "ship-fast" and "prove-everything" at the same time.** A move-fast startup and a mandatory-audit obligation are in direct tension — not because the framework forbids speed, but because provability *removes the fast/cheap region of the surface entirely*. Speed and cost then trade only against each other within the conservative envelope that remains.
+
+This is why the very first tuning question is not "what do I prefer?" but **"what is actually mandated?"** Identify hard constraints before you pick a preset: a constraint deletes options, a preference merely biases among them. Choosing a fast preset and *then* discovering an audit obligation is the expensive way to learn this.
+
 ## The dials, mapped to axes
 
 Each tunable in this section moves the federation along one or more axes. The summary:

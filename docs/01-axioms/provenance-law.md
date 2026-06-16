@@ -158,6 +158,36 @@ When updating a memory file (e.g., `memory/MEMORY.md`):
 
 Memory becomes a curated index of substrate references, not a parallel source of truth.
 
+## Reading the record back
+
+Provenance has two directions, and the rule above only describes one of them. Writing decisions to substrate (and citing them) is the **produce** side. The **consume** side is just as load-bearing: at any later moment, anyone must be able to ask *"show me every decision behind this — and why it is the way it is"* and reconstruct the answer **from the substrate alone**, without the people who made those decisions in the room. A record you can write but not read back is not an audit trail; it is a write-only log.
+
+Because state lives in git, the decision trail for any artifact is **queryable** — it is recovered, not remembered. The substrate is the index into its own history.
+
+### The decision-trail recipe
+
+Given an artifact and a question ("why is this field an integer?", "when did this rule change, and on whose ruling?"), reconstruct the trail:
+
+```
+1. Locate the artifact's history   → git log --follow -p <file>
+                                      (every change to this file, with the diff and the message that explains it)
+2. Find when a specific thing       → git log -S'<string>'   (the change that introduced or removed it)
+   entered or left                    git log -G'<regex>'    (changes matching a pattern)
+3. Bound it between known states    → git log <tag-a>..<tag-b>   (every decision between two doctrine/build closes)
+4. Follow a cited ruling            → the commit / HANDOVER_LOG entry the citation names (RULING-id @ commit)
+5. Read the frozen content at a tag → git show <tag>:<file>   (what the doctrine actually said at that point)
+```
+
+Each step lands on an **immutable, dated, attributable** commit — which is exactly the shape an audit, a review, or a fresh tier rotation needs. The `HANDOVER_LOG` and the mentors' `LEDGER` are not a parallel source of truth; they are **curated indexes** that point *into* this substrate, so a reader can find the relevant tag or commit fast and then verify against the frozen blob.
+
+### Why the consume side is mandatory, not a convenience
+
+- **Audit.** A regulated environment doesn't just need decisions recorded — it needs them *retrievable on demand* and tied to an immutable source. "Show every decision behind this change" must have a substrate-only answer (steps 1–5), or the trail fails audit.
+- **Rotation survival.** When a tier instance rotates out, its incoming replacement learns *why* the system is the way it is by reading the trail back — not by inheriting memory. The consume side is what makes [preventive rotation](../03-tunables/context-patterns.md) safe rather than amnesia.
+- **Honest reconstruction.** The same query that answers an auditor answers a contributor six months later. If the only way to know "why" is to ask the person who decided, the decision was never really on substrate.
+
+If your federation can write decisions but a newcomer can't reconstruct the *why* of a given artifact from git alone, that's a provenance gap to close — not a tooling nicety to defer.
+
 ## Variations / tunables on top
 
 | Tunable | Default | Range |
@@ -181,6 +211,7 @@ Memory becomes a curated index of substrate references, not a parallel source of
 - **Check the source, don't trust the memory.** Before acting on "I remember we decided X," go read the actual committed file. Memory is a guess until the source confirms it.
 - **Point to a specific version.** A good citation names the file *and* the exact tag or commit, so it can't drift or be misremembered later.
 - **This is how the system catches AI mistakes.** If an AI invents a plausible-but-false fact, requiring a source means the lie gets caught the moment someone looks.
+- **The record must read back, not just write.** You should be able to reconstruct *every decision behind any artifact* — and why — from git alone, with no original decision-maker present. A trail you can't query is write-only, and write-only fails audit.
 - New here? See [the mental model](../00-foundation/mental-model.md) for how this axiom fits the bigger picture.
 
 ## Next: [Axiom 7 — Git Foundations →](git-foundations.md)
