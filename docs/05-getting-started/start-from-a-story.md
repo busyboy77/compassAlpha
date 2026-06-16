@@ -97,7 +97,12 @@ AXES:           doctrine pass (write Charter + 60K) → build axis (LOCKED)
 FIRST CYCLE:    author the three compasses' 60K, then build catalog
 ```
 
-That scope is your starting map — and you drew it by hand, no setup required. From here, standing it up gets more technical: you follow the ordinary [greenfield setup](greenfield-setup.md) to bring up the repos and tiers, and the [sample doctrine cycle](../06-adoption-patterns/sample-doctrine-cycle.md) to see a compass authored end-to-end. If that feels like a lot, the **Bootstrap** preset is the gentlest way to begin — it's still the full setup, just tuned slow and safe with everything else dialled down ([operating presets →](../04-toggles/operating-presets.md)). And if a full federation sounds like more than your project needs, that's worth checking honestly first — see [Is CompassAlpha for you?](../index.md#is-compassalpha-for-you-yet).
+That scope is your starting map — and you drew it by hand, no setup required. **What happens next depends on who you are:**
+
+- **You don't write code yourself?** Stop here — the plan is the part that's yours, and it's done. Take it to the [**Start with just an idea**](start-with-an-idea.md) hand-off: give it to an AI assistant (with a ready-made kickoff) or a developer (with a one-line brief), and *they* stand the project up. You never need a terminal.
+- **You're a developer (or working closely with one)?** From here, standing it up gets more technical: follow the ordinary [greenfield setup](greenfield-setup.md) to bring up the repos and tiers, and the [sample doctrine cycle](../06-adoption-patterns/sample-doctrine-cycle.md) to see a compass authored end-to-end. If that feels like a lot, the **Bootstrap** preset is the gentlest way to begin — still the full setup, just tuned slow and safe ([operating presets →](../04-toggles/operating-presets.md)).
+
+And if a full federation sounds like more than your project needs, that's worth checking honestly first — see [Is CompassAlpha for you?](../index.md#is-compassalpha-for-you-yet).
 
 ## Remember this
 

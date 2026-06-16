@@ -12,9 +12,9 @@ This page is your map: **find your rung, see what it gives you, and know the sin
 
 ## The four rungs at a glance
 
-![The adoption ladder — four rising rungs (Borrow, Bootstrap, Federate, Scale). Each rung shows who it's for, what you adopt, what you get, and the signal to climb. A red marker on the lowest rung reads 'most adopters honestly start here'. One Charter plus cite-by-substrate carries up every rung.](../assets/adoption-ladder.svg)
+![The adoption ladder — five rising rungs starting from Rung 0 'Sketch' (just an idea, no code) through Borrow, Bootstrap, Federate, and Scale. Each rung shows who it's for, what you do or adopt, what you get, and the signal to climb. A red marker on the ground reads 'start where you fit — no code? Rung 0; one dev? Rung 1; both fine.' One Charter plus cite-by-substrate carries up every rung above 0.](../assets/adoption-ladder.svg)
 
-<small>*Left to right is lowest-ceremony → full-framework. You don't skip rungs and you don't have to reach the top — most adopters get lasting value partway up. The one thread that runs through every rung: keep a **Charter** and **cite decisions to git**.*</small>
+<small>*Left to right is "just an idea, no code" → full-framework. You don't skip rungs and you don't have to reach the top — most adopters get lasting value partway up. The one thread that runs through every building rung: keep a **Charter** and **cite decisions to git**.*</small>
 
 ## Find your rung
 
@@ -22,12 +22,27 @@ Read down this table and stop at the first row that sounds like you today:
 
 | If this is you… | You're on | What changes when you climb |
 |---|---|---|
+| You have only an **idea** and you **don't write code** | **Rung 0 — Sketch** | You hand your plan to an AI assistant or a developer, who stands it up |
 | Solo, one AI assistant, a small or one-off project | **Rung 1 — Borrow** | A second agent or a growing codebase makes coherence hard to hold in one head |
 | Ready to run your first real project *on the framework*, want it gentle | **Rung 2 — Bootstrap** | Your first cycle closes cleanly and the rhythm feels natural |
 | Running build **and** doctrine work, want a steady cadence | **Rung 3 — Federate** | More modules or contributors than one cadence can hold |
 | A multi-module estate, a brownfield system, or several contributors | **Rung 4 — Scale** | You're running the full framework — now you *tune*, you don't climb |
 
-Nobody is turned away, and there's no shame in a low rung — **most adopters honestly start at Rung 1**, and many get everything they need without ever reaching the top.
+Nobody is turned away — not even someone who doesn't write code. There's no shame in a low rung: **many builders start at Rung 1, and non-technical idea-owners start at Rung 0**, and plenty get everything they need without ever reaching the top.
+
+---
+
+## Rung 0 — Sketch
+
+*Just an idea · no code · non-technical.*
+
+The ground floor. You have a project in your head and you can describe it, but you don't build software yourself. You don't touch git, a repo, or a terminal here. You do the one part only you can do — **shape the idea into a plain-language plan** — and then hand that plan to someone (or something) that does the technical part.
+
+**What you get:** a clear **plan you own** — the vision, the parts, and the rules — written in your own words, so you can read it, change it, and explain it.
+
+**Climb when:** you hand the plan off — to an AI assistant (with a ready-made kickoff) or to a developer (with a one-line brief), who stands the project up for you.
+
+→ **This rung is written for you, step by step, with no code anywhere:** [Start with just an idea](start-with-an-idea.md).
 
 ---
 
@@ -92,7 +107,7 @@ The top of the ladder. You onboard modules **one at a time**, add axes as new ki
 
 ## The thread that runs up every rung
 
-Notice that **Rung 1's two habits never leave you**: a Charter and cite-by-substrate are still the spine at Rung 4 — the higher rungs add federation, axes, and tiers *around* that same core. That's why borrowing them solo is a genuine first rung and not a throwaway: you're already doing the most load-bearing part of CompassAlpha, just by hand. Climbing automates and enforces what you were already doing.
+Notice that **Rung 1's two habits never leave you**: a Charter and cite-by-substrate are still the spine at Rung 4 — the higher rungs add federation, axes, and tiers *around* that same core. That's why borrowing them solo is a genuine first rung and not a throwaway: you're already doing the most load-bearing part of CompassAlpha, just by hand. Climbing automates and enforces what you were already doing. (Rung 0 sits *below* that thread: there you produce the plain-language plan the Charter and the parts are later grown from — the thinking the whole spine rests on.)
 
 ## Remember this
 

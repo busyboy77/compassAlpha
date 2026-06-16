@@ -6,101 +6,115 @@
   <!-- HEADER -->
   <rect x="0" y="0" width="1500" height="92" fill="#1f2a36"/>
   <text x="750" y="40" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">The Adoption Ladder</text>
-  <text x="750" y="68" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Start on the rung that fits you today — then climb at your own pace. It is the same framework all the way up, never a different product.</text>
+  <text x="750" y="68" text-anchor="middle" font-size="13.5" fill="#a0aabb" font-style="italic">Start on the rung that fits you today &#8212; even if you don't write code. Then climb at your own pace. It is the same framework all the way up.</text>
 
   <!-- maturity axis (left, vertical) -->
-  <text x="40" y="540" text-anchor="middle" font-size="12.5" font-weight="700" fill="#33445a" transform="rotate(-90 40 540)">HOW MUCH OF THE FRAMEWORK YOU RUN  &#8594;</text>
+  <text x="36" y="540" text-anchor="middle" font-size="12.5" font-weight="700" fill="#33445a" transform="rotate(-90 36 540)">HOW MUCH OF THE FRAMEWORK YOU RUN  &#8594;</text>
 
   <!-- ground line -->
-  <line x1="70" y1="905" x2="1450" y2="905" stroke="#c9c3b4" stroke-width="2"/>
-  <text x="70" y="930" font-size="12" font-weight="700" fill="#7a6a48">LOWEST ceremony &#183; start here</text>
-  <text x="1450" y="930" text-anchor="end" font-size="12" font-weight="700" fill="#7a6a48">FULL framework</text>
+  <line x1="58" y1="905" x2="1452" y2="905" stroke="#c9c3b4" stroke-width="2"/>
+  <text x="58" y="930" font-size="12" font-weight="700" fill="#7a6a48">JUST AN IDEA &#183; no code</text>
+  <text x="1452" y="930" text-anchor="end" font-size="12" font-weight="700" fill="#7a6a48">FULL framework</text>
 
-  <!-- ============ RUNG 1 · BORROW (green, lowest) ============ -->
-  <rect x="60" y="580" width="300" height="300" rx="12" fill="#e7f0e3" stroke="#5a8a4a" stroke-width="2"/>
-  <rect x="60" y="580" width="300" height="46" rx="12" fill="#d4e6cd"/><rect x="60" y="608" width="300" height="18" fill="#d4e6cd"/>
-  <text x="210" y="610" text-anchor="middle" font-size="16" font-weight="700" fill="#2f5a26">RUNG 1 &#183; BORROW</text>
-  <text x="210" y="650" text-anchor="middle" font-size="11" fill="#4a7a3a" font-style="italic">Solo &#183; one AI assistant &#183; no federation</text>
-  <text x="84" y="684" font-size="10" font-weight="700" fill="#3a6a2a">YOU ADOPT</text>
-  <text x="84" y="702" font-size="11" fill="#2f5a26">A one-page Charter +</text>
-  <text x="84" y="718" font-size="11" fill="#2f5a26">cite every decision to git</text>
-  <text x="84" y="748" font-size="10" font-weight="700" fill="#3a6a2a">YOU GET</text>
-  <text x="84" y="766" font-size="11" fill="#2f5a26">Coherence drift mostly gone,</text>
-  <text x="84" y="782" font-size="11" fill="#2f5a26">for almost no ceremony</text>
-  <rect x="84" y="804" width="252" height="56" rx="6" fill="#fff" stroke="#5a8a4a" stroke-width="1.2"/>
-  <text x="96" y="824" font-size="10" font-weight="700" fill="#3a6a2a">CLIMB WHEN &#8594;</text>
-  <text x="96" y="841" font-size="10.5" fill="#2f5a26">a second agent joins, or the</text>
-  <text x="96" y="855" font-size="10.5" fill="#2f5a26">code outgrows one head</text>
+  <!-- ============ RUNG 0 · SKETCH (amber, ground floor, no code) ============ -->
+  <rect x="60" y="600" width="250" height="280" rx="12" fill="#fbf0e2" stroke="#c98a3a" stroke-width="2"/>
+  <rect x="60" y="600" width="250" height="42" rx="12" fill="#f4e2c8"/><rect x="60" y="624" width="250" height="18" fill="#f4e2c8"/>
+  <text x="185" y="627" text-anchor="middle" font-size="14.5" font-weight="700" fill="#8a5a1a">RUNG 0 &#183; SKETCH</text>
+  <text x="185" y="662" text-anchor="middle" font-size="10.5" fill="#a06a28" font-style="italic">Just an idea &#183; no code</text>
+  <text x="82" y="692" font-size="9.5" font-weight="700" fill="#9a6a2a">YOU DO</text>
+  <text x="82" y="708" font-size="10.5" fill="#8a5a1a">Describe your project in plain</text>
+  <text x="82" y="723" font-size="10.5" fill="#8a5a1a">words; shape a simple plan</text>
+  <text x="82" y="750" font-size="9.5" font-weight="700" fill="#9a6a2a">YOU GET</text>
+  <text x="82" y="766" font-size="10.5" fill="#8a5a1a">A plain plan you own &#8212;</text>
+  <text x="82" y="781" font-size="10.5" fill="#8a5a1a">ready to hand off</text>
+  <rect x="82" y="805" width="206" height="52" rx="6" fill="#fff" stroke="#c98a3a" stroke-width="1.2"/>
+  <text x="94" y="824" font-size="9.5" font-weight="700" fill="#9a6a2a">CLIMB WHEN &#8594;</text>
+  <text x="94" y="840" font-size="10" fill="#8a5a1a">hand the plan to an AI</text>
+  <text x="94" y="853" font-size="10" fill="#8a5a1a">assistant or a developer</text>
+
+  <!-- ============ RUNG 1 · BORROW (green) ============ -->
+  <rect x="345" y="525" width="250" height="280" rx="12" fill="#e7f0e3" stroke="#5a8a4a" stroke-width="2"/>
+  <rect x="345" y="525" width="250" height="42" rx="12" fill="#d4e6cd"/><rect x="345" y="549" width="250" height="18" fill="#d4e6cd"/>
+  <text x="470" y="552" text-anchor="middle" font-size="14.5" font-weight="700" fill="#2f5a26">RUNG 1 &#183; BORROW</text>
+  <text x="470" y="587" text-anchor="middle" font-size="10.5" fill="#4a7a3a" font-style="italic">Solo &#183; one AI assistant</text>
+  <text x="367" y="617" font-size="9.5" font-weight="700" fill="#3a6a2a">YOU ADOPT</text>
+  <text x="367" y="633" font-size="10.5" fill="#2f5a26">A one-page Charter + cite</text>
+  <text x="367" y="648" font-size="10.5" fill="#2f5a26">every decision to git</text>
+  <text x="367" y="675" font-size="9.5" font-weight="700" fill="#3a6a2a">YOU GET</text>
+  <text x="367" y="691" font-size="10.5" fill="#2f5a26">Coherence drift mostly gone,</text>
+  <text x="367" y="706" font-size="10.5" fill="#2f5a26">for almost no ceremony</text>
+  <rect x="367" y="730" width="206" height="52" rx="6" fill="#fff" stroke="#5a8a4a" stroke-width="1.2"/>
+  <text x="379" y="749" font-size="9.5" font-weight="700" fill="#3a6a2a">CLIMB WHEN &#8594;</text>
+  <text x="379" y="765" font-size="10" fill="#2f5a26">a second agent joins, or the</text>
+  <text x="379" y="778" font-size="10" fill="#2f5a26">code outgrows one head</text>
 
   <!-- ============ RUNG 2 · BOOTSTRAP (blue) ============ -->
-  <rect x="420" y="490" width="300" height="300" rx="12" fill="#eef4f9" stroke="#3b6ea5" stroke-width="2"/>
-  <rect x="420" y="490" width="300" height="46" rx="12" fill="#dce8f4"/><rect x="420" y="518" width="300" height="18" fill="#dce8f4"/>
-  <text x="570" y="520" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">RUNG 2 &#183; BOOTSTRAP</text>
-  <text x="570" y="560" text-anchor="middle" font-size="11" fill="#3b6ea5" font-style="italic">First real project on the full framework</text>
-  <text x="444" y="594" font-size="10" font-weight="700" fill="#2a5a8a">YOU ADOPT</text>
-  <text x="444" y="612" font-size="11" fill="#1a4a7a">Two repos &#183; three tiers &#183;</text>
-  <text x="444" y="628" font-size="11" fill="#1a4a7a">Bootstrap preset (slow &amp; safe)</text>
-  <text x="444" y="658" font-size="10" font-weight="700" fill="#2a5a8a">YOU GET</text>
-  <text x="444" y="676" font-size="11" fill="#1a4a7a">The full safety net, dialled</text>
-  <text x="444" y="692" font-size="11" fill="#1a4a7a">gentle: locked cycles + gates</text>
-  <rect x="444" y="714" width="252" height="56" rx="6" fill="#fff" stroke="#3b6ea5" stroke-width="1.2"/>
-  <text x="456" y="734" font-size="10" font-weight="700" fill="#2a5a8a">CLIMB WHEN &#8594;</text>
-  <text x="456" y="751" font-size="10.5" fill="#1a4a7a">your first cycle closes cleanly</text>
-  <text x="456" y="765" font-size="10.5" fill="#1a4a7a">&amp; the rhythm feels natural</text>
+  <rect x="630" y="450" width="250" height="280" rx="12" fill="#eef4f9" stroke="#3b6ea5" stroke-width="2"/>
+  <rect x="630" y="450" width="250" height="42" rx="12" fill="#dce8f4"/><rect x="630" y="474" width="250" height="18" fill="#dce8f4"/>
+  <text x="755" y="477" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a4a7a">RUNG 2 &#183; BOOTSTRAP</text>
+  <text x="755" y="512" text-anchor="middle" font-size="10.5" fill="#3b6ea5" font-style="italic">First project on the framework</text>
+  <text x="652" y="542" font-size="9.5" font-weight="700" fill="#2a5a8a">YOU ADOPT</text>
+  <text x="652" y="558" font-size="10.5" fill="#1a4a7a">Two repos &#183; three tiers &#183;</text>
+  <text x="652" y="573" font-size="10.5" fill="#1a4a7a">Bootstrap preset (slow &amp; safe)</text>
+  <text x="652" y="600" font-size="9.5" font-weight="700" fill="#2a5a8a">YOU GET</text>
+  <text x="652" y="616" font-size="10.5" fill="#1a4a7a">The full safety net, dialled</text>
+  <text x="652" y="631" font-size="10.5" fill="#1a4a7a">gentle: locked cycles + gates</text>
+  <rect x="652" y="655" width="206" height="52" rx="6" fill="#fff" stroke="#3b6ea5" stroke-width="1.2"/>
+  <text x="664" y="674" font-size="9.5" font-weight="700" fill="#2a5a8a">CLIMB WHEN &#8594;</text>
+  <text x="664" y="690" font-size="10" fill="#1a4a7a">your first cycle closes cleanly</text>
+  <text x="664" y="703" font-size="10" fill="#1a4a7a">&amp; the rhythm feels natural</text>
 
   <!-- ============ RUNG 3 · FEDERATE (lavender) ============ -->
-  <rect x="780" y="400" width="300" height="300" rx="12" fill="#efeaf6" stroke="#7a5aa5" stroke-width="2"/>
-  <rect x="780" y="400" width="300" height="46" rx="12" fill="#e4dcf0"/><rect x="780" y="428" width="300" height="18" fill="#e4dcf0"/>
-  <text x="930" y="430" text-anchor="middle" font-size="16" font-weight="700" fill="#4a2f7a">RUNG 3 &#183; FEDERATE</text>
-  <text x="930" y="470" text-anchor="middle" font-size="11" fill="#7a5aa5" font-style="italic">Multiple axes, alternating cycles</text>
-  <text x="804" y="504" font-size="10" font-weight="700" fill="#5a3f8a">YOU ADOPT</text>
-  <text x="804" y="522" font-size="11" fill="#4a2f7a">Build + doctrine axes taking</text>
-  <text x="804" y="538" font-size="11" fill="#4a2f7a">turns &#183; day-2 cycles (QA/ops)</text>
-  <text x="804" y="568" font-size="10" font-weight="700" fill="#5a3f8a">YOU GET</text>
-  <text x="804" y="586" font-size="11" fill="#4a2f7a">Vision &#8594; coherent code at a</text>
-  <text x="804" y="602" font-size="11" fill="#4a2f7a">steady, auditable cadence</text>
-  <rect x="804" y="624" width="252" height="56" rx="6" fill="#fff" stroke="#7a5aa5" stroke-width="1.2"/>
-  <text x="816" y="644" font-size="10" font-weight="700" fill="#5a3f8a">CLIMB WHEN &#8594;</text>
-  <text x="816" y="661" font-size="10.5" fill="#4a2f7a">more modules / contributors</text>
-  <text x="816" y="675" font-size="10.5" fill="#4a2f7a">than one cadence can hold</text>
+  <rect x="915" y="375" width="250" height="280" rx="12" fill="#efeaf6" stroke="#7a5aa5" stroke-width="2"/>
+  <rect x="915" y="375" width="250" height="42" rx="12" fill="#e4dcf0"/><rect x="915" y="399" width="250" height="18" fill="#e4dcf0"/>
+  <text x="1040" y="402" text-anchor="middle" font-size="14.5" font-weight="700" fill="#4a2f7a">RUNG 3 &#183; FEDERATE</text>
+  <text x="1040" y="437" text-anchor="middle" font-size="10.5" fill="#7a5aa5" font-style="italic">Multiple axes, taking turns</text>
+  <text x="937" y="467" font-size="9.5" font-weight="700" fill="#5a3f8a">YOU ADOPT</text>
+  <text x="937" y="483" font-size="10.5" fill="#4a2f7a">Build + doctrine axes taking</text>
+  <text x="937" y="498" font-size="10.5" fill="#4a2f7a">turns &#183; day-2 cycles (QA/ops)</text>
+  <text x="937" y="525" font-size="9.5" font-weight="700" fill="#5a3f8a">YOU GET</text>
+  <text x="937" y="541" font-size="10.5" fill="#4a2f7a">Vision &#8594; coherent code at a</text>
+  <text x="937" y="556" font-size="10.5" fill="#4a2f7a">steady, auditable cadence</text>
+  <rect x="937" y="580" width="206" height="52" rx="6" fill="#fff" stroke="#7a5aa5" stroke-width="1.2"/>
+  <text x="949" y="599" font-size="9.5" font-weight="700" fill="#5a3f8a">CLIMB WHEN &#8594;</text>
+  <text x="949" y="615" font-size="10" fill="#4a2f7a">more modules / contributors</text>
+  <text x="949" y="628" font-size="10" fill="#4a2f7a">than one cadence can hold</text>
 
   <!-- ============ RUNG 4 · SCALE (slate, highest) ============ -->
-  <rect x="1140" y="310" width="300" height="300" rx="12" fill="#e9edf2" stroke="#4a5a72" stroke-width="2"/>
-  <rect x="1140" y="310" width="300" height="46" rx="12" fill="#dae0e8"/><rect x="1140" y="338" width="300" height="18" fill="#dae0e8"/>
-  <text x="1290" y="340" text-anchor="middle" font-size="16" font-weight="700" fill="#28384f">RUNG 4 &#183; SCALE</text>
-  <text x="1290" y="380" text-anchor="middle" font-size="11" fill="#4a5a72" font-style="italic">Multi-module estate &#183; brownfield &#183; more hands</text>
-  <text x="1164" y="414" font-size="10" font-weight="700" fill="#39495f">YOU ADOPT</text>
-  <text x="1164" y="432" font-size="11" fill="#28384f">Module-by-module onboarding</text>
-  <text x="1164" y="448" font-size="11" fill="#28384f">&#183; added axes &#183; preset per lane</text>
-  <text x="1164" y="478" font-size="10" font-weight="700" fill="#39495f">YOU GET</text>
-  <text x="1164" y="496" font-size="11" fill="#28384f">A large codebase that stays</text>
-  <text x="1164" y="512" font-size="11" fill="#28384f">coherent as it &amp; the team grow</text>
-  <rect x="1164" y="534" width="252" height="56" rx="6" fill="#fff" stroke="#4a5a72" stroke-width="1.2"/>
-  <text x="1176" y="554" font-size="10" font-weight="700" fill="#39495f">YOU'RE AT THE TOP</text>
-  <text x="1176" y="571" font-size="10.5" fill="#28384f">running the full framework —</text>
-  <text x="1176" y="585" font-size="10.5" fill="#28384f">now you tune, you don't climb</text>
+  <rect x="1200" y="300" width="250" height="280" rx="12" fill="#e9edf2" stroke="#4a5a72" stroke-width="2"/>
+  <rect x="1200" y="300" width="250" height="42" rx="12" fill="#dae0e8"/><rect x="1200" y="324" width="250" height="18" fill="#dae0e8"/>
+  <text x="1325" y="327" text-anchor="middle" font-size="14.5" font-weight="700" fill="#28384f">RUNG 4 &#183; SCALE</text>
+  <text x="1325" y="362" text-anchor="middle" font-size="10.5" fill="#4a5a72" font-style="italic">Many modules / teams</text>
+  <text x="1222" y="392" font-size="9.5" font-weight="700" fill="#39495f">YOU ADOPT</text>
+  <text x="1222" y="408" font-size="10.5" fill="#28384f">Module-by-module onboarding</text>
+  <text x="1222" y="423" font-size="10.5" fill="#28384f">&#183; added axes &#183; preset per lane</text>
+  <text x="1222" y="450" font-size="9.5" font-weight="700" fill="#39495f">YOU GET</text>
+  <text x="1222" y="466" font-size="10.5" fill="#28384f">A large codebase that stays</text>
+  <text x="1222" y="481" font-size="10.5" fill="#28384f">coherent as it &amp; the team grow</text>
+  <rect x="1222" y="505" width="206" height="52" rx="6" fill="#fff" stroke="#4a5a72" stroke-width="1.2"/>
+  <text x="1234" y="524" font-size="9.5" font-weight="700" fill="#39495f">YOU'RE AT THE TOP</text>
+  <text x="1234" y="540" font-size="10" fill="#28384f">running the full framework &#8212;</text>
+  <text x="1234" y="553" font-size="10" fill="#28384f">now you tune, you don't climb</text>
 
-  <!-- climb arrows in the gaps (next safe step) -->
+  <!-- climb chevrons in the gaps (next safe step) -->
   <g stroke="#9aa3b0" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M372 560 L408 520"/><polygon points="408,520 396,521 405,532" fill="#9aa3b0" stroke="none"/>
-    <path d="M732 470 L768 430"/><polygon points="768,430 756,431 765,442" fill="#9aa3b0" stroke="none"/>
-    <path d="M1092 380 L1128 340"/><polygon points="1128,340 1116,341 1125,352" fill="#9aa3b0" stroke="none"/>
+    <path d="M318 562 L338 538"/><polygon points="338,538 327,540 335,549" fill="#9aa3b0" stroke="none"/>
+    <path d="M603 487 L623 463"/><polygon points="623,463 612,465 620,474" fill="#9aa3b0" stroke="none"/>
+    <path d="M888 412 L908 388"/><polygon points="908,388 897,390 905,399" fill="#9aa3b0" stroke="none"/>
+    <path d="M1173 337 L1193 313"/><polygon points="1193,313 1182,315 1190,324" fill="#9aa3b0" stroke="none"/>
   </g>
-  <text x="390" y="500" font-size="9.5" fill="#7a8290" font-style="italic">next safe step</text>
-  <text x="750" y="410" font-size="9.5" fill="#7a8290" font-style="italic">next safe step</text>
-  <text x="1110" y="320" font-size="9.5" fill="#7a8290" font-style="italic">next safe step</text>
 
-  <!-- "you are here" marker on Rung 1 -->
+  <!-- "start where you fit" marker on the ground, spanning Rung 0 / Rung 1 -->
   <g>
-    <path d="M210 905 L210 884" stroke="#c0392b" stroke-width="2"/>
-    <circle cx="210" cy="884" r="6" fill="#c0392b"/>
-    <rect x="120" y="940" width="320" height="26" rx="13" fill="#fbecea" stroke="#c0392b" stroke-width="1.2"/>
-    <text x="280" y="957" text-anchor="middle" font-size="11" font-weight="700" fill="#a02f22">Most adopters honestly start here &#8212; and that is fine</text>
+    <path d="M330 905 L330 884" stroke="#c0392b" stroke-width="2"/>
+    <circle cx="330" cy="884" r="6" fill="#c0392b"/>
+    <rect x="118" y="940" width="430" height="26" rx="13" fill="#fbecea" stroke="#c0392b" stroke-width="1.2"/>
+    <text x="333" y="957" text-anchor="middle" font-size="11" font-weight="700" fill="#a02f22">Start where you fit &#8212; no code? Rung 0. One dev? Rung 1. Both fine.</text>
   </g>
 
   <!-- one canonical thread that runs up every rung -->
-  <text x="1290" y="640" text-anchor="middle" font-size="10" fill="#5a6678" font-style="italic">one Charter &#183; cite-by-substrate</text>
-  <text x="1290" y="654" text-anchor="middle" font-size="10" fill="#5a6678" font-style="italic">carries up every rung</text>
+  <text x="1325" y="610" text-anchor="middle" font-size="10" fill="#5a6678" font-style="italic">one Charter &#183; cite-by-substrate</text>
+  <text x="1325" y="624" text-anchor="middle" font-size="10" fill="#5a6678" font-style="italic">carries up every rung above 0</text>
 
   <!-- ============ FOOTER ============ -->
   <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">

@@ -6,7 +6,7 @@ description: "CompassAlpha is a source-available framework for coordinating mult
 
 > **In plain words:** when several people — or several AI assistants — build one product together, they each tend to solve the same problem a slightly different way, and the codebase slowly turns into a tangle no one can keep straight. CompassAlpha is a shared rulebook and a way of working that keeps everything consistent as it grows — so what gets built stays true to what you pictured.
 >
-> **Just have an idea, and don't write code yourself? You're welcome here too** — start by [describing your project in plain words](05-getting-started/start-from-a-story.md). No setup, no code, no vocabulary to learn first.
+> **Just have an idea, and don't write code yourself? You're welcome here too** — [**start with just an idea**](05-getting-started/start-with-an-idea.md). No setup, no code, no vocabulary to learn first — you describe it in plain words and hand the technical part off.
 
 > **A little more precisely:** you get a codebase that stays coherent as it grows — one canonical way to do each thing, **enforced by an AI-agent federation against a single doctrine**, never left to each agent's guess. Say a component's vision in plain words; the federation grows it down through every layer — 60K ideology → 30K mechanics → 10K schema → code — all bound to that one doctrine. [How code coherence works →](00-foundation/codebase-coherence.md)
 
@@ -65,7 +65,7 @@ This portal is the framework's **constitution** + adoption guide. The framework 
 
 ## Is CompassAlpha for you (yet)?
 
-**First, the welcoming part: you're welcome here regardless of your size — or whether you write code at all.** This section is about *how much of the full framework pays off for you yet*, not whether you belong. If you just have an idea, your door is [Start from a story](05-getting-started/start-from-a-story.md) — plain words, no code. If you're one developer with one AI assistant, you can [borrow the core habits today](05-getting-started/borrow-compassalpha-solo.md). Wherever you are, there's a rung for you on [the adoption ladder](05-getting-started/the-adoption-ladder.md). With that said, here's the honest scale-fit:
+**First, the welcoming part: you're welcome here regardless of your size — or whether you write code at all.** This section is about *how much of the full framework pays off for you yet*, not whether you belong. If you just have an idea and don't code, your door is [Start with just an idea](05-getting-started/start-with-an-idea.md) — plain words, no setup, hand the technical part off. If you're one developer with one AI assistant, you can [borrow the core habits today](05-getting-started/borrow-compassalpha-solo.md). Wherever you are, there's a rung for you on [the adoption ladder](05-getting-started/the-adoption-ladder.md). With that said, here's the honest scale-fit:
 
 CompassAlpha earns its ceremony on **substantial, multi-component work built by more than one AI agent, over many cycles** — a real codebase, new or existing, where keeping every part coherent across sessions and contributors actually matters.
 

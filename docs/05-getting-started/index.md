@@ -11,7 +11,7 @@ description: "Getting started with CompassAlpha: prerequisites, greenfield setup
 This section takes you from zero to your first piece of work flowing through the bus. Everything here is practical: repos to create, files to stamp, commands to run, gates to pass. The conceptual grounding lives in [Foundation](../00-foundation/index.md) and [Axioms](../01-axioms/index.md) — if a term here is unfamiliar, those are the place to look it up.
 
 !!! tip "Not sure how much of the framework you actually need?"
-    Adoption isn't all-or-nothing. Start with [**the adoption ladder**](the-adoption-ladder.md) — it lays out adoption as rungs you climb at your own pace and helps you pick the one that fits you *today*. The lowest rung, [**Borrow CompassAlpha (solo)**](borrow-compassalpha-solo.md), is a real, complete starting point for a single developer with one AI assistant — no federation required.
+    Adoption isn't all-or-nothing. Start with [**the adoption ladder**](the-adoption-ladder.md) — it lays out adoption as rungs you climb at your own pace and helps you pick the one that fits you *today*. **Have only an idea and don't code?** Begin at the ground floor, [**Start with just an idea**](start-with-an-idea.md) — no git, no terminal, no setup. **A single developer with one AI assistant?** [**Borrow CompassAlpha (solo)**](borrow-compassalpha-solo.md) is a real, complete starting point — no federation required.
 
 !!! note "Source-available licensing"
     CompassAlpha is distributed under the **Business Source License 1.1** — *source-available*. You may read, modify, and evaluate the framework freely. **Commercial / production use requires a license.** See [COMMERCIAL.md](https://github.com/busyboy77/compassAlpha/blob/main/COMMERCIAL.md) before you put a CompassAlpha federation into production. The framework is published by **gradus** ([gradus.pk](https://gradus.pk)).
@@ -27,7 +27,7 @@ CompassAlpha meets you wherever your project is today.
 
 If you're not sure which you are: do you have a codebase with users, history, and obligations you can't drop? You're brownfield. Starting from a blank slate? You're greenfield. Most real adoptions are brownfield — and that path is the harder, more interesting one. CompassAlpha treats it as a first-class journey, not an afterthought.
 
-**Just have an idea, not a repo yet?** The gentlest way in is [**Start from a story**](start-from-a-story.md) — describe your project in plain English and watch it turn into compasses, a Charter, and axes *before* you set anything up. No jargon required to begin. **Already have a codebase?** [**Start from a story — existing project**](start-from-a-story-brownfield.md) converts it into CompassAlpha non-destructively.
+**Just have an idea, not a repo yet?** The gentlest way in is [**Start from a story**](start-from-a-story.md) — describe your project in plain English and turn it into compasses, a Charter, and axes *before* you set anything up. No jargon required to begin. **And if you don't write code at all,** [**Start with just an idea**](start-with-an-idea.md) takes you from idea to a plan you hand off, with no git or terminal anywhere. **Already have a codebase?** [**Start from a story — existing project**](start-from-a-story-brownfield.md) converts it into CompassAlpha non-destructively.
 
 ## What "getting started" actually delivers
 
