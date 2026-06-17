@@ -67,7 +67,7 @@ CompassAlpha provides a **protocol** — not a tool — for coordinating multipl
 | Section | What's there |
 |---|---|
 | **00 Foundation** | What CompassAlpha is, the constitution, GitAI category, glossary |
-| **01 Axioms** | The 7 INVARIANT rules — cannot be tuned away |
+| **01 Axioms** | The 8 INVARIANT rules — cannot be tuned away |
 | **02 Guardrails** | What the framework PREVENTS · failure modes |
 | **03 Tunables** | The customization surface · 5-axis trade-off |
 | **04 Toggles** | Live switches · when each can flip |

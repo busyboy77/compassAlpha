@@ -67,7 +67,7 @@ Read the [overview](index.md) first for what the three classes mean. Read the pe
 
 ## Invariants are not on this table
 
-Note what's *absent*: the seven [axioms](../01-axioms/index.md) and the [guardrails](../02-guardrails/index.md). They are `[INVARIANT]` — they don't flip at any timing, ever, without forking the framework. The firewall, hard-labour rule, persistence law, bus protocol, and provenance law have no flip-timing class because they have no "off" and no "later." If you find yourself wanting to toggle one, you want a different framework.
+Note what's *absent*: the eight [axioms](../01-axioms/index.md) and the [guardrails](../02-guardrails/index.md). They are `[INVARIANT]` — they don't flip at any timing, ever, without forking the framework. The firewall, hard-labour rule, persistence law, bus protocol, and provenance law have no flip-timing class because they have no "off" and no "later." If you find yourself wanting to toggle one, you want a different framework.
 
 The two `[INVARIANT]` rows that *do* appear above (VCS = git, single-live-writer) are listed only to mark them explicitly as `LIFECYCLE` / never — so adopters don't go looking for a dial that isn't there.
 

@@ -88,7 +88,7 @@ The through-line: each anti-preset stacks loosened settings *multiplicatively*. 
 
 ## The line presets cannot cross
 
-Presets and tuning operate on the **performance / cost / risk surface only.** The structural rules — the seven [axioms](../01-axioms/index.md), the [guardrails](../02-guardrails/index.md), the load-bearing invariants — remain fixed across *every* preset and every combination. No preset can toggle the [firewall](../01-axioms/firewall.md), the [hard-labour rule](../01-axioms/hard-labour-rule.md), the [persistence law](../01-axioms/persistence-law.md), the [bus protocol](../01-axioms/bus-protocol.md), or the [provenance law](../01-axioms/provenance-law.md). Tuning changes how fast and how cheap; it never changes what is correct.
+Presets and tuning operate on the **performance / cost / risk surface only.** The structural rules — the eight [axioms](../01-axioms/index.md), the [guardrails](../02-guardrails/index.md), the load-bearing invariants — remain fixed across *every* preset and every combination. No preset can toggle the [firewall](../01-axioms/firewall.md), the [hard-labour rule](../01-axioms/hard-labour-rule.md), the [persistence law](../01-axioms/persistence-law.md), the [bus protocol](../01-axioms/bus-protocol.md), or the [provenance law](../01-axioms/provenance-law.md). Tuning changes how fast and how cheap; it never changes what is correct.
 
 ## Remember this
 

@@ -4,19 +4,31 @@ description: "CompassAlpha is a source-available framework for coordinating mult
 
 # CompassAlpha
 
-> **In plain words:** when several people — or several AI assistants — build one product together, they each tend to solve the same problem a slightly different way, and the codebase slowly turns into a tangle no one can keep straight. CompassAlpha is a shared rulebook and a way of working that keeps everything consistent as it grows — so what gets built stays true to what you pictured.
->
-> **Just have an idea, and don't write code yourself? You're welcome here too** — [**start with just an idea**](05-getting-started/start-with-an-idea.md). No setup, no code, no vocabulary to learn first — you describe it in plain words and hand the technical part off.
+> **It's how you build, not a thing you build on.** CompassAlpha isn't a platform, a template, or an app you start from — it's a *way of working* (plus a shared rulebook) for keeping a codebase coherent when several people or AI assistants build it together. You bring your own product, your own AI agents, your own git; CompassAlpha governs how they stay consistent.
 
-> **A little more precisely:** you get a codebase that stays coherent as it grows — one canonical way to do each thing, **enforced by an AI-agent federation against a single doctrine**, never left to each agent's guess. Say a component's vision in plain words; the federation grows it down through every layer — 60K ideology → 30K mechanics → 10K schema → code — all bound to that one doctrine. [How code coherence works →](00-foundation/codebase-coherence.md)
+> **In plain words:** when several people — or several AI assistants — build one product together, they each tend to solve the same problem a slightly different way, and the codebase slowly turns into a tangle no one can keep straight. CompassAlpha keeps everything consistent as it grows — so what gets built stays true to what you pictured.
 
-CompassAlpha is the source-available framework that orchestrates those multi-tier AI-agent federations on substantial codebases and doctrine work — the reference framework for **GitAI** (GitOps' coordination patterns applied to multi-agent AI). Coherence is what you get; the federation, the bus protocol, and git are how it's delivered. *(For the technical reader, the one-liner is: "a framework, not a tool — the state of the federation is the state of git.")*
+## Which one are you?
 
-![CompassAlpha — the federation framework on one page](assets/federation-diagram.svg)
+Pick the door that fits you today — each is a real starting point, not a sales funnel:
 
-<small>*The whole framework on one page — inheritance · the two axes + future-axis slot · work-granularity lanes · stage taxonomies · the bus protocol · load-bearing rules · trade-offs · tunables. Click to open full size.*</small>
+- **I just have an idea — I don't write code.** → [Start with just an idea](05-getting-started/start-with-an-idea.md): plain words, no setup, no vocabulary first — you describe it and hand the technical part off.
+- **I'm one developer; I want to start today.** → [Borrow CompassAlpha (solo)](05-getting-started/borrow-compassalpha-solo.md): two habits you can adopt this afternoon — no federation.
+- **I'm sizing this up for a real project or a team.** → [Is it worth it yet?](#is-compassalpha-for-you-yet) — the honest, right-sized answer (you don't adopt the whole thing on day one).
+- **I have an existing codebase.** → [Bring it in without a rewrite](05-getting-started/brownfield-onboarding.md): non-destructive — your code stays untouched on day one.
+- **I just want to understand it first.** → [The mental model](00-foundation/mental-model.md): the core ideas, about ten minutes.
+
+??? note "A little more precisely (for the technical reader)"
+
+    You get a codebase that stays coherent as it grows — one canonical way to do each thing, **enforced by an AI-agent federation against a single doctrine**, never left to each agent's guess. Say a component's vision in plain words; the federation grows it down through every layer — 60K → 30K → 10K → code (zoom levels, from a high-level view down to the schema) — all bound to that one doctrine.
+
+    CompassAlpha is the source-available framework that orchestrates those multi-tier AI-agent federations on substantial codebases and doctrine work — the reference framework for **GitAI** (GitOps' coordination patterns applied to multi-agent AI). Coherence is what you get; the federation, the bus protocol, and git are how it's delivered. The one-liner: *a framework, not a tool — the state of the federation is the state of git.* [How code coherence works →](00-foundation/codebase-coherence.md)
 
 This portal is the framework's **constitution** + adoption guide. The framework itself is the protocols, conventions, and load-bearing rules documented here. The patterns were proven by a production multi-agent federation that drove every refinement in this document.
+
+![CompassAlpha — the whole framework at a glance](assets/federation-diagram.svg)
+
+<small>*The whole thing on one page — you do not need to understand this yet. Inheritance · the two axes + future-axis slot · work-granularity lanes · stage taxonomies · the bus protocol · load-bearing rules · trade-offs · tunables. Click to open full size.*</small>
 
 ---
 
@@ -33,7 +45,7 @@ This portal is the framework's **constitution** + adoption guide. The framework 
     1. [**The mental model**](00-foundation/mental-model.md) — the core ideas the framework rests on
     2. [**Framework, not tool**](00-foundation/framework-not-tool.md) — what CompassAlpha is, what it's not
     3. [**Origin — why GitAI**](00-foundation/origin-story.md) — the failures that forced the framework
-    4. [**The Constitution**](00-foundation/constitution.md) — the 7 invariant axioms + the doctrine model
+    4. [**The Constitution**](00-foundation/constitution.md) — the 8 invariant axioms + the doctrine model
     5. [**Codebase coherence**](00-foundation/codebase-coherence.md) — the core point of distinction
     6. [**GitAI category**](00-foundation/gitai-category.md) — where CompassAlpha fits
     7. [**Glossary**](00-foundation/glossary.md) — the canonical vocabulary
@@ -87,7 +99,7 @@ CompassAlpha is structured in four conceptual layers, from most-rigid to most-fl
 
     ---
 
-    7 inviolable rules. Cannot be tuned away. Read once, internalize forever.
+    8 inviolable rules. Cannot be tuned away. Read once, internalize forever.
 
     [→ Axioms](01-axioms/)
 

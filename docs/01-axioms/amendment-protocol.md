@@ -172,7 +172,7 @@ A later reader reconstructs *why* the constitution is the way it is from these r
 
 ### This amends the federation's doctrine, not the framework's axioms
 
-A clarifying boundary: this protocol governs how an adopter's **doctrine** (its Charter, Invariants, Primitives) amends. It is **not** the procedure for changing CompassAlpha's own seven-plus-this axioms — those still change only by forking the framework (see [Versioning the constitution](../00-foundation/constitution.md#versioning-the-constitution)). The amendment protocol is itself invariant: the *process* by which a constitution learns is fixed, even though the constitution's *content* changes every train.
+A clarifying boundary: this protocol governs how an adopter's **doctrine** (its Charter, Invariants, Primitives) amends. It is **not** the procedure for changing CompassAlpha's own eight axioms (this one included) — those still change only by forking the framework (see [Versioning the constitution](../00-foundation/constitution.md#versioning-the-constitution)). The amendment protocol is itself invariant: the *process* by which a constitution learns is fixed, even though the constitution's *content* changes every train.
 
 ## Variations / tunables on top
 
