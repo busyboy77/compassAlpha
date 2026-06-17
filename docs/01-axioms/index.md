@@ -13,6 +13,8 @@ New here? This section lists the eight non-negotiable rules that hold a CompassA
 
 Every axiom defends against one or more of the [four pathologies](../02-guardrails/index.md) — the recurring ways multi-agent work goes wrong. Break an axiom and you let its pathology back in.
 
+Not every axiom is *mechanically* enforced, and the framework says so plainly: [What is actually enforced](../07-reference/what-is-enforced.md) draws the line — rule by rule — between what a gate blocks, what git makes impossible to hide, and what still rests on the operator.
+
 ## The 8 axioms
 
 | # | Axiom | Defends against | Page |

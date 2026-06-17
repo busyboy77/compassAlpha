@@ -233,6 +233,8 @@ A gate that warns and lets the change through is a suggestion. A gate that **fai
 - It is **not** tamper-evidence or access control. It blocks non-conforming *content*; it does not by itself prove *who* changed what or stop a privileged actor from removing the gate. Signed commits, protected branches, and separation-of-duties are complementary controls your git host provides.
 - Its strength is exactly its declared rules. An empty rules file enforces nothing — the gate is only as real as the Charter you encode into it.
 
+For where this gate sits among everything else — which rules are mechanical (this gate), which are structural (git makes them visible), and which are still convention — see [what is actually enforced](what-is-enforced.md).
+
 ## Remember this
 
 - **Enforced means fail-closed.** The gate blocks a commit or merge on violation — that's the line between a convention and a control.
