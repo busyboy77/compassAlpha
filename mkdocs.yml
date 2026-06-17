@@ -123,6 +123,7 @@ nav:
     - Bus protocol: 01-axioms/bus-protocol.md
     - Provenance law: 01-axioms/provenance-law.md
     - Git foundations: 01-axioms/git-foundations.md
+    - Amendment protocol: 01-axioms/amendment-protocol.md
   - Guardrails:
     - 02-guardrails/index.md
     - Pollution containment: 02-guardrails/pollution-containment.md

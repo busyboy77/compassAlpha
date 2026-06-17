@@ -287,4 +287,4 @@ Stamp these onto every tier's boot file. Verify at T0. Audit at session start.
 
 ---
 
-## Next: [Guardrails →](../02-guardrails/index.md)
+## Next: [Axiom 8 — Amendment Protocol →](amendment-protocol.md)

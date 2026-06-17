@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1500" height="1040" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1040" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="up-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b89425"/></marker>
+    <marker id="down-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker>
+    <marker id="bind" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5a6b7d"/></marker>
+  </defs>
+
+  <rect width="1500" height="1040" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="29" font-weight="700" fill="#ffffff">How the constitution learns — the federated amendment loop</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Discoveries flow up · ratified truth flows down · gathered at a barrier, ratified by a council · never amended below it</text>
+
+  <!-- ============ LEFT RAIL: discoveries UP (amber) ============ -->
+  <line x1="38" y1="852" x2="38" y2="210" stroke="#b89425" stroke-width="3" marker-end="url(#up-amber)"/>
+  <text x="24" y="540" font-size="13" font-weight="700" fill="#8a6d0a" transform="rotate(-90 24 540)" text-anchor="middle">DISCOVERIES FLOW UP — nominate, never apply</text>
+
+  <!-- ============ RIGHT RAIL: ratified truth DOWN (blue) ============ -->
+  <line x1="1462" y1="210" x2="1462" y2="852" stroke="#3b6ea5" stroke-width="3" marker-end="url(#down-blue)"/>
+  <text x="1478" y="540" font-size="13" font-weight="700" fill="#1a4a7a" transform="rotate(90 1478 540)" text-anchor="middle">RATIFIED TRUTH FLOWS DOWN — adopt to every team</text>
+
+  <!-- ===================================================== -->
+  <!-- TOP: FEDERATION CHARTER                                -->
+  <!-- ===================================================== -->
+  <rect x="450" y="128" width="600" height="186" rx="12" fill="#2d3a4a"/>
+  <text x="750" y="166" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">FEDERATION CHARTER</text>
+  <text x="750" y="188" text-anchor="middle" font-size="12" fill="#9fb0c4" font-style="italic">the one constitution every team is bound to</text>
+
+  <rect x="478" y="208" width="250" height="86" rx="9" fill="#3d4a5a" stroke="#5a6b7d" stroke-width="1.4"/>
+  <path d="M496,232 a8,8 0 0 1 16,0 v6" fill="none" stroke="#cdd5e0" stroke-width="2"/>
+  <rect x="492" y="238" width="24" height="17" rx="3" fill="#cdd5e0"/>
+  <text x="526" y="236" font-size="14" font-weight="700" fill="#ffffff">Invariants</text>
+  <text x="526" y="256" font-size="10.5" fill="#aeb9c8">locked · federation-wide</text>
+  <text x="489" y="280" font-size="10.5" fill="#aeb9c8">the non-negotiables, everywhere</text>
+
+  <rect x="772" y="208" width="250" height="86" rx="9" fill="#3d4a5a" stroke="#5a6b7d" stroke-width="1.4"/>
+  <path d="M790,232 a8,8 0 0 1 16,0 v6" fill="none" stroke="#cdd5e0" stroke-width="2"/>
+  <rect x="786" y="238" width="24" height="17" rx="3" fill="#cdd5e0"/>
+  <text x="820" y="236" font-size="14" font-weight="700" fill="#ffffff">Primitives</text>
+  <text x="820" y="256" font-size="10.5" fill="#aeb9c8">locked definition · extensible</text>
+  <text x="783" y="280" font-size="10.5" fill="#aeb9c8">the shared contracts every part reuses</text>
+
+  <!-- version bump chips (amber) to the right of the Charter -->
+  <text x="1140" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6d0a">GO-UP-BUMP</text>
+  <rect x="1078" y="150" width="124" height="38" rx="8" fill="#f4e2a8" stroke="#b89425" stroke-width="1.6"/>
+  <text x="1140" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="#7a5e0a">charter-v(n+1)</text>
+  <line x1="1140" y1="244" x2="1140" y2="192" stroke="#b89425" stroke-width="2.4" marker-end="url(#up-amber)"/>
+  <rect x="1078" y="246" width="124" height="38" rx="8" fill="#fdf3d0" stroke="#c9a94a" stroke-width="1.4"/>
+  <text x="1140" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#8a6d0a">charter-v(n)</text>
+
+  <!-- ratified -> charter (GO-UP-BUMP) arrow -->
+  <line x1="750" y1="360" x2="750" y2="318" stroke="#b89425" stroke-width="2.6" marker-end="url(#up-amber)"/>
+  <text x="766" y="344" font-size="11" fill="#8a6d0a" font-style="italic">ratified → merges into the Charter</text>
+
+  <!-- ===================================================== -->
+  <!-- MIDDLE: RATIFICATION COUNCIL (the train)               -->
+  <!-- ===================================================== -->
+  <rect x="460" y="364" width="580" height="162" rx="12" fill="#ffffff" stroke="#5a6b7d" stroke-width="1.8"/>
+  <text x="750" y="392" text-anchor="middle" font-size="16" font-weight="700" fill="#2d3a4a">RATIFICATION COUNCIL — the train</text>
+  <text x="750" y="412" text-anchor="middle" font-size="11.5" fill="#777" font-style="italic">one lead per team · ratify, not all-hands</text>
+
+  <!-- lead chips -->
+  <g>
+    <circle cx="520" cy="446" r="13" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.5"/>
+    <circle cx="585" cy="446" r="13" fill="#eee0f5" stroke="#7a5b9c" stroke-width="1.5"/>
+    <circle cx="650" cy="446" r="13" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.5"/>
+    <circle cx="715" cy="446" r="13" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="1.5"/>
+    <circle cx="780" cy="446" r="13" fill="#eee0f5" stroke="#7a5b9c" stroke-width="1.5"/>
+    <text x="835" y="451" font-size="11" fill="#666" font-style="italic">team leads</text>
+  </g>
+
+  <!-- dispositions -->
+  <rect x="496" y="480" width="150" height="30" rx="7" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="1.2"/>
+  <text x="571" y="500" text-anchor="middle" font-size="11.5" fill="#2a5a2a">ACCEPT → bump</text>
+  <rect x="664" y="480" width="150" height="30" rx="7" fill="#fef8e7" stroke="#b89425" stroke-width="1.2"/>
+  <text x="739" y="500" text-anchor="middle" font-size="11.5" fill="#8a6d0a">DEFER → cascade</text>
+  <rect x="832" y="480" width="160" height="30" rx="7" fill="#eceff2" stroke="#5a6b7d" stroke-width="1.2"/>
+  <text x="912" y="500" text-anchor="middle" font-size="11.5" fill="#3a4654">REJECT → recorded</text>
+
+  <!-- cross-team recurrence badge (left of council) -->
+  <rect x="96" y="392" width="300" height="96" rx="11" fill="#fef8e7" stroke="#b89425" stroke-width="2"/>
+  <text x="246" y="420" text-anchor="middle" font-size="13.5" font-weight="700" fill="#8a6d0a">Cross-team recurrence</text>
+  <text x="246" y="444" text-anchor="middle" font-size="11.5" fill="#7a5e0a">same finding from N teams</text>
+  <text x="246" y="463" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7a5e0a">= the strongest signal</text>
+  <text x="246" y="480" text-anchor="middle" font-size="11" fill="#a98b2a" font-style="italic">fixed once upstream, not N times</text>
+
+  <!-- ===================================================== -->
+  <!-- BARRIER LINE                                           -->
+  <!-- ===================================================== -->
+  <line x1="70" y1="556" x2="1430" y2="556" stroke="#b89425" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="750" y="548" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a6d0a">FEDERATION BARRIER · doctrine-cycle end — nominations pool, then the train runs</text>
+
+  <!-- ===================================================== -->
+  <!-- BOTTOM: TEAM LANES (doctrine cycle, fix & align)       -->
+  <!-- ===================================================== -->
+
+  <!-- helper: each lane has amber UP (nominate) on left edge, blue DOWN (adopt) on right edge -->
+
+  <!-- Team Auth (blue) -->
+  <rect x="70" y="592" width="390" height="206" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="265" y="620" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4a7a">Team · Auth</text>
+  <text x="265" y="640" text-anchor="middle" font-size="11" fill="#1a4a7a" font-style="italic">doctrine cycle — fix &amp; align in place</text>
+  <g font-size="11.5" fill="#1a4a7a" text-anchor="middle">
+    <rect x="96" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#6f9bc7"/><text x="127" y="676">S1</text>
+    <rect x="166" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#6f9bc7"/><text x="197" y="676">S2</text>
+    <rect x="236" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#6f9bc7"/><text x="267" y="676">S3</text>
+    <rect x="306" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#6f9bc7"/><text x="337" y="676">S4</text>
+    <rect x="376" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#6f9bc7"/><text x="407" y="676">S5</text>
+  </g>
+  <text x="265" y="716" text-anchor="middle" font-size="10.5" fill="#1a4a7a">coherence enforced here · the engine never edits the Charter</text>
+  <!-- amber nominate up (left edge) -->
+  <line x1="92" y1="700" x2="92" y2="560" stroke="#b89425" stroke-width="2.4" marker-end="url(#up-amber)"/>
+  <text x="108" y="752" font-size="10.5" font-weight="700" fill="#8a6d0a">nominate ▲</text>
+  <!-- blue adopt down (right edge) -->
+  <line x1="438" y1="560" x2="438" y2="700" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#down-blue)"/>
+  <text x="352" y="752" font-size="10.5" font-weight="700" fill="#1a4a7a">▼ adopt</text>
+
+  <!-- Team Billing (purple) -->
+  <rect x="555" y="592" width="390" height="206" rx="11" fill="#eee0f5" stroke="#7a5b9c" stroke-width="2"/>
+  <text x="750" y="620" text-anchor="middle" font-size="15" font-weight="700" fill="#5a3a7a">Team · Billing</text>
+  <text x="750" y="640" text-anchor="middle" font-size="11" fill="#5a3a7a" font-style="italic">doctrine cycle — fix &amp; align in place</text>
+  <g font-size="11.5" fill="#5a3a7a" text-anchor="middle">
+    <rect x="581" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#b39ccb"/><text x="612" y="676">S1</text>
+    <rect x="651" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#b39ccb"/><text x="682" y="676">S2</text>
+    <rect x="721" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#b39ccb"/><text x="752" y="676">S3</text>
+    <rect x="791" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#b39ccb"/><text x="822" y="676">S4</text>
+    <rect x="861" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#b39ccb"/><text x="892" y="676">S5</text>
+  </g>
+  <text x="750" y="716" text-anchor="middle" font-size="10.5" fill="#5a3a7a">coherence enforced here · the engine never edits the Charter</text>
+  <line x1="577" y1="700" x2="577" y2="560" stroke="#b89425" stroke-width="2.4" marker-end="url(#up-amber)"/>
+  <text x="593" y="752" font-size="10.5" font-weight="700" fill="#8a6d0a">nominate ▲</text>
+  <line x1="923" y1="560" x2="923" y2="700" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#down-blue)"/>
+  <text x="837" y="752" font-size="10.5" font-weight="700" fill="#1a4a7a">▼ adopt</text>
+
+  <!-- Team Reporting (green) -->
+  <rect x="1040" y="592" width="390" height="206" rx="11" fill="#e0f0e0" stroke="#4a8a4a" stroke-width="2"/>
+  <text x="1235" y="620" text-anchor="middle" font-size="15" font-weight="700" fill="#2a5a2a">Team · Reporting</text>
+  <text x="1235" y="640" text-anchor="middle" font-size="11" fill="#2a5a2a" font-style="italic">doctrine cycle — fix &amp; align in place</text>
+  <g font-size="11.5" fill="#2a5a2a" text-anchor="middle">
+    <rect x="1066" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#86b386"/><text x="1097" y="676">S1</text>
+    <rect x="1136" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#86b386"/><text x="1167" y="676">S2</text>
+    <rect x="1206" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#86b386"/><text x="1237" y="676">S3</text>
+    <rect x="1276" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#86b386"/><text x="1307" y="676">S4</text>
+    <rect x="1346" y="656" width="62" height="30" rx="6" fill="#ffffff" stroke="#86b386"/><text x="1377" y="676">S5</text>
+  </g>
+  <text x="1235" y="716" text-anchor="middle" font-size="10.5" fill="#2a5a2a">coherence enforced here · the engine never edits the Charter</text>
+  <line x1="1062" y1="700" x2="1062" y2="560" stroke="#b89425" stroke-width="2.4" marker-end="url(#up-amber)"/>
+  <text x="1078" y="752" font-size="10.5" font-weight="700" fill="#8a6d0a">nominate ▲</text>
+  <line x1="1408" y1="560" x2="1408" y2="700" stroke="#3b6ea5" stroke-width="2.4" marker-end="url(#down-blue)"/>
+  <text x="1322" y="752" font-size="10.5" font-weight="700" fill="#1a4a7a">▼ adopt</text>
+
+  <!-- no-sideways cue between lanes -->
+  <line x1="463" y1="690" x2="552" y2="690" stroke="#c0392b" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="507" y="682" text-anchor="middle" font-size="14" fill="#c0392b">✕</text>
+  <line x1="948" y1="690" x2="1037" y2="690" stroke="#c0392b" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="992" y="682" text-anchor="middle" font-size="14" fill="#c0392b">✕</text>
+  <text x="750" y="784" text-anchor="middle" font-size="10.5" fill="#c0392b" font-style="italic">never team-to-team — everything routes through the center</text>
+
+  <!-- ============ BOTTOM CAPTION STRIP ============ -->
+  <rect x="40" y="828" width="1420" height="86" rx="9" fill="#f0ede4" stroke="#a89968" stroke-width="1.3"/>
+  <text x="750" y="857" text-anchor="middle" font-size="13.5" fill="#5a4d20">Discoveries flow <tspan font-weight="700">up</tspan> · ratified truth flows <tspan font-weight="700">down</tspan> · nothing crosses sideways — one constitution, changed in one place.</text>
+  <text x="750" y="881" text-anchor="middle" font-size="13.5" fill="#5a4d20">Ratify together, adopt staggered, sunset the old version — never flag-day every team at once.</text>
+  <text x="750" y="903" text-anchor="middle" font-size="13.5" font-weight="700" fill="#5a4d20">Driven by change, not by its own output: with no new input, the loop quiets.</text>
+
+  <!-- ============ FOOTER (Gradus emblem + wordmark) ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="684" y="1004" width="6" height="8" rx="1"/><rect x="693" y="998" width="6" height="14" rx="1"/><rect x="702" y="992" width="6" height="20" rx="1"/></g>
+    <text x="716" y="1012" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>

@@ -48,7 +48,7 @@
   <rect x="80" y="448" width="300" height="84" rx="10" fill="#dadfe5"/><rect x="356" y="448" width="24" height="84" fill="#dadfe5"/>
   <text x="230" y="482" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2a3a">LAYER 1 · AXIOMS</text>
   <rect x="170" y="494" width="120" height="20" rx="5" fill="#1a2a3a"/><text x="230" y="508" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">INVARIANT · always</text>
-  <text x="404" y="480" font-size="11.5" fill="#1a2a3a">all 7 axioms in force — the load-bearing rules every federation stands on</text>
+  <text x="404" y="480" font-size="11.5" fill="#1a2a3a">all 8 axioms in force — the load-bearing rules every federation stands on</text>
   <text x="404" y="502" font-size="10.5" fill="#5a6a7a" font-style="italic">cannot be changed without forking the framework — structural correctness</text>
 
   <!-- CAPTION -->

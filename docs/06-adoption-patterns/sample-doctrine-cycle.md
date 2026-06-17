@@ -154,7 +154,7 @@ This is a doctrine cycle, so it produces a **ratification package** for the foun
 5. **Protocol-amendment candidates** — none this cycle.
 6. **Open founder-calls** — the proration-downgrade bug: fix now (Polish) or defer?
 
-The founder ratifies. On ratification:
+The founder ratifies — in this single-team cycle, the founder *is* the [ratification council](../01-axioms/amendment-protocol.md#the-council-ratifies-a-few-not-all) collapsed to its one lead. On ratification:
 
 ```bash
 git -C /path/to/substrate tag -a charter-v0.6 -m "Cycle close: Billing compass + gapless-numbering invariant"

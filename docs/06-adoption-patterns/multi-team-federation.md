@@ -49,7 +49,7 @@ If you find yourself in every decision, that's a signal the work is mis-sliced (
 
 ## Teams can sit on different rungs at the same time
 
-Onboarding is not synchronized. Because [adoption is per-unit](../00-foundation/constitution.md#layer-1-the-7-axioms-invariant), each team climbs the [adoption ladder](../05-getting-started/the-adoption-ladder.md) at its own pace:
+Onboarding is not synchronized. Because [adoption is per-unit](../00-foundation/constitution.md#layer-1-the-8-axioms-invariant), each team climbs the [adoption ladder](../05-getting-started/the-adoption-ladder.md) at its own pace:
 
 - **Team Identity** is mature — running multiple axes (build + a Day-2 QA axis): **Rung 3, Federate.**
 - **Team Revenue** stood up its first federation last month: **Rung 2, Bootstrap.**

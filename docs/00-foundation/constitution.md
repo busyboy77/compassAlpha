@@ -1,5 +1,5 @@
 ---
-description: "The CompassAlpha constitution: 7 invariant axioms, guardrails, tunables and toggles, plus the one-Charter, Compasses and axis-annex doctrine model for multi-agent AI work."
+description: "The CompassAlpha constitution: 8 invariant axioms, guardrails, tunables and toggles, plus the one-Charter, Compasses and axis-annex doctrine model for multi-agent AI work."
 ---
 
 # The Constitution
@@ -20,7 +20,7 @@ When you adopt CompassAlpha, you accept the axioms unchanged, you accept the gua
 
 ---
 
-## Layer 1: The 7 Axioms (INVARIANT)
+## Layer 1: The 8 Axioms (INVARIANT)
 
 These rules **cannot be modified** without forking the framework. They define what CompassAlpha **is**.
 
@@ -36,6 +36,7 @@ These rules **cannot be modified** without forking the framework. They define wh
 | 5 | **Bus protocol** | Inbox-in-destination-folder. Sender writes, founder pings, recipient pulls. | [→](../01-axioms/bus-protocol.md) |
 | 6 | **Provenance law** | Cite by substrate. Never trust institutional memory unverified. | [→](../01-axioms/provenance-law.md) |
 | 7 | **Git foundations** | `GIT_INDEX_FILE` + worktree + `commit-tree` per session. | [→](../01-axioms/git-foundations.md) |
+| 8 | **Amendment protocol** | Discoveries flow up, ratified truth flows down. The constitution learns at a council-run train. | [→](../01-axioms/amendment-protocol.md) |
 
 Each axiom defends against one or more of the [four pathologies](../02-guardrails/index.md). If you try to weaken any axiom, you'll re-introduce the pathology it was preventing.
 
@@ -112,7 +113,7 @@ A worked example: a conservative profile biased toward intelligence + low-risk.
 <small>*An invariant foundation, a configurable top. The bottom two layers (axioms, guardrails) are the same for every project; the top two (tunables, toggles) are the profile a project chooses — here, Conservative. Swap the profile and the foundation is untouched. The same values, written out:*</small>
 
 ```
-LAYER 1 (axioms):     all 7 axioms in force (always — invariant)
+LAYER 1 (axioms):     all 8 axioms in force (always — invariant)
 LAYER 2 (guardrails): all 9 guardrails active (always — derived from axioms)
 LAYER 3 (tunables):
                       concurrency = LAYGO
@@ -194,7 +195,7 @@ This is what makes CompassAlpha constitutional rather than ad-hoc.
 A practical order:
 
 1. **Now**: skim this page (you're here)
-2. **Next 30 minutes**: read all 7 axioms ([→](../01-axioms/))
+2. **Next 30 minutes**: read all 8 axioms ([→](../01-axioms/))
 3. **Next hour**: read all 9 guardrails ([→](../02-guardrails/))
 4. **Next 2-3 hours**: skim the tunables (don't memorize) ([→](../03-tunables/))
 5. **As needed**: refer to toggles when you need a specific switch ([→](../04-toggles/))
@@ -212,7 +213,7 @@ The constitution evolves. Like real-world constitutions, it has amendment cycles
 - **Tunables**: extended frequently; existing tunables are stable
 - **Toggles**: extended in lockstep with tunables
 
-A reference federation's doctrine cycle (e.g. Charter v0.4 → v0.5) is itself the amendment process for the framework. Each cycle is documented in the [Changelog](../08-community/changelog.md).
+A reference federation's doctrine cycle (e.g. Charter v0.4 → v0.5) *informs and validates* the framework's own evolution — it does **not** amend the axioms, which still change only by forking. Each cycle is documented in the [Changelog](../08-community/changelog.md).
 
 ---
 

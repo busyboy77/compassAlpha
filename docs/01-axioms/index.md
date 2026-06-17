@@ -1,19 +1,19 @@
 ---
-description: "The 7 invariant axioms of CompassAlpha: tier grammar, firewall, persistence law, hard-labour rule, bus protocol, provenance law, and git foundations."
+description: "The 8 invariant axioms of CompassAlpha: tier grammar, firewall, persistence law, hard-labour rule, bus protocol, provenance law, git foundations, and the amendment protocol."
 ---
 
 # 01 · Axioms (the INVARIANT constitution)
 
-> The 7 foundational rules. **Cannot be modified without forking the framework.** Read once, internalize forever.
+> The 8 foundational rules. **Cannot be modified without forking the framework.** Read once, internalize forever.
 
 !!! note "This governs *changing* the rules — not *how much* you adopt"
     "Cannot be modified" means you don't water down a rule for a unit you've brought under CompassAlpha. It is **not** an all-or-nothing demand: adoption is incremental and per-unit, and different teams can sit on [different rungs](../05-getting-started/the-adoption-ladder.md) at the same time. Immutable rules, incremental rollout.
 
-New here? This section lists the seven non-negotiable rules that hold a CompassAlpha setup together — the ground rules every agent and human plays by. It's for anyone who wants to understand *why the framework is shaped the way it is* before customizing anything. (New to all of this? Start with [the mental model](../00-foundation/mental-model.md).)
+New here? This section lists the eight non-negotiable rules that hold a CompassAlpha setup together — the ground rules every agent and human plays by. It's for anyone who wants to understand *why the framework is shaped the way it is* before customizing anything. (New to all of this? Start with [the mental model](../00-foundation/mental-model.md).)
 
 Every axiom defends against one or more of the [four pathologies](../02-guardrails/index.md) — the recurring ways multi-agent work goes wrong. Break an axiom and you let its pathology back in.
 
-## The 7 axioms
+## The 8 axioms
 
 | # | Axiom | Defends against | Page |
 |---|---|---|---|
@@ -24,6 +24,7 @@ Every axiom defends against one or more of the [four pathologies](../02-guardrai
 | 5 | **Bus protocol** | Coordination loss, message routing errors | [→](bus-protocol.md) |
 | 6 | **Provenance law** | Hallucination drift, false-positive recall | [→](provenance-law.md) |
 | 7 | **Git foundations** | Cross-session contamination, parallel-doer races | [→](git-foundations.md) |
+| 8 | **Amendment protocol** | Doctrine drift, discovery loss, federation divergence | [→](amendment-protocol.md) |
 
 ## Why these are invariant
 
@@ -50,7 +51,7 @@ If you can only read one axiom, read [Tier Grammar](tier-grammar.md). Everything
 
 If you can read three, read **Tier Grammar** + **Firewall** + **Persistence Law**. Those three are the spine.
 
-If you can read all seven, do so. They're each ~5 minutes.
+If you can read all eight, do so. They're each ~5 minutes.
 
 ---
 

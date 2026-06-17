@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1500" height="960" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 960" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5a6b7d"/></marker>
+  </defs>
+
+  <rect width="1500" height="960" fill="#fafaf8"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect x="0" y="0" width="1500" height="98" fill="#1f2a36"/>
+  <text x="750" y="44" text-anchor="middle" font-size="29" font-weight="700" fill="#ffffff">A contested discovery — the framework illuminates, the federation decides</text>
+  <text x="750" y="74" text-anchor="middle" font-size="14" fill="#a0aabb" font-style="italic">Situation · evidence · the menu · the consequences — laid out in full light, then the framework chooses nothing</text>
+
+  <!-- ===================================================== -->
+  <!-- LEFT: the contested discovery                          -->
+  <!-- ===================================================== -->
+  <text x="230" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#444">A finding two teams disagree on</text>
+
+  <rect x="60" y="160" width="340" height="92" rx="11" fill="#dfeaf5" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="230" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#1a4a7a">Team A discovered</text>
+  <text x="230" y="216" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4a7a">rule X should hold</text>
+  <text x="230" y="238" text-anchor="middle" font-size="10.5" fill="#1a4a7a" font-style="italic">cited to its substrate</text>
+
+  <text x="230" y="288" text-anchor="middle" font-size="26" font-weight="700" fill="#c0392b">⚡ X vs ¬X</text>
+
+  <rect x="60" y="312" width="340" height="92" rx="11" fill="#eee0f5" stroke="#7a5b9c" stroke-width="2"/>
+  <text x="230" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#5a3a7a">Team B discovered</text>
+  <text x="230" y="368" text-anchor="middle" font-size="16" font-weight="700" fill="#5a3a7a">¬X should hold</text>
+  <text x="230" y="390" text-anchor="middle" font-size="10.5" fill="#5a3a7a" font-style="italic">cited to its substrate</text>
+
+  <!-- arrow into the decision surface -->
+  <line x1="400" y1="282" x2="452" y2="282" stroke="#5a6b7d" stroke-width="2.4" marker-end="url(#flow)"/>
+
+  <!-- ===================================================== -->
+  <!-- CENTER: THE DECISION SURFACE (framework illuminates)   -->
+  <!-- ===================================================== -->
+  <rect x="456" y="128" width="568" height="612" rx="14" fill="#ffffff" stroke="#5a6b7d" stroke-width="1.8"/>
+  <rect x="456" y="128" width="568" height="66" rx="14" fill="#2d3a4a"/>
+  <rect x="456" y="170" width="568" height="24" fill="#2d3a4a"/>
+  <text x="740" y="160" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">THE FRAMEWORK ILLUMINATES</text>
+  <text x="740" y="183" text-anchor="middle" font-size="12" fill="#9fb0c4" font-style="italic">it lays the table — it does not pick up a fork</text>
+
+  <!-- card 1: Situation -->
+  <rect x="476" y="210" width="262" height="236" rx="10" fill="#f7f9fb" stroke="#c4cfd9" stroke-width="1.3"/>
+  <text x="492" y="236" font-size="13.5" font-weight="700" fill="#2d3a4a">① Situation</text>
+  <line x1="492" y1="246" x2="722" y2="246" stroke="#dde4ea"/>
+  <text x="492" y="270" font-size="11.5" fill="#3a4654">who discovered what,</text>
+  <text x="492" y="290" font-size="11.5" fill="#3a4654">each traced to substrate.</text>
+  <rect x="492" y="306" width="210" height="56" rx="7" fill="#eef3f7" stroke="#c4cfd9"/>
+  <text x="502" y="328" font-size="11" fill="#1a4a7a">A → X  @ auth-v0.3:…</text>
+  <text x="502" y="350" font-size="11" fill="#5a3a7a">B → ¬X @ billing-v0.5:…</text>
+  <text x="492" y="386" font-size="10.5" fill="#888" font-style="italic">presented · not judged</text>
+
+  <!-- card 2: Evidence -->
+  <rect x="742" y="210" width="262" height="236" rx="10" fill="#f7f9fb" stroke="#c4cfd9" stroke-width="1.3"/>
+  <text x="758" y="236" font-size="13.5" font-weight="700" fill="#2d3a4a">② Evidence</text>
+  <line x1="758" y1="246" x2="988" y2="246" stroke="#dde4ea"/>
+  <text x="758" y="270" font-size="11.5" fill="#3a4654">cross-team recurrence —</text>
+  <text x="758" y="290" font-size="11.5" font-weight="700" fill="#3a4654">as data, not a verdict.</text>
+  <!-- X bar -->
+  <text x="758" y="320" font-size="11" fill="#1a4a7a">X</text>
+  <rect x="778" y="309" width="161" height="16" rx="3" fill="#bcd5ee"/>
+  <rect x="778" y="309" width="161" height="16" rx="3" fill="#3b6ea5"/>
+  <text x="948" y="322" font-size="11" fill="#1a4a7a">7 teams</text>
+  <!-- ¬X bar -->
+  <text x="758" y="350" font-size="11" fill="#5a3a7a">¬X</text>
+  <rect x="778" y="339" width="69" height="16" rx="3" fill="#7a5b9c"/>
+  <text x="856" y="352" font-size="11" fill="#5a3a7a">3 teams</text>
+  <text x="758" y="386" font-size="10.5" fill="#888" font-style="italic">the count, not the call</text>
+
+  <!-- card 3: Menu -->
+  <rect x="476" y="458" width="262" height="262" rx="10" fill="#f7f9fb" stroke="#c4cfd9" stroke-width="1.3"/>
+  <text x="492" y="484" font-size="13.5" font-weight="700" fill="#2d3a4a">③ Menu</text>
+  <line x1="492" y1="494" x2="722" y2="494" stroke="#dde4ea"/>
+  <text x="492" y="518" font-size="11.5" fill="#3a4654">the moves available —</text>
+  <text x="492" y="538" font-size="11.5" font-weight="700" fill="#3a4654">named, not chosen.</text>
+  <rect x="492" y="552" width="210" height="60" rx="8" fill="#ffffff" stroke="#5a6b7d" stroke-width="1.3"/>
+  <text x="597" y="576" text-anchor="middle" font-size="12" font-weight="700" fill="#2d3a4a">single solution</text>
+  <text x="597" y="596" text-anchor="middle" font-size="11" fill="#555">one rule, for everyone</text>
+  <rect x="492" y="624" width="210" height="60" rx="8" fill="#ffffff" stroke="#7a5b9c" stroke-width="1.3"/>
+  <text x="597" y="648" text-anchor="middle" font-size="12" font-weight="700" fill="#5a3a7a">define a new Invariant</text>
+  <text x="597" y="668" text-anchor="middle" font-size="11" fill="#5a3a7a">name the missing context</text>
+
+  <!-- card 4: Consequences -->
+  <rect x="742" y="458" width="262" height="262" rx="10" fill="#f7f9fb" stroke="#c4cfd9" stroke-width="1.3"/>
+  <text x="758" y="484" font-size="13.5" font-weight="700" fill="#2d3a4a">④ Consequences</text>
+  <line x1="758" y1="494" x2="988" y2="494" stroke="#dde4ea"/>
+  <text x="758" y="518" font-size="11.5" fill="#3a4654">what each move costs —</text>
+  <text x="758" y="538" font-size="11.5" font-weight="700" fill="#3a4654">shown, not weighted.</text>
+  <text x="758" y="566" font-size="11" fill="#2a5a2a">single solution → one side</text>
+  <text x="758" y="584" font-size="11" fill="#2a5a2a">migrates; constitution stays small</text>
+  <rect x="758" y="600" width="230" height="92" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="768" y="622" font-size="11" fill="#8a2b20">new Invariant → +1 rule;</text>
+  <text x="768" y="642" font-size="11" fill="#8a2b20">do it for every clash and</text>
+  <text x="768" y="662" font-size="11" font-weight="700" fill="#8a2b20">cycles stop converging</text>
+  <text x="768" y="682" font-size="10.5" fill="#a0473a" font-style="italic">the risk, surfaced — not forbidden</text>
+
+  <!-- arrow into council -->
+  <line x1="1024" y1="282" x2="1076" y2="282" stroke="#5a6b7d" stroke-width="2.4" marker-end="url(#flow)"/>
+
+  <!-- ===================================================== -->
+  <!-- RIGHT: THE FEDERATION DECIDES                          -->
+  <!-- ===================================================== -->
+  <rect x="1080" y="128" width="360" height="612" rx="14" fill="#f4f1ea" stroke="#a89968" stroke-width="1.6"/>
+  <text x="1260" y="160" text-anchor="middle" font-size="16" font-weight="700" fill="#5a4d20">THE FEDERATION DECIDES</text>
+  <text x="1260" y="182" text-anchor="middle" font-size="11.5" fill="#7a6a30" font-style="italic">the council alone chooses</text>
+
+  <rect x="1108" y="212" width="304" height="120" rx="11" fill="#ffffff" stroke="#5a6b7d" stroke-width="1.6"/>
+  <text x="1260" y="244" text-anchor="middle" font-size="14" font-weight="700" fill="#2d3a4a">Outcome A</text>
+  <text x="1260" y="270" text-anchor="middle" font-size="13" fill="#2d3a4a">a single shared solution</text>
+  <text x="1260" y="294" text-anchor="middle" font-size="11" fill="#666">one side is simply right;</text>
+  <text x="1260" y="312" text-anchor="middle" font-size="11" fill="#666">the other migrates — a correction</text>
+
+  <rect x="1108" y="356" width="304" height="120" rx="11" fill="#ffffff" stroke="#7a5b9c" stroke-width="1.6"/>
+  <text x="1260" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#5a3a7a">Outcome B</text>
+  <text x="1260" y="414" text-anchor="middle" font-size="13" fill="#5a3a7a">a new Invariant</text>
+  <text x="1260" y="438" text-anchor="middle" font-size="11" fill="#6a4a8a">both were right in context;</text>
+  <text x="1260" y="456" text-anchor="middle" font-size="11" fill="#6a4a8a">name it — a discovery</text>
+
+  <rect x="1108" y="506" width="304" height="86" rx="11" fill="#2d3a4a"/>
+  <text x="1260" y="538" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">The framework never</text>
+  <text x="1260" y="562" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">picks up a fork.</text>
+  <text x="1260" y="582" text-anchor="middle" font-size="10.5" fill="#9fb0c4" font-style="italic">maximal clarity · zero dictation</text>
+
+  <text x="1260" y="628" text-anchor="middle" font-size="11" fill="#7a6a30" font-style="italic">whatever they choose is</text>
+  <text x="1260" y="646" text-anchor="middle" font-size="11" fill="#7a6a30" font-style="italic">recorded as substrate —</text>
+  <text x="1260" y="664" text-anchor="middle" font-size="11" fill="#7a6a30" font-style="italic">decided stays decided</text>
+
+  <!-- ===================================================== -->
+  <!-- BOTTOM: THE CONVERGENCE MIRROR                         -->
+  <!-- ===================================================== -->
+  <rect x="40" y="762" width="1400" height="150" rx="11" fill="#f7f4ec" stroke="#a89968" stroke-width="1.4"/>
+  <text x="66" y="792" font-size="15" font-weight="700" fill="#5a4d20">THE CONVERGENCE MIRROR</text>
+  <text x="66" y="814" font-size="12" fill="#7a6a30" font-style="italic">a mirror, not a verdict</text>
+  <text x="66" y="846" font-size="12.5" fill="#3a4654">The one consequence a federation can't see for itself: the last K trains added M Invariants,</text>
+  <text x="66" y="866" font-size="12.5" fill="#3a4654">and cycles are catching more while settling less. It <tspan font-weight="700">reports</tspan>; the federation decides whether to stop.</text>
+  <text x="66" y="894" font-size="11.5" fill="#8a6d0a" font-style="italic">Surfacing the risk, choosing nothing — so that when they don't stop, they did it with eyes open.</text>
+
+  <!-- mini chart -->
+  <rect x="900" y="778" width="516" height="118" rx="8" fill="#ffffff" stroke="#d8d2c0"/>
+  <line x1="930" y1="876" x2="1396" y2="876" stroke="#cfc6a8"/>
+  <line x1="930" y1="792" x2="930" y2="876" stroke="#cfc6a8"/>
+  <!-- invariants added (rising, amber) -->
+  <polyline points="945,866 1035,848 1125,818 1215,800 1305,786 1390,782" fill="none" stroke="#b89425" stroke-width="2.6"/>
+  <text x="1396" y="780" text-anchor="end" font-size="10.5" font-weight="700" fill="#8a6d0a">Invariants added ▲</text>
+  <!-- settle rate (falling, blue) -->
+  <polyline points="945,798 1035,808 1125,832 1215,852 1305,866 1390,870" fill="none" stroke="#3b6ea5" stroke-width="2.6"/>
+  <text x="1390" y="888" text-anchor="end" font-size="10.5" font-weight="700" fill="#1a4a7a">cycle settle rate ▼</text>
+  <text x="1163" y="893" text-anchor="middle" font-size="10" fill="#999">trains →</text>
+
+  <!-- ============ FOOTER (Gradus emblem + wordmark) ============ -->
+  <a href="https://gradus.pk" xlink:href="https://gradus.pk" target="_blank">
+    <g fill="#5a7aa0"><rect x="684" y="930" width="6" height="8" rx="1"/><rect x="693" y="924" width="6" height="14" rx="1"/><rect x="702" y="918" width="6" height="20" rx="1"/></g>
+    <text x="716" y="938" font-size="13" fill="#5a7aa0">gradus.pk</text>
+  </a>
+
+</svg>
