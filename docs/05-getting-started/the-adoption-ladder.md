@@ -69,13 +69,13 @@ The lightest possible start. You don't stand up any of the federation machinery 
 
 Here you stand up the actual framework: **two repos** (one for code, one as the state-of-record) and the **three tiers** (a senior planner, a coordinator, and the hands-on builder). You run it under the **Bootstrap preset** — the leanest *posture*, not a stripped-down framework. It's the full setup with every dial turned to slow-and-safe so nothing moves faster than you can follow.
 
-!!! tip "Coming from Rung 1? This is a step, not a wall."
-    The jump from Rung 1 can look bigger than it is, because two new ideas arrive at once. In plain words:
+!!! tip "Coming from Rung 1? Take it as two small, safe steps — not one big one."
+    The full setup adds two new things — but you don't add them at the same time. You do one, get comfortable, then the other. And neither one can touch or break your actual code, so you can try each and undo it with nothing lost.
 
-    - **Two repos** — one holds your **code**, the other is the federation's **notebook** (who decided what, what's pending). Keeping them apart means the record of *why* never gets tangled with the *what*. You make two folders; you don't learn anything new to do it.
-    - **Three tiers** — instead of one assistant juggling everything, the work splits across a **planner**, a **coordinator**, and a **builder**. That's not more for *you* to do; it's how the machinery keeps each part focused so nothing gets muddled.
+    - **Step 1 — give your decisions their own home.** *(safe · reversible)* You're already jotting down "the way we do this" by hand. Now those notes get their own separate place, kept by git. Your code isn't touched — this is a second notebook sitting *next to* it, not inside it. Git keeps every version, so you can always go back. If it doesn't suit you, you delete a folder and you're exactly where you started.
+    - **Step 2 — let a few helpers share the work.** *(you stay in charge)* Instead of one assistant doing everything, the work splits across three simple roles: one plans, one organizes, one builds. This is *added safety, not added risk* — more checking before anything lands, and you're still the person who says "go." You switch this on only after Step 1 feels natural, and you run it on the slowest, gentlest setting while you find your feet.
 
-    On **Bootstrap** these run slow and quiet while you find your feet, and you don't memorize any of it — [the mental model](../00-foundation/mental-model.md) explains the ideas, and [greenfield setup](greenfield-setup.md) walks the steps one at a time. Nobody stands this up in one sitting.
+    Nobody does both steps in one sitting, and nothing here is a one-way door. [The mental model](../00-foundation/mental-model.md) explains the ideas; [greenfield setup](greenfield-setup.md) walks each step on its own.
 
 **What you get:** the complete safety net, dialled gentle — cycles that **lock** the rulebook while code is written, and gates that check work before it lands.
 

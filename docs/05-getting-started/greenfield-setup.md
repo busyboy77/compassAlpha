@@ -12,13 +12,13 @@ This page assumes you've cleared the [prerequisites](prerequisites.md). It walks
 
 The whole setup is seven steps. Each produces real artifacts on disk that you commit and push. Nothing load-bearing stays in your head.
 
-!!! note "Just climbed from Rung 1? The two ideas this page assumes, in plain words"
-    If you've been [borrowing CompassAlpha solo](borrow-compassalpha-solo.md) and this page suddenly looks heavier, it's really just **two new ideas** — defined here so nothing below is a surprise:
+!!! note "Just arrived from the solo start? Two new ideas — and you add them one at a time"
+    If you've been [borrowing CompassAlpha solo](borrow-compassalpha-solo.md) and this page suddenly looks heavier, it's two new ideas — and you don't take them on at once. Neither touches your actual code, and git keeps every version, so each is safe to try and simple to undo.
 
-    - **Two repos** — one holds your **code** (the *substrate*); the other is the federation's **notebook** (the *reviewer-state*: who decided what, what's pending, how rotations went). Keeping them separate stops the record of *why* from tangling with the *what*. In practice: you make two folders side by side.
-    - **Three tiers** — the work splits across a **planner** (Mentor-1), a **coordinator** (Mentor-2), and the **hands-on builder** (Doer), instead of one session doing everything. It isn't more work for *you* — it's how the machinery keeps each part focused so context stays clean.
+    - **First, your decisions get their own home — a second repo.** One repo holds your **code** (the *substrate*); a second, separate one is the federation's **notebook** (the *reviewer-state*: who decided what, what's pending, how rotations went). It sits *next to* your code, never inside it, so the record of *why* can't tangle with the *what*. In practice: two folders side by side — and deleting the second leaves your code exactly as it was.
+    - **Then, a few helpers share the work — three tiers.** The work splits across a **planner** (Mentor-1), a **coordinator** (Mentor-2), and the **hands-on builder** (Doer), instead of one session doing everything. It isn't more work for *you* — it's added checking that keeps each part focused, and you're still the one who says "go." Turn it on once the second repo feels natural.
 
-    That's the whole conceptual jump. You don't memorize any of it; [the mental model](../00-foundation/mental-model.md) has the ideas, and the steps below are click-by-click.
+    That's the whole jump, taken as two safe steps. You don't memorize any of it; [the mental model](../00-foundation/mental-model.md) has the ideas, and the steps below are click-by-click.
 
 !!! tip "Smallest viable first day"
     This page goes into the full detail, but you don't have to absorb all of it at once. If you want the gentlest possible start, begin in the **Bootstrap** [operating preset](../04-toggles/operating-presets.md) — the *leanest posture*: it's still the full setup (two repos, three tiers), but tuned to keep the machinery slow and quiet while you find your feet. You can dial the rest up later. Work through the steps below at your own pace; nothing here has to be done in one sitting.
