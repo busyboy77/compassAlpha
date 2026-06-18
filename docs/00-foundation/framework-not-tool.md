@@ -31,6 +31,9 @@ It **is**:
 
 When you adopt CompassAlpha, **you don't install anything**. You bring your own git, your own AI agent (Claude Code is the reference), your own host. CompassAlpha governs how they collaborate.
 
+!!! tip "Adopting it means *using* it — not *building* it"
+    There are two ways to misread "it's not a tool you install." The first is to go looking for software to download — there isn't any. The second, subtler one is to assume that *because* there's no runtime, you must **build** one before you get value: orchestration scripts, a CLI, a dashboard. You don't. **Adoption is the delivery.** You get value on day one by *practicing* the rules with the agents and git you already have — keep a Charter, cite decisions to git — and you climb from there. The only thing you might ever *build* is an optional [reference gate](../07-reference/what-is-enforced.md), if you want a particular rule mechanically enforced — and even those are small, opt-in, and never required to start. So if you find yourself estimating the effort to "engineer CompassAlpha into a deliverable," you're sizing the wrong thing: it's delivered by being **used**, not by being built.
+
 ---
 
 ## Why framework vs tool matters
@@ -171,6 +174,7 @@ These are the decisions CompassAlpha makes once, and then exports to every proje
 ## Remember this
 
 - **CompassAlpha is something you read and apply, not something you install.** No binary, no daemon, no API key — just markdown files you write and an AI agent you already use.
+- **You don't build it either — you use it.** Adoption *is* the delivery: value starts on day one from practicing the rules, not from engineering a runtime first. The only optional thing you'd ever build is a small [enforcement gate](../07-reference/what-is-enforced.md), and never to get started.
 - **The value lives in the rules, not in any executable.** Think HTTP or a constitution: the specification is what's worth having, and many implementations can be built on top of it.
 - **You keep your own tools.** Your git, your AI agent, your host, your CI/CD all stay yours; the framework only governs how the pieces collaborate.
 - If the difference between "framework" and "tool" still feels abstract, [the mental model](mental-model.md) page lays out the bigger picture it fits into.
