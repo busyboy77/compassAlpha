@@ -120,6 +120,31 @@ TIER-3 STATUS GRID — 2026-06-09 · cycle charter-v0.4 → v0.5 prep
 
 ---
 
+## Cycle-close: the convergence readout (doctrine drift)
+
+At a doctrine **cycle close**, the Tier-3 grid carries one more fixed panel: the [convergence mirror](../01-axioms/amendment-protocol.md#the-convergence-mirror) turned into numbers. It measures *doctrine drift* — the doctrine axis adding rules faster than it settles them — so a glance says whether the rulebook is **converging or bloating**. It reports; it does not gate.
+
+| Metric | Drift signal |
+|---|---|
+| Net doctrine delta (+Invariants / +Primitives this cycle) | rising trend = bloat |
+| Settle rate (queued items settled vs. re-deferred) | falling = stalling |
+| Backlog depth ([settlement-cascade](../01-axioms/amendment-protocol.md#deferred-work-the-settlement-cascade) size) | growing = falling behind |
+| Recurrence pressure (re-discoveries from prior cycles) | rising = doctrine not absorbing |
+
+### Worked example (generic)
+
+```text
+CONVERGENCE — charter-v0.4 → v0.5 · doctrine-drift readout
+DELTA       +2 invariants · +1 primitive    (cum: 18 inv · 3 prim)
+SETTLE      9 settled / 13 queued = 69%      (prev 74% ↓)
+BACKLOG     6 deferred                       (prev 4 ↑)
+RECURRENCE  2 re-discoveries from past cycles
+```
+
+Read the **trend, not the snapshot** — one cycle proves nothing; a settle-rate falling and a backlog rising across several closes is the drift the mirror exists to surface, while there's still time to choose to slow the amendments.
+
+---
+
 ## When each grid is printed (summary)
 
 | Event | Tier 1 | Tier 2 | Tier 3 |
