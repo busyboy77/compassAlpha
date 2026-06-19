@@ -51,7 +51,13 @@ These are **specified, not yet built.** They are named here as roadmap, not as e
 - **Proves:** the "two planes, never cross-commit" discipline mechanically, and the *observable* half of the hard-labour rule (who commits to substrate).
 - **Does not prove:** a mentor reasoning about substrate without committing. Trickier than gate #1 — it needs the repo-pair convention configured — which is why it is specified for review before it becomes a script.
 
-Neither gate can mechanize the genuinely honor-system rows (tier-grammar role discipline, firewall non-retention): you cannot gate what an agent *thinks*. Those stay convention by nature, and this page will keep saying so.
+### Candidate gate #3 — the compass-consistency check (coherence → mechanical)
+
+- **Checks:** at doctrine-cycle close (re-lock), fail closed if any Compass still references a Primitive the new Charter changed or dropped.
+- **Proves:** every Compass is consistent with the freshly-amended Charter before the build axis resumes — the one sweep a central [coherence architect](../00-foundation/codebase-coherence.md#you-dont-need-a-coherence-architect) would otherwise do by hand.
+- **Does not prove:** semantic coherence beyond declared Primitive references — the same textual-floor limit as the conformance gate.
+
+None of these gates can mechanize the genuinely honor-system rows (tier-grammar role discipline, firewall non-retention): you cannot gate what an agent *thinks*. Those stay convention by nature, and this page will keep saying so.
 
 ## Remember this
 

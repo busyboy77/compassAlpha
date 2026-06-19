@@ -51,7 +51,7 @@ Close a full doctrine cycle, fold in community review, and lock the axioms and c
 
 ![Adoption telemetry — opt-in, anonymize, submit via GitHub, public dashboard; commercial contact kept separate](../assets/adoption-telemetry.svg)
 
-**More invariants moved from convention to mechanical enforcement.** Today the [conformance gate](../07-reference/conformance-gate.md) mechanizes the coherence anti-patterns and the provenance law's cite-by-substrate rule; most coordination invariants are *structural or convention* (see [what is actually enforced](../07-reference/what-is-enforced.md)). Two further reference gates are specified for review: a **disclosure guard** (fail closed at turn-close if state is unflushed or unpushed — the persistence law's observable precondition) and a **plane-separation check** (fail closed on a cross-plane commit — the two-plane rule). Specified, not yet built.
+**More invariants moved from convention to mechanical enforcement.** Today the [conformance gate](../07-reference/conformance-gate.md) mechanizes the coherence anti-patterns and the provenance law's cite-by-substrate rule; most coordination invariants are *structural or convention* (see [what is actually enforced](../07-reference/what-is-enforced.md)). Three further reference gates are specified for review: a **disclosure guard** (fail closed at turn-close if state is unflushed or unpushed — the persistence law's observable precondition), a **plane-separation check** (fail closed on a cross-plane commit — the two-plane rule), and a **compass-consistency check** (fail closed at cycle close if any Compass still uses a Primitive the new Charter changed). Specified, not yet built.
 
 ## v1.0 stability criteria
 

@@ -62,6 +62,23 @@ Because every altitude derives from the single doctrine, the same concept is ren
 3. **Primitives lock the definition; Compasses localize use.** A genuinely new shared concept is *lifted* into a Primitive (see [LIFT-WATCH](glossary.md#lift-watch)) so every component reuses it — rather than each component growing its own copy.
 4. **Toolings and audit mechanize the check.** [Toolings and specialised agents](../03-tunables/invariants-toolings-agents.md) automate conformance — flagging a call that bypasses the canonical routine or a sanitization that's missing — so drift is caught, not discovered later. The [conformance gate](../07-reference/conformance-gate.md) is the concrete, fail-closed floor: encode the machine-checkable rules from your Charter and a violation **blocks** the commit or merge, rather than relying on discipline alone.
 
+## You don't need a "coherence architect"
+
+The instinct is to appoint one smart owner to sweep every Compass at each cycle's end and keep things tidy. CompassAlpha has none — **by design. One owner of all coherence is a bottleneck and a single point of failure.**
+
+The job is split across mechanisms that don't tire or queue:
+
+| The architect's job | Who does it instead |
+|---|---|
+| Fix the Compasses a change touches | the **doctrine axis** — its close *is* the fix |
+| Push a charter change into every Compass | each team's **delta re-run** ([amendment protocol](../01-axioms/amendment-protocol.md)) — per-team, no queue |
+| Catch bad patterns / uncited claims | the **[conformance gate](../07-reference/conformance-gate.md)** — fail-closed, every commit |
+| Spot drift or bloat | the **[convergence mirror](../01-axioms/amendment-protocol.md#the-convergence-mirror)** |
+
+The one piece left — a final check that no Compass still uses something the new Charter dropped — is best as a **gate, not a person**.
+
+**The federation *is* the hygiene architect: distributed, mechanical, no single neck to break.**
+
 ## Why it compounds across teams
 
 When many human teams build under the **one** Charter (see [the doctrine substrate](constitution.md#the-doctrine-substrate-charter-compasses-and-axis-annexes)), coherence is exactly what keeps their segments from diverging. Every team reuses the same Primitives; a cross-cutting change flows through a charter-level bump, never an ad-hoc per-team reinvention. Physical federation without enforced coherence is just distributed drift — the coherence layer is what makes the distribution safe.
